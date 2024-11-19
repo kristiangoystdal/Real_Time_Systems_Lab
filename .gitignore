@@ -1,2 +1,6 @@
 .vscode
 
+# Ignores debugging files for Lab 1
+.Lab_1.X/nbproject
+.Lab_1.X/dist/default/debug/
+.Lab_1.X/bulid/default/debug/
