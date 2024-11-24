@@ -49,8 +49,11 @@
 /*
 						 Main application
  */
+#define MAGIC_NUMBER_ADDR 0x7042
+
 #define MONITOR_PERIOD_ADDR 0x7000
 #define ALARM_DURATION_ADDR 0x7001
+
 
 
 
