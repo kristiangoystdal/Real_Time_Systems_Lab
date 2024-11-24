@@ -1,0 +1,705 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F18875 ]
+[d frameptr 6 ]
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[e E12235 . `uc
+ADC_CHANNEL_VSS 60
+ADC_CHANNEL_TEMP 61
+ADC_CHANNEL_DAC1 62
+ADC_CHANNEL_FVR_BUF1 63
+ADC_CHANNEL_ANA0 0
+]
+"135 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[e E12222 . `uc
+ADC_CHANNEL_VSS 60
+ADC_CHANNEL_TEMP 61
+ADC_CHANNEL_DAC1 62
+ADC_CHANNEL_FVR_BUF1 63
+ADC_CHANNEL_ANA0 0
+]
+"208
+[e E12229 . `uc
+ADC_BASIC 0
+ADC_SERIES_ACCUMULATE 1
+ADC_SERIES_AVERAGE 2
+ADC_BURST_AVERAGE 3
+ADC_LOW_PASS_FILTER 4
+]
+"225
+[e E12243 . `uc
+ADC_NEVER_INTERRUPT 0
+ADC_BELOW_LOWER_THRESHOLD 1
+ADC_ABOVE_LOWER_THRESHOLD 2
+ADC_INSIDE_LOWER_AND_UPPER_THRESHOLD 3
+ADC_OUTSIDE_LOWER_AND_UPPER_THRESHOLD 4
+ADC_BELOW_UPPER_THRESHOLD 5
+ADC_ABOVE_UPPER_THRESHOLD 6
+ADC_ALWAYS_INTERRUPT 7
+]
+"346
+[e E12283 . `uc
+ADC_NOT_CONVERTING 0
+ADC_1ST_PRECHARGE 1
+ADC_1ST_ACQUISITION 2
+ADC_1ST_CONVERSION 3
+ADC_2ND_PRECHARGE 5
+ADC_2ND_ACQUISITION 6
+ADC_2ND_CONVERSION 7
+]
+"351
+[e E12253 . `uc
+ADC_TRIGGER_SOURCE_DISABLED 0
+ADC_TRIGGER_SOURCE_ADACTPPS 1
+ADC_TRIGGER_SOURCE_TMR0 2
+ADC_TRIGGER_SOURCE_TMR1 3
+ADC_TRIGGER_SOURCE_TMR2 4
+ADC_TRIGGER_SOURCE_TMR3 5
+ADC_TRIGGER_SOURCE_TMR4 6
+ADC_TRIGGER_SOURCE_TMR5 7
+ADC_TRIGGER_SOURCE_TMR6 8
+ADC_TRIGGER_SOURCE_SMT1 9
+ADC_TRIGGER_SOURCE_SMT2 10
+ADC_TRIGGER_SOURCE_CCP1 11
+ADC_TRIGGER_SOURCE_CCP2 12
+ADC_TRIGGER_SOURCE_CCP3 13
+ADC_TRIGGER_SOURCE_CCP4 14
+ADC_TRIGGER_SOURCE_CCP5 15
+ADC_TRIGGER_SOURCE_PWM6 16
+ADC_TRIGGER_SOURCE_PWM7 17
+ADC_TRIGGER_SOURCE_C1OUT 18
+ADC_TRIGGER_SOURCE_C2OUT 19
+ADC_TRIGGER_SOURCE_IOC 20
+ADC_TRIGGER_SOURCE_CLC1 21
+ADC_TRIGGER_SOURCE_CLC2 22
+ADC_TRIGGER_SOURCE_CLC3 23
+ADC_TRIGGER_SOURCE_CLC4 24
+ADC_TRIGGER_SOURCE_ADERR 28
+ADC_TRIGGER_SOURCE_ADRESH 29
+ADC_TRIGGER_SOURCE_ADPCH 31
+]
+"356
+[e E12236 . `uc
+ADC_FIRST_DERIVATIVE_OF_SINGLE_MEASUREMENT 0
+ADC_ACTUAL_RESULT_VS_SETPOINT 1
+ADC_ACTUAL_RESULT_VS_FILTERED_VALUE 2
+ADC_FIRST_DERIVATIVE_OF_FILTERED_VALUE 4
+ADC_FILTERED_VALUE_VS_SETPOINT 5
+]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"37 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _ADC_Logic ADC_Logic `(v  1 e 1 0 ]
+"63
+[v _main main `(i  1 e 2 0 ]
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"135
+[v _ADC_ChannelSelect ADC_ChannelSelect `(v  1 e 1 0 ]
+"140
+[v _ADC_ConversionStart ADC_ConversionStart `(v  1 e 1 0 ]
+"155
+[v _ADC_IsConversionDone ADC_IsConversionDone `(a  1 e 1 0 ]
+"160
+[v _ADC_ConversionResultGet ADC_ConversionResultGet `(s  1 e 2 0 ]
+"386
+[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
+"399
+[v _ADC_ThresholdISR ADC_ThresholdISR `(v  1 e 1 0 ]
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"40 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"59
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"96
+[v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
+"105
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+"109
+[v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"49 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"96
+[v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
+"120
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+"169
+[v _TMR1_TMRInterruptEnable TMR1_TMRInterruptEnable `(v  1 e 1 0 ]
+"179
+[v _TMR1_OverflowISR TMR1_OverflowISR `(v  1 e 1 0 ]
+"197
+[v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
+"207
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+"212
+[v _TMR1_DefaultGateCallback TMR1_DefaultGateCallback `(v  1 s 1 TMR1_DefaultGateCallback ]
+[s S91 . 1 `uc 1 INTEDG 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"364 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[u S96 . 1 `S91 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES96  1 e 1 @11 ]
+"670
+[v _TRISA TRISA `VEuc  1 e 1 @17 ]
+[s S333 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"687
+[u S342 . 1 `S333 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES342  1 e 1 @17 ]
+"732
+[v _TRISB TRISB `VEuc  1 e 1 @18 ]
+"794
+[v _TRISC TRISC `VEuc  1 e 1 @19 ]
+"856
+[v _TRISD TRISD `VEuc  1 e 1 @20 ]
+"918
+[v _TRISE TRISE `VEuc  1 e 1 @21 ]
+"950
+[v _LATA LATA `VEuc  1 e 1 @22 ]
+[s S282 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"967
+[u S291 . 1 `S282 1 . 1 0 ]
+[v _LATAbits LATAbits `VES291  1 e 1 @22 ]
+"1012
+[v _LATB LATB `VEuc  1 e 1 @23 ]
+"1074
+[v _LATC LATC `VEuc  1 e 1 @24 ]
+"1136
+[v _LATD LATD `VEuc  1 e 1 @25 ]
+"1198
+[v _LATE LATE `VEuc  1 e 1 @26 ]
+"1805
+[v _ADRESL ADRESL `VEuc  1 e 1 @140 ]
+"1825
+[v _ADRESH ADRESH `VEuc  1 e 1 @141 ]
+"1839
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @142 ]
+"1909
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @143 ]
+"1986
+[v _ADACCL ADACCL `VEuc  1 e 1 @144 ]
+"2056
+[v _ADACCH ADACCH `VEuc  1 e 1 @145 ]
+"2126
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
+[s S404 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"2162
+[s S412 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM 1 0 :2:2 
+]
+[s S416 . 1 `uc 1 nDONE 1 0 :1:0 
+]
+[s S418 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+`uc 1 ADFM1 1 0 :1:3 
+]
+[s S423 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM0 1 0 :1:2 
+`uc 1 ADFRM1 1 0 :1:3 
+]
+[u S428 . 1 `S404 1 . 1 0 `S412 1 . 1 0 `S416 1 . 1 0 `S418 1 . 1 0 `S423 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES428  1 e 1 @147 ]
+"2237
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @148 ]
+[s S618 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+"2251
+[u S624 . 1 `S618 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES624  1 e 1 @148 ]
+"2276
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @149 ]
+[s S516 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+"2298
+[s S521 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+]
+[u S529 . 1 `S516 1 . 1 0 `S521 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES529  1 e 1 @149 ]
+"2353
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @150 ]
+[s S555 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+"2374
+[s S563 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+[u S567 . 1 `S555 1 . 1 0 `S563 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES567  1 e 1 @150 ]
+"2424
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @151 ]
+[s S586 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 ADMACT 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+"2444
+[s S593 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+]
+[u S597 . 1 `S586 1 . 1 0 `S593 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES597  1 e 1 @151 ]
+"2494
+[v _ADCLK ADCLK `VEuc  1 e 1 @152 ]
+"2552
+[v _ADACT ADACT `VEuc  1 e 1 @153 ]
+"2604
+[v _ADREF ADREF `VEuc  1 e 1 @154 ]
+"2645
+[v _ADCAP ADCAP `VEuc  1 e 1 @155 ]
+"2697
+[v _ADPRE ADPRE `VEuc  1 e 1 @156 ]
+"2767
+[v _ADACQ ADACQ `VEuc  1 e 1 @157 ]
+"2837
+[v _ADPCH ADPCH `VEuc  1 e 1 @158 ]
+"2895
+[v _ADCNT ADCNT `VEuc  1 e 1 @268 ]
+"2965
+[v _ADRPT ADRPT `VEuc  1 e 1 @269 ]
+"3042
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @270 ]
+"3112
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @271 ]
+"3189
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @272 ]
+"3259
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @273 ]
+"3336
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @274 ]
+"3406
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @275 ]
+"3483
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @276 ]
+"3553
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @277 ]
+"3630
+[v _ADERRL ADERRL `VEuc  1 e 1 @278 ]
+"3700
+[v _ADERRH ADERRH `VEuc  1 e 1 @279 ]
+"6497
+[v _TMR1L TMR1L `VEuc  1 e 1 @524 ]
+"6667
+[v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
+"6787
+[v _T1CON T1CON `VEuc  1 e 1 @526 ]
+[s S781 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 RD16 1 0 :1:1 
+`uc 1 nSYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+]
+"6818
+[s S787 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 T1RD16 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+]
+[s S794 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S798 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[u S801 . 1 `S781 1 . 1 0 `S787 1 . 1 0 `S794 1 . 1 0 `S798 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES801  1 e 1 @526 ]
+"6883
+[v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
+[s S903 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GVAL 1 0 :1:2 
+`uc 1 GGO_nDONE 1 0 :1:3 
+`uc 1 GSPM 1 0 :1:4 
+`uc 1 GTM 1 0 :1:5 
+`uc 1 GPOL 1 0 :1:6 
+`uc 1 GE 1 0 :1:7 
+]
+"6917
+[s S911 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S919 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[u S922 . 1 `S903 1 . 1 0 `S911 1 . 1 0 `S919 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES922  1 e 1 @527 ]
+"7079
+[v _T1GATE T1GATE `VEuc  1 e 1 @528 ]
+"7245
+[v _T1CLK T1CLK `VEuc  1 e 1 @529 ]
+[s S78 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"21269
+[u S83 . 1 `S78 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES83  1 e 1 @1804 ]
+[s S129 . 1 `uc 1 ADIF 1 0 :1:0 
+`uc 1 ADTIF 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"21303
+[u S135 . 1 `S129 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES135  1 e 1 @1805 ]
+[s S169 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR3IF 1 0 :1:2 
+`uc 1 TMR4IF 1 0 :1:3 
+`uc 1 TMR5IF 1 0 :1:4 
+`uc 1 TMR6IF 1 0 :1:5 
+]
+"21426
+[u S176 . 1 `S169 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES176  1 e 1 @1808 ]
+[s S861 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+`uc 1 TMR3GIF 1 0 :1:1 
+`uc 1 TMR5GIF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CLC1IF 1 0 :1:4 
+`uc 1 CLC2IF 1 0 :1:5 
+`uc 1 CLC3IF 1 0 :1:6 
+`uc 1 CLC4IF 1 0 :1:7 
+]
+"21478
+[u S870 . 1 `S861 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES870  1 e 1 @1809 ]
+[s S114 . 1 `uc 1 ADIE 1 0 :1:0 
+`uc 1 ADTIE 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIE 1 0 :1:6 
+`uc 1 OSFIE 1 0 :1:7 
+]
+"21725
+[u S120 . 1 `S114 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES120  1 e 1 @1815 ]
+[s S152 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR3IE 1 0 :1:2 
+`uc 1 TMR4IE 1 0 :1:3 
+`uc 1 TMR5IE 1 0 :1:4 
+`uc 1 TMR6IE 1 0 :1:5 
+]
+"21848
+[u S159 . 1 `S152 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES159  1 e 1 @1818 ]
+[s S882 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+`uc 1 TMR3GIE 1 0 :1:1 
+`uc 1 TMR5GIE 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 CLC1IE 1 0 :1:4 
+`uc 1 CLC2IE 1 0 :1:5 
+`uc 1 CLC3IE 1 0 :1:6 
+`uc 1 CLC4IE 1 0 :1:7 
+]
+"21900
+[u S891 . 1 `S882 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES891  1 e 1 @1819 ]
+"23451
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"23591
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"23688
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"23739
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"23797
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"33682
+[v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
+[s S312 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 ANSA3 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+`uc 1 ANSA5 1 0 :1:5 
+`uc 1 ANSA6 1 0 :1:6 
+`uc 1 ANSA7 1 0 :1:7 
+]
+"33699
+[u S321 . 1 `S312 1 . 1 0 ]
+"33699
+"33699
+[v _ANSELAbits ANSELAbits `VES321  1 e 1 @3896 ]
+"33744
+[v _WPUA WPUA `VEuc  1 e 1 @3897 ]
+"33806
+[v _ODCONA ODCONA `VEuc  1 e 1 @3898 ]
+"33868
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @3899 ]
+"33930
+[v _INLVLA INLVLA `VEuc  1 e 1 @3900 ]
+"33992
+[v _IOCAP IOCAP `VEuc  1 e 1 @3901 ]
+"34054
+[v _IOCAN IOCAN `VEuc  1 e 1 @3902 ]
+"34116
+[v _IOCAF IOCAF `VEuc  1 e 1 @3903 ]
+"34302
+[v _ANSELB ANSELB `VEuc  1 e 1 @3907 ]
+"34364
+[v _WPUB WPUB `VEuc  1 e 1 @3908 ]
+"34426
+[v _ODCONB ODCONB `VEuc  1 e 1 @3909 ]
+"34488
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @3910 ]
+"34550
+[v _INLVLB INLVLB `VEuc  1 e 1 @3911 ]
+"34612
+[v _IOCBP IOCBP `VEuc  1 e 1 @3912 ]
+"34674
+[v _IOCBN IOCBN `VEuc  1 e 1 @3913 ]
+"34736
+[v _IOCBF IOCBF `VEuc  1 e 1 @3914 ]
+"34922
+[v _ANSELC ANSELC `VEuc  1 e 1 @3918 ]
+"34984
+[v _WPUC WPUC `VEuc  1 e 1 @3919 ]
+"35046
+[v _ODCONC ODCONC `VEuc  1 e 1 @3920 ]
+"35108
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @3921 ]
+"35170
+[v _INLVLC INLVLC `VEuc  1 e 1 @3922 ]
+"35232
+[v _IOCCP IOCCP `VEuc  1 e 1 @3923 ]
+"35294
+[v _IOCCN IOCCN `VEuc  1 e 1 @3924 ]
+"35356
+[v _IOCCF IOCCF `VEuc  1 e 1 @3925 ]
+"35542
+[v _ANSELD ANSELD `VEuc  1 e 1 @3929 ]
+"35604
+[v _WPUD WPUD `VEuc  1 e 1 @3930 ]
+"35666
+[v _ODCOND ODCOND `VEuc  1 e 1 @3931 ]
+"35728
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @3932 ]
+"35790
+[v _INLVLD INLVLD `VEuc  1 e 1 @3933 ]
+"35976
+[v _ANSELE ANSELE `VEuc  1 e 1 @3940 ]
+"36008
+[v _WPUE WPUE `VEuc  1 e 1 @3941 ]
+"36046
+[v _ODCONE ODCONE `VEuc  1 e 1 @3942 ]
+"36078
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @3943 ]
+"36110
+[v _INLVLE INLVLE `VEuc  1 e 1 @3944 ]
+"36148
+[v _IOCEP IOCEP `VEuc  1 e 1 @3945 ]
+"36169
+[v _IOCEN IOCEN `VEuc  1 e 1 @3946 ]
+"36190
+[v _IOCEF IOCEF `VEuc  1 e 1 @3947 ]
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_ConversionDoneCallback ADC_ConversionDoneCallback `*.37(v  1 s 2 ADC_ConversionDoneCallback ]
+"40
+[v _ADC_ThresholdCallback ADC_ThresholdCallback `*.37(v  1 s 2 ADC_ThresholdCallback ]
+"41
+[v _adc_busy_status adc_busy_status `a  1 s 1 adc_busy_status ]
+"38 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
+[v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 s 2 timer1ReloadVal ]
+"44
+[v _TMR1_OverflowCallback TMR1_OverflowCallback `*.37(v  1 s 2 TMR1_OverflowCallback ]
+"45
+[v _TMR1_GateCallback TMR1_GateCallback `*.37(v  1 s 2 TMR1_GateCallback ]
+"63 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"91
+} 0
+"169 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_TMRInterruptEnable TMR1_TMRInterruptEnable `(v  1 e 1 0 ]
+{
+"172
+} 0
+"96
+[v _TMR1_Start TMR1_Start `(v  1 e 1 0 ]
+{
+"99
+} 0
+"197
+[v _TMR1_OverflowCallbackRegister TMR1_OverflowCallbackRegister `(v  1 e 1 0 ]
+{
+[v TMR1_OverflowCallbackRegister@CallbackHandler CallbackHandler `*.37(v  1 p 2 0 ]
+"200
+} 0
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"49 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"38 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"127
+} 0
+"40 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"50
+} 0
+"105
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"107
+} 0
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"59 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"85
+} 0
+"179 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_OverflowISR TMR1_OverflowISR `(v  1 e 1 0 ]
+{
+"181
+[v TMR1_OverflowISR@CountCallBack CountCallBack `VEus  1 s 2 CountCallBack ]
+"195
+} 0
+"37 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _ADC_Logic ADC_Logic `(v  1 e 1 0 ]
+{
+"47
+[v ADC_Logic@rawResult rawResult `s  1 a 2 5 ]
+"50
+[v ADC_Logic@result3Bit result3Bit `uc  1 a 1 7 ]
+"57
+} 0
+"207 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
+{
+"210
+} 0
+"120
+[v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
+{
+"124
+[v TMR1_CounterSet@onState onState `a  1 a 1 2 ]
+"120
+[v TMR1_CounterSet@timerVal timerVal `us  1 p 2 0 ]
+"136
+} 0
+"155 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_IsConversionDone ADC_IsConversionDone `(a  1 e 1 0 ]
+{
+"158
+} 0
+"140
+[v _ADC_ConversionStart ADC_ConversionStart `(v  1 e 1 0 ]
+{
+"143
+} 0
+"160
+[v _ADC_ConversionResultGet ADC_ConversionResultGet `(s  1 e 2 0 ]
+{
+"163
+} 0
+"135
+[v _ADC_ChannelSelect ADC_ChannelSelect `(v  1 e 1 0 ]
+{
+[v ADC_ChannelSelect@channel channel `E12222  1 p 1 wreg ]
+[v ADC_ChannelSelect@channel channel `E12222  1 p 1 wreg ]
+"137
+[v ADC_ChannelSelect@channel channel `E12222  1 p 1 0 ]
+"138
+} 0
+"399
+[v _ADC_ThresholdISR ADC_ThresholdISR `(v  1 e 1 0 ]
+{
+"410
+} 0
+"386
+[v _ADC_ISR ADC_ISR `(v  1 e 1 0 ]
+{
+"397
+} 0

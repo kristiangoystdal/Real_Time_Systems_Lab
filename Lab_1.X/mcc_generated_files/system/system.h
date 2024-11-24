@@ -43,6 +43,8 @@
 #include "../system/pins.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
+#include "../adc/adc.h"
+#include "../timer/tmr1.h"
 
 /**
  * @ingroup systemdriver
