@@ -37,8 +37,11 @@
 /*
     Main application
 */
-#include "controller/LCD/lcd.h"
-#include "controller/LCD/I2C/i2c.h"
+
+void global_initialization() {
+    // TODO: Read EEPROM
+    // TODO: Initialize Clock
+}
 
 int main(void)
 {
@@ -58,15 +61,11 @@ int main(void)
 
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
-    OpenI2C();
-    LCDinit();
+
+    // TODO: Global Initialization
+    global_initialization();
 
     while(1)
     {
-        unsigned char c = 'a';
-        unsigned char pos = 0x80;
-        LCDWriteChar(c, pos);
-        pos = 0xc1;
-        LCDWriteStr("Temp", pos);
     }    
 }
