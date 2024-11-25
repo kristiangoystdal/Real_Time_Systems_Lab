@@ -37,6 +37,8 @@
 /*
     Main application
 */
+#include "controller/LCD/lcd.h"
+#include "controller/LCD/I2C/i2c.h"
 
 int main(void)
 {
@@ -56,14 +58,15 @@ int main(void)
 
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
-
-    IO_RA4_SetHigh();
+    OpenI2C();
+    LCDinit();
 
     while(1)
     {
-        if(IO_RB4_GetValue() == LOW){
-            IO_RA4_Toggle();
-            __delay_ms(500);
-        }
+        unsigned char c = 'a';
+        unsigned char pos = 0x80;
+        LCDWriteChar(c, pos);
+        pos = 0xc1;
+        LCDWriteStr("Temp", pos);
     }    
 }
