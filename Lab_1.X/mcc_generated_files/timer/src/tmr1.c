@@ -12,7 +12,7 @@
   * @version Package Version 5.0.0
   */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -178,18 +178,13 @@ void TMR1_TMRInterruptDisable(void)
 
 void TMR1_OverflowISR(void)
 {
-    static volatile uint16_t CountCallBack = 0;
     /* cppcheck-suppress misra-c2012-8.7 */
     TMR1_CounterSet(timer1ReloadVal);
 
-    // Callback function: This is called on every 3 pass.
-    if(++CountCallBack >= TMR1_INTERRUPT_TICKER_FACTOR)
-    { 
-        if(NULL != TMR1_OverflowCallback)
-        {
-            TMR1_OverflowCallback();
-        }
-        CountCallBack = 0;
+    // The ticker is set to 1 -> The callback function gets called every time this ISR executes.
+    if(NULL != TMR1_OverflowCallback)
+    {
+        TMR1_OverflowCallback();
     }
     PIR4bits.TMR1IF = 0;
 }
