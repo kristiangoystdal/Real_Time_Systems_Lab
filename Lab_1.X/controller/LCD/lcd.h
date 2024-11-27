@@ -27,8 +27,8 @@ int LCDbusy(void);
 
 void LCDpos(unsigned char l, unsigned char c);
 
-void LCDWriteChar(unsigned char c, unsigned char pos);
+void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c);
 
-void LCDWriteStr(char *c, unsigned char pos);
+void LCDWriteStr(char *s, unsigned char l, unsigned char c);
 
 #endif

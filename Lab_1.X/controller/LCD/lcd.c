@@ -133,14 +133,14 @@ void LCDpos(unsigned char l, unsigned char c)
   LCDcmd(p);
 }
 
-void LCDWriteChar(unsigned char c, unsigned char pos) {
-  LCDcmd(pos);
+void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c) {
+  LCDpos(l, c);
   while (LCDbusy());
-  LCDchar(c);
+  LCDchar(s);
 }
 
-void LCDWriteStr(char *c, unsigned char pos) {
-  LCDcmd(pos);
+void LCDWriteStr(char *s, unsigned char l, unsigned char c) {
+  LCDpos(l, c);
   while (LCDbusy());
-  LCDstr(c);
+  LCDstr(s);
 }
