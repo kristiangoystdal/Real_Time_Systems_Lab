@@ -15,6 +15,11 @@
 #define INITIAL_CLOCK_HOURS 0
 #define INITIAL_CLOCK_MINUTES 0
 
+#define MAX_TEMPERATURE 0
+#define MIN_TEMPERATURE 1
+#define MAX_LUMINOSITY 2
+#define MIN_LUMINOSITY 3
+
 typedef struct
 {
     uint8_t monitoringPeriod;
@@ -44,5 +49,6 @@ void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom);
 SensorsMaxMin get_max_min(void);
 uint8_t get_config_clock_hours(void);
 uint8_t get_config_clock_minutes(void);
+void get_measure(uint8_t index, char measure [17]);
 
 #endif

@@ -36,7 +36,7 @@
 #include "controller/EEPROM/EEPROM_controller.h"
 #include "state/state.h"
 #include "clock/clock.h"
-#include "mode/mode.h"
+#include "mode/normal_mode.h"
 /*
     Main application
 */
@@ -49,8 +49,8 @@ void global_initialization() {
         set_default();
     }
     set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
-    // TODO: Initializa LED2
-    mode_initialization(NORMAL_MODE);
+    // TODO: Initialize LED2
+    normal_mode_initialization();
 }
 
 int main(void)
