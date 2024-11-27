@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: Lab_1
-creation_date: 2024-11-24T16:36:38.753Z[Europe/Lisbon]
+creation_date: 2024-11-27T10:59:50.429Z[Europe/Lisbon]
 operating_system: Mac OS X
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -24,6 +24,7 @@ modules:
 - {name: '@mchp-mcc/pic16-pin-manager', type: MELODY, version: 3.6.1}
 - {name: '@mchp-mcc/pin-content-processor', type: MELODY, version: 3.9.0}
 - {name: '@mchp-mcc/scf-pic8-interrupt-v2', type: MELODY, version: 5.2.12}
+- {name: '@mchp-mcc/scf-pic8-memory-v2', type: MELODY, version: 5.0.2}
 - {name: '@mchp-mcc/scf-pic8-mssp-v1', type: MELODY, version: 7.0.2}
 - {name: '@mchp-mcc/scf-pic8-osc-v1', type: MELODY, version: 4.3.7}
 - {name: '@mchp-mcc/scf-pic8-tmr1-v1', type: MELODY, version: 5.0.0}

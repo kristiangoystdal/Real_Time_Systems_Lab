@@ -1,4 +1,4 @@
-#include "mcc_generated_files/system/system.h"
+#include "../mcc_generated_files/system/system.h"
 
 #define MONITORING_PERIOD_ADDR 0x7000
 #define ALARM_DURATION_ADDR 0x7001
