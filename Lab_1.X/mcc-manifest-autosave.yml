@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: Lab_1
-creation_date: 2024-11-27T10:59:50.435Z[Europe/Lisbon]
-operating_system: Mac OS X
+creation_date: 2024-11-27T12:02:38.453Z[Europe/London]
+operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
 device_name: PIC16F18875
@@ -23,6 +23,7 @@ modules:
 - {name: '@mchp-mcc/pic16-configuration-bits-v1', type: MELODY, version: 4.1.4}
 - {name: '@mchp-mcc/pic16-pin-manager', type: MELODY, version: 3.6.1}
 - {name: '@mchp-mcc/pin-content-processor', type: MELODY, version: 3.9.0}
+- {name: '@mchp-mcc/scf-pic8-adcc-v2', type: MELODY, version: 5.0.0}
 - {name: '@mchp-mcc/scf-pic8-interrupt-v2', type: MELODY, version: 5.2.12}
 - {name: '@mchp-mcc/scf-pic8-memory-v2', type: MELODY, version: 5.0.2}
 - {name: '@mchp-mcc/scf-pic8-mssp-v1', type: MELODY, version: 7.0.2}

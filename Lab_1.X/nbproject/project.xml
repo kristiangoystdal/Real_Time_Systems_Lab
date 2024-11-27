@@ -9,7 +9,9 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>CONTROLLERS</sourceRootElem>
+                <sourceRootElem>controller</sourceRootElem>
+                <sourceRootElem>mode</sourceRootElem>
+                <sourceRootElem>clock</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
