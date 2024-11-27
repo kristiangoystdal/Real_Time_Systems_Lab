@@ -20818,7 +20818,7 @@ void CLOCK_Initialize(void);
 # 40 "./mcc_generated_files/system/config_bits.h" 2
 # 43 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 115 "./mcc_generated_files/system/../system/pins.h"
+# 96 "./mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -21049,324 +21049,13 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "./mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 44 "./mcc_generated_files/system/system.h" 2
-# 54 "./mcc_generated_files/system/system.h"
-void SYSTEM_Initialize(void);
-# 35 "main.c" 2
-
-
-
-
-
-
-
-
-adc_result_t ADC_ConversionResultGet(void);
-
-
-
-
-
-
-
-void ADC_ConversionDoneCallbackRegister(void (*callback)(void));
-
-
-
-
-
-
-
-adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
-
-
-
-
-
-
-
-uint8_t ADC_ResolutionGet(void);
-# 165 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_IsBusy(void);
-
-
-
-
-
-
-
-void ADC_BusyStatusSet(_Bool status);
-
-
-
-
-
-
-
-void ADC_ConversionStop(void);
-
-
-
-
-
-
-
-void ADC_SampleRepeatCountSet(adc_repeat_count_t repeatCount);
-
-
-
-
-
-
-
-void ADC_ComputationModeSet(adc_computation_mode_t computationMode);
-
-
-
-
-
-
-
-void ADC_UpperThresholdSet(adc_threshold_t upperThreshold);
-
-
-
-
-
-
-
-void ADC_LowerThresholdSet(adc_threshold_t lowerThreshold);
-
-
-
-
-
-
-
-void ADC_ThresholdModeSet(adc_threshold_mode_t thresholdMode);
-
-
-
-
-
-
-
-void ADC_ThresholdInterruptEnable(void);
-
-
-
-
-
-
-
-void ADC_ThresholdInterruptDisable(void);
-
-
-
-
-
-
-
-adc_accumulate_t ADC_AccumulatedResultGet(void);
-
-
-
-
-
-
-
-void ADC_ThresholdCallbackRegister(void (*callback)(void));
-# 262 "./mcc_generated_files/system/../adc/adc.h"
-void ADC_StopOnInterruptEnable(void);
-
-
-
-
-
-
-
-void ADC_StopOnInterruptDisable(void);
-
-
-
-
-
-
-
-void ADC_SampleCapacitorDischarge(void);
-
-
-
-
-
-
-
-void ADC_AcquisitionTimeSet(uint8_t acquisitionValue);
-
-
-
-
-
-
-
-void ADC_PrechargeTimeSet(uint8_t prechargeTime);
-
-
-
-
-
-
-
-adc_repeat_count_t ADC_CurrentConversionCountGet(void);
-
-
-
-
-
-
-
-void ADC_AccumulatorClear(void);
-# 319 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_IsAccumulatorClearComplete(void);
-# 328 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_HasAccumulatorOverflowed(void);
-# 337 "./mcc_generated_files/system/../adc/adc.h"
-adc_result_t ADC_FilterValueGet(void);
-
-
-
-
-
-
-
-adc_result_t ADC_PreviousResultGet(void);
-
-
-
-
-
-
-
-void ADC_SetPointDefine(adc_threshold_t setPoint);
-
-
-
-
-
-
-
-adc_result_t ADC_ErrorCalculationGet(void);
-
-
-
-
-
-
-
-void ADC_DoubleSamplingEnable(void);
-
-
-
-
-
-
-
-void ADC_DoubleSamplingDisable(void);
-
-
-
-
-
-
-
-void ADC_ContinuousConversionEnable(void);
-
-
-
-
-
-
-
-void ADC_ContinuousConversionDisable(void);
-# 402 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_IsErrorGreaterThanUpperThreshold(void);
-# 411 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_IsErrorLesserThanLowerThreshold(void);
-
-
-
-
-
-
-
-adc_conversion_stage_t ADC_ConversionStageStatusGet(void);
-
-
-
-
-
-
-
-void ADC_AutoTriggerSourceSet(adc_trigger_source_t triggerSource);
-
-
-
-
-
-
-
-void ADC_ErrorCalculationModeSet(adc_calculation_mode_t errorCalculationMode);
-
-
-
-
-
-
-
-void ADC_CalculationRightShiftSet(uint8_t rightShiftValue);
-
-
-
-
-
-
-
-void ADC_ConversionDoneInterruptFlagClear(void);
-# 460 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_IsConversionDoneInterruptFlagSet(void);
-
-
-
-
-
-
-
-void ADC_ThresholdInterruptFlagClear(void);
-# 477 "./mcc_generated_files/system/../adc/adc.h"
-_Bool ADC_IsThresholdInterruptFlagSet(void);
-
-
-
-
-
-
-
-void ADC_ISR(void);
-
-
-
-
-
-
-
-void ADC_ThresholdISR(void);
-# 46 "./mcc_generated_files/system/system.h" 2
+# 47 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../timer/tmr1.h" 1
 # 40 "./mcc_generated_files/system/../timer/tmr1.h"
 # 1 "./mcc_generated_files/system/../timer/tmr1_deprecated.h" 1
 # 40 "./mcc_generated_files/system/../timer/tmr1.h" 2
-# 180 "./mcc_generated_files/system/../timer/tmr1.h"
+# 175 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Initialize(void);
 
 
@@ -21376,15 +21065,15 @@ void TMR1_Initialize(void);
 
 
 void TMR1_Deinitialize(void);
-# 197 "./mcc_generated_files/system/../timer/tmr1.h"
+# 192 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Start(void);
-# 206 "./mcc_generated_files/system/../timer/tmr1.h"
+# 201 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Stop(void);
-# 215 "./mcc_generated_files/system/../timer/tmr1.h"
+# 210 "./mcc_generated_files/system/../timer/tmr1.h"
 uint16_t TMR1_CounterGet(void);
-# 224 "./mcc_generated_files/system/../timer/tmr1.h"
+# 219 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_CounterSet(uint16_t timerVal);
-# 233 "./mcc_generated_files/system/../timer/tmr1.h"
+# 228 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_PeriodSet(uint16_t periodVal);
 
 
@@ -21394,7 +21083,7 @@ void TMR1_PeriodSet(uint16_t periodVal);
 
 
 uint16_t TMR1_PeriodGet(void);
-# 250 "./mcc_generated_files/system/../timer/tmr1.h"
+# 245 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Reload(void);
 
 
@@ -21404,9 +21093,9 @@ void TMR1_Reload(void);
 
 
 uint16_t TMR1_MaxCountGet(void);
-# 267 "./mcc_generated_files/system/../timer/tmr1.h"
+# 262 "./mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_SinglePulseAcquisitionStart(void);
-# 276 "./mcc_generated_files/system/../timer/tmr1.h"
+# 271 "./mcc_generated_files/system/../timer/tmr1.h"
 uint8_t TMR1_GateStateGet(void);
 
 
@@ -21448,64 +21137,33 @@ void TMR1_OverflowISR(void);
 
 
  void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
-# 47 "./mcc_generated_files/system/system.h" 2
-# 56 "./mcc_generated_files/system/system.h"
+# 49 "./mcc_generated_files/system/system.h" 2
+
+
+
+
+
+
+
+
 void SYSTEM_Initialize(void);
-# 35 "main.c" 2
+# 36 "main.c" 2
 
 
-void ADC_Logic() {
-
-  ADC_ChannelSelect(ADC_CHANNEL_ANA0);
-  ADC_ConversionStart();
 
 
-  while (!ADC_IsConversionDone())
-    ;
 
-
-  adc_result_t rawResult = ADC_ConversionResultGet();
-
-
-  uint8_t result3Bit = rawResult >> 7;
-
-  if (result3Bit == 7) {
+int main(void)
+{
+    SYSTEM_Initialize();
+# 60 "main.c"
     do { LATAbits.LATA4 = 1; } while(0);
-  } else {
-    do { LATAbits.LATA4 = 0; } while(0);
-  }
-}
 
-
-
-
-
-int main(void) {
-  SYSTEM_Initialize();
-
-
-
-
-
-
-  (INTCONbits.GIE = 1);
-
-
-
-
-
-  (INTCONbits.PEIE = 1);
-
-
-
-
-  do { ANSELAbits.ANSA0 = 1; } while(0);
-  do { TRISAbits.TRISA0 = 1; } while(0);
-
-  TMR1_TMRInterruptEnable();
-  TMR1_OverflowCallbackRegister(ADC_Logic);
-  TMR1_Start();
-
-  while (1) {
-  }
+    while(1)
+    {
+        if(PORTBbits.RB4 == 0){
+            do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0);
+            _delay((unsigned long)((500)*(32000000U/4000.0)));
+        }
+    }
 }
