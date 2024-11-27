@@ -1,4 +1,7 @@
-#include "../mcc_generated_files/system/system.h"
+#ifndef __EEPROM_H
+#define __EEPROM_H
+
+#include "../../mcc_generated_files/system/system.h"
 
 #define MONITORING_PERIOD_ADDR 0x7000
 #define ALARM_DURATION_ADDR 0x7001
@@ -47,3 +50,5 @@ Configs ReadConfigs();
 void WriteConfigs(Configs configs);
 void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
 SensorsMaxMin ReadMaxMin();
+
+#endif
