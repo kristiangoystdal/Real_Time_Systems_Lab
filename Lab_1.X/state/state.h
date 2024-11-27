@@ -3,6 +3,17 @@
 
 #include "stdint.h"
 
+#define INITIAL_MONITORING_PERIOD 3
+#define INITIAL_ALARM_DURATION 5
+#define INITIAL_ALARM_FLAG 0
+#define INITIAL_ALARM_HOURS 12
+#define INITIAL_ALARM_MINUTES 0
+#define INITIAL_ALARM_SECONDS 0
+#define INITIAL_THRESHOLD_TEMP 25
+#define INITIAL_THRESHOLD_LUM 5
+#define INITIAL_CLOCK_HOURS 0
+#define INITIAL_CLOCK_MINUTES 0
+
 typedef struct
 {
     uint8_t monitoringPeriod;
@@ -28,6 +39,7 @@ typedef struct
 void set_configs(Configs configs);
 void set_default_configs();
 Configs get_configs();
+void set_default_max_min();
 void set_max_min(SensorsMaxMin sensorsMaxMin);
 SensorsMaxMin get_max_min();
 
