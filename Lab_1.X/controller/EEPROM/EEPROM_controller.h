@@ -2,6 +2,7 @@
 #define __EEPROM_H
 
 #include "../../mcc_generated_files/system/system.h"
+#include "../../state/state.h"
 
 #define MONITORING_PERIOD_ADDR 0x7000
 #define ALARM_DURATION_ADDR 0x7001
@@ -22,30 +23,8 @@
 
 #define MAGIC_WORD 42
 
-typedef struct
-{
-    uint8_t monitoringPeriod;
-    uint8_t alarmDuration;
-    uint8_t alarmFlag;
-    uint8_t alarmHours;
-    uint8_t alarmMinutes;
-    uint8_t alarmSeconds;
-    uint8_t thresholdTemp;
-    uint8_t thresholdLum;
-    uint8_t clockHours;
-    uint8_t clockMinutes;
-} Configs;
-
-typedef struct
-{
-    uint8_t maxTemp[5];
-    uint8_t minTemp[5];
-    uint8_t maxLum[5];
-    uint8_t minLum[5];
-} SensorsMaxMin;
-
-uint8_t CalculateChecksum(Configs configs);
-bool ConfigIsUsable();
+uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
+bool MemIsUsable();
 Configs ReadConfigs();
 void WriteConfigs(Configs configs);
 void WriteMaxMin(SensorsMaxMin sensorsMaxMin);

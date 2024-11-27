@@ -1,6 +1,6 @@
 #include "EEPROM_controller.h"
 
-uint8_t CalculateChecksum(Configs configs)
+uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
 {
     uint8_t checksum = 0;
     checksum += configs.monitoringPeriod;
@@ -13,12 +13,16 @@ uint8_t CalculateChecksum(Configs configs)
     checksum += configs.thresholdLum;
     checksum += configs.clockHours;
     checksum += configs.clockMinutes;
+    checksum += sensorsMaxMin.maxLum;
+    checksum += sensorsMaxMin.maxTemp;
+    checksum += sensorsMaxMin.minLum;
+    checksum += sensorsMaxMin.minTemp;
     return checksum;
 }
 
-bool ConfigIsUsable()
+bool MemIsUsable()
 {
-    uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs());
+    uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs(), ReadMaxMin());
     uint8_t readMagicWord = EEPROM_Read(MAGIC_WORD_ADDR);
     uint8_t readChecksum = EEPROM_Read(CHECKSUM_ADDR);
     if ((readChecksum == calculatedChecksum) && (readMagicWord == MAGIC_WORD))

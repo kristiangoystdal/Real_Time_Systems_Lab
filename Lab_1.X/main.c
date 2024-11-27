@@ -33,13 +33,18 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-
+#include "controller/EEPROM/EEPROM_controller.h"
+#include "state/state.h"
 /*
     Main application
 */
 
 void global_initialization() {
     // TODO: Read EEPROM
+    if(MemIsUsable()) {
+        Configs configs = ReadConfigs();
+        set_configs(configs);
+    }
     // TODO: Initialize Clock
 }
 
