@@ -33,28 +33,7 @@
     THIS SOFTWARE.
 */
 #include "mcc_generated_files/system/system.h"
-
-void ADC_Logic() {
-  // Start ADC conversion on RA0
-  ADC_ChannelSelect(ADC_CHANNEL_ANA0); // Select RA0 (AN0) as input channel
-  ADC_ConversionStart();               // Start ADC conversion
-
-  // Wait for the conversion to complete
-  while (!ADC_IsConversionDone())
-    ;
-
-  // Get the raw ADC result (10-bit resolution)
-  adc_result_t rawResult = ADC_ConversionResultGet();
-
-  // Convert the raw ADC value to 3 bits (0–7)
-  uint8_t result3Bit = rawResult >> 7;
-
-  if (result3Bit == 7) {
-    IO_RA4_SetHigh();
-  } else {
-    IO_RA4_SetLow();
-  }
-}
+#include "src/luminosity/luminosity.h"
 
 /*
     Main application
@@ -79,11 +58,8 @@ int main(void) {
   // Disable the Peripheral Interrupts
   // INTERRUPT_PeripheralInterruptDisable();
 
-  IO_RA0_SetAnalogMode();   // Set RA0 to analog mode
-  IO_RA0_SetDigitalInput(); // Ensure RA0 is configured as input
-
   TMR1_TMRInterruptEnable();
-  TMR1_OverflowCallbackRegister(ADC_Logic);
+  TMR1_OverflowCallbackRegister(readLum);
   TMR1_Start();
 
   while (1) {
