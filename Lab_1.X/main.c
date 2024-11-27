@@ -35,17 +35,22 @@
 #include "mcc_generated_files/system/system.h"
 #include "controller/EEPROM/EEPROM_controller.h"
 #include "state/state.h"
+#include "clock/clock.h"
+#include "mode/mode.h"
 /*
     Main application
 */
 
 void global_initialization() {
-    // TODO: Read EEPROM
     if(MemIsUsable()) {
-        Configs configs = ReadConfigs();
-        set_configs(configs);
+        set_configs(ReadConfigs(), false);
+        set_max_min(ReadMaxMin(), false);
+    } else {
+        set_default();
     }
-    // TODO: Initialize Clock
+    set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+    // TODO: Initializa LED2
+    mode_initialization(NORMAL_MODE);
 }
 
 int main(void)

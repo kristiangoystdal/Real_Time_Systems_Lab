@@ -1,16 +1,34 @@
 
 #include "state.h"
-#include "EEPROM_controller.h"
+#include "../controller/EEPROM/EEPROM_controller.h"
+#include <string.h>
 
 static Configs _configs;
 static SensorsMaxMin _sensorsMaxMin;
 
-void set_configs(Configs configs) {
+void set_configs(Configs configs, bool write_eeprom) {
   _configs = configs;
-  WriteConfigs(configs);
+  if(write_eeprom) {
+    WriteConfigs(configs);
+    WriteChecksum(configs, _sensorsMaxMin);
+  }
 }
 
-void set_default_configs() {
+Configs get_configs(){
+  return _configs;
+}
+
+void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
+  _sensorsMaxMin = sensorsMaxMin;
+  if(write_eeprom) {
+    WriteMaxMin(sensorsMaxMin);
+    WriteChecksum(_configs, sensorsMaxMin);
+  }
+}
+
+void set_default() {
+  memset(&_sensorsMaxMin, 0, sizeof(_sensorsMaxMin));
+  WriteMaxMin(_sensorsMaxMin);
   _configs.monitoringPeriod = INITIAL_MONITORING_PERIOD;
   _configs.alarmDuration = INITIAL_ALARM_DURATION;
   _configs.alarmFlag = INITIAL_ALARM_FLAG;
@@ -24,20 +42,14 @@ void set_default_configs() {
   WriteConfigs(_configs);
 }
 
-Configs get_configs(){
-  return _configs;
-}
-
-void set_max_min(SensorsMaxMin sensorsMaxMin) {
-  _sensorsMaxMin = sensorsMaxMin;
-  WriteMaxMin(sensorsMaxMin);
-}
-
-void set_default_max_min() {
-  memset(&_sensorsMaxMin, 0, 20);
-  WriteMaxMin(_sensorsMaxMin);
-}
-
 SensorsMaxMin get_max_min() {
   return _sensorsMaxMin;
+}
+
+uint8_t get_config_clock_hours() {
+  return _configs.clockHours;
+}
+
+uint8_t get_config_clock_minutes() {
+  return _configs.clockMinutes;
 }

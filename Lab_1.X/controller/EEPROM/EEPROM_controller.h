@@ -24,10 +24,11 @@
 #define MAGIC_WORD 42
 
 uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
-bool MemIsUsable();
-Configs ReadConfigs();
+void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
+bool MemIsUsable(void);
+Configs ReadConfigs(void);
 void WriteConfigs(Configs configs);
 void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
-SensorsMaxMin ReadMaxMin();
+SensorsMaxMin ReadMaxMin(void);
 
 #endif

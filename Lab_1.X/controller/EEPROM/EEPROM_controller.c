@@ -13,11 +13,18 @@ uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
     checksum += configs.thresholdLum;
     checksum += configs.clockHours;
     checksum += configs.clockMinutes;
-    checksum += sensorsMaxMin.maxLum;
-    checksum += sensorsMaxMin.maxTemp;
-    checksum += sensorsMaxMin.minLum;
-    checksum += sensorsMaxMin.minTemp;
+    for(uint8_t i = 0; i < 5; i++) {
+        checksum += sensorsMaxMin.maxLum[i];
+        checksum += sensorsMaxMin.maxTemp[i];
+        checksum += sensorsMaxMin.minLum[i];
+        checksum += sensorsMaxMin.minTemp[i];
+    }
     return checksum;
+}
+
+void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin) {
+    uint8_t calculatedChecksum = CalculateChecksum(configs, sensorsMaxMin);
+    EEPROM_Write(CHECKSUM_ADDR, calculatedChecksum);
 }
 
 bool MemIsUsable()
@@ -53,9 +60,7 @@ Configs ReadConfigs()
 
 void WriteConfigs(Configs configs)
 {
-    uint8_t calculatedChecksum = CalculateChecksum(configs);
     EEPROM_Write(MAGIC_WORD_ADDR, MAGIC_WORD);
-    EEPROM_Write(CHECKSUM_ADDR, calculatedChecksum);
     EEPROM_Write(MONITORING_PERIOD_ADDR, configs.monitoringPeriod);
     EEPROM_Write(ALARM_DURATION_ADDR, configs.alarmDuration);
     EEPROM_Write(ALARM_FLAG_ADDR, configs.alarmFlag);

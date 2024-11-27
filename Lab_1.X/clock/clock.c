@@ -50,7 +50,7 @@ uint8_t increment_hours() {
   return ONLY_HOURS;
 }
 
-uint8_t get_clock(uint8_t precision, char* clock) {
+uint8_t get_clock(uint8_t precision, char clock[9]) {
   switch (precision) {
     case ONLY_SECONDS:
       clock[0] = 0x30 + _seconds/10;

@@ -2,6 +2,7 @@
 #define __STATE_H
 
 #include "stdint.h"
+#include "stdbool.h"
 
 #define INITIAL_MONITORING_PERIOD 3
 #define INITIAL_ALARM_DURATION 5
@@ -36,11 +37,12 @@ typedef struct
     uint8_t minLum[5];
 } SensorsMaxMin;
 
-void set_configs(Configs configs);
-void set_default_configs();
-Configs get_configs();
-void set_default_max_min();
-void set_max_min(SensorsMaxMin sensorsMaxMin);
-SensorsMaxMin get_max_min();
+void set_default(void);
+void set_configs(Configs configs, bool write_eeprom);
+Configs get_configs(void);
+void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom);
+SensorsMaxMin get_max_min(void);
+uint8_t get_config_clock_hours(void);
+uint8_t get_config_clock_minutes(void);
 
 #endif
