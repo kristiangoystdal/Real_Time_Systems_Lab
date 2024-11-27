@@ -38,6 +38,11 @@
     Main application
 */
 
+void global_initialization() {
+    // TODO: Read EEPROM
+    // TODO: Initialize Clock
+}
+
 int main(void)
 {
     SYSTEM_Initialize();
@@ -57,13 +62,10 @@ int main(void)
     // Disable the Peripheral Interrupts 
     //INTERRUPT_PeripheralInterruptDisable(); 
 
-    IO_RA4_SetHigh();
+    // TODO: Global Initialization
+    global_initialization();
 
     while(1)
     {
-        if(IO_RB4_GetValue() == LOW){
-            IO_RA4_Toggle();
-            __delay_ms(500);
-        }
     }    
 }
