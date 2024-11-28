@@ -20,6 +20,9 @@
 #define MAX_LUMINOSITY 2
 #define MIN_LUMINOSITY 3
 
+#define NORMAL_MODE 0
+#define CONFIGURATION_MODE 1
+
 typedef struct
 {
     uint8_t monitoringPeriod;
@@ -50,5 +53,8 @@ SensorsMaxMin get_max_min(void);
 uint8_t get_config_clock_hours(void);
 uint8_t get_config_clock_minutes(void);
 void get_measure(uint8_t index, char measure [17]);
+void set_mode(uint8_t mode);
+uint8_t get_mode(void);
+bool mode_has_changed(void);
 
 #endif

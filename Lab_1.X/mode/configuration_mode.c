@@ -1,8 +1,9 @@
 
 #include "configuration_mode.h"
+#include "../controller/LED/led.h"
 
 void configuration_mode_initialization() {
-
+  turn_off(2);
 }
 
 void configuration_mode_timer_handler() {

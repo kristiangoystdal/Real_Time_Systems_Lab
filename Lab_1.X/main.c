@@ -38,6 +38,7 @@
 #include "state/state.h"
 #include "clock/clock.h"
 #include "mode/normal_mode.h"
+#include "mode/configuration_mode.h"
 /*
     Main application
 */
@@ -50,8 +51,7 @@ void global_initialization() {
         set_default();
     }
     set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
-    // TODO: Initialize LED2
-    normal_mode_initialization();
+    set_mode(NORMAL_MODE);
 }
 
 int main(void) {
@@ -76,12 +76,15 @@ int main(void) {
   // TODO: Global Initialization
   global_initialization();
 
-  turn_on(3);
   while (1) {
-    toggle(0);
-    toggle(1);
-    toggle(2);
-    toggle(3);
-    __delay_ms(1000);
+    if(mode_has_changed()) {
+      uint8_t mode = get_mode();
+      if(mode == NORMAL_MODE) {
+        normal_mode_initialization();
+      } else {
+        configuration_mode_initialization();
+      }
+    }
+    SLEEP();
   }
 }

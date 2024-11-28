@@ -5,6 +5,8 @@
 
 static Configs _configs;
 static SensorsMaxMin _sensorsMaxMin;
+static uint8_t _mode;
+static bool _mode_has_changed;
 
 void set_configs(Configs configs, bool write_eeprom) {
   _configs = configs;
@@ -89,4 +91,18 @@ void get_measure(uint8_t index, char measure [17] ) {
       measure_to_string(_sensorsMaxMin.minLum, measure);
       return;
   }
+}
+
+void set_mode(uint8_t mode) {
+  _mode = mode;
+  _mode_has_changed = true;
+}
+
+uint8_t get_mode(void) {
+  _mode_has_changed = false;
+  return _mode;
+}
+
+bool mode_has_changed(void) {
+  return _mode_has_changed;
 }
