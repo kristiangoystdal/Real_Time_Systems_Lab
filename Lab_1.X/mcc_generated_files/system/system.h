@@ -43,9 +43,11 @@
 #include "../system/pins.h"
 #include "../i2c_host/mssp1.h"
 #include "../nvm/nvm.h"
+#include "../pwm/pwm6.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 #include "../timer/tmr1.h"
+#include "../timer/tmr6.h"
 
 /**
  * @ingroup systemdriver

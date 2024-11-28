@@ -20807,7 +20807,7 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 2 3
 # 39 "mcc_generated_files/system/src/../pins.h" 2
-# 96 "mcc_generated_files/system/src/../pins.h"
+# 191 "mcc_generated_files/system/src/../pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -20827,14 +20827,14 @@ void PIN_MANAGER_Initialize(void)
 
     LATA = 0x0;
     LATB = 0x0;
-    LATC = 0x0;
+    LATC = 0x18;
     LATD = 0x0;
     LATE = 0x0;
 
 
 
 
-    TRISA = 0xEF;
+    TRISA = 0xF;
     TRISB = 0xFF;
     TRISC = 0xFF;
     TRISD = 0xFF;
@@ -20843,9 +20843,9 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    ANSELA = 0xEF;
+    ANSELA = 0xF;
     ANSELB = 0xEF;
-    ANSELC = 0xFF;
+    ANSELC = 0xE7;
     ANSELD = 0xFF;
     ANSELE = 0x7;
 
@@ -20883,7 +20883,15 @@ void PIN_MANAGER_Initialize(void)
     INLVLC = 0xFF;
     INLVLD = 0xFF;
     INLVLE = 0x7;
-# 113 "mcc_generated_files/system/src/pins.c"
+
+
+
+
+    SSP1CLKPPS = 0x13;
+    RC3PPS = 0x14;
+    SSP1DATPPS = 0x14;
+    RC4PPS = 0x15;
+# 117 "mcc_generated_files/system/src/pins.c"
     IOCAP = 0x0;
     IOCAN = 0x0;
     IOCAF = 0x0;

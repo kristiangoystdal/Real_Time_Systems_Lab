@@ -1,0 +1,57 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"4 mode/normal_mode.h
+[; ;mode/normal_mode.h: 4: void normal_mode_initialization();
+[v _normal_mode_initialization `(v ~T0 @X0 0 e? ]
+"4 mode/configuration_mode.h
+[; ;mode/configuration_mode.h: 4: void configuration_mode_initialization();
+[v _configuration_mode_initialization `(v ~T0 @X0 0 e? ]
+"6 mode/mode.c
+[; ;mode/mode.c: 6: void mode_initialization(uint8_t mode) {
+[v _mode_initialization `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _mode_initialization ]
+[v _mode `uc ~T0 @X0 1 r1 ]
+[f ]
+"7
+[; ;mode/mode.c: 7:   if(mode == 0) {
+[e $ ! == -> _mode `i -> 0 `i 2  ]
+{
+"8
+[; ;mode/mode.c: 8:     normal_mode_initialization();
+[e ( _normal_mode_initialization ..  ]
+"9
+[; ;mode/mode.c: 9:     return;
+[e $UE 1  ]
+"10
+[; ;mode/mode.c: 10:   }
+}
+[e :U 2 ]
+"11
+[; ;mode/mode.c: 11:   configuration_mode_initialization();
+[e ( _configuration_mode_initialization ..  ]
+"12
+[; ;mode/mode.c: 12: }
+[e :UE 1 ]
+}
+"14
+[; ;mode/mode.c: 14: void set_interrupts_handler(uint8_t mode) {
+[v _set_interrupts_handler `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _set_interrupts_handler ]
+[v _mode `uc ~T0 @X0 1 r1 ]
+[f ]
+"15
+[; ;mode/mode.c: 15:   if(mode == 0) {
+[e $ ! == -> _mode `i -> 0 `i 4  ]
+{
+"16
+[; ;mode/mode.c: 16:     return;
+[e $UE 3  ]
+"17
+[; ;mode/mode.c: 17:   }
+}
+[e :U 4 ]
+"18
+[; ;mode/mode.c: 18: }
+[e :UE 3 ]
+}

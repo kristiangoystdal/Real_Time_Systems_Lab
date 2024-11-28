@@ -9,6 +9,9 @@ mcc_generated_files/system/src/../../i2c_host/i2c_host_event_types.h  \
 mcc_generated_files/system/src/../../i2c_host/i2c_host_types.h  \
 mcc_generated_files/system/src/../../i2c_host/i2c_host_interface.h  \
 mcc_generated_files/system/src/../../nvm/nvm.h  \
+mcc_generated_files/system/src/../../pwm/pwm6.h  \
 mcc_generated_files/system/src/../../system/interrupt.h  \
 mcc_generated_files/system/src/../../timer/tmr1.h  \
-mcc_generated_files/system/src/../../timer/tmr1_deprecated.h 
+mcc_generated_files/system/src/../../timer/tmr1_deprecated.h  \
+mcc_generated_files/system/src/../../timer/tmr6.h  \
+mcc_generated_files/system/src/../../timer/tmr6_deprecated.h 

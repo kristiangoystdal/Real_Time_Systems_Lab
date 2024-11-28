@@ -33,4 +33,4 @@ MP_CC_DIR="/Applications/microchip/xc8/v2.50/bin"
 MP_AS_DIR="/Applications/microchip/xc8/v2.50/bin"
 MP_LD_DIR="/Applications/microchip/xc8/v2.50/bin"
 MP_AR_DIR="/Applications/microchip/xc8/v2.50/bin"
-DFP_DIR=/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387
+DFP_DIR=/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389

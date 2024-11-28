@@ -20832,7 +20832,7 @@ void CLOCK_Initialize(void);
 # 40 "mcc_generated_files/system/src/../../system/config_bits.h" 2
 # 43 "mcc_generated_files/system/src/../../system/system.h" 2
 # 1 "mcc_generated_files/system/src/../../system/../system/pins.h" 1
-# 96 "mcc_generated_files/system/src/../../system/../system/pins.h"
+# 191 "mcc_generated_files/system/src/../../system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -21050,6 +21050,18 @@ eeprom_data_t EEPROM_Read(eeprom_address_t address);
 # 230 "mcc_generated_files/system/src/../../system/../nvm/nvm.h"
 void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
 # 46 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../pwm/pwm6.h" 1
+# 57 "mcc_generated_files/system/src/../../system/../pwm/pwm6.h"
+ void PWM6_Initialize(void);
+
+
+
+
+
+
+
+ void PWM6_LoadDutyValue(uint16_t dutyValue);
+# 47 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 1
@@ -21138,7 +21150,265 @@ void TMR1_OverflowISR(void);
 
 
  void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
-# 49 "mcc_generated_files/system/src/../../system/system.h" 2
+# 50 "mcc_generated_files/system/src/../../system/system.h" 2
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr6.h" 1
+# 41 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+# 1 "mcc_generated_files/system/src/../../system/../timer/tmr6_deprecated.h" 1
+# 41 "mcc_generated_files/system/src/../../system/../timer/tmr6.h" 2
+# 162 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+typedef enum
+{
+
+
+
+
+
+
+
+   TMR6_ROP_STARTS_TMRON,
+
+
+
+
+   TMR6_ROP_STARTS_TMRON_ERSHIGH,
+
+
+
+
+   TMR6_ROP_STARTS_TMRON_ERSLOW,
+
+
+
+
+   TMR6_ROP_RESETS_ERSBOTHEDGE,
+
+
+
+
+   TMR6_ROP_RESETS_ERSRISINGEDGE,
+
+
+
+
+   TMR6_ROP_RESETS_ERSFALLINGEDGE,
+
+
+
+
+   TMR6_ROP_RESETS_ERSLOW,
+
+
+
+
+   TMR6_ROP_RESETS_ERSHIGH,
+# 217 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+   TMR6_OS_STARTS_TMRON,
+
+
+
+
+   TMR6_OS_STARTS_ERSRISINGEDGE ,
+
+
+
+
+   TMR6_OS_STARTS_ERSFALLINGEDGE ,
+
+
+
+
+   TMR6_OS_STARTS_ERSBOTHEDGE,
+
+
+
+
+
+   TMR6_OS_STARTS_ERSFIRSTRISINGEDGE,
+
+
+
+
+
+   TMR6_OS_STARTS_ERSFIRSTFALLINGEDGE,
+
+
+
+
+
+   TMR6_OS_STARTS_ERSRISINGEDGEDETECT,
+
+
+
+
+   TMR6_OS_STARTS_ERSFALLINGEDGEDETECT,
+
+
+
+
+   TMR6_OS_STARTS_TMRON_ERSHIGH = 0x16,
+
+
+
+
+   TMR6_OS_STARTS_TMRON_ERSLOW = 0x17,
+# 274 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+   TMR6_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+
+
+
+
+   TMR6_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+
+
+
+
+
+   TMR6_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+
+} TMR6_HLT_MODE;
+
+
+
+
+
+
+typedef enum
+{
+
+
+
+    TMR6_T6CKIPPS_PIN = 0x0,
+
+
+
+    TMR6_TMR2_POSTSCALED = 0x1,
+
+
+
+    TMR6_TMR4_POSTSCALED = 0x2,
+
+
+
+    TMR6_CCP1_OUT = 0x4,
+
+
+
+    TMR6_CCP2_OUT = 0x5,
+
+
+
+    TMR6_CCP3_OUT = 0x6,
+
+
+
+    TMR6_CCP4_OUT = 0x7,
+
+
+
+    TMR6_CCP5_OUT = 0x8,
+
+
+
+    TMR6_PWM6_OUT = 0x9,
+
+
+
+    TMR6_PWM7_OUT = 0xa,
+
+
+
+    TMR6_SYNC_C1OUT = 0xb,
+
+
+
+    TMR6_SYNC_C2OUT = 0xc,
+
+
+
+    TMR6_ZCD_OUT = 0xd,
+
+
+
+    TMR6_LC1_OUT = 0xe,
+
+
+
+    TMR6_LC2_OUT = 0xf,
+
+
+
+    TMR6_LC3_OUT = 0x10,
+
+
+
+    TMR6_LC4_OUT = 0x11
+} TMR6_HLT_EXT_RESET_SOURCE;
+# 377 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_Initialize(void);
+
+
+
+
+
+
+
+void TMR6_Deinitialize(void);
+# 394 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_Start(void);
+# 403 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_Stop(void);
+# 412 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+uint8_t TMR6_CounterGet(void);
+# 421 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_CounterSet(uint8_t count);
+# 430 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_PeriodSet(uint8_t periodVal);
+# 439 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+uint8_t TMR6_PeriodGet(void);
+
+
+
+
+
+
+
+uint8_t TMR6_MaxCountGet(void);
+# 456 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_ModeSet(TMR6_HLT_MODE mode);
+# 465 "mcc_generated_files/system/src/../../system/../timer/tmr6.h"
+void TMR6_ExtResetSourceSet(TMR6_HLT_EXT_RESET_SOURCE reset);
+
+
+
+
+
+
+
+_Bool TMR6_PeriodMatchStatusGet(void);
+
+
+
+
+
+
+
+void TMR6_PeriodMatchStatusClear(void);
+
+
+
+
+
+
+
+void TMR6_Tasks(void);
+
+
+
+
+
+
+void TMR6_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
+# 51 "mcc_generated_files/system/src/../../system/system.h" 2
 
 
 
@@ -21164,7 +21434,34 @@ void INTERRUPT_Initialize (void)
 
 
 }
+# 59 "mcc_generated_files/system/src/interrupt.c"
+void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
+{
 
+    if(INTCONbits.PEIE == 1)
+    {
+        if(PIE4bits.TMR1IE == 1 && PIR4bits.TMR1IF == 1)
+        {
+            TMR1_OverflowISR();
+        }
+        else if(PIE3bits.BCL1IE == 1 && PIR3bits.BCL1IF == 1)
+        {
+            I2C1_ERROR_ISR();
+        }
+        else if(PIE3bits.SSP1IE == 1 && PIR3bits.SSP1IF == 1)
+        {
+            I2C1_ISR();
+        }
+        else
+        {
+
+        }
+    }
+    else
+    {
+
+    }
+}
 
 void INT_ISR(void)
 {

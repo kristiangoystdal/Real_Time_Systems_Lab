@@ -2,18 +2,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56 mcc_generated_files/system/src/../../system/clock.h
 [; ;mcc_generated_files/system/src/../../system/clock.h: 56: void CLOCK_Initialize(void);
 [v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
-"96 mcc_generated_files/system/src/../../system/pins.h
-[; ;mcc_generated_files/system/src/../../system/pins.h: 96: void PIN_MANAGER_Initialize (void);
+"191 mcc_generated_files/system/src/../../system/pins.h
+[; ;mcc_generated_files/system/src/../../system/pins.h: 191: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
 "175 mcc_generated_files/system/src/../../timer/tmr1.h
 [; ;mcc_generated_files/system/src/../../timer/tmr1.h: 175: void TMR1_Initialize(void);
 [v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
+"377 mcc_generated_files/system/src/../../timer/tmr6.h
+[; ;mcc_generated_files/system/src/../../timer/tmr6.h: 377: void TMR6_Initialize(void);
+[v _TMR6_Initialize `(v ~T0 @X0 0 ef ]
 "77 mcc_generated_files/system/src/../../i2c_host/mssp1.h
 [; ;mcc_generated_files/system/src/../../i2c_host/mssp1.h: 77: void I2C1_Initialize(void);
 [v _I2C1_Initialize `(v ~T0 @X0 0 ef ]
 "115 mcc_generated_files/system/src/../../nvm/nvm.h
 [; ;mcc_generated_files/system/src/../../nvm/nvm.h: 115: void NVM_Initialize(void);
 [v _NVM_Initialize `(v ~T0 @X0 0 ef ]
+"57 mcc_generated_files/system/src/../../pwm/pwm6.h
+[; ;mcc_generated_files/system/src/../../pwm/pwm6.h: 57:  void PWM6_Initialize(void);
+[v _PWM6_Initialize `(v ~T0 @X0 0 ef ]
 "85 mcc_generated_files/system/src/../../system/interrupt.h
 [; ;mcc_generated_files/system/src/../../system/interrupt.h: 85: void INTERRUPT_Initialize (void);
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
@@ -1673,15 +1679,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/system.c: 43:     TMR1_Initialize();
 [e ( _TMR1_Initialize ..  ]
 "44
-[; ;mcc_generated_files/system/src/system.c: 44:     I2C1_Initialize();
-[e ( _I2C1_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 44:     TMR6_Initialize();
+[e ( _TMR6_Initialize ..  ]
 "45
-[; ;mcc_generated_files/system/src/system.c: 45:     NVM_Initialize();
-[e ( _NVM_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 45:     I2C1_Initialize();
+[e ( _I2C1_Initialize ..  ]
 "46
-[; ;mcc_generated_files/system/src/system.c: 46:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 46:     NVM_Initialize();
+[e ( _NVM_Initialize ..  ]
 "47
-[; ;mcc_generated_files/system/src/system.c: 47: }
+[; ;mcc_generated_files/system/src/system.c: 47:     PWM6_Initialize();
+[e ( _PWM6_Initialize ..  ]
+"48
+[; ;mcc_generated_files/system/src/system.c: 48:     INTERRUPT_Initialize();
+[e ( _INTERRUPT_Initialize ..  ]
+"49
+[; ;mcc_generated_files/system/src/system.c: 49: }
 [e :UE 1621 ]
 }

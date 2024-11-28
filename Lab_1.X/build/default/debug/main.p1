@@ -1,8 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
-"57 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 57: void SYSTEM_Initialize(void);
+"59 ./controller/EEPROM/../../mcc_generated_files/system/system.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"18 ./controller/LCD/lcd.h
+[; ;./controller/LCD/lcd.h: 18: void LCDinit(void);
+[v _LCDinit `(v ~T0 @X0 0 ef ]
+"32
+[; ;./controller/LCD/lcd.h: 32: void LCDWriteStr(char *s, unsigned char l, unsigned char c);
+[v _LCDWriteStr `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
 "956 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h
 [; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h: 956:     struct {
 [s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -14,17 +19,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "967
 [; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h: 967: extern volatile LATAbits_t LATAbits __attribute__((address(0x016)));
 [v _LATAbits `VS52 ~T0 @X0 0 e@22 ]
-"452
-[; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h: 452:     struct {
-[s S35 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S35 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"451
-[; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h: 451: typedef union {
-[u S34 `S35 1 ]
-[n S34 . . ]
-"463
-[; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h: 463: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
-[v _PORTBbits `VS34 ~T0 @X0 0 e@13 ]
 [v F202 `(v ~T0 @X0 1 tf1`ul ]
 "20 /Applications/microchip/xc8/v2.50/pic/include/builtins.h
 [v __delay `JF202 ~T0 @X0 0 e ]
@@ -1667,56 +1661,163 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36489
 [; ;/Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+"45 main.c
+[; ;main.c: 45: void global_initialization()
+[v _global_initialization `(v ~T0 @X0 1 ef ]
+"46
+[; ;main.c: 46: {
+{
+[e :U _global_initialization ]
+[f ]
+"49
+[; ;main.c: 49: }
+[e :UE 1623 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"41 main.c
-[; ;main.c: 41: int main(void)
+"51
+[; ;main.c: 51: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
-"42
-[; ;main.c: 42: {
+"52
+[; ;main.c: 52: {
 {
 [e :U _main ]
 [f ]
-"43
-[; ;main.c: 43:     SYSTEM_Initialize();
+"53
+[; ;main.c: 53:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"60
-[; ;main.c: 60:     do { LATAbits.LATA4 = 1; } while(0);
-[e :U 1624 ]
+"71
+[; ;main.c: 71:     global_initialization();
+[e ( _global_initialization ..  ]
+[v F12518 `uc ~T0 @X0 -> 6 `i s ]
+[i F12518
+:U ..
+"73
+[; ;main.c: 73:     char string[] = "Einar";
+-> 69 `c
+-> 105 `c
+-> 110 `c
+-> 97 `c
+-> 114 `c
+-> 0 `c
+..
+]
+[v _string `uc ~T0 @X0 -> 6 `i a ]
+[e = _string F12518 ]
+[v F12520 `uc ~T0 @X0 -> 9 `i s ]
+[i F12520
+:U ..
+"74
+[; ;main.c: 74:     char string2[] = "Kristian";
+-> 75 `c
+-> 114 `c
+-> 105 `c
+-> 115 `c
+-> 116 `c
+-> 105 `c
+-> 97 `c
+-> 110 `c
+-> 0 `c
+..
+]
+[v _string2 `uc ~T0 @X0 -> 9 `i a ]
+[e = _string2 F12520 ]
+[v F12522 `uc ~T0 @X0 -> 5 `i s ]
+[i F12522
+:U ..
+"75
+[; ;main.c: 75:     char string3[] = "Joao";
+-> 74 `c
+-> 111 `c
+-> 97 `c
+-> 111 `c
+-> 0 `c
+..
+]
+[v _string3 `uc ~T0 @X0 -> 5 `i a ]
+[e = _string3 F12522 ]
+[v F12524 `uc ~T0 @X0 -> 6 `i s ]
+[i F12524
+:U ..
+"76
+[; ;main.c: 76:     char string4[] = "Hello";
+-> 72 `c
+-> 101 `c
+-> 108 `c
+-> 108 `c
+-> 111 `c
+-> 0 `c
+..
+]
+[v _string4 `uc ~T0 @X0 -> 6 `i a ]
+[e = _string4 F12524 ]
+"78
+[; ;main.c: 78:     while (1)
+[e :U 1626 ]
+"79
+[; ;main.c: 79:     {
+{
+"80
+[; ;main.c: 80:         LCDinit();
+[e ( _LCDinit ..  ]
+"82
+[; ;main.c: 82:         LCDWriteStr(string, 0, 0);
+[e ( _LCDWriteStr (3 , , &U _string -> -> 0 `i `uc -> -> 0 `i `uc ]
+"83
+[; ;main.c: 83:         do { LATAbits.LATA4 = 1; } while(0);
+[e :U 1630 ]
 {
 [e = . . _LATAbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 1623 ]
-"62
-[; ;main.c: 62:     while(1)
-[e :U 1626 ]
-"63
-[; ;main.c: 63:     {
+[e :U 1629 ]
+"85
+[; ;main.c: 85:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"87
+[; ;main.c: 87:         LCDWriteStr(string2, 1, 0);
+[e ( _LCDWriteStr (3 , , &U _string2 -> -> 1 `i `uc -> -> 0 `i `uc ]
+"88
+[; ;main.c: 88:         do { LATAbits.LATA5 = 1; } while(0);
+[e :U 1633 ]
 {
-"64
-[; ;main.c: 64:         if(PORTBbits.RB4 == 0){
-[e $ ! == -> . . _PORTBbits 0 4 `i -> 0 `i 1628  ]
-{
-"65
-[; ;main.c: 65:             do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0);
-[e :U 1631 ]
-{
-[e = . . _LATAbits 0 4 -> ~ -> . . _LATAbits 0 4 `i `uc ]
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 1630 ]
-"66
-[; ;main.c: 66:             _delay((unsigned long)((500)*(32000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"67
-[; ;main.c: 67:         }
+[e :U 1632 ]
+"90
+[; ;main.c: 90:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"92
+[; ;main.c: 92:         LCDWriteStr(string3, 0, 0);
+[e ( _LCDWriteStr (3 , , &U _string3 -> -> 0 `i `uc -> -> 0 `i `uc ]
+"93
+[; ;main.c: 93:         do { LATAbits.LATA6 = 1; } while(0);
+[e :U 1636 ]
+{
+[e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
 }
-[e :U 1628 ]
-"68
-[; ;main.c: 68:     }
+[e :U 1635 ]
+"95
+[; ;main.c: 95:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"97
+[; ;main.c: 97:         LCDWriteStr(string4, 1, 0);
+[e ( _LCDWriteStr (3 , , &U _string4 -> -> 1 `i `uc -> -> 0 `i `uc ]
+"98
+[; ;main.c: 98:         do { LATAbits.LATA7 = 1; } while(0);
+[e :U 1639 ]
+{
+[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+}
+[e :U 1638 ]
+"100
+[; ;main.c: 100:         _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"101
+[; ;main.c: 101:     }
 }
 [e :U 1625 ]
 [e $U 1626  ]
 [e :U 1627 ]
-"69
-[; ;main.c: 69: }
-[e :UE 1621 ]
+"102
+[; ;main.c: 102: }
+[e :UE 1624 ]
 }

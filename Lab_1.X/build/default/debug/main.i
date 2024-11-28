@@ -20818,7 +20818,7 @@ void CLOCK_Initialize(void);
 # 40 "./mcc_generated_files/system/config_bits.h" 2
 # 43 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 96 "./mcc_generated_files/system/../system/pins.h"
+# 191 "./mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -21036,6 +21036,18 @@ eeprom_data_t EEPROM_Read(eeprom_address_t address);
 # 230 "./mcc_generated_files/system/../nvm/nvm.h"
 void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
 # 46 "./mcc_generated_files/system/system.h" 2
+# 1 "./mcc_generated_files/system/../pwm/pwm6.h" 1
+# 57 "./mcc_generated_files/system/../pwm/pwm6.h"
+ void PWM6_Initialize(void);
+
+
+
+
+
+
+
+ void PWM6_LoadDutyValue(uint16_t dutyValue);
+# 47 "./mcc_generated_files/system/system.h" 2
 # 1 "./mcc_generated_files/system/../system/interrupt.h" 1
 # 85 "./mcc_generated_files/system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
@@ -21049,7 +21061,7 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "./mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 47 "./mcc_generated_files/system/system.h" 2
+# 48 "./mcc_generated_files/system/system.h" 2
 
 # 1 "./mcc_generated_files/system/../timer/tmr1.h" 1
 # 40 "./mcc_generated_files/system/../timer/tmr1.h"
@@ -21137,7 +21149,265 @@ void TMR1_OverflowISR(void);
 
 
  void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
-# 49 "./mcc_generated_files/system/system.h" 2
+# 50 "./mcc_generated_files/system/system.h" 2
+# 1 "./mcc_generated_files/system/../timer/tmr6.h" 1
+# 41 "./mcc_generated_files/system/../timer/tmr6.h"
+# 1 "./mcc_generated_files/system/../timer/tmr6_deprecated.h" 1
+# 41 "./mcc_generated_files/system/../timer/tmr6.h" 2
+# 162 "./mcc_generated_files/system/../timer/tmr6.h"
+typedef enum
+{
+
+
+
+
+
+
+
+   TMR6_ROP_STARTS_TMRON,
+
+
+
+
+   TMR6_ROP_STARTS_TMRON_ERSHIGH,
+
+
+
+
+   TMR6_ROP_STARTS_TMRON_ERSLOW,
+
+
+
+
+   TMR6_ROP_RESETS_ERSBOTHEDGE,
+
+
+
+
+   TMR6_ROP_RESETS_ERSRISINGEDGE,
+
+
+
+
+   TMR6_ROP_RESETS_ERSFALLINGEDGE,
+
+
+
+
+   TMR6_ROP_RESETS_ERSLOW,
+
+
+
+
+   TMR6_ROP_RESETS_ERSHIGH,
+# 217 "./mcc_generated_files/system/../timer/tmr6.h"
+   TMR6_OS_STARTS_TMRON,
+
+
+
+
+   TMR6_OS_STARTS_ERSRISINGEDGE ,
+
+
+
+
+   TMR6_OS_STARTS_ERSFALLINGEDGE ,
+
+
+
+
+   TMR6_OS_STARTS_ERSBOTHEDGE,
+
+
+
+
+
+   TMR6_OS_STARTS_ERSFIRSTRISINGEDGE,
+
+
+
+
+
+   TMR6_OS_STARTS_ERSFIRSTFALLINGEDGE,
+
+
+
+
+
+   TMR6_OS_STARTS_ERSRISINGEDGEDETECT,
+
+
+
+
+   TMR6_OS_STARTS_ERSFALLINGEDGEDETECT,
+
+
+
+
+   TMR6_OS_STARTS_TMRON_ERSHIGH = 0x16,
+
+
+
+
+   TMR6_OS_STARTS_TMRON_ERSLOW = 0x17,
+# 274 "./mcc_generated_files/system/../timer/tmr6.h"
+   TMR6_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+
+
+
+
+   TMR6_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+
+
+
+
+
+   TMR6_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+
+} TMR6_HLT_MODE;
+
+
+
+
+
+
+typedef enum
+{
+
+
+
+    TMR6_T6CKIPPS_PIN = 0x0,
+
+
+
+    TMR6_TMR2_POSTSCALED = 0x1,
+
+
+
+    TMR6_TMR4_POSTSCALED = 0x2,
+
+
+
+    TMR6_CCP1_OUT = 0x4,
+
+
+
+    TMR6_CCP2_OUT = 0x5,
+
+
+
+    TMR6_CCP3_OUT = 0x6,
+
+
+
+    TMR6_CCP4_OUT = 0x7,
+
+
+
+    TMR6_CCP5_OUT = 0x8,
+
+
+
+    TMR6_PWM6_OUT = 0x9,
+
+
+
+    TMR6_PWM7_OUT = 0xa,
+
+
+
+    TMR6_SYNC_C1OUT = 0xb,
+
+
+
+    TMR6_SYNC_C2OUT = 0xc,
+
+
+
+    TMR6_ZCD_OUT = 0xd,
+
+
+
+    TMR6_LC1_OUT = 0xe,
+
+
+
+    TMR6_LC2_OUT = 0xf,
+
+
+
+    TMR6_LC3_OUT = 0x10,
+
+
+
+    TMR6_LC4_OUT = 0x11
+} TMR6_HLT_EXT_RESET_SOURCE;
+# 377 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_Initialize(void);
+
+
+
+
+
+
+
+void TMR6_Deinitialize(void);
+# 394 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_Start(void);
+# 403 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_Stop(void);
+# 412 "./mcc_generated_files/system/../timer/tmr6.h"
+uint8_t TMR6_CounterGet(void);
+# 421 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_CounterSet(uint8_t count);
+# 430 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_PeriodSet(uint8_t periodVal);
+# 439 "./mcc_generated_files/system/../timer/tmr6.h"
+uint8_t TMR6_PeriodGet(void);
+
+
+
+
+
+
+
+uint8_t TMR6_MaxCountGet(void);
+# 456 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_ModeSet(TMR6_HLT_MODE mode);
+# 465 "./mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_ExtResetSourceSet(TMR6_HLT_EXT_RESET_SOURCE reset);
+
+
+
+
+
+
+
+_Bool TMR6_PeriodMatchStatusGet(void);
+
+
+
+
+
+
+
+void TMR6_PeriodMatchStatusClear(void);
+
+
+
+
+
+
+
+void TMR6_Tasks(void);
+
+
+
+
+
+
+void TMR6_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
+# 51 "./mcc_generated_files/system/system.h" 2
 
 
 
@@ -21148,22 +21418,124 @@ void TMR1_OverflowISR(void);
 
 void SYSTEM_Initialize(void);
 # 36 "main.c" 2
+# 1 "./controller/LCD/lcd.h" 1
+# 12 "./controller/LCD/lcd.h"
+void LCDsend(unsigned char c);
+
+unsigned char LCDrecv(unsigned char mode);
+
+void LCDsend2x4(unsigned char c, unsigned char mode);
+
+void LCDinit(void);
+
+void LCDcmd(unsigned char c);
+
+void LCDchar(unsigned char c);
+
+void LCDstr(char *p);
+
+int LCDbusy(void);
+
+void LCDpos(unsigned char l, unsigned char c);
+
+void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c);
+
+void LCDWriteStr(char *s, unsigned char l, unsigned char c);
+# 37 "main.c" 2
+# 1 "./controller/EEPROM/EEPROM_controller.h" 1
+# 25 "./controller/EEPROM/EEPROM_controller.h"
+typedef struct
+{
+    uint8_t monitoringPeriod;
+    uint8_t alarmDuration;
+    uint8_t alarmFlag;
+    uint8_t alarmHours;
+    uint8_t alarmMinutes;
+    uint8_t alarmSeconds;
+    uint8_t thresholdTemp;
+    uint8_t thresholdLum;
+    uint8_t clockHours;
+    uint8_t clockMinutes;
+} Configs;
+
+typedef struct
+{
+    uint8_t maxTemp[5];
+    uint8_t minTemp[5];
+    uint8_t maxLum[5];
+    uint8_t minLum[5];
+} SensorsMaxMin;
+
+uint8_t CalculateChecksum(Configs configs);
+_Bool ConfigIsUsable();
+Configs ReadConfigs();
+void WriteConfigs(Configs configs);
+void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
+SensorsMaxMin ReadMaxMin();
+# 38 "main.c" 2
+# 1 "./controller/LED/led.h" 1
 
 
 
 
+
+void turn_on(uint8_t n);
+
+void turn_off(uint8_t n);
+
+void toggle(uint8_t n);
+# 39 "main.c" 2
+# 1 "./controller/PWM/pwm.h" 1
+
+
+
+void PWM_Output_D4_Enable();
+void PWM_Output_D4_Disable();
+# 40 "main.c" 2
+
+
+
+
+
+void global_initialization()
+{
+
+
+}
 
 int main(void)
 {
     SYSTEM_Initialize();
-# 60 "main.c"
-    do { LATAbits.LATA4 = 1; } while(0);
+# 71 "main.c"
+    global_initialization();
 
-    while(1)
+    char string[] = "Einar";
+    char string2[] = "Kristian";
+    char string3[] = "Joao";
+    char string4[] = "Hello";
+
+    while (1)
     {
-        if(PORTBbits.RB4 == 0){
-            do { LATAbits.LATA4 = ~LATAbits.LATA4; } while(0);
-            _delay((unsigned long)((500)*(32000000U/4000.0)));
-        }
+        LCDinit();
+
+        LCDWriteStr(string, 0, 0);
+        do { LATAbits.LATA4 = 1; } while(0);
+
+        _delay((unsigned long)((1000)*(32000000U/4000.0)));
+
+        LCDWriteStr(string2, 1, 0);
+        do { LATAbits.LATA5 = 1; } while(0);
+
+        _delay((unsigned long)((1000)*(32000000U/4000.0)));
+
+        LCDWriteStr(string3, 0, 0);
+        do { LATAbits.LATA6 = 1; } while(0);
+
+        _delay((unsigned long)((1000)*(32000000U/4000.0)));
+
+        LCDWriteStr(string4, 1, 0);
+        do { LATAbits.LATA7 = 1; } while(0);
+
+        _delay((unsigned long)((1000)*(32000000U/4000.0)));
     }
 }

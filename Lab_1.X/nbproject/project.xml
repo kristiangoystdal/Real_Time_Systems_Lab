@@ -10,6 +10,9 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>CONTROLLERS</sourceRootElem>
+                <sourceRootElem>clock</sourceRootElem>
+                <sourceRootElem>controller</sourceRootElem>
+                <sourceRootElem>mode</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

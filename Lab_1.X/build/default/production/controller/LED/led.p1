@@ -1,0 +1,34 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"4 controller/LED/led.c
+[; ;controller/LED/led.c: 4: void turn_on(uint8_t n) {
+[v _turn_on `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _turn_on ]
+[v _n `uc ~T0 @X0 1 r1 ]
+[f ]
+"6
+[; ;controller/LED/led.c: 6: }
+[e :UE 1 ]
+}
+"8
+[; ;controller/LED/led.c: 8: void turn_off(uint8_t n) {
+[v _turn_off `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _turn_off ]
+[v _n `uc ~T0 @X0 1 r1 ]
+[f ]
+"10
+[; ;controller/LED/led.c: 10: }
+[e :UE 2 ]
+}
+"12
+[; ;controller/LED/led.c: 12: void toggle(uint8_t n) {
+[v _toggle `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _toggle ]
+[v _n `uc ~T0 @X0 1 r1 ]
+[f ]
+"14
+[; ;controller/LED/led.c: 14: }
+[e :UE 3 ]
+}
