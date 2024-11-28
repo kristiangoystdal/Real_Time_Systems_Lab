@@ -2,6 +2,7 @@ Microchip MPLAB XC8 Compiler V2.50
 
 Linker command line:
 
+<<<<<<< HEAD
 -W-3 --edf=/Applications/microchip/xc8/v2.50/pic/dat/20240725155939_en.msgs \
   -cn -h+dist/default/debug/Lab_1.X.debug.sym \
   --cmf=dist/default/debug/Lab_1.X.debug.cmf -z -Q16F18875 \
@@ -15,6 +16,23 @@ Linker command line:
   -ABANK6=0320h-036Fh -ABANK7=03A0h-03EFh -ABANK8=0420h-046Fh \
   -ABANK9=04A0h-04EFh -ABANK10=0520h-056Fh -ABANK11=05A0h-05EFh \
   -ABANK12=0620h-064Fh -ABIGRAM=02000h-023EFh \
+=======
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.50\pic\dat\20240725155939_en.msgs \
+  -cn -h+dist/default/debug\Lab_1.X.debug.sym \
+  --cmf=dist/default/debug\Lab_1.X.debug.cmf -z -Q16F18875 \
+  -oC:\Users\krisg\AppData\Local\Temp\xcAspn0.\driver_tmp_3.o \
+  --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
+  -Mdist/default/debug/Lab_1.X.debug.map \
+  --md=C:\Users\krisg\AppData\Local\Temp\xcAspn0.\driver_tmp_0.dat -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh -ABANK4=0220h-026Fh \
+  -ABANK5=02A0h-02EFh -ABANK6=0320h-036Fh -ABANK7=03A0h-03EFh \
+  -ABANK8=0420h-046Fh -ABANK9=04A0h-04EFh -ABANK10=0520h-056Fh \
+  -ABANK11=05A0h-05EFh -ABANK12=0620h-064Fh -ABIGRAM=02000h-023EFh \
+>>>>>>> initialization_and_modes
   -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-026Fh,02A0h-02EFh,0320h-036Fh,03A0h-03EFh,0420h-046Fh,04A0h-04EFh,0520h-056Fh,05A0h-05EFh,0620h-064Fh \
   -AABS1=020h-07Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-026Fh,02A0h-02EFh,0320h-036Fh,03A0h-03EFh,0420h-046Fh,04A0h-04EFh,0520h-056Fh,05A0h-05EFh,0620h-064Fh \
   -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-011Fh -ASFR3=0180h-019Fh \
@@ -30,9 +48,16 @@ Linker command line:
   -ASFR31=0F80h-0FEFh -ACONFIG=08007h-0800Bh -DCONFIG=2 \
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+<<<<<<< HEAD
   -DENTRY=2 -preset_vec=00h,intentry=04h,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k /tmp/xc2PdciM8/driver_tmp_15.o \
   dist/default/debug/Lab_1.X.debug.o 
+=======
+  -DENTRY=2 -preset_vec=00h,intentry,sivt,init,end_init -ppowerup=CODE \
+  -pcinit=CODE -pfunctab=ENTRY -k \
+  C:\Users\krisg\AppData\Local\Temp\xcAspn0.\driver_tmp_15.o \
+  dist/default/debug\Lab_1.X.debug.o 
+>>>>>>> initialization_and_modes
 
 Object code version is 3.11
 
@@ -41,6 +66,7 @@ Machine type is 16F18875
 
 
                 Name                               Link     Load   Length Selector   Space Scale
+<<<<<<< HEAD
 /tmp/xc2PdciM8/driver_tmp_15.o
                 end_init                             31       31        2        8       0
                 reset_vec                             0        0        2        0       0
@@ -192,6 +218,57 @@ TOTAL           Name                               Link     Load   Length     Sp
                 inittext                            6D0      6D0        6         0
                 idataBANK1                          688      688        9         0
                 idataBANK0                          652      652       11         0
+=======
+C:\Users\krisg\AppData\Local\Temp\xcAspn0.\driver_tmp_15.o
+                end_init                              3        3        2        0       0
+                reset_vec                             0        0        3        0       0
+                config                             8007     8007        5        0       4
+dist/default/debug\Lab_1.X.debug.o
+                cinit                               7ED      7ED       13      FDA       0
+                config                             8007     8007        5        0       4
+                text13                              6AF      6AF        9      D5E       0
+                text12                              69B      69B        4      D36       0
+                text11                              6C3      6C3        F      D86       0
+                text10                              6A3      6A3        6      D46       0
+                text9                               6B8      6B8        B      D70       0
+                text8                               698      698        3      D30       0
+                text7                               69F      69F        4      D3E       0
+                text6                               79A      79A       53      F34       0
+                text5                               6E5      6E5       1E      DCA       0
+                text4                               6D2      6D2       13      DA4       0
+                text3                               697      697        1      D2E       0
+                text2                               74F      74F       4B      E9E       0
+                text1                               703      703       23      E06       0
+                maintext                            726      726       29      E4C       0
+                cstackCOMMON                         7A       7A        4       70       1
+                clrtext                             6A9      6A9        6      D52       0
+                bssBANK0                             20       20       12       20       1
+                bssCOMMON                            70       70        A       70       1
+                nvBANK0                              32       32        6       20       1
+                stringtext2                         814      814       12     1000       0
+                stringtext1                         800      800       14     1000       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CODE           
+                end_init                              3        3        2         0
+                cinit                               7ED      7ED       13         0
+                reset_vec                             0        0        3         0
+                text13                              6AF      6AF        9         0
+                text12                              69B      69B        4         0
+                text11                              6C3      6C3        F         0
+                text10                              6A3      6A3        6         0
+                text9                               6B8      6B8        B         0
+                text8                               698      698        3         0
+                text7                               69F      69F        4         0
+                text6                               79A      79A       53         0
+                text5                               6E5      6E5       1E         0
+                text4                               6D2      6D2       13         0
+                text3                               697      697        1         0
+                text2                               74F      74F       4B         0
+                text1                               703      703       23         0
+                maintext                            726      726       29         0
+                clrtext                             6A9      6A9        6         0
+>>>>>>> initialization_and_modes
 
         CLASS   STRCODE        
                 stringtext2                         62E      62E       12         0
@@ -204,6 +281,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
+<<<<<<< HEAD
                 cstackCOMMON                         70       70        8         1
                 bssCOMMON                            78       78        5         1
 
@@ -212,6 +290,14 @@ TOTAL           Name                               Link     Load   Length     Sp
                 dataBANK0                            58       58       11         1
                 bssBANK0                             46       46       12         1
                 nvBANK0                              69       69        6         1
+=======
+                cstackCOMMON                         7A       7A        4         1
+                bssCOMMON                            70       70        A         1
+
+        CLASS   BANK0          
+                bssBANK0                             20       20       12         1
+                nvBANK0                              32       32        6         1
+>>>>>>> initialization_and_modes
 
         CLASS   BANK1          
                 dataBANK1                            A0       A0        9         1
@@ -363,6 +449,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
+<<<<<<< HEAD
                 reset_vec                      000000  000002  000002         0       0  CODE        2
                 text3                          000608  000026  00062E       C10       0  CODE        2
                 stringtext1                    0005F4  000014  000608       BE8       0  STRCODE     2
@@ -372,13 +459,40 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK0                    000020  00004F  00006F        20       1  BANK0       1
                 intentry                       000004  0005F0  0005F4         8       0  CODE        2
                 dataBANK1                      0000A0  00000B  0000AB        A0       1  BANK1       1
+=======
+                reset_vec                      000000  000005  000005         0       0  CODE        2
+                bssBANK0                       000020  000018  000038        20       1  BANK0       1
+                bssCOMMON                      000070  00000E  00007E        70       1  COMMON      1
+                text3                          000697  000001  000698       D2E       0  CODE        2
+                text8                          000698  000003  00069B       D30       0  CODE        2
+                text12                         00069B  000004  00069F       D36       0  CODE        2
+                text7                          00069F  000004  0006A3       D3E       0  CODE        2
+                text10                         0006A3  000006  0006A9       D46       0  CODE        2
+                clrtext                        0006A9  000006  0006AF       D52       0  CODE        2
+                text13                         0006AF  000009  0006B8       D5E       0  CODE        2
+                text9                          0006B8  00000B  0006C3       D70       0  CODE        2
+                text11                         0006C3  00000F  0006D2       D86       0  CODE        2
+                text4                          0006D2  000013  0006E5       DA4       0  CODE        2
+                text5                          0006E5  00001E  000703       DCA       0  CODE        2
+                text1                          000703  000023  000726       E06       0  CODE        2
+                maintext                       000726  000029  00074F       E4C       0  CODE        2
+                text2                          00074F  00004B  00079A       E9E       0  CODE        2
+                text6                          00079A  000053  0007ED       F34       0  CODE        2
+                cinit                          0007ED  000013  000800       FDA       0  CODE        2
+                stringtext1                    000800  000026  000826      1000       0  STRCODE     2
+>>>>>>> initialization_and_modes
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
+<<<<<<< HEAD
         BANK0            0006F-0006F               1           1
         BANK1            000AB-000EF              45           1
+=======
+        BANK0            00038-0006F              38           1
+        BANK1            000A0-000EF              50           1
+>>>>>>> initialization_and_modes
         BANK10           00520-0056F              50           1
         BANK11           005A0-005EF              50           1
         BANK12           00620-0064F              30           1
@@ -391,6 +505,7 @@ UNUSED ADDRESS RANGES
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
+<<<<<<< HEAD
         CODE             00002-00003               2           2
                          00740-01FFF             800
         COMMON           0007D-0007D               1           1
@@ -402,6 +517,18 @@ UNUSED ADDRESS RANGES
         IDLOC            08000-08003               4           2
         RAM              0006F-0006F               1           1
                          000AB-000EF              45
+=======
+        CODE             00005-00696             692           2
+                         00826-01FFF             800
+        CONST            00005-00696             100           2
+                         00826-01FFF             100
+        EEDATA           0F000-0F0FF             100           2
+        ENTRY            00005-00696             100           2
+                         00826-01FFF             100
+        IDLOC            08000-08003               4           2
+        RAM              00038-0006F              38           1
+                         000A0-000EF              50
+>>>>>>> initialization_and_modes
                          00120-0016F              50
                          001A0-001EF              50
                          00220-0026F              50
@@ -445,6 +572,7 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
+<<<<<<< HEAD
         STRCODE          00002-00003               2           2
                          00740-01FFF            18C0
         STRING           00002-00003               2           2
@@ -480,16 +608,68 @@ LCDstr@p                                 cstackBANK0  00024
 TMR1_CounterSet@onState                  cstackCOMMON 00072
 TMR1_CounterSet@timerVal                 cstackCOMMON 00070
 WriteI2C@data_out                        cstackCOMMON 00075
+=======
+        STRCODE          00005-00696             692           2
+                         00826-01FFF            17DA
+        STRING           00005-00696             100           2
+                         00826-01FFF             100
+
+                                  Symbol Table
+
+INT_SetInterruptHandler@InterruptHandler cstackCOMMON 0007A
+_ADACCH                                  (abs)        00091
+_ADACCL                                  (abs)        00090
+_ADACQ                                   (abs)        0009D
+_ADACT                                   (abs)        00099
+_ADCAP                                   (abs)        0009B
+_ADCLK                                   (abs)        00098
+_ADCNT                                   (abs)        0010C
+_ADCON0                                  (abs)        00093
+_ADCON0bits                              (abs)        00093
+_ADCON1                                  (abs)        00094
+_ADCON1bits                              (abs)        00094
+_ADCON2                                  (abs)        00095
+_ADCON2bits                              (abs)        00095
+_ADCON3                                  (abs)        00096
+_ADCON3bits                              (abs)        00096
+_ADC_ConversionDoneCallback              bssCOMMON    00072
+_ADC_ThresholdCallback                   bssBANK0     00030
+_ADERRH                                  (abs)        00117
+_ADERRL                                  (abs)        00116
+_ADFLTRH                                 (abs)        00115
+_ADFLTRL                                 (abs)        00114
+_ADLTHH                                  (abs)        0010F
+_ADLTHL                                  (abs)        0010E
+_ADPCH                                   (abs)        0009E
+_ADPRE                                   (abs)        0009C
+_ADPREVH                                 (abs)        0008F
+_ADPREVL                                 (abs)        0008E
+_ADREF                                   (abs)        0009A
+_ADRESH                                  (abs)        0008D
+_ADRESL                                  (abs)        0008C
+_ADRPT                                   (abs)        0010D
+_ADSTAT                                  (abs)        00097
+_ADSTATbits                              (abs)        00097
+_ADSTPTH                                 (abs)        00113
+_ADSTPTL                                 (abs)        00112
+_ADUTHH                                  (abs)        00111
+_ADUTHL                                  (abs)        00110
+>>>>>>> initialization_and_modes
 _ANSELA                                  (abs)        00F38
 _ANSELB                                  (abs)        00F43
 _ANSELC                                  (abs)        00F4E
 _ANSELD                                  (abs)        00F59
 _ANSELE                                  (abs)        00F64
+<<<<<<< HEAD
 _CCPTMRS1bits                            (abs)        0021F
 _CLOCK_Initialize                        text13       00691
 _I2C1_AckSend                            text53       0071A
 _I2C1_BusReset                           text59       00722
 _I2C1_Callback                           bssBANK0     00056
+=======
+_CLOCK_Initialize                        text13       006AF
+_I2C1_Callback                           bssBANK0     0002E
+>>>>>>> initialization_and_modes
 _I2C1_CallbackRegister                   (abs)        00000
 _I2C1_Close                              text55       005DF
 _I2C1_DataReceive                        text52       00732
@@ -507,6 +687,7 @@ _I2C1_EVENT_STOP                         text38       006AB
 _I2C1_EVENT_TX                           text45       004E7
 _I2C1_ErrorEventHandler                  text36       00535
 _I2C1_ErrorGet                           (abs)        00000
+<<<<<<< HEAD
 _I2C1_ErrorInterruptClear                text58       0073B
 _I2C1_EventHandler                       text31       003D2
 _I2C1_ISR                                text30       00706
@@ -514,6 +695,10 @@ _I2C1_Initialize                         text11       00663
 _I2C1_InterruptClear                     text57       00738
 _I2C1_InterruptsEnable                   text12       00702
 _I2C1_IsAddr                             text34       006BB
+=======
+_I2C1_Initialize                         text11       006C3
+_I2C1_InterruptsEnable                   text12       0069B
+>>>>>>> initialization_and_modes
 _I2C1_IsBusy                             (abs)        00000
 _I2C1_IsData                             text33       006F4
 _I2C1_IsNack                             text32       006E2
@@ -533,11 +718,18 @@ _INLVLC                                  (abs)        00F52
 _INLVLD                                  (abs)        00F5D
 _INLVLE                                  (abs)        00F68
 _INTCONbits                              (abs)        0000B
+<<<<<<< HEAD
 _INTERRUPT_Initialize                    text9        0067D
 _INTERRUPT_InterruptManager              intentry     00004
 _INT_DefaultInterruptHandler             (abs)        00000
 _INT_InterruptHandler                    nvBANK0      0006D
 _INT_SetInterruptHandler                 text10       006DC
+=======
+_INTERRUPT_Initialize                    text9        006B8
+_INT_DefaultInterruptHandler             (abs)        00000
+_INT_InterruptHandler                    nvBANK0      00036
+_INT_SetInterruptHandler                 text10       006A3
+>>>>>>> initialization_and_modes
 _IOCAF                                   (abs)        00F3F
 _IOCAN                                   (abs)        00F3E
 _IOCAP                                   (abs)        00F3D
@@ -572,8 +764,13 @@ _NVMCON1bits                             (abs)        0081E
 _NVMCON2                                 (abs)        0081F
 _NVMDATH                                 (abs)        0081D
 _NVMDATL                                 (abs)        0081C
+<<<<<<< HEAD
 _NVM_Initialize                          text7        006FE
 _NVM_StatusClear                         text8        00726
+=======
+_NVM_Initialize                          text7        0069F
+_NVM_StatusClear                         text8        00698
+>>>>>>> initialization_and_modes
 _ODCONA                                  (abs)        00F3A
 _ODCONB                                  (abs)        00F45
 _ODCONC                                  (abs)        00F50
@@ -584,14 +781,21 @@ _OSCCON3                                 (abs)        0088F
 _OSCEN                                   (abs)        00891
 _OSCFRQ                                  (abs)        00893
 _OSCTUNE                                 (abs)        00892
+_PIE1bits                                (abs)        00717
 _PIE3bits                                (abs)        00719
 _PIE4bits                                (abs)        0071A
 _PIE5bits                                (abs)        0071B
+<<<<<<< HEAD
 _PIN_MANAGER_Initialize                  text6        0037F
+=======
+_PIN_MANAGER_Initialize                  text6        0079A
+>>>>>>> initialization_and_modes
 _PIR0bits                                (abs)        0070C
+_PIR1bits                                (abs)        0070D
 _PIR3bits                                (abs)        0070F
 _PIR4bits                                (abs)        00710
 _PIR5bits                                (abs)        00711
+<<<<<<< HEAD
 _PWM6CON                                 (abs)        0038E
 _PWM6DCH                                 (abs)        0038D
 _PWM6DCL                                 (abs)        0038C
@@ -599,6 +803,10 @@ _PWM6_Initialize                         text5        00672
 _RC3PPS                                  (abs)        00F23
 _RC4PPS                                  (abs)        00F24
 _ReadI2C                                 text25       00552
+=======
+_RC3PPS                                  (abs)        00F23
+_RC4PPS                                  (abs)        00F24
+>>>>>>> initialization_and_modes
 _SLRCONA                                 (abs)        00F3B
 _SLRCONB                                 (abs)        00F46
 _SLRCONC                                 (abs)        00F51
@@ -615,7 +823,11 @@ _SSP1CON3                                (abs)        00192
 _SSP1DATPPS                              (abs)        00EC6
 _SSP1STAT                                (abs)        0018F
 _SSP1STATbits                            (abs)        0018F
+<<<<<<< HEAD
 _SYSTEM_Initialize                       text2        0056C
+=======
+_SYSTEM_Initialize                       text4        006D2
+>>>>>>> initialization_and_modes
 _T1CLK                                   (abs)        00211
 _T1CON                                   (abs)        0020E
 _T1CONbits                               (abs)        0020E
@@ -635,6 +847,7 @@ _TMR1H                                   (abs)        0020D
 _TMR1L                                   (abs)        0020C
 _TMR1_CounterSet                         text29       005B3
 _TMR1_DefaultGateCallback                (abs)        00000
+<<<<<<< HEAD
 _TMR1_DefaultOverflowCallback            text28       0073F
 _TMR1_GateCallback                       nvBANK1      000A9
 _TMR1_Initialize                         text4        00514
@@ -643,6 +856,12 @@ _TMR1_OverflowISR                        text27       0059C
 _TMR6_DefaultPeriodMatchCallback         (abs)        00000
 _TMR6_Initialize                         text3        00608
 _TMR6_PeriodMatchCallback                nvBANK0      00069
+=======
+_TMR1_DefaultOverflowCallback            (abs)        00000
+_TMR1_GateCallback                       nvBANK0      00032
+_TMR1_Initialize                         text5        006E5
+_TMR1_OverflowCallback                   nvBANK0      00034
+>>>>>>> initialization_and_modes
 _TRISA                                   (abs)        00011
 _TRISB                                   (abs)        00012
 _TRISC                                   (abs)        00013
@@ -702,6 +921,7 @@ __HcstackCOMMON                          cstackCOMMON 00000
 __HdataBANK0                             dataBANK0    00000
 __HdataBANK1                             dataBANK1    00000
 __Heeprom_data                           eeprom_data  00000
+<<<<<<< HEAD
 __Hend_init                              end_init     00033
 __Hfunctab                               functab      00000
 __Hheap                                  heap         00000
@@ -713,9 +933,18 @@ __Hintentry                              intentry     00031
 __Hmaintext                              maintext     00000
 __HnvBANK0                               nvBANK0      00000
 __HnvBANK1                               nvBANK1      00000
+=======
+__Hend_init                              end_init     00005
+__Hfunctab                               functab      00000
+__Hheap                                  heap         00000
+__Hinit                                  init         00003
+__Hintentry                              intentry     00003
+__Hmaintext                              maintext     00000
+__HnvBANK0                               nvBANK0      00000
+>>>>>>> initialization_and_modes
 __Hpowerup                               powerup      00000
 __Hram                                   ram          00000
-__Hreset_vec                             reset_vec    00002
+__Hreset_vec                             reset_vec    00003
 __Hsfr0                                  sfr0         00000
 __Hsfr1                                  sfr1         00000
 __Hsfr10                                 sfr10        00000
@@ -748,9 +977,15 @@ __Hsfr6                                  sfr6         00000
 __Hsfr7                                  sfr7         00000
 __Hsfr8                                  sfr8         00000
 __Hsfr9                                  sfr9         00000
+<<<<<<< HEAD
 __Hsivt                                  sivt         00031
 __Hspace_0                               (abs)        00740
 __Hspace_1                               (abs)        000AB
+=======
+__Hsivt                                  sivt         00003
+__Hspace_0                               (abs)        00826
+__Hspace_1                               (abs)        0007E
+>>>>>>> initialization_and_modes
 __Hspace_2                               (abs)        00000
 __Hspace_3                               (abs)        00000
 __Hspace_4                               (abs)        10013
@@ -796,7 +1031,11 @@ __Lbank9                                 bank9        00000
 __Lbigram                                bigram       00000
 __LbssBANK0                              bssBANK0     00000
 __LbssCOMMON                             bssCOMMON    00000
+<<<<<<< HEAD
 __Lcinit                                 cinit        00033
+=======
+__Lcinit                                 cinit        007ED
+>>>>>>> initialization_and_modes
 __Lclrtext                               clrtext      00000
 __Lcode                                  code         00000
 __Lcommon                                common       00000
@@ -806,6 +1045,7 @@ __LcstackCOMMON                          cstackCOMMON 00000
 __LdataBANK0                             dataBANK0    00000
 __LdataBANK1                             dataBANK1    00000
 __Leeprom_data                           eeprom_data  00000
+<<<<<<< HEAD
 __Lend_init                              end_init     00031
 __Lfunctab                               functab      00000
 __Lheap                                  heap         00000
@@ -817,6 +1057,15 @@ __Lintentry                              intentry     00004
 __Lmaintext                              maintext     00000
 __LnvBANK0                               nvBANK0      00000
 __LnvBANK1                               nvBANK1      00000
+=======
+__Lend_init                              end_init     00003
+__Lfunctab                               functab      00000
+__Lheap                                  heap         00000
+__Linit                                  init         00003
+__Lintentry                              intentry     00003
+__Lmaintext                              maintext     00000
+__LnvBANK0                               nvBANK0      00000
+>>>>>>> initialization_and_modes
 __Lpowerup                               powerup      00000
 __Lram                                   ram          00000
 __Lreset_vec                             reset_vec    00000
@@ -852,7 +1101,11 @@ __Lsfr6                                  sfr6         00000
 __Lsfr7                                  sfr7         00000
 __Lsfr8                                  sfr8         00000
 __Lsfr9                                  sfr9         00000
+<<<<<<< HEAD
 __Lsivt                                  sivt         00031
+=======
+__Lsivt                                  sivt         00003
+>>>>>>> initialization_and_modes
 __Lspace_0                               (abs)        00000
 __Lspace_1                               (abs)        00000
 __Lspace_2                               (abs)        00000
@@ -877,6 +1130,7 @@ ___stack_hi                              stack        00000
 ___stack_lo                              stack        00000
 ___stackhi                               (abs)        00000
 ___stacklo                               (abs)        00000
+<<<<<<< HEAD
 __end_of_CLOCK_Initialize                text13       0069A
 __end_of_I2C1_AckSend                    text53       0071E
 __end_of_I2C1_BusReset                   text59       00726
@@ -1028,6 +1282,62 @@ clear_ram0                               clrtext      006D6
 end_of_initialization                    cinit        00058
 init_ram                                 inittext     006D0
 int$flags                                (abs)        0007E
+=======
+__end_of_CLOCK_Initialize                text13       006B8
+__end_of_I2C1_Host                       stringtext1  00814
+__end_of_I2C1_Initialize                 text11       006D2
+__end_of_I2C1_InterruptsEnable           text12       0069F
+__end_of_INTERRUPT_Initialize            text9        006C3
+__end_of_INT_SetInterruptHandler         text10       006A9
+__end_of_NVM_Initialize                  text7        006A3
+__end_of_NVM_StatusClear                 text8        0069B
+__end_of_PIN_MANAGER_Initialize          text6        007ED
+__end_of_SYSTEM_Initialize               text4        006E5
+__end_of_TMR1_Initialize                 text5        00703
+__end_of__initialization                 cinit        007FD
+__end_of_global_initialization           text3        00698
+__end_of_i2c1_eventTable                 stringtext2  00826
+__end_of_main                            maintext     0074F
+__end_of_toggle                          text2        0079A
+__end_of_turn_on                         text1        00726
+__hours                                  bssCOMMON    00079
+__initialization                         cinit        007ED
+__minutes                                bssCOMMON    00078
+__pbssBANK0                              bssBANK0     00020
+__pbssCOMMON                             bssCOMMON    00070
+__pcstackCOMMON                          cstackCOMMON 0007A
+__pmaintext                              maintext     00726
+__pnvBANK0                               nvBANK0      00032
+__pstringtext1                           stringtext1  00800
+__pstringtext2                           stringtext2  00814
+__ptext1                                 text1        00703
+__ptext10                                text10       006A3
+__ptext11                                text11       006C3
+__ptext12                                text12       0069B
+__ptext13                                text13       006AF
+__ptext2                                 text2        0074F
+__ptext3                                 text3        00697
+__ptext4                                 text4        006D2
+__ptext5                                 text5        006E5
+__ptext6                                 text6        0079A
+__ptext7                                 text7        0069F
+__ptext8                                 text8        00698
+__ptext9                                 text9        006B8
+__seconds                                bssCOMMON    00077
+_adc_busy_status                         bssCOMMON    00076
+_global_initialization                   text3        00697
+_i2c1Status                              bssBANK0     00020
+_i2c1_eventTable                         stringtext2  00814
+_main                                    maintext     00726
+_timer1ReloadVal                         bssCOMMON    00070
+_toggle                                  text2        0074F
+_turn_on                                 text1        00703
+_unlockKeyHigh                           bssCOMMON    00074
+_unlockKeyLow                            bssCOMMON    00075
+btemp                                    (abs)        0007E
+clear_ram0                               clrtext      006A9
+end_of_initialization                    cinit        007FD
+>>>>>>> initialization_and_modes
 intlevel0                                functab      00000
 intlevel1                                functab      00000
 intlevel2                                functab      00000
@@ -1043,14 +1353,22 @@ main@string2                             cstackBANK0  0002C
 main@string3                             cstackBANK0  00041
 main@string4                             cstackBANK0  0003B
 reset_vec                                reset_vec    00000
+<<<<<<< HEAD
 start                                    init         00031
 start_initialization                     cinit        00033
+=======
+start                                    init         00003
+start_initialization                     cinit        007ED
+toggle@n                                 cstackCOMMON 0007A
+turn_on@n                                cstackCOMMON 0007A
+>>>>>>> initialization_and_modes
 wtemp0                                   (abs)        0007E
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
+<<<<<<< HEAD
 controller/LCD/lcd.c
 		_LCDinit       		CODE           	0300	0000	127
 		_LCDsend       		CODE           	046A	0000	67
@@ -1062,6 +1380,10 @@ controller/LCD/lcd.c
 		_LCDbusy       		CODE           	061B	0000	19
 		_LCDrecv       		CODE           	005C	0000	333
 		_LCDcmd        		CODE           	06A3	0000	8
+=======
+mcc_generated_files/timer/src/tmr1.c
+		_TMR1_Initialize		CODE           	06E5	0000	30
+>>>>>>> initialization_and_modes
 
 controller/LCD/lcd.c estimated size: 809
 
@@ -1074,6 +1396,7 @@ mcc_generated_files/timer/src/tmr1.c
 mcc_generated_files/timer/src/tmr1.c estimated size: 80
 
 mcc_generated_files/system/src/interrupt.c
+<<<<<<< HEAD
 		_INT_SetInterruptHandler		CODE           	06DC	0000	6
 		_INTERRUPT_Initialize		CODE           	067D	0000	11
 		_INTERRUPT_InterruptManager		CODE           	0004	0000	45
@@ -1113,6 +1436,16 @@ mcc_generated_files/i2c_host/src/mssp1.c
 		_I2C1_RestartDisable		CODE           	072C	0000	3
 		_I2C1_DataTransmit		CODE           	06F9	0000	5
 		_I2C1_AckSend  		CODE           	071A	0000	4
+=======
+		_INT_SetInterruptHandler		CODE           	06A3	0000	6
+		_INTERRUPT_Initialize		CODE           	06B8	0000	11
+
+mcc_generated_files/system/src/interrupt.c estimated size: 17
+
+mcc_generated_files/i2c_host/src/mssp1.c
+		_I2C1_InterruptsEnable		CODE           	069B	0000	4
+		_I2C1_Initialize		CODE           	06C3	0000	15
+>>>>>>> initialization_and_modes
 
 mcc_generated_files/i2c_host/src/mssp1.c estimated size: 367
 
@@ -1123,21 +1456,35 @@ controller/LCD/I2C/i2c.c
 controller/LCD/I2C/i2c.c estimated size: 101
 
 mcc_generated_files/nvm/src/nvm.c
+<<<<<<< HEAD
 		_NVM_Initialize		CODE           	06FE	0000	4
 		_NVM_StatusClear		CODE           	0726	0000	3
+=======
+		_NVM_Initialize		CODE           	069F	0000	4
+		_NVM_StatusClear		CODE           	0698	0000	3
+>>>>>>> initialization_and_modes
 
 mcc_generated_files/nvm/src/nvm.c estimated size: 7
 
 mcc_generated_files/system/src/pins.c
+<<<<<<< HEAD
 		_PIN_MANAGER_Initialize		CODE           	037F	0000	83
+=======
+		_PIN_MANAGER_Initialize		CODE           	079A	0000	83
+>>>>>>> initialization_and_modes
 
 mcc_generated_files/system/src/pins.c estimated size: 83
 
 shared
+<<<<<<< HEAD
 		__initialization		CODE           	0033	0000	37
+=======
+		__initialization		CODE           	07ED	0000	16
+>>>>>>> initialization_and_modes
 		_I2C1_Host     		STRCODE        	0000	0000	0
 		_i2c1_eventTable		STRCODE        	062E	0000	18
 
+<<<<<<< HEAD
 shared estimated size: 55
 
 mcc_generated_files/timer/src/tmr6.c
@@ -1147,10 +1494,23 @@ mcc_generated_files/timer/src/tmr6.c estimated size: 19
 
 mcc_generated_files/system/src/clock.c
 		_CLOCK_Initialize		CODE           	0691	0000	9
+=======
+shared estimated size: 34
+
+controller/LED/led.c
+		_toggle        		CODE           	074F	0000	75
+		_turn_on       		CODE           	0703	0000	35
+
+controller/LED/led.c estimated size: 110
+
+mcc_generated_files/system/src/clock.c
+		_CLOCK_Initialize		CODE           	06AF	0000	9
+>>>>>>> initialization_and_modes
 
 mcc_generated_files/system/src/clock.c estimated size: 9
 
 main.c
+<<<<<<< HEAD
 		_main          		CODE           	0261	0000	159
 		_global_initialization		CODE           	073E	0000	1
 
@@ -1158,6 +1518,15 @@ main.c estimated size: 160
 
 mcc_generated_files/system/src/system.c
 		_SYSTEM_Initialize		CODE           	056C	0000	25
+=======
+		_main          		CODE           	0726	0000	41
+		_global_initialization		CODE           	0697	0000	1
+
+main.c estimated size: 42
+
+mcc_generated_files/system/src/system.c
+		_SYSTEM_Initialize		CODE           	06D2	0000	19
+>>>>>>> initialization_and_modes
 
 mcc_generated_files/system/src/system.c estimated size: 25
 

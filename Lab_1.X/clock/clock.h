@@ -19,14 +19,14 @@
 
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
-uint8_t increment_clock();
+uint8_t increment_clock(void);
 
-uint8_t increment_seconds();
+uint8_t increment_seconds(void);
 
-uint8_t increment_minutes();
+uint8_t increment_minutes(void);
 
-uint8_t increment_hours();
+uint8_t increment_hours(void);
 
-uint8_t get_clock(uint8_t precision, char* clock);
+uint8_t get_clock(uint8_t precision, char clock[9]);
 
 #endif

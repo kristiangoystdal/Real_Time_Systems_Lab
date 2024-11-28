@@ -32,59 +32,59 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR
     THIS SOFTWARE.
 */
-#include "mcc_generated_files/system/system.h"
-#include "controller/LCD/lcd.h"
-#include "controller/EEPROM/EEPROM_controller.h"
 #include "controller/LED/led.h"
-#include "controller/PWM/pwm.h"
-
+#include "mcc_generated_files/system/system.h"
+#include "controller/EEPROM/EEPROM_controller.h"
+#include "state/state.h"
+#include "clock/clock.h"
+#include "mode/normal_mode.h"
+#include "mode/configuration_mode.h"
 /*
     Main application
 */
 
-void global_initialization()
-{
-    // TODO: Read EEPROM
-    // TODO: Initialize Clock
+void global_initialization() {
+    if(MemIsUsable()) {
+        set_configs(ReadConfigs(), false);
+        set_max_min(ReadMaxMin(), false);
+    } else {
+        set_default();
+    }
+    set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+    set_mode(NORMAL_MODE);
 }
 
-int main(void)
-{
-    SYSTEM_Initialize();
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
+int main(void) {
+  SYSTEM_Initialize();
+  // If using interrupts in PIC18 High/Low Priority Mode you need to enable the
+  // Global High and Low Interrupts If using interrupts in PIC Mid-Range
+  // Compatibility Mode you need to enable the Global and Peripheral Interrupts
+  // Use the following macros to:
 
-    // Enable the Global Interrupts
-    // INTERRUPT_GlobalInterruptEnable();
+  // Enable the Global Interrupts
+  // INTERRUPT_GlobalInterruptEnable();
 
-    // Disable the Global Interrupts
-    // INTERRUPT_GlobalInterruptDisable();
+  // Disable the Global Interrupts
+  // INTERRUPT_GlobalInterruptDisable();
 
-    // Enable the Peripheral Interrupts
-    // INTERRUPT_PeripheralInterruptEnable();
+  // Enable the Peripheral Interrupts
+  // INTERRUPT_PeripheralInterruptEnable();
 
-    // Disable the Peripheral Interrupts
-    // INTERRUPT_PeripheralInterruptDisable();
+  // Disable the Peripheral Interrupts
+  // INTERRUPT_PeripheralInterruptDisable();
 
-    // TODO: Global Initialization
-    global_initialization();
+  // TODO: Global Initialization
+  global_initialization();
 
-    char string[] = "NORMAL MODE";
-    char string2[] = "PWM MODE   ";
-    LCDinit();
-
-    while (1)
-    {
-        LCDWriteStr(string, 0, 0);
-        IO_RA6_SetHigh();
-
-        __delay_ms(5000);
-
-        LCDWriteStr(string2, 0, 0);
-        PWM_Output_D4_Enable();
-
-        __delay_ms(5000);
-        PWM_Output_D4_Disable();
+  while (1) {
+    if(mode_has_changed()) {
+      uint8_t mode = get_mode();
+      if(mode == NORMAL_MODE) {
+        normal_mode_initialization();
+      } else {
+        configuration_mode_initialization();
+      }
     }
+    SLEEP();
+  }
 }

@@ -18,6 +18,9 @@
       <package packageName="@mchp-mcc/pin-content-processor" version="3.9.0" contentType="MELODY">
          <modules class="java.util.ArrayList"/>
       </package>
+      <package packageName="@mchp-mcc/scf-pic8-adcc-v2" version="5.0.0" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
       <package packageName="@mchp-mcc/scf-pic8-interrupt-v2" version="5.2.12" contentType="MELODY">
          <modules class="java.util.ArrayList"/>
       </package>
@@ -41,6 +44,10 @@
       </package>
    </usedPackages>
    <usedClasses class="java.util.TreeMap">
+      <entry>
+         <string>ADCC</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
       <entry>
          <string>Application Builder</string>
          <string>class com.microchip.mcc.melody.module.FrameworkModule</string>
@@ -134,6 +141,10 @@
          <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
       </entry>
       <entry>
+         <string>module67</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
          <string>module89</string>
          <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
       </entry>
@@ -157,31 +168,43 @@
          <hash>7d697124fb429db115d73502f7b43da5f004e4cc4542a25602cf16bcd1013357</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c_host/i2c_host_event_types.h</file>
+         <file>mcc_generated_files\adc\adc.h</file>
+         <hash>baa5b0bfacafbb778b41b64518047b1ab19c1b3844c79fc5d125b4885256240b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adc\adc_types.h</file>
+         <hash>70626d17feaffd44f3f1fb63e259b14048e4f221b4fbe147f1cbbce06d38232e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adc\src\adc.c</file>
+         <hash>014c690192ae26b6609e4d58ee2459f78ed61660c60c21fad5d129b309a21357</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\i2c_host\i2c_host_event_types.h</file>
          <hash>6cf089748cc9c9e6d29c664e258240b15d411a33f6f37a36a661fa2d1a644b2a</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c_host/i2c_host_interface.h</file>
+         <file>mcc_generated_files\i2c_host\i2c_host_interface.h</file>
          <hash>c31fc8038273aff77ec9ac3074fed63c76aaf714a4aca1a476eff5ad75904c66</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c_host/i2c_host_types.h</file>
+         <file>mcc_generated_files\i2c_host\i2c_host_types.h</file>
          <hash>d9f4805fd017c9c76da80898b6d096634fec9656f0cea76ed9419090b99ad1f2</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c_host/mssp1.h</file>
+         <file>mcc_generated_files\i2c_host\mssp1.h</file>
          <hash>a6225c500d257045209b6a9f40742b218084ea3382674ab8bccd9b90083b433e</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/i2c_host/src/mssp1.c</file>
+         <file>mcc_generated_files\i2c_host\src\mssp1.c</file>
          <hash>71aeb0cb9268766ef4e397cb1d8630254ebf05826981ebdf2adc017a7ae9c8e0</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/nvm/nvm.h</file>
+         <file>mcc_generated_files\nvm\nvm.h</file>
          <hash>30bc4d4740bad6f93fa81b320ee1db911b9e568bba3d15a48f3b526aa5a6a99f</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/nvm/src/nvm.c</file>
+         <file>mcc_generated_files\nvm\src\nvm.c</file>
          <hash>4ad0f2951b4c97350b4e76ac431011460d2b1e1ac0a42828a6b904ffa442fec8</hash>
       </entry>
       <entry>
@@ -197,11 +220,11 @@
          <hash>c49245aede1a0cea57baac10759c8e2d260babfd51cf24c9d8c2e08f5915ee2a</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/system/config_bits.h</file>
+         <file>mcc_generated_files\system\config_bits.h</file>
          <hash>d1b2c9c88e5a0541da83ae1b28e71f4988834b939072098d96e218c2118a54f9</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/system/interrupt.h</file>
+         <file>mcc_generated_files\system\interrupt.h</file>
          <hash>47f226ff2adddb0539ef0e7861ca253264f1103a8bab3884a91489c8e4f89dda</hash>
       </entry>
       <entry>
@@ -209,11 +232,11 @@
          <hash>085ff6cb826bfd76131f38cd1346be13322d2576efba5abdc804134296e8b115</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/system/src/clock.c</file>
+         <file>mcc_generated_files\system\src\clock.c</file>
          <hash>f68ad7690cd0fefa10e2007c802bcb95480d4591b42dffc46962a4aac8e9d43d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/system/src/config_bits.c</file>
+         <file>mcc_generated_files\system\src\config_bits.c</file>
          <hash>3466d2b8eedd211d4380a932bd6b6a6c57efe93a74c693d4a2749d5f2b028753</hash>
       </entry>
       <entry>
@@ -233,7 +256,7 @@
          <hash>17bdb7741b62c584f142871044ba74ea0277ecc9a1b9caeab58fcddee63a3657</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/timer/src/tmr1.c</file>
+         <file>mcc_generated_files\timer\src\tmr1.c</file>
          <hash>f23aa5c51c91b1988fee84f9601d1977f7b7d9518b3cda6bbac6ba8dae78fdd6</hash>
       </entry>
       <entry>
@@ -245,7 +268,7 @@
          <hash>68e61a186eb6ba8c87df40fedff5e673a9be0dda85d27264cd400a9cf608d29b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/timer/tmr1_deprecated.h</file>
+         <file>mcc_generated_files\timer\tmr1_deprecated.h</file>
          <hash>b7d7ea4c61613b0e4f6315bd837f3d894d4b95b30fda3413abd95c10c6b897a2</hash>
       </entry>
       <entry>

@@ -1,6 +1,6 @@
 #include "EEPROM_controller.h"
 
-uint8_t CalculateChecksum(Configs configs)
+uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
 {
     uint8_t checksum = 0;
     checksum += configs.monitoringPeriod;
@@ -13,12 +13,23 @@ uint8_t CalculateChecksum(Configs configs)
     checksum += configs.thresholdLum;
     checksum += configs.clockHours;
     checksum += configs.clockMinutes;
+    for(uint8_t i = 0; i < 5; i++) {
+        checksum += sensorsMaxMin.maxLum[i];
+        checksum += sensorsMaxMin.maxTemp[i];
+        checksum += sensorsMaxMin.minLum[i];
+        checksum += sensorsMaxMin.minTemp[i];
+    }
     return checksum;
 }
 
-bool ConfigIsUsable()
+void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin) {
+    uint8_t calculatedChecksum = CalculateChecksum(configs, sensorsMaxMin);
+    EEPROM_Write(CHECKSUM_ADDR, calculatedChecksum);
+}
+
+bool MemIsUsable()
 {
-    uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs());
+    uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs(), ReadMaxMin());
     uint8_t readMagicWord = EEPROM_Read(MAGIC_WORD_ADDR);
     uint8_t readChecksum = EEPROM_Read(CHECKSUM_ADDR);
     if ((readChecksum == calculatedChecksum) && (readMagicWord == MAGIC_WORD))
@@ -49,9 +60,7 @@ Configs ReadConfigs()
 
 void WriteConfigs(Configs configs)
 {
-    uint8_t calculatedChecksum = CalculateChecksum(configs);
     EEPROM_Write(MAGIC_WORD_ADDR, MAGIC_WORD);
-    EEPROM_Write(CHECKSUM_ADDR, calculatedChecksum);
     EEPROM_Write(MONITORING_PERIOD_ADDR, configs.monitoringPeriod);
     EEPROM_Write(ALARM_DURATION_ADDR, configs.alarmDuration);
     EEPROM_Write(ALARM_FLAG_ADDR, configs.alarmFlag);

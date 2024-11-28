@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/sources/c99/pic/compiler_support.c"
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic\\compiler_support.c"
+>>>>>>> initialization_and_modes
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/sources/c99/pic/compiler_support.c" 2
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
+# 2 "<built-in>" 2
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic\\compiler_support.c" 2
+>>>>>>> initialization_and_modes
 __persistent unsigned char __BTEMP12;
 __persistent unsigned char __BTEMP13;
 __persistent unsigned char __BTEMP14;

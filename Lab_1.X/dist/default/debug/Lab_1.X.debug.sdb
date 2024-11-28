@@ -3,7 +3,88 @@
 [d edition pro ]
 [d chip 16F18875 ]
 [d frameptr 6 ]
-"80 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
+"135 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[e E12222 . `uc
+ADC_CHANNEL_VSS 60
+ADC_CHANNEL_TEMP 61
+ADC_CHANNEL_DAC1 62
+ADC_CHANNEL_FVR_BUF1 63
+ADC_CHANNEL_ANA0 0
+]
+"208
+[e E12229 . `uc
+ADC_BASIC 0
+ADC_SERIES_ACCUMULATE 1
+ADC_SERIES_AVERAGE 2
+ADC_BURST_AVERAGE 3
+ADC_LOW_PASS_FILTER 4
+]
+"225
+[e E12243 . `uc
+ADC_NEVER_INTERRUPT 0
+ADC_BELOW_LOWER_THRESHOLD 1
+ADC_ABOVE_LOWER_THRESHOLD 2
+ADC_INSIDE_LOWER_AND_UPPER_THRESHOLD 3
+ADC_OUTSIDE_LOWER_AND_UPPER_THRESHOLD 4
+ADC_BELOW_UPPER_THRESHOLD 5
+ADC_ABOVE_UPPER_THRESHOLD 6
+ADC_ALWAYS_INTERRUPT 7
+]
+"346
+[e E12283 . `uc
+ADC_NOT_CONVERTING 0
+ADC_1ST_PRECHARGE 1
+ADC_1ST_ACQUISITION 2
+ADC_1ST_CONVERSION 3
+ADC_2ND_PRECHARGE 5
+ADC_2ND_ACQUISITION 6
+ADC_2ND_CONVERSION 7
+]
+"351
+[e E12253 . `uc
+ADC_TRIGGER_SOURCE_DISABLED 0
+ADC_TRIGGER_SOURCE_ADACTPPS 1
+ADC_TRIGGER_SOURCE_TMR0 2
+ADC_TRIGGER_SOURCE_TMR1 3
+ADC_TRIGGER_SOURCE_TMR2 4
+ADC_TRIGGER_SOURCE_TMR3 5
+ADC_TRIGGER_SOURCE_TMR4 6
+ADC_TRIGGER_SOURCE_TMR5 7
+ADC_TRIGGER_SOURCE_TMR6 8
+ADC_TRIGGER_SOURCE_SMT1 9
+ADC_TRIGGER_SOURCE_SMT2 10
+ADC_TRIGGER_SOURCE_CCP1 11
+ADC_TRIGGER_SOURCE_CCP2 12
+ADC_TRIGGER_SOURCE_CCP3 13
+ADC_TRIGGER_SOURCE_CCP4 14
+ADC_TRIGGER_SOURCE_CCP5 15
+ADC_TRIGGER_SOURCE_PWM6 16
+ADC_TRIGGER_SOURCE_PWM7 17
+ADC_TRIGGER_SOURCE_C1OUT 18
+ADC_TRIGGER_SOURCE_C2OUT 19
+ADC_TRIGGER_SOURCE_IOC 20
+ADC_TRIGGER_SOURCE_CLC1 21
+ADC_TRIGGER_SOURCE_CLC2 22
+ADC_TRIGGER_SOURCE_CLC3 23
+ADC_TRIGGER_SOURCE_CLC4 24
+ADC_TRIGGER_SOURCE_ADERR 28
+ADC_TRIGGER_SOURCE_ADRESH 29
+ADC_TRIGGER_SOURCE_ADPCH 31
+]
+"356
+[e E12236 . `uc
+ADC_FIRST_DERIVATIVE_OF_SINGLE_MEASUREMENT 0
+ADC_ACTUAL_RESULT_VS_SETPOINT 1
+ADC_ACTUAL_RESULT_VS_FILTERED_VALUE 2
+ADC_FIRST_DERIVATIVE_OF_FILTERED_VALUE 4
+ADC_FILTERED_VALUE_VS_SETPOINT 5
+]
+"53 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
+[e E12222 . `uc
+NVM_OK 0
+NVM_ERROR 1
+]
+"80 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
 [e E12218 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -22,6 +103,7 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
+<<<<<<< HEAD
 "53 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
 [e E12222 . `uc
 NVM_OK 0
@@ -76,13 +158,21 @@ TMR6_LC4_OUT 17
 "5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcadd.c
+=======
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+>>>>>>> initialization_and_modes
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/Umul8_16.c
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 /Applications/microchip/xc8/v2.50/pic/sources/c99/pic/__eeprom.c
+"6 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+<<<<<<< HEAD
 "3 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
 [v _CalculateChecksum CalculateChecksum `(uc  1 e 1 0 ]
 "26 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.h
@@ -94,13 +184,29 @@ TMR6_LC4_OUT 17
 "59
 [v _WriteI2C WriteI2C `(c  1 e 1 0 ]
 "17 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/lcd.c
+=======
+"3 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _CalculateChecksum CalculateChecksum `(uc  1 e 1 0 ]
+"22 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.h
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"34 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _ReadConfigs ReadConfigs `(S36  1 e 10 0 ]
+"44 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LCD/I2C/i2c.c
+[v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
+"59
+[v _WriteI2C WriteI2C `(c  1 e 1 0 ]
+"17 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LCD/lcd.c
+>>>>>>> initialization_and_modes
 [v _LCDsend LCDsend `(v  1 e 1 0 ]
 "25
 [v _LCDrecv LCDrecv `(uc  1 e 1 0 ]
 "56
 [v _LCDsend2x4 LCDsend2x4 `(v  1 e 1 0 ]
+<<<<<<< HEAD
 "79
 [v _LCDinit LCDinit `(v  1 e 1 0 ]
+=======
+>>>>>>> initialization_and_modes
 "102
 [v _LCDcmd LCDcmd `(v  1 e 1 0 ]
 "107
@@ -111,13 +217,23 @@ TMR6_LC4_OUT 17
 [v _LCDbusy LCDbusy `(i  1 e 2 0 ]
 "125
 [v _LCDpos LCDpos `(v  1 e 1 0 ]
+<<<<<<< HEAD
 "142
 [v _LCDWriteStr LCDWriteStr `(v  1 e 1 0 ]
 "45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
 [v _global_initialization global_initialization `(v  1 e 1 0 ]
 "51
+=======
+"5 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LED/led.c
+[v _turn_on turn_on `(v  1 e 1 0 ]
+"29
+[v _toggle toggle `(v  1 e 1 0 ]
+"42 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _global_initialization global_initialization `(v  1 e 1 0 ]
+"47
+>>>>>>> initialization_and_modes
 [v _main main `(i  1 e 2 0 ]
-"114 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
+"114 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "130
 [v _I2C1_Deinitialize I2C1_Deinitialize `(v  1 e 1 0 ]
@@ -203,7 +319,7 @@ TMR6_LC4_OUT 17
 [v _I2C1_ErrorInterruptClear I2C1_ErrorInterruptClear `T(v  1 s 1 I2C1_ErrorInterruptClear ]
 "496
 [v _I2C1_StatusFlagsClear I2C1_StatusFlagsClear `T(v  1 s 1 I2C1_StatusFlagsClear ]
-"43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
 [v _NVM_Initialize NVM_Initialize `(v  1 e 1 0 ]
 "65
 [v _NVM_StatusClear NVM_StatusClear `(v  1 e 1 0 ]
@@ -211,11 +327,15 @@ TMR6_LC4_OUT 17
 [v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
 "222
 [v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+<<<<<<< HEAD
 "45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/pwm/src/pwm6.c
 [v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
 "39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/clock.c
+=======
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/clock.c
+>>>>>>> initialization_and_modes
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
-"40 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/interrupt.c
+"40 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "59
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -225,11 +345,11 @@ TMR6_LC4_OUT 17
 [v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
 "109
 [v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
-"38 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/pins.c
+"38 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/system.c
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"49 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr1.c
+"49 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "120
 [v _TMR1_CounterSet TMR1_CounterSet `(v  1 e 1 0 ]
@@ -239,18 +359,28 @@ TMR6_LC4_OUT 17
 [v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
 "207
 [v _TMR1_DefaultGateCallback TMR1_DefaultGateCallback `(v  1 s 1 TMR1_DefaultGateCallback ]
+<<<<<<< HEAD
 "50 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 "161
 [v _TMR6_DefaultPeriodMatchCallback TMR6_DefaultPeriodMatchCallback `(v  1 s 1 TMR6_DefaultPeriodMatchCallback ]
 [s S1355 . 1 `uc 1 INTEDG 1 0 :1:0 
+=======
+[s S1239 . 1 `uc 1 INTEDG 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
+<<<<<<< HEAD
 "364 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8/pic/include/proc/pic16f18875.h
 [u S1360 . 1 `S1355 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES1360  1 e 1 @11 ]
+=======
+"364 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[u S1244 . 1 `S1239 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1244  1 e 1 @11 ]
+>>>>>>> initialization_and_modes
 "670
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "732
@@ -275,7 +405,11 @@ TMR6_LC4_OUT 17
 [v _TRISE TRISE `VEuc  1 e 1 @21 ]
 "950
 [v _LATA LATA `VEuc  1 e 1 @22 ]
+<<<<<<< HEAD
 [s S2158 . 1 `uc 1 LATA0 1 0 :1:0 
+=======
+[s S720 . 1 `uc 1 LATA0 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -285,8 +419,13 @@ TMR6_LC4_OUT 17
 `uc 1 LATA7 1 0 :1:7 
 ]
 "967
+<<<<<<< HEAD
 [u S2167 . 1 `S2158 1 . 1 0 ]
 [v _LATAbits LATAbits `VES2167  1 e 1 @22 ]
+=======
+[u S729 . 1 `S720 1 . 1 0 ]
+[v _LATAbits LATAbits `VES729  1 e 1 @22 ]
+>>>>>>> initialization_and_modes
 "1012
 [v _LATB LATB `VEuc  1 e 1 @23 ]
 "1074
@@ -295,6 +434,147 @@ TMR6_LC4_OUT 17
 [v _LATD LATD `VEuc  1 e 1 @25 ]
 "1198
 [v _LATE LATE `VEuc  1 e 1 @26 ]
+"1805
+[v _ADRESL ADRESL `VEuc  1 e 1 @140 ]
+"1825
+[v _ADRESH ADRESH `VEuc  1 e 1 @141 ]
+"1839
+[v _ADPREVL ADPREVL `VEuc  1 e 1 @142 ]
+"1909
+[v _ADPREVH ADPREVH `VEuc  1 e 1 @143 ]
+"1986
+[v _ADACCL ADACCL `VEuc  1 e 1 @144 ]
+"2056
+[v _ADACCH ADACCH `VEuc  1 e 1 @145 ]
+"2126
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
+[s S769 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+"2162
+[s S777 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM 1 0 :2:2 
+]
+[s S781 . 1 `uc 1 nDONE 1 0 :1:0 
+]
+[s S783 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+`uc 1 ADFM1 1 0 :1:3 
+]
+[s S788 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFRM0 1 0 :1:2 
+`uc 1 ADFRM1 1 0 :1:3 
+]
+[u S793 . 1 `S769 1 . 1 0 `S777 1 . 1 0 `S781 1 . 1 0 `S783 1 . 1 0 `S788 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES793  1 e 1 @147 ]
+"2237
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @148 ]
+[s S995 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+"2251
+[u S1001 . 1 `S995 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1001  1 e 1 @148 ]
+"2276
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @149 ]
+[s S893 . 1 `uc 1 ADMD 1 0 :3:0 
+`uc 1 ADACLR 1 0 :1:3 
+`uc 1 ADCRS 1 0 :3:4 
+`uc 1 ADPSIS 1 0 :1:7 
+]
+"2298
+[s S898 . 1 `uc 1 ADMD0 1 0 :1:0 
+`uc 1 ADMD1 1 0 :1:1 
+`uc 1 ADMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCRS0 1 0 :1:4 
+`uc 1 ADCRS1 1 0 :1:5 
+`uc 1 ADCRS2 1 0 :1:6 
+]
+[u S906 . 1 `S893 1 . 1 0 `S898 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES906  1 e 1 @149 ]
+"2353
+[v _ADCON3 ADCON3 `VEuc  1 e 1 @150 ]
+[s S932 . 1 `uc 1 ADTMD0 1 0 :1:0 
+`uc 1 ADTMD1 1 0 :1:1 
+`uc 1 ADTMD2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ADCALC0 1 0 :1:4 
+`uc 1 ADCALC1 1 0 :1:5 
+`uc 1 ADCALC2 1 0 :1:6 
+]
+"2374
+[s S940 . 1 `uc 1 ADTMD 1 0 :3:0 
+`uc 1 ADSOI 1 0 :1:3 
+`uc 1 ADCALC 1 0 :3:4 
+]
+[u S944 . 1 `S932 1 . 1 0 `S940 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES944  1 e 1 @150 ]
+"2424
+[v _ADSTAT ADSTAT `VEuc  1 e 1 @151 ]
+[s S963 . 1 `uc 1 ADSTAT 1 0 :3:0 
+`uc 1 ADMACT 1 0 :1:3 
+`uc 1 ADMATH 1 0 :1:4 
+`uc 1 ADLTHR 1 0 :1:5 
+`uc 1 ADUTHR 1 0 :1:6 
+`uc 1 ADAOV 1 0 :1:7 
+]
+"2444
+[s S970 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+`uc 1 ADSTAT1 1 0 :1:1 
+`uc 1 ADSTAT2 1 0 :1:2 
+]
+[u S974 . 1 `S963 1 . 1 0 `S970 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES974  1 e 1 @151 ]
+"2494
+[v _ADCLK ADCLK `VEuc  1 e 1 @152 ]
+"2552
+[v _ADACT ADACT `VEuc  1 e 1 @153 ]
+"2604
+[v _ADREF ADREF `VEuc  1 e 1 @154 ]
+"2645
+[v _ADCAP ADCAP `VEuc  1 e 1 @155 ]
+"2697
+[v _ADPRE ADPRE `VEuc  1 e 1 @156 ]
+"2767
+[v _ADACQ ADACQ `VEuc  1 e 1 @157 ]
+"2837
+[v _ADPCH ADPCH `VEuc  1 e 1 @158 ]
+"2895
+[v _ADCNT ADCNT `VEuc  1 e 1 @268 ]
+"2965
+[v _ADRPT ADRPT `VEuc  1 e 1 @269 ]
+"3042
+[v _ADLTHL ADLTHL `VEuc  1 e 1 @270 ]
+"3112
+[v _ADLTHH ADLTHH `VEuc  1 e 1 @271 ]
+"3189
+[v _ADUTHL ADUTHL `VEuc  1 e 1 @272 ]
+"3259
+[v _ADUTHH ADUTHH `VEuc  1 e 1 @273 ]
+"3336
+[v _ADSTPTL ADSTPTL `VEuc  1 e 1 @274 ]
+"3406
+[v _ADSTPTH ADSTPTH `VEuc  1 e 1 @275 ]
+"3483
+[v _ADFLTRL ADFLTRL `VEuc  1 e 1 @276 ]
+"3553
+[v _ADFLTRH ADFLTRH `VEuc  1 e 1 @277 ]
+"3630
+[v _ADERRL ADERRL `VEuc  1 e 1 @278 ]
+"3700
+[v _ADERRH ADERRH `VEuc  1 e 1 @279 ]
 "4604
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
 "4624
@@ -464,20 +744,29 @@ TMR6_LC4_OUT 17
 [v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
 "6787
 [v _T1CON T1CON `VEuc  1 e 1 @526 ]
+<<<<<<< HEAD
 [s S1656 . 1 `uc 1 ON 1 0 :1:0 
+=======
+[s S1310 . 1 `uc 1 ON 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
 "6818
+<<<<<<< HEAD
 [s S1662 . 1 `uc 1 TMR1ON 1 0 :1:0 
+=======
+[s S1316 . 1 `uc 1 TMR1ON 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
+<<<<<<< HEAD
 [s S1669 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
@@ -490,6 +779,20 @@ TMR6_LC4_OUT 17
 "6883
 [v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
 [s S1778 . 1 `uc 1 . 1 0 :2:0 
+=======
+[s S1323 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+]
+[s S1327 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RD161 1 0 :1:1 
+]
+[u S1330 . 1 `S1310 1 . 1 0 `S1316 1 . 1 0 `S1323 1 . 1 0 `S1327 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1330  1 e 1 @526 ]
+"6883
+[v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
+[s S1446 . 1 `uc 1 . 1 0 :2:0 
+>>>>>>> initialization_and_modes
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO_nDONE 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -498,7 +801,11 @@ TMR6_LC4_OUT 17
 `uc 1 GE 1 0 :1:7 
 ]
 "6917
+<<<<<<< HEAD
 [s S1786 . 1 `uc 1 . 1 0 :2:0 
+=======
+[s S1454 . 1 `uc 1 . 1 0 :2:0 
+>>>>>>> initialization_and_modes
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -506,15 +813,24 @@ TMR6_LC4_OUT 17
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
+<<<<<<< HEAD
 [s S1794 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
 [u S1797 . 1 `S1778 1 . 1 0 `S1786 1 . 1 0 `S1794 1 . 1 0 ]
 [v _T1GCONbits T1GCONbits `VES1797  1 e 1 @527 ]
+=======
+[s S1462 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 T1GGO 1 0 :1:3 
+]
+[u S1465 . 1 `S1446 1 . 1 0 `S1454 1 . 1 0 `S1462 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1465  1 e 1 @527 ]
+>>>>>>> initialization_and_modes
 "7079
 [v _T1GATE T1GATE `VEuc  1 e 1 @528 ]
 "7245
 [v _T1CLK T1CLK `VEuc  1 e 1 @529 ]
+<<<<<<< HEAD
 [s S1413 . 1 `uc 1 C5TSEL 1 0 :2:0 
 `uc 1 P6TSEL 1 0 :2:2 
 `uc 1 P7TSEL 1 0 :2:4 
@@ -620,13 +936,30 @@ TMR6_LC4_OUT 17
 "12547
 [v _PWM6CON PWM6CON `VEuc  1 e 1 @910 ]
 [s S1505 . 1 `uc 1 INTF 1 0 :1:0 
+=======
+[s S1226 . 1 `uc 1 INTF 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "21269
+<<<<<<< HEAD
 [u S1510 . 1 `S1505 1 . 1 0 ]
 [v _PIR0bits PIR0bits `VES1510  1 e 1 @1804 ]
+=======
+[u S1231 . 1 `S1226 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1231  1 e 1 @1804 ]
+[s S839 . 1 `uc 1 ADIF 1 0 :1:0 
+`uc 1 ADTIF 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"21303
+[u S845 . 1 `S839 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES845  1 e 1 @1805 ]
+>>>>>>> initialization_and_modes
 [s S463 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
@@ -637,7 +970,11 @@ TMR6_LC4_OUT 17
 "21376
 [u S470 . 1 `S463 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES470  1 e 1 @1807 ]
+<<<<<<< HEAD
 [s S1553 . 1 `uc 1 TMR1IF 1 0 :1:0 
+=======
+[s S1369 . 1 `uc 1 TMR1IF 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -645,9 +982,15 @@ TMR6_LC4_OUT 17
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "21426
+<<<<<<< HEAD
 [u S1560 . 1 `S1553 1 . 1 0 ]
 [v _PIR4bits PIR4bits `VES1560  1 e 1 @1808 ]
 [s S1736 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+=======
+[u S1376 . 1 `S1369 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES1376  1 e 1 @1808 ]
+[s S1404 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 TMR3GIF 1 0 :1:1 
 `uc 1 TMR5GIF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -657,9 +1000,24 @@ TMR6_LC4_OUT 17
 `uc 1 CLC4IF 1 0 :1:7 
 ]
 "21478
+<<<<<<< HEAD
 [u S1745 . 1 `S1736 1 . 1 0 ]
 [v _PIR5bits PIR5bits `VES1745  1 e 1 @1809 ]
 [s S1176 . 1 `uc 1 SSP1IE 1 0 :1:0 
+=======
+[u S1413 . 1 `S1404 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES1413  1 e 1 @1809 ]
+[s S824 . 1 `uc 1 ADIE 1 0 :1:0 
+`uc 1 ADTIE 1 0 :1:1 
+`uc 1 . 1 0 :4:2 
+`uc 1 CSWIE 1 0 :1:6 
+`uc 1 OSFIE 1 0 :1:7 
+]
+"21725
+[u S830 . 1 `S824 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES830  1 e 1 @1815 ]
+[s S2107 . 1 `uc 1 SSP1IE 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -667,9 +1025,15 @@ TMR6_LC4_OUT 17
 `uc 1 RCIE 1 0 :1:5 
 ]
 "21798
+<<<<<<< HEAD
 [u S1183 . 1 `S1176 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES1183  1 e 1 @1817 ]
 [s S1536 . 1 `uc 1 TMR1IE 1 0 :1:0 
+=======
+[u S2114 . 1 `S2107 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES2114  1 e 1 @1817 ]
+[s S1386 . 1 `uc 1 TMR1IE 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 TMR3IE 1 0 :1:2 
 `uc 1 TMR4IE 1 0 :1:3 
@@ -677,9 +1041,15 @@ TMR6_LC4_OUT 17
 `uc 1 TMR6IE 1 0 :1:5 
 ]
 "21848
+<<<<<<< HEAD
 [u S1543 . 1 `S1536 1 . 1 0 ]
 [v _PIE4bits PIE4bits `VES1543  1 e 1 @1818 ]
 [s S1757 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+=======
+[u S1393 . 1 `S1386 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES1393  1 e 1 @1818 ]
+[s S1425 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 TMR3GIE 1 0 :1:1 
 `uc 1 TMR5GIE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -689,8 +1059,13 @@ TMR6_LC4_OUT 17
 `uc 1 CLC4IE 1 0 :1:7 
 ]
 "21900
+<<<<<<< HEAD
 [u S1766 . 1 `S1757 1 . 1 0 ]
 [v _PIE5bits PIE5bits `VES1766  1 e 1 @1819 ]
+=======
+[u S1434 . 1 `S1425 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES1434  1 e 1 @1819 ]
+>>>>>>> initialization_and_modes
 "23101
 [v _NVMADRL NVMADRL `VEuc  1 e 1 @2074 ]
 "23163
@@ -699,7 +1074,11 @@ TMR6_LC4_OUT 17
 [v _NVMDATL NVMDATL `VEuc  1 e 1 @2076 ]
 "23281
 [v _NVMDATH NVMDATH `VEuc  1 e 1 @2077 ]
+<<<<<<< HEAD
 [s S1329 . 1 `uc 1 RD 1 0 :1:0 
+=======
+[s S1588 . 1 `uc 1 RD 1 0 :1:0 
+>>>>>>> initialization_and_modes
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -708,8 +1087,13 @@ TMR6_LC4_OUT 17
 `uc 1 NVMREGS 1 0 :1:6 
 ]
 "23347
+<<<<<<< HEAD
 [u S1337 . 1 `S1329 1 . 1 0 ]
 [v _NVMCON1bits NVMCON1bits `VES1337  1 e 1 @2078 ]
+=======
+[u S1596 . 1 `S1588 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES1596  1 e 1 @2078 ]
+>>>>>>> initialization_and_modes
 "23387
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @2079 ]
 "23451
@@ -804,31 +1188,50 @@ TMR6_LC4_OUT 17
 [v _IOCEN IOCEN `VEuc  1 e 1 @3946 ]
 "36190
 [v _IOCEF IOCEF `VEuc  1 e 1 @3947 ]
+<<<<<<< HEAD
 "4 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/clock/clock.c
+=======
+"4 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\clock/clock.c
+>>>>>>> initialization_and_modes
 [v __hours _hours `uc  1 s 1 _hours ]
 "5
 [v __minutes _minutes `uc  1 s 1 _minutes ]
 "6
 [v __seconds _seconds `uc  1 s 1 _seconds ]
+<<<<<<< HEAD
 "96 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Callback I2C1_Callback `*.37(v  1 s 2 I2C1_Callback ]
 [s S843 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.2uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12218 1 errorState 1 12 `E12227 1 state 1 13 ]
 "97
 [v _i2c1Status i2c1Status `VES843  1 e 14 0 ]
+=======
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_ConversionDoneCallback ADC_ConversionDoneCallback `*.37(v  1 s 2 ADC_ConversionDoneCallback ]
+"40
+[v _ADC_ThresholdCallback ADC_ThresholdCallback `*.37(v  1 s 2 ADC_ThresholdCallback ]
+"41
+[v _adc_busy_status adc_busy_status `a  1 s 1 adc_busy_status ]
+"96 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
+[v _I2C1_Callback I2C1_Callback `*.37(v  1 s 2 I2C1_Callback ]
+[s S1774 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.2uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12218 1 errorState 1 12 `E12227 1 state 1 13 ]
+"97
+[v _i2c1Status i2c1Status `VES1774  1 e 14 0 ]
+>>>>>>> initialization_and_modes
 "99
 [v _i2c1_eventTable i2c1_eventTable `DC[9]*.37(E12227  1 e 18 0 ]
-"40 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
+"40 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
 [v _unlockKeyLow unlockKeyLow `VNEuc  1 s 1 unlockKeyLow ]
 "41
 [v _unlockKeyHigh unlockKeyHigh `VNEuc  1 s 1 unlockKeyHigh ]
-"38 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/interrupt.c
+"38 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
 [v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
-"43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr1.c
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 s 2 timer1ReloadVal ]
 "44
 [v _TMR1_OverflowCallback TMR1_OverflowCallback `*.37(v  1 s 2 TMR1_OverflowCallback ]
 "45
 [v _TMR1_GateCallback TMR1_GateCallback `*.37(v  1 s 2 TMR1_GateCallback ]
+<<<<<<< HEAD
 "43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_PeriodMatchCallback TMR6_PeriodMatchCallback `*.37(v  1 s 2 TMR6_PeriodMatchCallback ]
 "51 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
@@ -856,8 +1259,35 @@ TMR6_LC4_OUT 17
 [v _global_initialization global_initialization `(v  1 e 1 0 ]
 {
 "49
+=======
+"47 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"77
+>>>>>>> initialization_and_modes
 } 0
-"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/system.c
+"5 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LED/led.c
+[v _turn_on turn_on `(v  1 e 1 0 ]
+{
+[v turn_on@n n `uc  1 p 1 wreg ]
+[v turn_on@n n `uc  1 p 1 wreg ]
+[v turn_on@n n `uc  1 p 1 0 ]
+"15
+} 0
+"29
+[v _toggle toggle `(v  1 e 1 0 ]
+{
+[v toggle@n n `uc  1 p 1 wreg ]
+[v toggle@n n `uc  1 p 1 wreg ]
+[v toggle@n n `uc  1 p 1 0 ]
+"39
+} 0
+"42 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _global_initialization global_initialization `(v  1 e 1 0 ]
+{
+"45
+} 0
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "49
@@ -867,22 +1297,26 @@ TMR6_LC4_OUT 17
 {
 "72
 } 0
-"49 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr1.c
+"49 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/timer/src/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
+<<<<<<< HEAD
 "45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/pwm/src/pwm6.c
 [v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
 {
 "61
 } 0
 "38 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/pins.c
+=======
+"38 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/pins.c
+>>>>>>> initialization_and_modes
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "131
 } 0
-"43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
 [v _NVM_Initialize NVM_Initialize `(v  1 e 1 0 ]
 {
 "46
@@ -892,7 +1326,7 @@ TMR6_LC4_OUT 17
 {
 "68
 } 0
-"40 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/interrupt.c
+"40 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "50
@@ -903,7 +1337,7 @@ TMR6_LC4_OUT 17
 [v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
 "107
 } 0
-"114 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
+"114 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 {
 "128
@@ -913,7 +1347,7 @@ TMR6_LC4_OUT 17
 {
 "478
 } 0
-"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/clock.c
+"39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 {
 "55

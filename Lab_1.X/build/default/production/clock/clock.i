@@ -4,7 +4,11 @@
 # 288 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/language_support.h" 1 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
+>>>>>>> initialization_and_modes
 # 2 "<built-in>" 2
 # 1 "clock/clock.c" 2
 
@@ -12,6 +16,7 @@
 
 
 
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
 
 
@@ -25,6 +30,21 @@ typedef unsigned short uintptr_t;
 # 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef short intptr_t;
 # 164 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+>>>>>>> initialization_and_modes
 typedef signed char int8_t;
 
 
@@ -47,7 +67,11 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
+<<<<<<< HEAD
 # 194 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+=======
+# 194 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+>>>>>>> initialization_and_modes
 typedef long long intmax_t;
 
 
@@ -76,9 +100,15 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
+<<<<<<< HEAD
 # 235 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
 # 27 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+=======
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+>>>>>>> initialization_and_modes
 
 typedef int8_t int_fast8_t;
 
@@ -110,14 +140,24 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
+<<<<<<< HEAD
 # 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/stdint.h" 1 3
+=======
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/stdint.h" 1 3
+>>>>>>> initialization_and_modes
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
+<<<<<<< HEAD
 # 149 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
 # 5 "clock/clock.h" 2
+=======
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 4 "clock/clock.h" 2
+>>>>>>> initialization_and_modes
 # 20 "clock/clock.h"
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
@@ -130,7 +170,12 @@ uint8_t increment_minutes();
 uint8_t increment_hours();
 
 uint8_t get_clock(uint8_t precision, char* clock);
+<<<<<<< HEAD
 # 3 "clock/clock.c" 2
+=======
+# 2 "clock/clock.c" 2
+
+>>>>>>> initialization_and_modes
 
 static uint8_t _hours = 0;
 static uint8_t _minutes = 0;
