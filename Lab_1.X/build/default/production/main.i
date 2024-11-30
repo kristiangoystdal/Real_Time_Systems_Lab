@@ -8,7 +8,7 @@
 # 2 "<built-in>" 2
 # 1 "main.c" 2
 # 35 "main.c"
-# 1 "./controller/LED/led.h" 1
+# 1 "./clock/clock.h" 1
 
 
 
@@ -117,18 +117,27 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
-# 4 "./controller/LED/led.h" 2
+# 4 "./clock/clock.h" 2
+# 20 "./clock/clock.h"
+void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
+uint8_t increment_clock(void);
 
-void turn_on(uint8_t n);
+uint8_t increment_seconds(void);
 
-void turn_off(uint8_t n);
+uint8_t increment_minutes(void);
 
-void toggle(uint8_t n);
+uint8_t increment_hours(void);
+
+uint8_t get_clock(uint8_t precision, char clock[9]);
 # 35 "main.c" 2
 
-# 1 "./mcc_generated_files/system/system.h" 1
-# 39 "./mcc_generated_files/system/system.h"
+# 1 "./controller/EEPROM/EEPROM_controller.h" 1
+
+
+
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 1
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/system.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -20830,22 +20839,22 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
-# 39 "./mcc_generated_files/system/system.h" 2
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdbool.h" 1 3
-# 41 "./mcc_generated_files/system/system.h" 2
+# 41 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
-# 1 "./mcc_generated_files/system/config_bits.h" 1
-# 39 "./mcc_generated_files/system/config_bits.h"
-# 1 "./mcc_generated_files/system/../system/clock.h" 1
-# 56 "./mcc_generated_files/system/../system/clock.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 1
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/config_bits.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../system/clock.h" 1
+# 56 "./controller/EEPROM/../../mcc_generated_files/system/../system/clock.h"
 void CLOCK_Initialize(void);
-# 39 "./mcc_generated_files/system/config_bits.h" 2
-# 42 "./mcc_generated_files/system/system.h" 2
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 2
+# 42 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
-# 1 "./mcc_generated_files/system/../system/pins.h" 1
-# 210 "./mcc_generated_files/system/../system/pins.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../system/pins.h" 1
+# 210 "./controller/EEPROM/../../mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
 
 
@@ -20855,14 +20864,14 @@ void PIN_MANAGER_Initialize (void);
 
 
 void PIN_MANAGER_IOC(void);
-# 43 "./mcc_generated_files/system/system.h" 2
+# 43 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
-# 1 "./mcc_generated_files/system/../i2c_host/mssp1.h" 1
-# 45 "./mcc_generated_files/system/../i2c_host/mssp1.h"
-# 1 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 1
-# 39 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
-# 1 "./mcc_generated_files/system/../i2c_host/i2c_host_types.h" 1
-# 44 "./mcc_generated_files/system/../i2c_host/i2c_host_types.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h" 1
+# 45 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 1
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h" 1
+# 44 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h"
 typedef enum
 {
     I2C_ERROR_NONE,
@@ -20870,13 +20879,13 @@ typedef enum
     I2C_ERROR_DATA_NACK,
     I2C_ERROR_BUS_COLLISION,
 } i2c_host_error_t;
-# 62 "./mcc_generated_files/system/../i2c_host/i2c_host_types.h"
+# 62 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h"
 typedef struct i2c_transfer_setup
 {
   uint32_t clkSpeed;
 } i2c_host_transfer_setup_t;
-# 39 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 2
-# 48 "./mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 2
+# 48 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
 typedef enum
 {
     I2C_STATE_IDLE = 0,
@@ -20912,10 +20921,10 @@ typedef i2c_host_event_states_t (*i2c1eventHandler)(void);
 
 extern volatile i2c_host_event_status_t i2c1Status;
 extern const i2c1eventHandler i2c1_eventTable[(9)];
-# 45 "./mcc_generated_files/system/../i2c_host/mssp1.h" 2
+# 45 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h" 2
 
-# 1 "./mcc_generated_files/system/../i2c_host/i2c_host_interface.h" 1
-# 51 "./mcc_generated_files/system/../i2c_host/i2c_host_interface.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_interface.h" 1
+# 51 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_interface.h"
 typedef struct
 {
     void (*Initialize)(void);
@@ -20929,24 +20938,24 @@ typedef struct
     void (*CallbackRegister)(void (*callback)(void));
     void (*Tasks)(void);
 }i2c_host_interface_t;
-# 46 "./mcc_generated_files/system/../i2c_host/mssp1.h" 2
-# 68 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 46 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h" 2
+# 68 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 extern const i2c_host_interface_t I2C1_Host;
-# 77 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 77 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 void I2C1_Initialize(void);
-# 86 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 86 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 void I2C1_Deinitialize(void);
-# 117 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 117 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 _Bool I2C1_Write(uint16_t address, uint8_t *data, size_t dataLength);
-# 148 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 148 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 _Bool I2C1_Read(uint16_t address, uint8_t *data, size_t dataLength);
-# 183 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 183 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 _Bool I2C1_WriteRead(uint16_t address, uint8_t *writeData, size_t writeLength, uint8_t *readData, size_t readLength);
-# 194 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 194 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 i2c_host_error_t I2C1_ErrorGet(void);
-# 205 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 205 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 _Bool I2C1_IsBusy(void);
-# 232 "./mcc_generated_files/system/../i2c_host/mssp1.h"
+# 232 "./controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 void I2C1_CallbackRegister(void (*callbackHandler)(void));
 
 
@@ -20964,10 +20973,10 @@ void I2C1_ISR(void);
 
 
 void I2C1_ERROR_ISR(void);
-# 44 "./mcc_generated_files/system/system.h" 2
+# 44 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
-# 1 "./mcc_generated_files/system/../nvm/nvm.h" 1
-# 80 "./mcc_generated_files/system/../nvm/nvm.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h" 1
+# 80 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 typedef uint16_t flash_data_t;
 
 
@@ -21004,9 +21013,9 @@ typedef enum
 
 
 void NVM_Initialize(void);
-# 124 "./mcc_generated_files/system/../nvm/nvm.h"
+# 124 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 _Bool NVM_IsBusy(void);
-# 133 "./mcc_generated_files/system/../nvm/nvm.h"
+# 133 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 nvm_status_t NVM_StatusGet(void);
 
 
@@ -21040,9 +21049,9 @@ void NVM_UnlockKeyClear(void);
 
 
 flash_data_t FLASH_Read(flash_address_t address);
-# 179 "./mcc_generated_files/system/../nvm/nvm.h"
+# 179 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer);
-# 189 "./mcc_generated_files/system/../nvm/nvm.h"
+# 189 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 nvm_status_t FLASH_PageErase(flash_address_t address);
 
 
@@ -21060,33 +21069,33 @@ flash_address_t FLASH_PageAddressGet(flash_address_t address);
 
 
 uint16_t FLASH_PageOffsetGet(flash_address_t address);
-# 217 "./mcc_generated_files/system/../nvm/nvm.h"
+# 217 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 eeprom_data_t EEPROM_Read(eeprom_address_t address);
-# 230 "./mcc_generated_files/system/../nvm/nvm.h"
+# 230 "./controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
-# 45 "./mcc_generated_files/system/system.h" 2
+# 45 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
-# 1 "./mcc_generated_files/system/../system/interrupt.h" 1
-# 85 "./mcc_generated_files/system/../system/interrupt.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h" 1
+# 85 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INTERRUPT_Initialize (void);
-# 139 "./mcc_generated_files/system/../system/interrupt.h"
+# 139 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INT_ISR(void);
-# 148 "./mcc_generated_files/system/../system/interrupt.h"
+# 148 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INT_CallBack(void);
-# 157 "./mcc_generated_files/system/../system/interrupt.h"
+# 157 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INT_SetInterruptHandler(void (* InterruptHandler)(void));
-# 166 "./mcc_generated_files/system/../system/interrupt.h"
+# 166 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 extern void (*INT_InterruptHandler)(void);
-# 175 "./mcc_generated_files/system/../system/interrupt.h"
+# 175 "./controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
-# 46 "./mcc_generated_files/system/system.h" 2
+# 46 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
 
-# 1 "./mcc_generated_files/system/../timer/tmr1.h" 1
-# 40 "./mcc_generated_files/system/../timer/tmr1.h"
-# 1 "./mcc_generated_files/system/../timer/tmr1_deprecated.h" 1
-# 40 "./mcc_generated_files/system/../timer/tmr1.h" 2
-# 175 "./mcc_generated_files/system/../timer/tmr1.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 1
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 1 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h" 1
+# 39 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 2
+# 179 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Initialize(void);
 
 
@@ -21096,15 +21105,15 @@ void TMR1_Initialize(void);
 
 
 void TMR1_Deinitialize(void);
-# 192 "./mcc_generated_files/system/../timer/tmr1.h"
+# 196 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Start(void);
-# 201 "./mcc_generated_files/system/../timer/tmr1.h"
+# 205 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Stop(void);
-# 210 "./mcc_generated_files/system/../timer/tmr1.h"
+# 214 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 uint16_t TMR1_CounterGet(void);
-# 219 "./mcc_generated_files/system/../timer/tmr1.h"
+# 223 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_CounterSet(uint16_t timerVal);
-# 228 "./mcc_generated_files/system/../timer/tmr1.h"
+# 233 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_PeriodSet(uint16_t periodVal);
 
 
@@ -21114,7 +21123,7 @@ void TMR1_PeriodSet(uint16_t periodVal);
 
 
 uint16_t TMR1_PeriodGet(void);
-# 245 "./mcc_generated_files/system/../timer/tmr1.h"
+# 250 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Reload(void);
 
 
@@ -21124,9 +21133,9 @@ void TMR1_Reload(void);
 
 
 uint16_t TMR1_MaxCountGet(void);
-# 262 "./mcc_generated_files/system/../timer/tmr1.h"
+# 267 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_SinglePulseAcquisitionStart(void);
-# 271 "./mcc_generated_files/system/../timer/tmr1.h"
+# 276 "./controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 uint8_t TMR1_GateStateGet(void);
 
 
@@ -21159,7 +21168,7 @@ void TMR1_OverflowISR(void);
 
 
 
- void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+void TMR1_OverflowCallbackRegister(void (*CallbackHandler)(void));
 
 
 
@@ -21167,11 +21176,751 @@ void TMR1_OverflowISR(void);
 
 
 
- void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
-# 48 "./mcc_generated_files/system/system.h" 2
-# 57 "./mcc_generated_files/system/system.h"
+void TMR1_GateCallbackRegister(void (*CallbackHandler)(void));
+# 48 "./controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 57 "./controller/EEPROM/../../mcc_generated_files/system/system.h"
 void SYSTEM_Initialize(void);
+# 4 "./controller/EEPROM/EEPROM_controller.h" 2
+
+# 1 "./controller/EEPROM/../../state/state.h" 1
+# 26 "./controller/EEPROM/../../state/state.h"
+typedef struct
+{
+    uint8_t monitoringPeriod;
+    uint8_t alarmDuration;
+    uint8_t alarmFlag;
+    uint8_t alarmHours;
+    uint8_t alarmMinutes;
+    uint8_t alarmSeconds;
+    uint8_t thresholdTemp;
+    uint8_t thresholdLum;
+    uint8_t clockHours;
+    uint8_t clockMinutes;
+} Configs;
+
+typedef struct
+{
+    uint8_t maxTemp[5];
+    uint8_t minTemp[5];
+    uint8_t maxLum[5];
+    uint8_t minLum[5];
+} SensorsMaxMin;
+
+void set_default(void);
+void set_configs(Configs configs, _Bool write_eeprom);
+Configs get_configs(void);
+void set_max_min(SensorsMaxMin sensorsMaxMin, _Bool write_eeprom);
+SensorsMaxMin get_max_min(void);
+uint8_t get_config_clock_hours(void);
+uint8_t get_config_clock_minutes(void);
+void get_measure(uint8_t index, char measure [17]);
+void set_mode(uint8_t mode);
+uint8_t get_mode(void);
+_Bool mode_has_changed(void);
+# 5 "./controller/EEPROM/EEPROM_controller.h" 2
+# 26 "./controller/EEPROM/EEPROM_controller.h"
+uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
+void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
+_Bool MemIsUsable(void);
+Configs ReadConfigs(void);
+void WriteConfigs(Configs configs);
+void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
+SensorsMaxMin ReadMaxMin(void);
 # 36 "main.c" 2
+
+# 1 "./controller/LED/led.h" 1
+
+
+
+
+
+void turn_on(uint8_t n);
+
+void turn_off(uint8_t n);
+
+void toggle(uint8_t n);
+# 37 "main.c" 2
+
+# 1 "./mcc_generated_files/adc/adc.h" 1
+# 41 "./mcc_generated_files/adc/adc.h"
+# 1 "./mcc_generated_files/adc/./adc_types.h" 1
+# 62 "./mcc_generated_files/adc/./adc_types.h"
+typedef int16_t adc_result_t;
+
+
+
+
+
+
+typedef uint16_t adc_accumulate_t;
+
+
+
+
+
+
+typedef int16_t adc_threshold_t;
+
+
+
+
+
+
+typedef uint8_t adc_repeat_count_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_CHANNEL_VSS = 0x3c,
+    ADC_CHANNEL_TEMP = 0x3d,
+    ADC_CHANNEL_DAC1 = 0x3e,
+    ADC_CHANNEL_FVR_BUF1 = 0x3f,
+    ADC_CHANNEL_ANA0 = 0x0
+} adc_channel_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_BASIC = 0x0,
+    ADC_SERIES_ACCUMULATE = 0x1,
+    ADC_SERIES_AVERAGE = 0x2,
+    ADC_BURST_AVERAGE = 0x3,
+    ADC_LOW_PASS_FILTER = 0x4
+} adc_computation_mode_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_FIRST_DERIVATIVE_OF_SINGLE_MEASUREMENT = 0x0,
+    ADC_ACTUAL_RESULT_VS_SETPOINT = 0x1,
+    ADC_ACTUAL_RESULT_VS_FILTERED_VALUE = 0x2,
+    ADC_FIRST_DERIVATIVE_OF_FILTERED_VALUE = 0x4,
+    ADC_FILTERED_VALUE_VS_SETPOINT = 0x5
+} adc_calculation_mode_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_NEVER_INTERRUPT = 0x0,
+    ADC_BELOW_LOWER_THRESHOLD = 0x1,
+    ADC_ABOVE_LOWER_THRESHOLD = 0x2,
+    ADC_INSIDE_LOWER_AND_UPPER_THRESHOLD = 0x3,
+    ADC_OUTSIDE_LOWER_AND_UPPER_THRESHOLD = 0x4,
+    ADC_BELOW_UPPER_THRESHOLD = 0x5,
+    ADC_ABOVE_UPPER_THRESHOLD = 0x6,
+    ADC_ALWAYS_INTERRUPT = 0x7
+} adc_threshold_mode_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_TRIGGER_SOURCE_DISABLED = 0x0,
+    ADC_TRIGGER_SOURCE_ADACTPPS = 0x1,
+    ADC_TRIGGER_SOURCE_TMR0 = 0x2,
+    ADC_TRIGGER_SOURCE_TMR1 = 0x3,
+    ADC_TRIGGER_SOURCE_TMR2 = 0x4,
+    ADC_TRIGGER_SOURCE_TMR3 = 0x5,
+    ADC_TRIGGER_SOURCE_TMR4 = 0x6,
+    ADC_TRIGGER_SOURCE_TMR5 = 0x7,
+    ADC_TRIGGER_SOURCE_TMR6 = 0x8,
+    ADC_TRIGGER_SOURCE_SMT1 = 0x9,
+    ADC_TRIGGER_SOURCE_SMT2 = 0xa,
+    ADC_TRIGGER_SOURCE_CCP1 = 0xb,
+    ADC_TRIGGER_SOURCE_CCP2 = 0xc,
+    ADC_TRIGGER_SOURCE_CCP3 = 0xd,
+    ADC_TRIGGER_SOURCE_CCP4 = 0xe,
+    ADC_TRIGGER_SOURCE_CCP5 = 0xf,
+    ADC_TRIGGER_SOURCE_PWM6 = 0x10,
+    ADC_TRIGGER_SOURCE_PWM7 = 0x11,
+    ADC_TRIGGER_SOURCE_C1OUT = 0x12,
+    ADC_TRIGGER_SOURCE_C2OUT = 0x13,
+    ADC_TRIGGER_SOURCE_IOC = 0x14,
+    ADC_TRIGGER_SOURCE_CLC1 = 0x15,
+    ADC_TRIGGER_SOURCE_CLC2 = 0x16,
+    ADC_TRIGGER_SOURCE_CLC3 = 0x17,
+    ADC_TRIGGER_SOURCE_CLC4 = 0x18,
+    ADC_TRIGGER_SOURCE_ADERR = 0x1c,
+    ADC_TRIGGER_SOURCE_ADRESH = 0x1d,
+    ADC_TRIGGER_SOURCE_ADPCH = 0x1f
+} adc_trigger_source_t;
+
+
+
+
+
+
+typedef enum
+{
+    ADC_NOT_CONVERTING = 0x0,
+    ADC_1ST_PRECHARGE = 0x1,
+    ADC_1ST_ACQUISITION = 0x2,
+    ADC_1ST_CONVERSION = 0x3,
+    ADC_2ND_PRECHARGE = 0x5,
+    ADC_2ND_ACQUISITION = 0x6,
+    ADC_2ND_CONVERSION = 0x7
+} adc_conversion_stage_t;
+# 41 "./mcc_generated_files/adc/adc.h" 2
+# 57 "./mcc_generated_files/adc/adc.h"
+void ADC_Initialize(void);
+
+
+
+
+
+
+
+void ADC_Deinitialize(void);
+
+
+
+
+
+
+
+void ADC_Enable(void);
+
+
+
+
+
+
+
+void ADC_Disable(void);
+
+
+
+
+
+
+
+void ADC_ChannelSelect(adc_channel_t channel);
+# 99 "./mcc_generated_files/adc/adc.h"
+void ADC_ConversionStart(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptDisable(void);
+# 124 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsConversionDone(void);
+
+
+
+
+
+
+
+adc_result_t ADC_ConversionResultGet(void);
+
+
+
+
+
+
+
+void ADC_ConversionDoneCallbackRegister(void (*callback)(void));
+
+
+
+
+
+
+
+adc_result_t ADC_ChannelSelectAndConvert(adc_channel_t channel);
+
+
+
+
+
+
+
+uint8_t ADC_ResolutionGet(void);
+# 165 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsBusy(void);
+
+
+
+
+
+
+
+void ADC_BusyStatusSet(_Bool status);
+
+
+
+
+
+
+
+void ADC_ConversionStop(void);
+
+
+
+
+
+
+
+void ADC_SampleRepeatCountSet(adc_repeat_count_t repeatCount);
+
+
+
+
+
+
+
+void ADC_ComputationModeSet(adc_computation_mode_t computationMode);
+
+
+
+
+
+
+
+void ADC_UpperThresholdSet(adc_threshold_t upperThreshold);
+
+
+
+
+
+
+
+void ADC_LowerThresholdSet(adc_threshold_t lowerThreshold);
+
+
+
+
+
+
+
+void ADC_ThresholdModeSet(adc_threshold_mode_t thresholdMode);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+adc_accumulate_t ADC_AccumulatedResultGet(void);
+
+
+
+
+
+
+
+void ADC_ThresholdCallbackRegister(void (*callback)(void));
+# 262 "./mcc_generated_files/adc/adc.h"
+void ADC_StopOnInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_StopOnInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_SampleCapacitorDischarge(void);
+
+
+
+
+
+
+
+void ADC_AcquisitionTimeSet(uint8_t acquisitionValue);
+
+
+
+
+
+
+
+void ADC_PrechargeTimeSet(uint8_t prechargeTime);
+
+
+
+
+
+
+
+adc_repeat_count_t ADC_CurrentConversionCountGet(void);
+
+
+
+
+
+
+
+void ADC_AccumulatorClear(void);
+# 319 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsAccumulatorClearComplete(void);
+# 328 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_HasAccumulatorOverflowed(void);
+# 337 "./mcc_generated_files/adc/adc.h"
+adc_result_t ADC_FilterValueGet(void);
+
+
+
+
+
+
+
+adc_result_t ADC_PreviousResultGet(void);
+
+
+
+
+
+
+
+void ADC_SetPointDefine(adc_threshold_t setPoint);
+
+
+
+
+
+
+
+adc_result_t ADC_ErrorCalculationGet(void);
+
+
+
+
+
+
+
+void ADC_DoubleSamplingEnable(void);
+
+
+
+
+
+
+
+void ADC_DoubleSamplingDisable(void);
+
+
+
+
+
+
+
+void ADC_ContinuousConversionEnable(void);
+
+
+
+
+
+
+
+void ADC_ContinuousConversionDisable(void);
+# 402 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsErrorGreaterThanUpperThreshold(void);
+# 411 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsErrorLesserThanLowerThreshold(void);
+
+
+
+
+
+
+
+adc_conversion_stage_t ADC_ConversionStageStatusGet(void);
+
+
+
+
+
+
+
+void ADC_AutoTriggerSourceSet(adc_trigger_source_t triggerSource);
+
+
+
+
+
+
+
+void ADC_ErrorCalculationModeSet(adc_calculation_mode_t errorCalculationMode);
+
+
+
+
+
+
+
+void ADC_CalculationRightShiftSet(uint8_t rightShiftValue);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptFlagClear(void);
+# 460 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsConversionDoneInterruptFlagSet(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptFlagClear(void);
+# 477 "./mcc_generated_files/adc/adc.h"
+_Bool ADC_IsThresholdInterruptFlagSet(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
+# 38 "main.c" 2
+
+
+# 1 "./mode/configuration_mode.h" 1
+
+
+
+void configuration_mode_initialization(void);
+void configuration_mode_timer_handler(void);
+void configuration_mode_s1_handler(void);
+void configuration_mode_s2_handler(void);
+# 40 "main.c" 2
+
+# 1 "./mode/normal_mode.h" 1
+
+
+
+
+
+
+
+void normal_mode_initialization(void);
+void normal_mode_timer_handler(void);
+void normal_mode_s1_handler(void);
+void normal_mode_s2_handler(void);
+# 41 "main.c" 2
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short ssize_t;
+# 255 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 43 "main.c" 2
 
 
 
@@ -21179,21 +21928,54 @@ void SYSTEM_Initialize(void);
 
 
 void global_initialization() {
-
-
+  if (MemIsUsable()) {
+    set_configs(ReadConfigs(), 0);
+    set_max_min(ReadMaxMin(), 0);
+  } else {
+    set_default();
+  }
+  set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+  set_mode(0);
 }
 
 int main(void) {
   SYSTEM_Initialize();
-# 67 "main.c"
+
+
+
+
+
+
+  (INTCONbits.GIE = 1);
+
+
+
+
+
+  (INTCONbits.PEIE = 1);
+
+
+
+
+  ADC_Initialize();
+
+
+
+
+
+
+
   global_initialization();
 
-  turn_on(3);
   while (1) {
-    toggle(0);
-    toggle(1);
-    toggle(2);
-    toggle(3);
-    _delay((unsigned long)((1000)*(32000000U/4000.0)));
+    if (mode_has_changed()) {
+      uint8_t mode = get_mode();
+      if (mode == 0) {
+        normal_mode_initialization();
+      } else {
+        configuration_mode_initialization();
+      }
+    }
+    __asm("sleep");
   }
 }

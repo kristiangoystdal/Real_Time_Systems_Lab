@@ -9,16 +9,22 @@
       </logicalFolder>
       <logicalFolder name="controller" displayName="controller" projectFiles="true">
         <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
-          <itemPath>controller/EEPROM/EEPROM_controller.c</itemPath>
+          <itemPath>controller/EEPROM/EEPROM_controller.h</itemPath>
         </logicalFolder>
         <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
           <logicalFolder name="I2C" displayName="I2C" projectFiles="true">
-            <itemPath>controller/LCD/I2C/i2c.c</itemPath>
+            <itemPath>controller/LCD/I2C/i2c.h</itemPath>
           </logicalFolder>
-          <itemPath>controller/LCD/lcd.c</itemPath>
+          <itemPath>controller/LCD/lcd.h</itemPath>
         </logicalFolder>
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
-          <itemPath>controller/LED/led.c</itemPath>
+          <itemPath>controller/LED/led.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
+          <itemPath>controller/Luminosity/luminosity.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Temperature" displayName="Temperature" projectFiles="true">
+          <itemPath>controller/Temperature/temperature.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -50,7 +56,11 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="mode" displayName="mode" projectFiles="true">
-        <itemPath>mode/mode.c</itemPath>
+        <itemPath>mode/configuration_mode.c</itemPath>
+        <itemPath>mode/normal_mode.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="state" displayName="state" projectFiles="true">
+        <itemPath>state/state.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -70,12 +80,22 @@
       </logicalFolder>
       <logicalFolder name="controller" displayName="controller" projectFiles="true">
         <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
+          <itemPath>controller/EEPROM/EEPROM_controller.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
           <logicalFolder name="I2C" displayName="I2C" projectFiles="true">
+            <itemPath>controller/LCD/I2C/i2c.c</itemPath>
           </logicalFolder>
+          <itemPath>controller/LCD/lcd.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
+          <itemPath>controller/LED/led.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
+          <itemPath>controller/Luminosity/luminosity.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Temperature" displayName="Temperature" projectFiles="true">
+          <itemPath>controller/Temperature/temperature.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -113,6 +133,8 @@
       </logicalFolder>
       <logicalFolder name="mode" displayName="mode" projectFiles="true">
       </logicalFolder>
+      <logicalFolder name="state" displayName="state" projectFiles="true">
+      </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -120,6 +142,7 @@
     <Elem>controller</Elem>
     <Elem>mode</Elem>
     <Elem>clock</Elem>
+    <Elem>state</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

@@ -1745,27 +1745,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "17 controller/LCD/lcd.c
-[; ;controller/LCD/lcd.c: 17: void LCDsend(unsigned char c)
+[; ;controller/LCD/lcd.c: 17: void LCDsend(unsigned char c) {
 [v _LCDsend `(v ~T0 @X0 1 ef1`uc ]
-"18
-[; ;controller/LCD/lcd.c: 18: {
 {
 [e :U _LCDsend ]
-"17
-[; ;controller/LCD/lcd.c: 17: void LCDsend(unsigned char c)
 [v _c `uc ~T0 @X0 1 r1 ]
-"18
-[; ;controller/LCD/lcd.c: 18: {
 [f ]
-"19
-[; ;controller/LCD/lcd.c: 19:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"18
+[; ;controller/LCD/lcd.c: 18:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1619  ]
 [e :U 1620 ]
 [e :U 1619 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1620  ]
 [e :U 1621 ]
-"20
-[; ;controller/LCD/lcd.c: 20:   do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"19
+[; ;controller/LCD/lcd.c: 19:   do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0);
 [e :U 1624 ]
 {
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
@@ -1776,29 +1770,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1627 ]
 }
 [e :U 1623 ]
+"20
+[; ;controller/LCD/lcd.c: 20:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1628  ]
 [e :U 1629 ]
 [e :U 1628 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1629  ]
 [e :U 1630 ]
 "21
-[; ;controller/LCD/lcd.c: 21:   WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+[; ;controller/LCD/lcd.c: 21:   WriteI2C(0x4e | 0x00);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 0 `i `uc ]
+"22
+[; ;controller/LCD/lcd.c: 22:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1631  ]
 [e :U 1632 ]
 [e :U 1631 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1632  ]
 [e :U 1633 ]
-"22
-[; ;controller/LCD/lcd.c: 22:   WriteI2C(c); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"23
+[; ;controller/LCD/lcd.c: 23:   WriteI2C(c);
 [e ( _WriteI2C (1 _c ]
+"24
+[; ;controller/LCD/lcd.c: 24:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1634  ]
 [e :U 1635 ]
 [e :U 1634 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1635  ]
 [e :U 1636 ]
-"23
-[; ;controller/LCD/lcd.c: 23:   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
+"25
+[; ;controller/LCD/lcd.c: 25:   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
 [e :U 1639 ]
 {
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
@@ -1809,38 +1809,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1642 ]
 }
 [e :U 1638 ]
-"24
-[; ;controller/LCD/lcd.c: 24: }
+"26
+[; ;controller/LCD/lcd.c: 26: }
 [e :UE 1618 ]
 }
-"25
-[; ;controller/LCD/lcd.c: 25: unsigned char LCDrecv(unsigned char mode)
+"27
+[; ;controller/LCD/lcd.c: 27: unsigned char LCDrecv(unsigned char mode) {
 [v _LCDrecv `(uc ~T0 @X0 1 ef1`uc ]
-"26
-[; ;controller/LCD/lcd.c: 26: {
 {
 [e :U _LCDrecv ]
-"25
-[; ;controller/LCD/lcd.c: 25: unsigned char LCDrecv(unsigned char mode)
 [v _mode `uc ~T0 @X0 1 r1 ]
-"26
-[; ;controller/LCD/lcd.c: 26: {
 [f ]
-"27
-[; ;controller/LCD/lcd.c: 27:   unsigned char hc;
-[v _hc `uc ~T0 @X0 1 a ]
 "28
-[; ;controller/LCD/lcd.c: 28:   unsigned char lc;
+[; ;controller/LCD/lcd.c: 28:   unsigned char hc;
+[v _hc `uc ~T0 @X0 1 a ]
+"29
+[; ;controller/LCD/lcd.c: 29:   unsigned char lc;
 [v _lc `uc ~T0 @X0 1 a ]
-"30
-[; ;controller/LCD/lcd.c: 30:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"31
+[; ;controller/LCD/lcd.c: 31:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1644  ]
 [e :U 1645 ]
 [e :U 1644 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1645  ]
 [e :U 1646 ]
-"31
-[; ;controller/LCD/lcd.c: 31:   do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"32
+[; ;controller/LCD/lcd.c: 32:   do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0);
 [e :U 1649 ]
 {
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
@@ -1851,40 +1845,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1652 ]
 }
 [e :U 1648 ]
+"33
+[; ;controller/LCD/lcd.c: 33:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1653  ]
 [e :U 1654 ]
 [e :U 1653 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1654  ]
 [e :U 1655 ]
-"32
-[; ;controller/LCD/lcd.c: 32:   WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"34
+[; ;controller/LCD/lcd.c: 34:   WriteI2C(0x4e | 0x00);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 0 `i `uc ]
+"35
+[; ;controller/LCD/lcd.c: 35:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1656  ]
 [e :U 1657 ]
 [e :U 1656 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1657  ]
 [e :U 1658 ]
-"33
-[; ;controller/LCD/lcd.c: 33:   WriteI2C(0xf0 | 0x08 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"36
+[; ;controller/LCD/lcd.c: 36:   WriteI2C(0xf0 | 0x08 | 0x02 | mode);
 [e ( _WriteI2C (1 -> | | | -> 240 `i -> 8 `i -> 2 `i -> _mode `i `uc ]
+"37
+[; ;controller/LCD/lcd.c: 37:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1659  ]
 [e :U 1660 ]
 [e :U 1659 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1660  ]
 [e :U 1661 ]
-"34
-[; ;controller/LCD/lcd.c: 34:   WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"38
+[; ;controller/LCD/lcd.c: 38:   WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode);
 [e ( _WriteI2C (1 -> | | | | -> 240 `i -> 8 `i -> 4 `i -> 2 `i -> _mode `i `uc ]
+"39
+[; ;controller/LCD/lcd.c: 39:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1662  ]
 [e :U 1663 ]
 [e :U 1662 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1663  ]
 [e :U 1664 ]
-"35
-[; ;controller/LCD/lcd.c: 35:   _delay((unsigned long)((1)*(4000000/4000000.0)));
+"40
+[; ;controller/LCD/lcd.c: 40:   _delay((unsigned long)((1)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"36
-[; ;controller/LCD/lcd.c: 36:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"41
+[; ;controller/LCD/lcd.c: 41:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
 [e :U 1667 ]
 {
 [e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
@@ -1895,29 +1897,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1670 ]
 }
 [e :U 1666 ]
+"42
+[; ;controller/LCD/lcd.c: 42:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1671  ]
 [e :U 1672 ]
 [e :U 1671 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1672  ]
 [e :U 1673 ]
-"37
-[; ;controller/LCD/lcd.c: 37:   WriteI2C(0x4e | 0x01); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"43
+[; ;controller/LCD/lcd.c: 43:   WriteI2C(0x4e | 0x01);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 1 `i `uc ]
+"44
+[; ;controller/LCD/lcd.c: 44:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1674  ]
 [e :U 1675 ]
 [e :U 1674 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1675  ]
 [e :U 1676 ]
-"38
-[; ;controller/LCD/lcd.c: 38:   hc = ReadI2C(); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"45
+[; ;controller/LCD/lcd.c: 45:   hc = ReadI2C();
 [e = _hc ( _ReadI2C ..  ]
+"46
+[; ;controller/LCD/lcd.c: 46:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1677  ]
 [e :U 1678 ]
 [e :U 1677 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1678  ]
 [e :U 1679 ]
-"39
-[; ;controller/LCD/lcd.c: 39:   do { SSP1CON2bits.ACKDT=1;SSP1CON2bits.ACKEN=1;while(SSP1CON2bits.ACKEN); } while (0);
+"47
+[; ;controller/LCD/lcd.c: 47:   do { SSP1CON2bits.ACKDT=1;SSP1CON2bits.ACKEN=1;while(SSP1CON2bits.ACKEN); } while (0);
 [e :U 1682 ]
 {
 [e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
@@ -1929,8 +1937,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1685 ]
 }
 [e :U 1681 ]
-"40
-[; ;controller/LCD/lcd.c: 40:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"48
+[; ;controller/LCD/lcd.c: 48:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
 [e :U 1688 ]
 {
 [e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
@@ -1941,40 +1949,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1691 ]
 }
 [e :U 1687 ]
+"49
+[; ;controller/LCD/lcd.c: 49:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1692  ]
 [e :U 1693 ]
 [e :U 1692 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1693  ]
 [e :U 1694 ]
-"41
-[; ;controller/LCD/lcd.c: 41:   WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"50
+[; ;controller/LCD/lcd.c: 50:   WriteI2C(0x4e | 0x00);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 0 `i `uc ]
+"51
+[; ;controller/LCD/lcd.c: 51:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1695  ]
 [e :U 1696 ]
 [e :U 1695 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1696  ]
 [e :U 1697 ]
-"42
-[; ;controller/LCD/lcd.c: 42:   WriteI2C(0xf0 | 0x08 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"52
+[; ;controller/LCD/lcd.c: 52:   WriteI2C(0xf0 | 0x08 | 0x02 | mode);
 [e ( _WriteI2C (1 -> | | | -> 240 `i -> 8 `i -> 2 `i -> _mode `i `uc ]
+"53
+[; ;controller/LCD/lcd.c: 53:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1698  ]
 [e :U 1699 ]
 [e :U 1698 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1699  ]
 [e :U 1700 ]
-"43
-[; ;controller/LCD/lcd.c: 43:   WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"54
+[; ;controller/LCD/lcd.c: 54:   WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode);
 [e ( _WriteI2C (1 -> | | | | -> 240 `i -> 8 `i -> 4 `i -> 2 `i -> _mode `i `uc ]
+"55
+[; ;controller/LCD/lcd.c: 55:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1701  ]
 [e :U 1702 ]
 [e :U 1701 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1702  ]
 [e :U 1703 ]
-"44
-[; ;controller/LCD/lcd.c: 44:   _delay((unsigned long)((1)*(4000000/4000000.0)));
+"56
+[; ;controller/LCD/lcd.c: 56:   _delay((unsigned long)((1)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"45
-[; ;controller/LCD/lcd.c: 45:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"57
+[; ;controller/LCD/lcd.c: 57:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
 [e :U 1706 ]
 {
 [e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
@@ -1985,29 +2001,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1709 ]
 }
 [e :U 1705 ]
+"58
+[; ;controller/LCD/lcd.c: 58:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1710  ]
 [e :U 1711 ]
 [e :U 1710 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1711  ]
 [e :U 1712 ]
-"46
-[; ;controller/LCD/lcd.c: 46:   WriteI2C(0x4e | 0x01); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"59
+[; ;controller/LCD/lcd.c: 59:   WriteI2C(0x4e | 0x01);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 1 `i `uc ]
+"60
+[; ;controller/LCD/lcd.c: 60:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1713  ]
 [e :U 1714 ]
 [e :U 1713 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1714  ]
 [e :U 1715 ]
-"47
-[; ;controller/LCD/lcd.c: 47:   lc = ReadI2C(); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"61
+[; ;controller/LCD/lcd.c: 61:   lc = ReadI2C();
 [e = _lc ( _ReadI2C ..  ]
+"62
+[; ;controller/LCD/lcd.c: 62:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1716  ]
 [e :U 1717 ]
 [e :U 1716 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1717  ]
 [e :U 1718 ]
-"48
-[; ;controller/LCD/lcd.c: 48:   do { SSP1CON2bits.ACKDT=1;SSP1CON2bits.ACKEN=1;while(SSP1CON2bits.ACKEN); } while (0);
+"63
+[; ;controller/LCD/lcd.c: 63:   do { SSP1CON2bits.ACKDT=1;SSP1CON2bits.ACKEN=1;while(SSP1CON2bits.ACKEN); } while (0);
 [e :U 1721 ]
 {
 [e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
@@ -2019,8 +2041,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1724 ]
 }
 [e :U 1720 ]
-"49
-[; ;controller/LCD/lcd.c: 49:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"64
+[; ;controller/LCD/lcd.c: 64:   do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
 [e :U 1727 ]
 {
 [e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
@@ -2031,29 +2053,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1730 ]
 }
 [e :U 1726 ]
+"65
+[; ;controller/LCD/lcd.c: 65:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1731  ]
 [e :U 1732 ]
 [e :U 1731 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1732  ]
 [e :U 1733 ]
-"50
-[; ;controller/LCD/lcd.c: 50:   WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"66
+[; ;controller/LCD/lcd.c: 66:   WriteI2C(0x4e | 0x00);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 0 `i `uc ]
+"67
+[; ;controller/LCD/lcd.c: 67:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1734  ]
 [e :U 1735 ]
 [e :U 1734 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1735  ]
 [e :U 1736 ]
-"51
-[; ;controller/LCD/lcd.c: 51:   WriteI2C(0xf0 | 0x08 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"68
+[; ;controller/LCD/lcd.c: 68:   WriteI2C(0xf0 | 0x08 | 0x02 | mode);
 [e ( _WriteI2C (1 -> | | | -> 240 `i -> 8 `i -> 2 `i -> _mode `i `uc ]
+"69
+[; ;controller/LCD/lcd.c: 69:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1737  ]
 [e :U 1738 ]
 [e :U 1737 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1738  ]
 [e :U 1739 ]
-"52
-[; ;controller/LCD/lcd.c: 52:   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
+"70
+[; ;controller/LCD/lcd.c: 70:   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
 [e :U 1742 ]
 {
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
@@ -2064,49 +2092,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1745 ]
 }
 [e :U 1741 ]
-"53
-[; ;controller/LCD/lcd.c: 53:   return ((hc&0xf0) | ((lc>>4)&0x0f));
+"71
+[; ;controller/LCD/lcd.c: 71:   return ((hc & 0xf0) | ((lc >> 4) & 0x0f));
 [e ) -> | & -> _hc `i -> 240 `i & >> -> _lc `i -> 4 `i -> 15 `i `uc ]
 [e $UE 1643  ]
-"54
-[; ;controller/LCD/lcd.c: 54: }
+"72
+[; ;controller/LCD/lcd.c: 72: }
 [e :UE 1643 ]
 }
-"56
-[; ;controller/LCD/lcd.c: 56: void LCDsend2x4(unsigned char c, unsigned char mode)
+"74
+[; ;controller/LCD/lcd.c: 74: void LCDsend2x4(unsigned char c, unsigned char mode) {
 [v _LCDsend2x4 `(v ~T0 @X0 1 ef2`uc`uc ]
-"57
-[; ;controller/LCD/lcd.c: 57: {
 {
 [e :U _LCDsend2x4 ]
-"56
-[; ;controller/LCD/lcd.c: 56: void LCDsend2x4(unsigned char c, unsigned char mode)
 [v _c `uc ~T0 @X0 1 r1 ]
 [v _mode `uc ~T0 @X0 1 r2 ]
-"57
-[; ;controller/LCD/lcd.c: 57: {
 [f ]
-"58
-[; ;controller/LCD/lcd.c: 58:   unsigned char hc;
+"75
+[; ;controller/LCD/lcd.c: 75:   unsigned char hc;
 [v _hc `uc ~T0 @X0 1 a ]
-"59
-[; ;controller/LCD/lcd.c: 59:   unsigned char lc;
+"76
+[; ;controller/LCD/lcd.c: 76:   unsigned char lc;
 [v _lc `uc ~T0 @X0 1 a ]
-"61
-[; ;controller/LCD/lcd.c: 61:   hc = c & 0xf0;
+"78
+[; ;controller/LCD/lcd.c: 78:   hc = c & 0xf0;
 [e = _hc -> & -> _c `i -> 240 `i `uc ]
-"62
-[; ;controller/LCD/lcd.c: 62:   lc = (c << 4) & 0xf0;
+"79
+[; ;controller/LCD/lcd.c: 79:   lc = (c << 4) & 0xf0;
 [e = _lc -> & << -> _c `i -> 4 `i -> 240 `i `uc ]
-"64
-[; ;controller/LCD/lcd.c: 64:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"81
+[; ;controller/LCD/lcd.c: 81:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1747  ]
 [e :U 1748 ]
 [e :U 1747 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1748  ]
 [e :U 1749 ]
-"65
-[; ;controller/LCD/lcd.c: 65:   do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"82
+[; ;controller/LCD/lcd.c: 82:   do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0);
 [e :U 1752 ]
 {
 [e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
@@ -2117,75 +2139,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1755 ]
 }
 [e :U 1751 ]
+"83
+[; ;controller/LCD/lcd.c: 83:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1756  ]
 [e :U 1757 ]
 [e :U 1756 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1757  ]
 [e :U 1758 ]
-"66
-[; ;controller/LCD/lcd.c: 66:   WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"84
+[; ;controller/LCD/lcd.c: 84:   WriteI2C(0x4e | 0x00);
 [e ( _WriteI2C (1 -> | -> 78 `i -> 0 `i `uc ]
+"85
+[; ;controller/LCD/lcd.c: 85:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1759  ]
 [e :U 1760 ]
 [e :U 1759 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1760  ]
 [e :U 1761 ]
-"67
-[; ;controller/LCD/lcd.c: 67:   WriteI2C(hc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"86
+[; ;controller/LCD/lcd.c: 86:   WriteI2C(hc | 0x08 | mode);
 [e ( _WriteI2C (1 -> | | -> _hc `i -> 8 `i -> _mode `i `uc ]
+"87
+[; ;controller/LCD/lcd.c: 87:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1762  ]
 [e :U 1763 ]
 [e :U 1762 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1763  ]
 [e :U 1764 ]
-"68
-[; ;controller/LCD/lcd.c: 68:   WriteI2C(hc | 0x08 | 0x04 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"88
+[; ;controller/LCD/lcd.c: 88:   WriteI2C(hc | 0x08 | 0x04 | mode);
 [e ( _WriteI2C (1 -> | | | -> _hc `i -> 8 `i -> 4 `i -> _mode `i `uc ]
+"89
+[; ;controller/LCD/lcd.c: 89:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1765  ]
 [e :U 1766 ]
 [e :U 1765 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1766  ]
 [e :U 1767 ]
-"69
-[; ;controller/LCD/lcd.c: 69:   _delay((unsigned long)((1)*(4000000/4000000.0)));
+"90
+[; ;controller/LCD/lcd.c: 90:   _delay((unsigned long)((1)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"70
-[; ;controller/LCD/lcd.c: 70:   WriteI2C(hc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"91
+[; ;controller/LCD/lcd.c: 91:   WriteI2C(hc | 0x08 | mode);
 [e ( _WriteI2C (1 -> | | -> _hc `i -> 8 `i -> _mode `i `uc ]
+"92
+[; ;controller/LCD/lcd.c: 92:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1768  ]
 [e :U 1769 ]
 [e :U 1768 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1769  ]
 [e :U 1770 ]
-"71
-[; ;controller/LCD/lcd.c: 71:   WriteI2C(lc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"93
+[; ;controller/LCD/lcd.c: 93:   WriteI2C(lc | 0x08 | mode);
 [e ( _WriteI2C (1 -> | | -> _lc `i -> 8 `i -> _mode `i `uc ]
+"94
+[; ;controller/LCD/lcd.c: 94:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1771  ]
 [e :U 1772 ]
 [e :U 1771 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1772  ]
 [e :U 1773 ]
-"72
-[; ;controller/LCD/lcd.c: 72:   WriteI2C(lc | 0x08 | 0x04 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"95
+[; ;controller/LCD/lcd.c: 95:   WriteI2C(lc | 0x08 | 0x04 | mode);
 [e ( _WriteI2C (1 -> | | | -> _lc `i -> 8 `i -> 4 `i -> _mode `i `uc ]
+"96
+[; ;controller/LCD/lcd.c: 96:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1774  ]
 [e :U 1775 ]
 [e :U 1774 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1775  ]
 [e :U 1776 ]
-"73
-[; ;controller/LCD/lcd.c: 73:   _delay((unsigned long)((1)*(4000000/4000000.0)));
+"97
+[; ;controller/LCD/lcd.c: 97:   _delay((unsigned long)((1)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"74
-[; ;controller/LCD/lcd.c: 74:   WriteI2C(lc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+"98
+[; ;controller/LCD/lcd.c: 98:   WriteI2C(lc | 0x08 | mode);
 [e ( _WriteI2C (1 -> | | -> _lc `i -> 8 `i -> _mode `i `uc ]
+"99
+[; ;controller/LCD/lcd.c: 99:   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
 [e $U 1777  ]
 [e :U 1778 ]
 [e :U 1777 ]
 [e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 1 1 `i -> 0 `i 1778  ]
 [e :U 1779 ]
-"75
-[; ;controller/LCD/lcd.c: 75:   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
+"100
+[; ;controller/LCD/lcd.c: 100:   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
 [e :U 1782 ]
 {
 [e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
@@ -2196,214 +2234,206 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1785 ]
 }
 [e :U 1781 ]
-"76
-[; ;controller/LCD/lcd.c: 76:   _delay((unsigned long)((50)*(4000000/4000000.0)));
+"101
+[; ;controller/LCD/lcd.c: 101:   _delay((unsigned long)((50)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"77
-[; ;controller/LCD/lcd.c: 77: }
+"102
+[; ;controller/LCD/lcd.c: 102: }
 [e :UE 1746 ]
 }
-"79
-[; ;controller/LCD/lcd.c: 79: void LCDinit(void)
+"104
+[; ;controller/LCD/lcd.c: 104: void LCDinit(void) {
 [v _LCDinit `(v ~T0 @X0 1 ef ]
-"80
-[; ;controller/LCD/lcd.c: 80: {
 {
 [e :U _LCDinit ]
 [f ]
-"81
-[; ;controller/LCD/lcd.c: 81:   _delay((unsigned long)((50)*(4000000/4000.0)));
+"105
+[; ;controller/LCD/lcd.c: 105:   _delay((unsigned long)((50)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"82
-[; ;controller/LCD/lcd.c: 82:   LCDsend(0x30);
+"106
+[; ;controller/LCD/lcd.c: 106:   LCDsend(0x30);
 [e ( _LCDsend (1 -> -> 48 `i `uc ]
-"83
-[; ;controller/LCD/lcd.c: 83:   LCDsend(0x34); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x30);
+"107
+[; ;controller/LCD/lcd.c: 107:   LCDsend(0x34);
 [e ( _LCDsend (1 -> -> 52 `i `uc ]
+"108
+[; ;controller/LCD/lcd.c: 108:   _delay((unsigned long)((500)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"109
+[; ;controller/LCD/lcd.c: 109:   LCDsend(0x30);
 [e ( _LCDsend (1 -> -> 48 `i `uc ]
-"84
-[; ;controller/LCD/lcd.c: 84:   _delay((unsigned long)((5)*(4000000/4000.0)));
+"110
+[; ;controller/LCD/lcd.c: 110:   _delay((unsigned long)((5)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"85
-[; ;controller/LCD/lcd.c: 85:   LCDsend(0x30);
+"111
+[; ;controller/LCD/lcd.c: 111:   LCDsend(0x30);
 [e ( _LCDsend (1 -> -> 48 `i `uc ]
-"86
-[; ;controller/LCD/lcd.c: 86:   LCDsend(0x34); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x30);
+"112
+[; ;controller/LCD/lcd.c: 112:   LCDsend(0x34);
 [e ( _LCDsend (1 -> -> 52 `i `uc ]
+"113
+[; ;controller/LCD/lcd.c: 113:   _delay((unsigned long)((500)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"114
+[; ;controller/LCD/lcd.c: 114:   LCDsend(0x30);
 [e ( _LCDsend (1 -> -> 48 `i `uc ]
-"87
-[; ;controller/LCD/lcd.c: 87:   _delay((unsigned long)((100)*(4000000/4000000.0)));
+"115
+[; ;controller/LCD/lcd.c: 115:   _delay((unsigned long)((100)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"88
-[; ;controller/LCD/lcd.c: 88:   LCDsend(0x30);
+"116
+[; ;controller/LCD/lcd.c: 116:   LCDsend(0x30);
 [e ( _LCDsend (1 -> -> 48 `i `uc ]
-"89
-[; ;controller/LCD/lcd.c: 89:   LCDsend(0x34); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x30);
+"117
+[; ;controller/LCD/lcd.c: 117:   LCDsend(0x34);
 [e ( _LCDsend (1 -> -> 52 `i `uc ]
+"118
+[; ;controller/LCD/lcd.c: 118:   _delay((unsigned long)((500)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"119
+[; ;controller/LCD/lcd.c: 119:   LCDsend(0x30);
 [e ( _LCDsend (1 -> -> 48 `i `uc ]
-"90
-[; ;controller/LCD/lcd.c: 90:   _delay((unsigned long)((100)*(4000000/4000000.0)));
+"120
+[; ;controller/LCD/lcd.c: 120:   _delay((unsigned long)((100)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"91
-[; ;controller/LCD/lcd.c: 91:   LCDsend(0x20);
+"121
+[; ;controller/LCD/lcd.c: 121:   LCDsend(0x20);
 [e ( _LCDsend (1 -> -> 32 `i `uc ]
-"92
-[; ;controller/LCD/lcd.c: 92:   LCDsend(0x24); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x20);
+"122
+[; ;controller/LCD/lcd.c: 122:   LCDsend(0x24);
 [e ( _LCDsend (1 -> -> 36 `i `uc ]
+"123
+[; ;controller/LCD/lcd.c: 123:   _delay((unsigned long)((500)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"124
+[; ;controller/LCD/lcd.c: 124:   LCDsend(0x20);
 [e ( _LCDsend (1 -> -> 32 `i `uc ]
-"93
-[; ;controller/LCD/lcd.c: 93:   _delay((unsigned long)((5)*(4000000/4000.0)));
+"125
+[; ;controller/LCD/lcd.c: 125:   _delay((unsigned long)((5)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"95
-[; ;controller/LCD/lcd.c: 95:   LCDsend2x4(0x28, 0);
+"127
+[; ;controller/LCD/lcd.c: 127:   LCDsend2x4(0x28, 0);
 [e ( _LCDsend2x4 (2 , -> -> 40 `i `uc -> -> 0 `i `uc ]
-"96
-[; ;controller/LCD/lcd.c: 96:   LCDsend2x4(0x06, 0);
+"128
+[; ;controller/LCD/lcd.c: 128:   LCDsend2x4(0x06, 0);
 [e ( _LCDsend2x4 (2 , -> -> 6 `i `uc -> -> 0 `i `uc ]
-"97
-[; ;controller/LCD/lcd.c: 97:   LCDsend2x4(0x0f, 0);
+"129
+[; ;controller/LCD/lcd.c: 129:   LCDsend2x4(0x0f, 0);
 [e ( _LCDsend2x4 (2 , -> -> 15 `i `uc -> -> 0 `i `uc ]
-"98
-[; ;controller/LCD/lcd.c: 98:   LCDsend2x4(0x01, 0);
+"130
+[; ;controller/LCD/lcd.c: 130:   LCDsend2x4(0x01, 0);
 [e ( _LCDsend2x4 (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
-"99
-[; ;controller/LCD/lcd.c: 99:   _delay((unsigned long)((2)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"100
-[; ;controller/LCD/lcd.c: 100: }
+"131
+[; ;controller/LCD/lcd.c: 131:   _delay((unsigned long)((20)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"132
+[; ;controller/LCD/lcd.c: 132: }
 [e :UE 1786 ]
 }
-"102
-[; ;controller/LCD/lcd.c: 102: void LCDcmd(unsigned char c)
+"134
+[; ;controller/LCD/lcd.c: 134: void LCDcmd(unsigned char c) { LCDsend2x4(c, 0); }
 [v _LCDcmd `(v ~T0 @X0 1 ef1`uc ]
-"103
-[; ;controller/LCD/lcd.c: 103: {
 {
 [e :U _LCDcmd ]
-"102
-[; ;controller/LCD/lcd.c: 102: void LCDcmd(unsigned char c)
 [v _c `uc ~T0 @X0 1 r1 ]
-"103
-[; ;controller/LCD/lcd.c: 103: {
 [f ]
-"104
-[; ;controller/LCD/lcd.c: 104:   LCDsend2x4(c, 0);
 [e ( _LCDsend2x4 (2 , _c -> -> 0 `i `uc ]
-"105
-[; ;controller/LCD/lcd.c: 105: }
 [e :UE 1787 ]
 }
-"107
-[; ;controller/LCD/lcd.c: 107: void LCDchar(unsigned char c)
+"136
+[; ;controller/LCD/lcd.c: 136: void LCDchar(unsigned char c) { LCDsend2x4(c, 0x01); }
 [v _LCDchar `(v ~T0 @X0 1 ef1`uc ]
-"108
-[; ;controller/LCD/lcd.c: 108: {
 {
 [e :U _LCDchar ]
-"107
-[; ;controller/LCD/lcd.c: 107: void LCDchar(unsigned char c)
 [v _c `uc ~T0 @X0 1 r1 ]
-"108
-[; ;controller/LCD/lcd.c: 108: {
 [f ]
-"109
-[; ;controller/LCD/lcd.c: 109:   LCDsend2x4(c, 0x01);
 [e ( _LCDsend2x4 (2 , _c -> -> 1 `i `uc ]
-"110
-[; ;controller/LCD/lcd.c: 110: }
 [e :UE 1788 ]
 }
-"112
-[; ;controller/LCD/lcd.c: 112: void LCDstr(char *p)
+"138
+[; ;controller/LCD/lcd.c: 138: void LCDstr(char *p) {
 [v _LCDstr `(v ~T0 @X0 1 ef1`*uc ]
-"113
-[; ;controller/LCD/lcd.c: 113: {
 {
 [e :U _LCDstr ]
-"112
-[; ;controller/LCD/lcd.c: 112: void LCDstr(char *p)
 [v _p `*uc ~T0 @X0 1 r1 ]
-"113
-[; ;controller/LCD/lcd.c: 113: {
 [f ]
-"114
-[; ;controller/LCD/lcd.c: 114:   unsigned char c;
+"139
+[; ;controller/LCD/lcd.c: 139:   unsigned char c;
 [v _c `uc ~T0 @X0 1 a ]
-"116
-[; ;controller/LCD/lcd.c: 116:   while((c = *p++)) LCDchar(c);
+"141
+[; ;controller/LCD/lcd.c: 141:   while ((c = *p++))
 [e $U 1790  ]
 [e :U 1791 ]
+"142
+[; ;controller/LCD/lcd.c: 142:     LCDchar(c);
 [e ( _LCDchar (1 _c ]
 [e :U 1790 ]
+"141
+[; ;controller/LCD/lcd.c: 141:   while ((c = *p++))
 [e $ != -> = _c -> *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x `uc `i -> 0 `i 1791  ]
 [e :U 1792 ]
-"117
-[; ;controller/LCD/lcd.c: 117: }
+"143
+[; ;controller/LCD/lcd.c: 143: }
 [e :UE 1789 ]
 }
-"119
-[; ;controller/LCD/lcd.c: 119: int LCDbusy()
+"145
+[; ;controller/LCD/lcd.c: 145: int LCDbusy() {
 [v _LCDbusy `(i ~T0 @X0 1 ef ]
-"120
-[; ;controller/LCD/lcd.c: 120: {
 {
 [e :U _LCDbusy ]
 [f ]
-"121
-[; ;controller/LCD/lcd.c: 121:   if(LCDrecv(0) & 0x80) return 1;
+"146
+[; ;controller/LCD/lcd.c: 146:   if (LCDrecv(0) & 0x80)
 [e $ ! != & -> ( _LCDrecv (1 -> -> 0 `i `uc `i -> 128 `i -> 0 `i 1794  ]
+"147
+[; ;controller/LCD/lcd.c: 147:     return 1;
 [e ) -> 1 `i ]
 [e $UE 1793  ]
 [e :U 1794 ]
-"122
-[; ;controller/LCD/lcd.c: 122:   return 0;
+"148
+[; ;controller/LCD/lcd.c: 148:   return 0;
 [e ) -> 0 `i ]
 [e $UE 1793  ]
-"123
-[; ;controller/LCD/lcd.c: 123: }
+"149
+[; ;controller/LCD/lcd.c: 149: }
 [e :UE 1793 ]
 }
-"125
-[; ;controller/LCD/lcd.c: 125: void LCDpos(unsigned char l, unsigned char c)
+"151
+[; ;controller/LCD/lcd.c: 151: void LCDpos(unsigned char l, unsigned char c) {
 [v _LCDpos `(v ~T0 @X0 1 ef2`uc`uc ]
-"126
-[; ;controller/LCD/lcd.c: 126: {
 {
 [e :U _LCDpos ]
-"125
-[; ;controller/LCD/lcd.c: 125: void LCDpos(unsigned char l, unsigned char c)
 [v _l `uc ~T0 @X0 1 r1 ]
 [v _c `uc ~T0 @X0 1 r2 ]
-"126
-[; ;controller/LCD/lcd.c: 126: {
 [f ]
-"127
-[; ;controller/LCD/lcd.c: 127:   unsigned char p;
+"152
+[; ;controller/LCD/lcd.c: 152:   unsigned char p;
 [v _p `uc ~T0 @X0 1 a ]
-"131
-[; ;controller/LCD/lcd.c: 131:   if (l>=1) p = 0xc0; else p=0x80;
+"156
+[; ;controller/LCD/lcd.c: 156:   if (l >= 1)
 [e $ ! >= -> _l `i -> 1 `i 1796  ]
+"157
+[; ;controller/LCD/lcd.c: 157:     p = 0xc0;
 [e = _p -> -> 192 `i `uc ]
 [e $U 1797  ]
+"158
+[; ;controller/LCD/lcd.c: 158:   else
 [e :U 1796 ]
+"159
+[; ;controller/LCD/lcd.c: 159:     p = 0x80;
 [e = _p -> -> 128 `i `uc ]
 [e :U 1797 ]
-"132
-[; ;controller/LCD/lcd.c: 132:   p = p | (c&0x0f);
+"160
+[; ;controller/LCD/lcd.c: 160:   p = p | (c & 0x0f);
 [e = _p -> | -> _p `i & -> _c `i -> 15 `i `uc ]
-"133
-[; ;controller/LCD/lcd.c: 133:   LCDcmd(p);
+"161
+[; ;controller/LCD/lcd.c: 161:   LCDcmd(p);
 [e ( _LCDcmd (1 _p ]
-"134
-[; ;controller/LCD/lcd.c: 134: }
+"162
+[; ;controller/LCD/lcd.c: 162: }
 [e :UE 1795 ]
 }
-"136
-[; ;controller/LCD/lcd.c: 136: void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c) {
+"164
+[; ;controller/LCD/lcd.c: 164: void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c) {
 [v _LCDWriteChar `(v ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _LCDWriteChar ]
@@ -2411,25 +2441,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _l `uc ~T0 @X0 1 r2 ]
 [v _c `uc ~T0 @X0 1 r3 ]
 [f ]
-"137
-[; ;controller/LCD/lcd.c: 137:   LCDpos(l, c);
+"165
+[; ;controller/LCD/lcd.c: 165:   LCDpos(l, c);
 [e ( _LCDpos (2 , _l _c ]
-"138
-[; ;controller/LCD/lcd.c: 138:   while (LCDbusy());
+"166
+[; ;controller/LCD/lcd.c: 166:   while (LCDbusy())
 [e $U 1799  ]
 [e :U 1800 ]
+"167
+[; ;controller/LCD/lcd.c: 167:     ;
 [e :U 1799 ]
+"166
+[; ;controller/LCD/lcd.c: 166:   while (LCDbusy())
 [e $ != ( _LCDbusy ..  -> 0 `i 1800  ]
 [e :U 1801 ]
-"139
-[; ;controller/LCD/lcd.c: 139:   LCDchar(s);
+"168
+[; ;controller/LCD/lcd.c: 168:   LCDchar(s);
 [e ( _LCDchar (1 _s ]
-"140
-[; ;controller/LCD/lcd.c: 140: }
+"169
+[; ;controller/LCD/lcd.c: 169: }
 [e :UE 1798 ]
 }
-"142
-[; ;controller/LCD/lcd.c: 142: void LCDWriteStr(char *s, unsigned char l, unsigned char c) {
+"171
+[; ;controller/LCD/lcd.c: 171: void LCDWriteStr(char *s, unsigned char l, unsigned char c) {
 [v _LCDWriteStr `(v ~T0 @X0 1 ef3`*uc`uc`uc ]
 {
 [e :U _LCDWriteStr ]
@@ -2437,20 +2471,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _l `uc ~T0 @X0 1 r2 ]
 [v _c `uc ~T0 @X0 1 r3 ]
 [f ]
-"143
-[; ;controller/LCD/lcd.c: 143:   LCDpos(l, c);
+"172
+[; ;controller/LCD/lcd.c: 172:   LCDpos(l, c);
 [e ( _LCDpos (2 , _l _c ]
-"144
-[; ;controller/LCD/lcd.c: 144:   while (LCDbusy());
+"173
+[; ;controller/LCD/lcd.c: 173:   while (LCDbusy())
 [e $U 1803  ]
 [e :U 1804 ]
+"174
+[; ;controller/LCD/lcd.c: 174:     ;
 [e :U 1803 ]
+"173
+[; ;controller/LCD/lcd.c: 173:   while (LCDbusy())
 [e $ != ( _LCDbusy ..  -> 0 `i 1804  ]
 [e :U 1805 ]
-"145
-[; ;controller/LCD/lcd.c: 145:   LCDstr(s);
+"175
+[; ;controller/LCD/lcd.c: 175:   LCDstr(s);
 [e ( _LCDstr (1 _s ]
-"146
-[; ;controller/LCD/lcd.c: 146: }
+"176
+[; ;controller/LCD/lcd.c: 176: }
 [e :UE 1802 ]
 }

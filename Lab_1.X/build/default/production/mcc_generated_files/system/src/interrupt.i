@@ -21063,10 +21063,10 @@ void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
 
 
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 1
-# 40 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 39 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 # 1 "mcc_generated_files/system/src/../../system/../timer/tmr1_deprecated.h" 1
-# 40 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 2
-# 175 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 39 "mcc_generated_files/system/src/../../system/../timer/tmr1.h" 2
+# 179 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_Initialize(void);
 
 
@@ -21076,15 +21076,15 @@ void TMR1_Initialize(void);
 
 
 void TMR1_Deinitialize(void);
-# 192 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 196 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_Start(void);
-# 201 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 205 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_Stop(void);
-# 210 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 214 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 uint16_t TMR1_CounterGet(void);
-# 219 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 223 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_CounterSet(uint16_t timerVal);
-# 228 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 233 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_PeriodSet(uint16_t periodVal);
 
 
@@ -21094,7 +21094,7 @@ void TMR1_PeriodSet(uint16_t periodVal);
 
 
 uint16_t TMR1_PeriodGet(void);
-# 245 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 250 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_Reload(void);
 
 
@@ -21104,9 +21104,9 @@ void TMR1_Reload(void);
 
 
 uint16_t TMR1_MaxCountGet(void);
-# 262 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 267 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 void TMR1_SinglePulseAcquisitionStart(void);
-# 271 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
+# 276 "mcc_generated_files/system/src/../../system/../timer/tmr1.h"
 uint8_t TMR1_GateStateGet(void);
 
 
@@ -21139,7 +21139,7 @@ void TMR1_OverflowISR(void);
 
 
 
- void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+void TMR1_OverflowCallbackRegister(void (*CallbackHandler)(void));
 
 
 
@@ -21147,7 +21147,7 @@ void TMR1_OverflowISR(void);
 
 
 
- void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
+void TMR1_GateCallbackRegister(void (*CallbackHandler)(void));
 # 48 "mcc_generated_files/system/src/../../system/system.h" 2
 # 57 "mcc_generated_files/system/src/../../system/system.h"
 void SYSTEM_Initialize(void);

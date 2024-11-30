@@ -20857,47 +20857,64 @@ void LCDWriteStr(char *s, unsigned char l, unsigned char c);
 
 
 
-void LCDsend(unsigned char c)
-{
+void LCDsend(unsigned char c) {
   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(c); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x00);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(c);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
 }
-unsigned char LCDrecv(unsigned char mode)
-{
+unsigned char LCDrecv(unsigned char mode) {
   unsigned char hc;
   unsigned char lc;
 
   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0xf0 | 0x08 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x00);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0xf0 | 0x08 | 0x02 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   _delay((unsigned long)((1)*(4000000/4000000.0)));
-  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x01); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  hc = ReadI2C(); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x01);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  hc = ReadI2C();
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   do { SSP1CON2bits.ACKDT=1;SSP1CON2bits.ACKEN=1;while(SSP1CON2bits.ACKEN); } while (0);
-  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0xf0 | 0x08 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x00);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0xf0 | 0x08 | 0x02 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0xf0 | 0x08 | 0x04 | 0x02 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   _delay((unsigned long)((1)*(4000000/4000000.0)));
-  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x01); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  lc = ReadI2C(); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x01);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  lc = ReadI2C();
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   do { SSP1CON2bits.ACKDT=1;SSP1CON2bits.ACKEN=1;while(SSP1CON2bits.ACKEN); } while (0);
-  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0xf0 | 0x08 | 0x02 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.RSEN=1;while(SSP1CON2bits.RSEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x00);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0xf0 | 0x08 | 0x02 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
-  return ((hc&0xf0) | ((lc>>4)&0x0f));
+  return ((hc & 0xf0) | ((lc >> 4) & 0x0f));
 }
 
-void LCDsend2x4(unsigned char c, unsigned char mode)
-{
+void LCDsend2x4(unsigned char c, unsigned char mode) {
   unsigned char hc;
   unsigned char lc;
 
@@ -20905,85 +20922,98 @@ void LCDsend2x4(unsigned char c, unsigned char mode)
   lc = (c << 4) & 0xf0;
 
   while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(0x4e | 0x00); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(hc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(hc | 0x08 | 0x04 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  do { SSP1CON2bits.SEN=1;while(SSP1CON2bits.SEN); } while (0);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(0x4e | 0x00);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(hc | 0x08 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(hc | 0x08 | 0x04 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   _delay((unsigned long)((1)*(4000000/4000000.0)));
-  WriteI2C(hc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(lc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
-  WriteI2C(lc | 0x08 | 0x04 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(hc | 0x08 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(lc | 0x08 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(lc | 0x08 | 0x04 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   _delay((unsigned long)((1)*(4000000/4000000.0)));
-  WriteI2C(lc | 0x08 | mode); while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
+  WriteI2C(lc | 0x08 | mode);
+  while ((SSP1CON2 & 0x1F) | (SSP1STATbits.R_W));
   do { SSP1CON2bits.PEN = 1;while(SSP1CON2bits.PEN); } while (0);
   _delay((unsigned long)((50)*(4000000/4000000.0)));
 }
 
-void LCDinit(void)
-{
+void LCDinit(void) {
   _delay((unsigned long)((50)*(4000000/4000.0)));
   LCDsend(0x30);
-  LCDsend(0x34); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x30);
+  LCDsend(0x34);
+  _delay((unsigned long)((500)*(4000000/4000000.0)));
+  LCDsend(0x30);
   _delay((unsigned long)((5)*(4000000/4000.0)));
   LCDsend(0x30);
-  LCDsend(0x34); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x30);
+  LCDsend(0x34);
+  _delay((unsigned long)((500)*(4000000/4000000.0)));
+  LCDsend(0x30);
   _delay((unsigned long)((100)*(4000000/4000000.0)));
   LCDsend(0x30);
-  LCDsend(0x34); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x30);
+  LCDsend(0x34);
+  _delay((unsigned long)((500)*(4000000/4000000.0)));
+  LCDsend(0x30);
   _delay((unsigned long)((100)*(4000000/4000000.0)));
   LCDsend(0x20);
-  LCDsend(0x24); _delay((unsigned long)((500)*(4000000/4000000.0))); LCDsend(0x20);
+  LCDsend(0x24);
+  _delay((unsigned long)((500)*(4000000/4000000.0)));
+  LCDsend(0x20);
   _delay((unsigned long)((5)*(4000000/4000.0)));
 
   LCDsend2x4(0x28, 0);
   LCDsend2x4(0x06, 0);
   LCDsend2x4(0x0f, 0);
   LCDsend2x4(0x01, 0);
-  _delay((unsigned long)((2)*(4000000/4000.0)));
+  _delay((unsigned long)((20)*(4000000/4000.0)));
 }
 
-void LCDcmd(unsigned char c)
-{
-  LCDsend2x4(c, 0);
-}
+void LCDcmd(unsigned char c) { LCDsend2x4(c, 0); }
 
-void LCDchar(unsigned char c)
-{
-  LCDsend2x4(c, 0x01);
-}
+void LCDchar(unsigned char c) { LCDsend2x4(c, 0x01); }
 
-void LCDstr(char *p)
-{
+void LCDstr(char *p) {
   unsigned char c;
 
-  while((c = *p++)) LCDchar(c);
+  while ((c = *p++))
+    LCDchar(c);
 }
 
-int LCDbusy()
-{
-  if(LCDrecv(0) & 0x80) return 1;
+int LCDbusy() {
+  if (LCDrecv(0) & 0x80)
+    return 1;
   return 0;
 }
 
-void LCDpos(unsigned char l, unsigned char c)
-{
+void LCDpos(unsigned char l, unsigned char c) {
   unsigned char p;
 
 
 
-  if (l>=1) p = 0xc0; else p=0x80;
-  p = p | (c&0x0f);
+  if (l >= 1)
+    p = 0xc0;
+  else
+    p = 0x80;
+  p = p | (c & 0x0f);
   LCDcmd(p);
 }
 
 void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c) {
   LCDpos(l, c);
-  while (LCDbusy());
+  while (LCDbusy())
+    ;
   LCDchar(s);
 }
 
 void LCDWriteStr(char *s, unsigned char l, unsigned char c) {
   LCDpos(l, c);
-  while (LCDbusy());
+  while (LCDbusy())
+    ;
   LCDstr(s);
 }

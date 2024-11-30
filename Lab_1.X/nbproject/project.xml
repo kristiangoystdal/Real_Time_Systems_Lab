@@ -12,6 +12,7 @@
                 <sourceRootElem>controller</sourceRootElem>
                 <sourceRootElem>mode</sourceRootElem>
                 <sourceRootElem>clock</sourceRootElem>
+                <sourceRootElem>state</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

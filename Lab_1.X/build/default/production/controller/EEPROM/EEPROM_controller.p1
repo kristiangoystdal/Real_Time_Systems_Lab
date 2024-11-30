@@ -1,21 +1,24 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"22 controller/EEPROM/EEPROM_controller.h
-[; ;controller/EEPROM/EEPROM_controller.h: 22: typedef struct {
+"27 controller/EEPROM/../../state/state.h
+[; ;controller/EEPROM/../../state/state.h: 27: {
 [s S1621 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1621 . monitoringPeriod alarmDuration alarmFlag alarmHours alarmMinutes alarmSeconds thresholdTemp thresholdLum clockHours clockMinutes ]
-"44
-[; ;controller/EEPROM/EEPROM_controller.h: 44: Configs ReadConfigs();
-[v _ReadConfigs `(S1621 ~T0 @X0 0 e? ]
+"41
+[; ;controller/EEPROM/../../state/state.h: 41: {
+[s S1622 `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i ]
+[n S1622 . maxTemp minTemp maxLum minLum ]
+"230 controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h
+[; ;controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h: 230: void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
+[v _EEPROM_Write `(v ~T0 @X0 0 ef2`us`uc ]
+"29 controller/EEPROM/EEPROM_controller.h
+[; ;controller/EEPROM/EEPROM_controller.h: 29: Configs ReadConfigs(void);
+[v _ReadConfigs `(S1621 ~T0 @X0 0 ef ]
+"32
+[; ;controller/EEPROM/EEPROM_controller.h: 32: SensorsMaxMin ReadMaxMin(void);
+[v _ReadMaxMin `(S1622 ~T0 @X0 0 ef ]
 "217 controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h
 [; ;controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h: 217: eeprom_data_t EEPROM_Read(eeprom_address_t address);
 [v _EEPROM_Read `(uc ~T0 @X0 0 ef1`us ]
-"230
-[; ;controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h: 230: void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
-[v _EEPROM_Write `(v ~T0 @X0 0 ef2`us`uc ]
-"35 controller/EEPROM/EEPROM_controller.h
-[; ;controller/EEPROM/EEPROM_controller.h: 35: typedef struct {
-[s S1622 `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i ]
-[n S1622 . maxTemp minTemp maxLum minLum ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1655,15 +1658,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 "3 controller/EEPROM/EEPROM_controller.c
-[; ;controller/EEPROM/EEPROM_controller.c: 3: uint8_t CalculateChecksum(Configs configs)
-[v _CalculateChecksum `(uc ~T0 @X0 1 ef1`S1621 ]
+[; ;controller/EEPROM/EEPROM_controller.c: 3: uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
+[v _CalculateChecksum `(uc ~T0 @X0 1 ef2`S1621`S1622 ]
 "4
 [; ;controller/EEPROM/EEPROM_controller.c: 4: {
 {
 [e :U _CalculateChecksum ]
 "3
-[; ;controller/EEPROM/EEPROM_controller.c: 3: uint8_t CalculateChecksum(Configs configs)
+[; ;controller/EEPROM/EEPROM_controller.c: 3: uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
 [v _configs `S1621 ~T0 @X0 1 r1 ]
+[v _sensorsMaxMin `S1622 ~T0 @X0 1 r2 ]
 "4
 [; ;controller/EEPROM/EEPROM_controller.c: 4: {
 [f ]
@@ -1702,264 +1706,304 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;controller/EEPROM/EEPROM_controller.c: 15:     checksum += configs.clockMinutes;
 [e =+ _checksum -> . _configs 9 `uc ]
 "16
-[; ;controller/EEPROM/EEPROM_controller.c: 16:     return checksum;
-[e ) _checksum ]
-[e $UE 1623  ]
-"17
-[; ;controller/EEPROM/EEPROM_controller.c: 17: }
-[e :UE 1623 ]
-}
-"19
-[; ;controller/EEPROM/EEPROM_controller.c: 19: _Bool ConfigIsUsable()
-[v _ConfigIsUsable `(a ~T0 @X0 1 ef ]
-"20
-[; ;controller/EEPROM/EEPROM_controller.c: 20: {
-{
-[e :U _ConfigIsUsable ]
-[f ]
-"21
-[; ;controller/EEPROM/EEPROM_controller.c: 21:     uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs());
-[v _calculatedChecksum `uc ~T0 @X0 1 a ]
-[e = _calculatedChecksum ( _CalculateChecksum (1 ( _ReadConfigs ..  ]
-"22
-[; ;controller/EEPROM/EEPROM_controller.c: 22:     uint8_t readMagicWord = EEPROM_Read(0x7042);
-[v _readMagicWord `uc ~T0 @X0 1 a ]
-[e = _readMagicWord ( _EEPROM_Read (1 -> -> 28738 `i `us ]
-"23
-[; ;controller/EEPROM/EEPROM_controller.c: 23:     uint8_t readChecksum = EEPROM_Read(0x7043);
-[v _readChecksum `uc ~T0 @X0 1 a ]
-[e = _readChecksum ( _EEPROM_Read (1 -> -> 28739 `i `us ]
-"24
-[; ;controller/EEPROM/EEPROM_controller.c: 24:     if ((readChecksum == calculatedChecksum) && (readMagicWord == 42))
-[e $ ! && == -> _readChecksum `i -> _calculatedChecksum `i == -> _readMagicWord `i -> 42 `i 1625  ]
-"25
-[; ;controller/EEPROM/EEPROM_controller.c: 25:     {
-{
-"26
-[; ;controller/EEPROM/EEPROM_controller.c: 26:         return 1;
-[e ) -> -> 1 `i `a ]
-[e $UE 1624  ]
-"27
-[; ;controller/EEPROM/EEPROM_controller.c: 27:     }
-}
-[e $U 1626  ]
-"28
-[; ;controller/EEPROM/EEPROM_controller.c: 28:     else
-[e :U 1625 ]
-"29
-[; ;controller/EEPROM/EEPROM_controller.c: 29:     {
-{
-"30
-[; ;controller/EEPROM/EEPROM_controller.c: 30:         return 0;
-[e ) -> -> 0 `i `a ]
-[e $UE 1624  ]
-"31
-[; ;controller/EEPROM/EEPROM_controller.c: 31:     }
-}
-[e :U 1626 ]
-"32
-[; ;controller/EEPROM/EEPROM_controller.c: 32: }
-[e :UE 1624 ]
-}
-"34
-[; ;controller/EEPROM/EEPROM_controller.c: 34: Configs ReadConfigs()
-[v _ReadConfigs `(S1621 ~T0 @X0 1 ef ]
-"35
-[; ;controller/EEPROM/EEPROM_controller.c: 35: {
-{
-[e :U _ReadConfigs ]
-[f ]
-"36
-[; ;controller/EEPROM/EEPROM_controller.c: 36:     Configs configs;
-[v _configs `S1621 ~T0 @X0 1 a ]
-"37
-[; ;controller/EEPROM/EEPROM_controller.c: 37:     configs.monitoringPeriod = EEPROM_Read(0x7000);
-[e = . _configs 0 ( _EEPROM_Read (1 -> -> 28672 `i `us ]
-"38
-[; ;controller/EEPROM/EEPROM_controller.c: 38:     configs.alarmDuration = EEPROM_Read(0x7001);
-[e = . _configs 1 ( _EEPROM_Read (1 -> -> 28673 `i `us ]
-"39
-[; ;controller/EEPROM/EEPROM_controller.c: 39:     configs.alarmFlag = EEPROM_Read(0x7002);
-[e = . _configs 2 ( _EEPROM_Read (1 -> -> 28674 `i `us ]
-"40
-[; ;controller/EEPROM/EEPROM_controller.c: 40:     configs.alarmHours = EEPROM_Read(0x7003);
-[e = . _configs 3 ( _EEPROM_Read (1 -> -> 28675 `i `us ]
-"41
-[; ;controller/EEPROM/EEPROM_controller.c: 41:     configs.alarmMinutes = EEPROM_Read(0x7004);
-[e = . _configs 4 ( _EEPROM_Read (1 -> -> 28676 `i `us ]
-"42
-[; ;controller/EEPROM/EEPROM_controller.c: 42:     configs.alarmSeconds = EEPROM_Read(0x7005);
-[e = . _configs 5 ( _EEPROM_Read (1 -> -> 28677 `i `us ]
-"43
-[; ;controller/EEPROM/EEPROM_controller.c: 43:     configs.thresholdTemp = EEPROM_Read(0x7006);
-[e = . _configs 6 ( _EEPROM_Read (1 -> -> 28678 `i `us ]
-"44
-[; ;controller/EEPROM/EEPROM_controller.c: 44:     configs.thresholdLum = EEPROM_Read(0x7007);
-[e = . _configs 7 ( _EEPROM_Read (1 -> -> 28679 `i `us ]
-"45
-[; ;controller/EEPROM/EEPROM_controller.c: 45:     configs.clockHours = EEPROM_Read(0x7008);
-[e = . _configs 8 ( _EEPROM_Read (1 -> -> 28680 `i `us ]
-"46
-[; ;controller/EEPROM/EEPROM_controller.c: 46:     configs.clockMinutes = EEPROM_Read(0x7009);
-[e = . _configs 9 ( _EEPROM_Read (1 -> -> 28681 `i `us ]
-"47
-[; ;controller/EEPROM/EEPROM_controller.c: 47:     return configs;
-[e ) _configs ]
-[e $UE 1627  ]
-"48
-[; ;controller/EEPROM/EEPROM_controller.c: 48: }
-[e :UE 1627 ]
-}
-"50
-[; ;controller/EEPROM/EEPROM_controller.c: 50: void WriteConfigs(Configs configs)
-[v _WriteConfigs `(v ~T0 @X0 1 ef1`S1621 ]
-"51
-[; ;controller/EEPROM/EEPROM_controller.c: 51: {
-{
-[e :U _WriteConfigs ]
-"50
-[; ;controller/EEPROM/EEPROM_controller.c: 50: void WriteConfigs(Configs configs)
-[v _configs `S1621 ~T0 @X0 1 r1 ]
-"51
-[; ;controller/EEPROM/EEPROM_controller.c: 51: {
-[f ]
-"52
-[; ;controller/EEPROM/EEPROM_controller.c: 52:     uint8_t calculatedChecksum = CalculateChecksum(configs);
-[v _calculatedChecksum `uc ~T0 @X0 1 a ]
-[e = _calculatedChecksum ( _CalculateChecksum (1 _configs ]
-"53
-[; ;controller/EEPROM/EEPROM_controller.c: 53:     EEPROM_Write(0x7042, 42);
-[e ( _EEPROM_Write (2 , -> -> 28738 `i `us -> -> 42 `i `uc ]
-"54
-[; ;controller/EEPROM/EEPROM_controller.c: 54:     EEPROM_Write(0x7043, calculatedChecksum);
-[e ( _EEPROM_Write (2 , -> -> 28739 `i `us _calculatedChecksum ]
-"55
-[; ;controller/EEPROM/EEPROM_controller.c: 55:     EEPROM_Write(0x7000, configs.monitoringPeriod);
-[e ( _EEPROM_Write (2 , -> -> 28672 `i `us . _configs 0 ]
-"56
-[; ;controller/EEPROM/EEPROM_controller.c: 56:     EEPROM_Write(0x7001, configs.alarmDuration);
-[e ( _EEPROM_Write (2 , -> -> 28673 `i `us . _configs 1 ]
-"57
-[; ;controller/EEPROM/EEPROM_controller.c: 57:     EEPROM_Write(0x7002, configs.alarmFlag);
-[e ( _EEPROM_Write (2 , -> -> 28674 `i `us . _configs 2 ]
-"58
-[; ;controller/EEPROM/EEPROM_controller.c: 58:     EEPROM_Write(0x7003, configs.alarmHours);
-[e ( _EEPROM_Write (2 , -> -> 28675 `i `us . _configs 3 ]
-"59
-[; ;controller/EEPROM/EEPROM_controller.c: 59:     EEPROM_Write(0x7004, configs.alarmMinutes);
-[e ( _EEPROM_Write (2 , -> -> 28676 `i `us . _configs 4 ]
-"60
-[; ;controller/EEPROM/EEPROM_controller.c: 60:     EEPROM_Write(0x7005, configs.alarmSeconds);
-[e ( _EEPROM_Write (2 , -> -> 28677 `i `us . _configs 5 ]
-"61
-[; ;controller/EEPROM/EEPROM_controller.c: 61:     EEPROM_Write(0x7006, configs.thresholdTemp);
-[e ( _EEPROM_Write (2 , -> -> 28678 `i `us . _configs 6 ]
-"62
-[; ;controller/EEPROM/EEPROM_controller.c: 62:     EEPROM_Write(0x7007, configs.thresholdLum);
-[e ( _EEPROM_Write (2 , -> -> 28679 `i `us . _configs 7 ]
-"63
-[; ;controller/EEPROM/EEPROM_controller.c: 63:     EEPROM_Write(0x7008, configs.clockHours);
-[e ( _EEPROM_Write (2 , -> -> 28680 `i `us . _configs 8 ]
-"64
-[; ;controller/EEPROM/EEPROM_controller.c: 64:     EEPROM_Write(0x7009, configs.clockMinutes);
-[e ( _EEPROM_Write (2 , -> -> 28681 `i `us . _configs 9 ]
-"65
-[; ;controller/EEPROM/EEPROM_controller.c: 65: }
-[e :UE 1628 ]
-}
-"67
-[; ;controller/EEPROM/EEPROM_controller.c: 67: void WriteMaxMin(SensorsMaxMin sensorMaxMin)
-[v _WriteMaxMin `(v ~T0 @X0 1 ef1`S1622 ]
-"68
-[; ;controller/EEPROM/EEPROM_controller.c: 68: {
-{
-[e :U _WriteMaxMin ]
-"67
-[; ;controller/EEPROM/EEPROM_controller.c: 67: void WriteMaxMin(SensorsMaxMin sensorMaxMin)
-[v _sensorMaxMin `S1622 ~T0 @X0 1 r1 ]
-"68
-[; ;controller/EEPROM/EEPROM_controller.c: 68: {
-[f ]
-"69
-[; ;controller/EEPROM/EEPROM_controller.c: 69:     for (uint8_t i = 0; i < 5; i++)
+[; ;controller/EEPROM/EEPROM_controller.c: 16:     for(uint8_t i = 0; i < 5; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 5 `i 1630  ]
-[e $U 1631  ]
-[e :U 1630 ]
-"70
-[; ;controller/EEPROM/EEPROM_controller.c: 70:     {
+[e $ < -> _i `i -> 5 `i 1624  ]
+[e $U 1625  ]
+[e :U 1624 ]
 {
-"71
-[; ;controller/EEPROM/EEPROM_controller.c: 71:         EEPROM_Write(0x700A + i, sensorMaxMin.maxTemp[i]);
-[e ( _EEPROM_Write (2 , -> + -> 28682 `i -> _i `i `us *U + &U . _sensorMaxMin 0 * -> _i `ux -> -> # *U &U . _sensorMaxMin 0 `ui `ux ]
-"72
-[; ;controller/EEPROM/EEPROM_controller.c: 72:         EEPROM_Write(0x700F + i, sensorMaxMin.minTemp[i]);
-[e ( _EEPROM_Write (2 , -> + -> 28687 `i -> _i `i `us *U + &U . _sensorMaxMin 1 * -> _i `ux -> -> # *U &U . _sensorMaxMin 1 `ui `ux ]
-"73
-[; ;controller/EEPROM/EEPROM_controller.c: 73:         EEPROM_Write(0x7014 + i, sensorMaxMin.maxLum[i]);
-[e ( _EEPROM_Write (2 , -> + -> 28692 `i -> _i `i `us *U + &U . _sensorMaxMin 2 * -> _i `ux -> -> # *U &U . _sensorMaxMin 2 `ui `ux ]
-"74
-[; ;controller/EEPROM/EEPROM_controller.c: 74:         EEPROM_Write(0x7019 + i, sensorMaxMin.minLum[i]);
-[e ( _EEPROM_Write (2 , -> + -> 28697 `i -> _i `i `us *U + &U . _sensorMaxMin 3 * -> _i `ux -> -> # *U &U . _sensorMaxMin 3 `ui `ux ]
-"75
-[; ;controller/EEPROM/EEPROM_controller.c: 75:     }
+"17
+[; ;controller/EEPROM/EEPROM_controller.c: 17:         checksum += sensorsMaxMin.maxLum[i];
+[e =+ _checksum -> *U + &U . _sensorsMaxMin 2 * -> _i `ux -> -> # *U &U . _sensorsMaxMin 2 `ui `ux `uc ]
+"18
+[; ;controller/EEPROM/EEPROM_controller.c: 18:         checksum += sensorsMaxMin.maxTemp[i];
+[e =+ _checksum -> *U + &U . _sensorsMaxMin 0 * -> _i `ux -> -> # *U &U . _sensorsMaxMin 0 `ui `ux `uc ]
+"19
+[; ;controller/EEPROM/EEPROM_controller.c: 19:         checksum += sensorsMaxMin.minLum[i];
+[e =+ _checksum -> *U + &U . _sensorsMaxMin 3 * -> _i `ux -> -> # *U &U . _sensorsMaxMin 3 `ui `ux `uc ]
+"20
+[; ;controller/EEPROM/EEPROM_controller.c: 20:         checksum += sensorsMaxMin.minTemp[i];
+[e =+ _checksum -> *U + &U . _sensorsMaxMin 1 * -> _i `ux -> -> # *U &U . _sensorsMaxMin 1 `ui `ux `uc ]
+"21
+[; ;controller/EEPROM/EEPROM_controller.c: 21:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 5 `i 1630  ]
-[e :U 1631 ]
+[e $ < -> _i `i -> 5 `i 1624  ]
+[e :U 1625 ]
+}
+"22
+[; ;controller/EEPROM/EEPROM_controller.c: 22:     return checksum;
+[e ) _checksum ]
+[e $UE 1623  ]
+"23
+[; ;controller/EEPROM/EEPROM_controller.c: 23: }
+[e :UE 1623 ]
+}
+"25
+[; ;controller/EEPROM/EEPROM_controller.c: 25: void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin) {
+[v _WriteChecksum `(v ~T0 @X0 1 ef2`S1621`S1622 ]
+{
+[e :U _WriteChecksum ]
+[v _configs `S1621 ~T0 @X0 1 r1 ]
+[v _sensorsMaxMin `S1622 ~T0 @X0 1 r2 ]
+[f ]
+"26
+[; ;controller/EEPROM/EEPROM_controller.c: 26:     uint8_t calculatedChecksum = CalculateChecksum(configs, sensorsMaxMin);
+[v _calculatedChecksum `uc ~T0 @X0 1 a ]
+[e = _calculatedChecksum ( _CalculateChecksum (2 , _configs _sensorsMaxMin ]
+"27
+[; ;controller/EEPROM/EEPROM_controller.c: 27:     EEPROM_Write(0x7043, calculatedChecksum);
+[e ( _EEPROM_Write (2 , -> -> 28739 `i `us _calculatedChecksum ]
+"28
+[; ;controller/EEPROM/EEPROM_controller.c: 28: }
+[e :UE 1627 ]
+}
+"30
+[; ;controller/EEPROM/EEPROM_controller.c: 30: _Bool MemIsUsable()
+[v _MemIsUsable `(a ~T0 @X0 1 ef ]
+"31
+[; ;controller/EEPROM/EEPROM_controller.c: 31: {
+{
+[e :U _MemIsUsable ]
+[f ]
+"32
+[; ;controller/EEPROM/EEPROM_controller.c: 32:     uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs(), ReadMaxMin());
+[v _calculatedChecksum `uc ~T0 @X0 1 a ]
+[e = _calculatedChecksum ( _CalculateChecksum (2 , ( _ReadConfigs ..  ( _ReadMaxMin ..  ]
+"33
+[; ;controller/EEPROM/EEPROM_controller.c: 33:     uint8_t readMagicWord = EEPROM_Read(0x7042);
+[v _readMagicWord `uc ~T0 @X0 1 a ]
+[e = _readMagicWord ( _EEPROM_Read (1 -> -> 28738 `i `us ]
+"34
+[; ;controller/EEPROM/EEPROM_controller.c: 34:     uint8_t readChecksum = EEPROM_Read(0x7043);
+[v _readChecksum `uc ~T0 @X0 1 a ]
+[e = _readChecksum ( _EEPROM_Read (1 -> -> 28739 `i `us ]
+"35
+[; ;controller/EEPROM/EEPROM_controller.c: 35:     if ((readChecksum == calculatedChecksum) && (readMagicWord == 42))
+[e $ ! && == -> _readChecksum `i -> _calculatedChecksum `i == -> _readMagicWord `i -> 42 `i 1629  ]
+"36
+[; ;controller/EEPROM/EEPROM_controller.c: 36:     {
+{
+"37
+[; ;controller/EEPROM/EEPROM_controller.c: 37:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1628  ]
+"38
+[; ;controller/EEPROM/EEPROM_controller.c: 38:     }
+}
+[e $U 1630  ]
+"39
+[; ;controller/EEPROM/EEPROM_controller.c: 39:     else
+[e :U 1629 ]
+"40
+[; ;controller/EEPROM/EEPROM_controller.c: 40:     {
+{
+"41
+[; ;controller/EEPROM/EEPROM_controller.c: 41:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1628  ]
+"42
+[; ;controller/EEPROM/EEPROM_controller.c: 42:     }
+}
+[e :U 1630 ]
+"43
+[; ;controller/EEPROM/EEPROM_controller.c: 43: }
+[e :UE 1628 ]
+}
+"45
+[; ;controller/EEPROM/EEPROM_controller.c: 45: Configs ReadConfigs()
+[v _ReadConfigs `(S1621 ~T0 @X0 1 ef ]
+"46
+[; ;controller/EEPROM/EEPROM_controller.c: 46: {
+{
+[e :U _ReadConfigs ]
+[f ]
+"47
+[; ;controller/EEPROM/EEPROM_controller.c: 47:     Configs configs;
+[v _configs `S1621 ~T0 @X0 1 a ]
+"48
+[; ;controller/EEPROM/EEPROM_controller.c: 48:     configs.monitoringPeriod = EEPROM_Read(0x7000);
+[e = . _configs 0 ( _EEPROM_Read (1 -> -> 28672 `i `us ]
+"49
+[; ;controller/EEPROM/EEPROM_controller.c: 49:     configs.alarmDuration = EEPROM_Read(0x7001);
+[e = . _configs 1 ( _EEPROM_Read (1 -> -> 28673 `i `us ]
+"50
+[; ;controller/EEPROM/EEPROM_controller.c: 50:     configs.alarmFlag = EEPROM_Read(0x7002);
+[e = . _configs 2 ( _EEPROM_Read (1 -> -> 28674 `i `us ]
+"51
+[; ;controller/EEPROM/EEPROM_controller.c: 51:     configs.alarmHours = EEPROM_Read(0x7003);
+[e = . _configs 3 ( _EEPROM_Read (1 -> -> 28675 `i `us ]
+"52
+[; ;controller/EEPROM/EEPROM_controller.c: 52:     configs.alarmMinutes = EEPROM_Read(0x7004);
+[e = . _configs 4 ( _EEPROM_Read (1 -> -> 28676 `i `us ]
+"53
+[; ;controller/EEPROM/EEPROM_controller.c: 53:     configs.alarmSeconds = EEPROM_Read(0x7005);
+[e = . _configs 5 ( _EEPROM_Read (1 -> -> 28677 `i `us ]
+"54
+[; ;controller/EEPROM/EEPROM_controller.c: 54:     configs.thresholdTemp = EEPROM_Read(0x7006);
+[e = . _configs 6 ( _EEPROM_Read (1 -> -> 28678 `i `us ]
+"55
+[; ;controller/EEPROM/EEPROM_controller.c: 55:     configs.thresholdLum = EEPROM_Read(0x7007);
+[e = . _configs 7 ( _EEPROM_Read (1 -> -> 28679 `i `us ]
+"56
+[; ;controller/EEPROM/EEPROM_controller.c: 56:     configs.clockHours = EEPROM_Read(0x7008);
+[e = . _configs 8 ( _EEPROM_Read (1 -> -> 28680 `i `us ]
+"57
+[; ;controller/EEPROM/EEPROM_controller.c: 57:     configs.clockMinutes = EEPROM_Read(0x7009);
+[e = . _configs 9 ( _EEPROM_Read (1 -> -> 28681 `i `us ]
+"58
+[; ;controller/EEPROM/EEPROM_controller.c: 58:     return configs;
+[e ) _configs ]
+[e $UE 1631  ]
+"59
+[; ;controller/EEPROM/EEPROM_controller.c: 59: }
+[e :UE 1631 ]
+}
+"61
+[; ;controller/EEPROM/EEPROM_controller.c: 61: void WriteConfigs(Configs configs)
+[v _WriteConfigs `(v ~T0 @X0 1 ef1`S1621 ]
+"62
+[; ;controller/EEPROM/EEPROM_controller.c: 62: {
+{
+[e :U _WriteConfigs ]
+"61
+[; ;controller/EEPROM/EEPROM_controller.c: 61: void WriteConfigs(Configs configs)
+[v _configs `S1621 ~T0 @X0 1 r1 ]
+"62
+[; ;controller/EEPROM/EEPROM_controller.c: 62: {
+[f ]
+"63
+[; ;controller/EEPROM/EEPROM_controller.c: 63:     EEPROM_Write(0x7042, 42);
+[e ( _EEPROM_Write (2 , -> -> 28738 `i `us -> -> 42 `i `uc ]
+"64
+[; ;controller/EEPROM/EEPROM_controller.c: 64:     EEPROM_Write(0x7000, configs.monitoringPeriod);
+[e ( _EEPROM_Write (2 , -> -> 28672 `i `us . _configs 0 ]
+"65
+[; ;controller/EEPROM/EEPROM_controller.c: 65:     EEPROM_Write(0x7001, configs.alarmDuration);
+[e ( _EEPROM_Write (2 , -> -> 28673 `i `us . _configs 1 ]
+"66
+[; ;controller/EEPROM/EEPROM_controller.c: 66:     EEPROM_Write(0x7002, configs.alarmFlag);
+[e ( _EEPROM_Write (2 , -> -> 28674 `i `us . _configs 2 ]
+"67
+[; ;controller/EEPROM/EEPROM_controller.c: 67:     EEPROM_Write(0x7003, configs.alarmHours);
+[e ( _EEPROM_Write (2 , -> -> 28675 `i `us . _configs 3 ]
+"68
+[; ;controller/EEPROM/EEPROM_controller.c: 68:     EEPROM_Write(0x7004, configs.alarmMinutes);
+[e ( _EEPROM_Write (2 , -> -> 28676 `i `us . _configs 4 ]
+"69
+[; ;controller/EEPROM/EEPROM_controller.c: 69:     EEPROM_Write(0x7005, configs.alarmSeconds);
+[e ( _EEPROM_Write (2 , -> -> 28677 `i `us . _configs 5 ]
+"70
+[; ;controller/EEPROM/EEPROM_controller.c: 70:     EEPROM_Write(0x7006, configs.thresholdTemp);
+[e ( _EEPROM_Write (2 , -> -> 28678 `i `us . _configs 6 ]
+"71
+[; ;controller/EEPROM/EEPROM_controller.c: 71:     EEPROM_Write(0x7007, configs.thresholdLum);
+[e ( _EEPROM_Write (2 , -> -> 28679 `i `us . _configs 7 ]
+"72
+[; ;controller/EEPROM/EEPROM_controller.c: 72:     EEPROM_Write(0x7008, configs.clockHours);
+[e ( _EEPROM_Write (2 , -> -> 28680 `i `us . _configs 8 ]
+"73
+[; ;controller/EEPROM/EEPROM_controller.c: 73:     EEPROM_Write(0x7009, configs.clockMinutes);
+[e ( _EEPROM_Write (2 , -> -> 28681 `i `us . _configs 9 ]
+"74
+[; ;controller/EEPROM/EEPROM_controller.c: 74: }
+[e :UE 1632 ]
 }
 "76
-[; ;controller/EEPROM/EEPROM_controller.c: 76: }
-[e :UE 1629 ]
-}
-"78
-[; ;controller/EEPROM/EEPROM_controller.c: 78: SensorsMaxMin ReadMaxMin()
-[v _ReadMaxMin `(S1622 ~T0 @X0 1 ef ]
-"79
-[; ;controller/EEPROM/EEPROM_controller.c: 79: {
+[; ;controller/EEPROM/EEPROM_controller.c: 76: void WriteMaxMin(SensorsMaxMin sensorMaxMin)
+[v _WriteMaxMin `(v ~T0 @X0 1 ef1`S1622 ]
+"77
+[; ;controller/EEPROM/EEPROM_controller.c: 77: {
 {
-[e :U _ReadMaxMin ]
+[e :U _WriteMaxMin ]
+"76
+[; ;controller/EEPROM/EEPROM_controller.c: 76: void WriteMaxMin(SensorsMaxMin sensorMaxMin)
+[v _sensorMaxMin `S1622 ~T0 @X0 1 r1 ]
+"77
+[; ;controller/EEPROM/EEPROM_controller.c: 77: {
 [f ]
-"80
-[; ;controller/EEPROM/EEPROM_controller.c: 80:     SensorsMaxMin sensorMaxMin;
-[v _sensorMaxMin `S1622 ~T0 @X0 1 a ]
-"81
-[; ;controller/EEPROM/EEPROM_controller.c: 81:     for (uint8_t i = 0; i < 5; i++)
+"78
+[; ;controller/EEPROM/EEPROM_controller.c: 78:     for (uint8_t i = 0; i < 5; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 5 `i 1634  ]
 [e $U 1635  ]
 [e :U 1634 ]
-"82
-[; ;controller/EEPROM/EEPROM_controller.c: 82:     {
+"79
+[; ;controller/EEPROM/EEPROM_controller.c: 79:     {
 {
+"80
+[; ;controller/EEPROM/EEPROM_controller.c: 80:         EEPROM_Write(0x700A + i, sensorMaxMin.maxTemp[i]);
+[e ( _EEPROM_Write (2 , -> + -> 28682 `i -> _i `i `us *U + &U . _sensorMaxMin 0 * -> _i `ux -> -> # *U &U . _sensorMaxMin 0 `ui `ux ]
+"81
+[; ;controller/EEPROM/EEPROM_controller.c: 81:         EEPROM_Write(0x700F + i, sensorMaxMin.minTemp[i]);
+[e ( _EEPROM_Write (2 , -> + -> 28687 `i -> _i `i `us *U + &U . _sensorMaxMin 1 * -> _i `ux -> -> # *U &U . _sensorMaxMin 1 `ui `ux ]
+"82
+[; ;controller/EEPROM/EEPROM_controller.c: 82:         EEPROM_Write(0x7014 + i, sensorMaxMin.maxLum[i]);
+[e ( _EEPROM_Write (2 , -> + -> 28692 `i -> _i `i `us *U + &U . _sensorMaxMin 2 * -> _i `ux -> -> # *U &U . _sensorMaxMin 2 `ui `ux ]
 "83
-[; ;controller/EEPROM/EEPROM_controller.c: 83:         sensorMaxMin.maxTemp[i] = EEPROM_Read(0x700A + i);
-[e = *U + &U . _sensorMaxMin 0 * -> _i `ux -> -> # *U &U . _sensorMaxMin 0 `ui `ux ( _EEPROM_Read (1 -> + -> 28682 `i -> _i `i `us ]
+[; ;controller/EEPROM/EEPROM_controller.c: 83:         EEPROM_Write(0x7019 + i, sensorMaxMin.minLum[i]);
+[e ( _EEPROM_Write (2 , -> + -> 28697 `i -> _i `i `us *U + &U . _sensorMaxMin 3 * -> _i `ux -> -> # *U &U . _sensorMaxMin 3 `ui `ux ]
 "84
-[; ;controller/EEPROM/EEPROM_controller.c: 84:         sensorMaxMin.minTemp[i] = EEPROM_Read(0x700F + i);
-[e = *U + &U . _sensorMaxMin 1 * -> _i `ux -> -> # *U &U . _sensorMaxMin 1 `ui `ux ( _EEPROM_Read (1 -> + -> 28687 `i -> _i `i `us ]
-"85
-[; ;controller/EEPROM/EEPROM_controller.c: 85:         sensorMaxMin.maxLum[i] = EEPROM_Read(0x7014 + i);
-[e = *U + &U . _sensorMaxMin 2 * -> _i `ux -> -> # *U &U . _sensorMaxMin 2 `ui `ux ( _EEPROM_Read (1 -> + -> 28692 `i -> _i `i `us ]
-"86
-[; ;controller/EEPROM/EEPROM_controller.c: 86:         sensorMaxMin.minLum[i] = EEPROM_Read(0x7019 + i);
-[e = *U + &U . _sensorMaxMin 3 * -> _i `ux -> -> # *U &U . _sensorMaxMin 3 `ui `ux ( _EEPROM_Read (1 -> + -> 28697 `i -> _i `i `us ]
-"87
-[; ;controller/EEPROM/EEPROM_controller.c: 87:     }
+[; ;controller/EEPROM/EEPROM_controller.c: 84:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 5 `i 1634  ]
 [e :U 1635 ]
 }
-"88
-[; ;controller/EEPROM/EEPROM_controller.c: 88:     return sensorMaxMin;
-[e ) _sensorMaxMin ]
-[e $UE 1633  ]
-"89
-[; ;controller/EEPROM/EEPROM_controller.c: 89: }
+"85
+[; ;controller/EEPROM/EEPROM_controller.c: 85: }
 [e :UE 1633 ]
+}
+"87
+[; ;controller/EEPROM/EEPROM_controller.c: 87: SensorsMaxMin ReadMaxMin()
+[v _ReadMaxMin `(S1622 ~T0 @X0 1 ef ]
+"88
+[; ;controller/EEPROM/EEPROM_controller.c: 88: {
+{
+[e :U _ReadMaxMin ]
+[f ]
+"89
+[; ;controller/EEPROM/EEPROM_controller.c: 89:     SensorsMaxMin sensorMaxMin;
+[v _sensorMaxMin `S1622 ~T0 @X0 1 a ]
+"90
+[; ;controller/EEPROM/EEPROM_controller.c: 90:     for (uint8_t i = 0; i < 5; i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 5 `i 1638  ]
+[e $U 1639  ]
+[e :U 1638 ]
+"91
+[; ;controller/EEPROM/EEPROM_controller.c: 91:     {
+{
+"92
+[; ;controller/EEPROM/EEPROM_controller.c: 92:         sensorMaxMin.maxTemp[i] = EEPROM_Read(0x700A + i);
+[e = *U + &U . _sensorMaxMin 0 * -> _i `ux -> -> # *U &U . _sensorMaxMin 0 `ui `ux ( _EEPROM_Read (1 -> + -> 28682 `i -> _i `i `us ]
+"93
+[; ;controller/EEPROM/EEPROM_controller.c: 93:         sensorMaxMin.minTemp[i] = EEPROM_Read(0x700F + i);
+[e = *U + &U . _sensorMaxMin 1 * -> _i `ux -> -> # *U &U . _sensorMaxMin 1 `ui `ux ( _EEPROM_Read (1 -> + -> 28687 `i -> _i `i `us ]
+"94
+[; ;controller/EEPROM/EEPROM_controller.c: 94:         sensorMaxMin.maxLum[i] = EEPROM_Read(0x7014 + i);
+[e = *U + &U . _sensorMaxMin 2 * -> _i `ux -> -> # *U &U . _sensorMaxMin 2 `ui `ux ( _EEPROM_Read (1 -> + -> 28692 `i -> _i `i `us ]
+"95
+[; ;controller/EEPROM/EEPROM_controller.c: 95:         sensorMaxMin.minLum[i] = EEPROM_Read(0x7019 + i);
+[e = *U + &U . _sensorMaxMin 3 * -> _i `ux -> -> # *U &U . _sensorMaxMin 3 `ui `ux ( _EEPROM_Read (1 -> + -> 28697 `i -> _i `i `us ]
+"96
+[; ;controller/EEPROM/EEPROM_controller.c: 96:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 5 `i 1638  ]
+[e :U 1639 ]
+}
+"97
+[; ;controller/EEPROM/EEPROM_controller.c: 97:     return sensorMaxMin;
+[e ) _sensorMaxMin ]
+[e $UE 1637  ]
+"98
+[; ;controller/EEPROM/EEPROM_controller.c: 98: }
+[e :UE 1637 ]
 }

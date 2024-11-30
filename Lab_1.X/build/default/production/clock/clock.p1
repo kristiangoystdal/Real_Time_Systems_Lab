@@ -164,7 +164,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 10 ]
 }
 "53
-[; ;clock/clock.c: 53: uint8_t get_clock(uint8_t precision, char* clock) {
+[; ;clock/clock.c: 53: uint8_t get_clock(uint8_t precision, char clock[9]) {
 [v _get_clock `(uc ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _get_clock ]

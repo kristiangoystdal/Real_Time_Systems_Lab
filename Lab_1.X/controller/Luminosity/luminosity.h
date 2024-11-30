@@ -11,7 +11,6 @@
 #include <stdint.h>
 #include <xc.h>
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -27,6 +26,7 @@ extern "C" {
  * @return uint8_t The 3-bit luminosity value.
  */
 uint8_t readLum(void);
+void get_luminosity(char *luminosity);
 
 #ifdef __cplusplus
 }

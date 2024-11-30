@@ -79,11 +79,6 @@ ADC_ACTUAL_RESULT_VS_FILTERED_VALUE 2
 ADC_FIRST_DERIVATIVE_OF_FILTERED_VALUE 4
 ADC_FILTERED_VALUE_VS_SETPOINT 5
 ]
-"53 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
-[e E12222 . `uc
-NVM_OK 0
-NVM_ERROR 1
-]
 "80 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
 [e E12218 . `uc
 I2C_ERROR_NONE 0
@@ -103,10 +98,43 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
+"53 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
+[e E12222 . `uc
+NVM_OK 0
+NVM_ERROR 1
+]
+"31 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/Luminosity/luminosity.c
+[e E12225 . `uc
+ADC_CHANNEL_VSS 60
+ADC_CHANNEL_TEMP 61
+ADC_CHANNEL_DAC1 62
+ADC_CHANNEL_FVR_BUF1 63
+ADC_CHANNEL_ANA0 0
+]
 "5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
+"1177 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
@@ -115,40 +143,78 @@ I2C_STATE_RESET 8
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"8 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\clock/clock.c
+[v _set_clock set_clock `(v  1 e 1 0 ]
+"53
+[v _get_clock get_clock `(uc  1 e 1 0 ]
 "3 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
 [v _CalculateChecksum CalculateChecksum `(uc  1 e 1 0 ]
-"22 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.h
-[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
-"34 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
-[v _ReadConfigs ReadConfigs `(S36  1 e 10 0 ]
+"25
+[v _WriteChecksum WriteChecksum `(v  1 e 1 0 ]
+"30
+[v _MemIsUsable MemIsUsable `(a  1 e 1 0 ]
+"27 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X/state/state.h
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"45 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _ReadConfigs ReadConfigs `(S94  1 e 10 0 ]
+"61
+[v _WriteConfigs WriteConfigs `(v  1 e 1 0 ]
+"76
+[v _WriteMaxMin WriteMaxMin `(v  1 e 1 0 ]
+"41 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X/state/state.h
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"87 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _ReadMaxMin ReadMaxMin `(S105  1 e 20 0 ]
 "44 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LCD/I2C/i2c.c
 [v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
 "59
 [v _WriteI2C WriteI2C `(c  1 e 1 0 ]
 "17 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LCD/lcd.c
 [v _LCDsend LCDsend `(v  1 e 1 0 ]
-"25
+"27
 [v _LCDrecv LCDrecv `(uc  1 e 1 0 ]
-"56
+"74
 [v _LCDsend2x4 LCDsend2x4 `(v  1 e 1 0 ]
-"102
+"104
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+"134
 [v _LCDcmd LCDcmd `(v  1 e 1 0 ]
-"107
+"136
 [v _LCDchar LCDchar `(v  1 e 1 0 ]
-"112
+"138
 [v _LCDstr LCDstr `(v  1 e 1 0 ]
-"119
+"145
 [v _LCDbusy LCDbusy `(i  1 e 2 0 ]
-"125
+"151
 [v _LCDpos LCDpos `(v  1 e 1 0 ]
+"171
+[v _LCDWriteStr LCDWriteStr `(v  1 e 1 0 ]
 "5 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LED/led.c
 [v _turn_on turn_on `(v  1 e 1 0 ]
 "29
 [v _toggle toggle `(v  1 e 1 0 ]
-"42 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+"16 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/Luminosity/luminosity.c
+[v _get_luminosity get_luminosity `(v  1 e 1 0 ]
+"29
+[v _readLum readLum `(uc  1 e 1 0 ]
+"12 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/Temperature/temperature.c
+[v _readTemperature readTemperature `(uc  1 e 1 0 ]
+"19
+[v _get_temperature get_temperature `(v  1 e 1 0 ]
+"49 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
 [v _global_initialization global_initialization `(v  1 e 1 0 ]
-"47
+"60
 [v _main main `(i  1 e 2 0 ]
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"135
+[v _ADC_ChannelSelect ADC_ChannelSelect `(v  1 e 1 0 ]
+"140
+[v _ADC_ConversionStart ADC_ConversionStart `(v  1 e 1 0 ]
+"155
+[v _ADC_IsConversionDone ADC_IsConversionDone `(a  1 e 1 0 ]
+"160
+[v _ADC_ConversionResultGet ADC_ConversionResultGet `(s  1 e 2 0 ]
 "114 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "130
@@ -261,21 +327,43 @@ I2C_STATE_RESET 8
 [v _TMR1_DefaultOverflowCallback TMR1_DefaultOverflowCallback `(v  1 s 1 TMR1_DefaultOverflowCallback ]
 "207
 [v _TMR1_DefaultGateCallback TMR1_DefaultGateCallback `(v  1 s 1 TMR1_DefaultGateCallback ]
-[s S1239 . 1 `uc 1 INTEDG 1 0 :1:0 
+"5 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mode/configuration_mode.c
+[v _configuration_mode_initialization configuration_mode_initialization `(v  1 e 1 0 ]
+"13 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mode/normal_mode.c
+[v _normal_mode_initialization normal_mode_initialization `(v  1 e 1 0 ]
+"11 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v _set_configs set_configs `(v  1 e 1 0 ]
+"23
+[v _set_max_min set_max_min `(v  1 e 1 0 ]
+"31
+[v _set_default set_default `(v  1 e 1 0 ]
+"51
+[v _get_config_clock_hours get_config_clock_hours `(uc  1 e 1 0 ]
+"55
+[v _get_config_clock_minutes get_config_clock_minutes `(uc  1 e 1 0 ]
+"59
+[v _measure_to_string measure_to_string `(v  1 e 1 0 ]
+"96
+[v _set_mode set_mode `(v  1 e 1 0 ]
+"101
+[v _get_mode get_mode `(uc  1 e 1 0 ]
+"106
+[v _mode_has_changed mode_has_changed `(a  1 e 1 0 ]
+[s S1390 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
-[u S1244 . 1 `S1239 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1244  1 e 1 @11 ]
+[u S1395 . 1 `S1390 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1395  1 e 1 @11 ]
 "670
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "732
 [v _TRISB TRISB `VEuc  1 e 1 @18 ]
 "794
 [v _TRISC TRISC `VEuc  1 e 1 @19 ]
-[s S173 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S2030 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -285,15 +373,15 @@ I2C_STATE_RESET 8
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "811
-[u S182 . 1 `S173 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES182  1 e 1 @19 ]
+[u S2039 . 1 `S2030 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES2039  1 e 1 @19 ]
 "856
 [v _TRISD TRISD `VEuc  1 e 1 @20 ]
 "918
 [v _TRISE TRISE `VEuc  1 e 1 @21 ]
 "950
 [v _LATA LATA `VEuc  1 e 1 @22 ]
-[s S720 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S2421 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -303,8 +391,8 @@ I2C_STATE_RESET 8
 `uc 1 LATA7 1 0 :1:7 
 ]
 "967
-[u S729 . 1 `S720 1 . 1 0 ]
-[v _LATAbits LATAbits `VES729  1 e 1 @22 ]
+[u S2430 . 1 `S2421 1 . 1 0 ]
+[v _LATAbits LATAbits `VES2430  1 e 1 @22 ]
 "1012
 [v _LATB LATB `VEuc  1 e 1 @23 ]
 "1074
@@ -327,7 +415,7 @@ I2C_STATE_RESET 8
 [v _ADACCH ADACCH `VEuc  1 e 1 @145 ]
 "2126
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @147 ]
-[s S769 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S189 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -336,44 +424,44 @@ I2C_STATE_RESET 8
 `uc 1 ADON 1 0 :1:7 
 ]
 "2162
-[s S777 . 1 `uc 1 DONE 1 0 :1:0 
+[s S197 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFRM 1 0 :2:2 
 ]
-[s S781 . 1 `uc 1 nDONE 1 0 :1:0 
+[s S201 . 1 `uc 1 nDONE 1 0 :1:0 
 ]
-[s S783 . 1 `uc 1 GO 1 0 :1:0 
+[s S203 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 `uc 1 ADFM1 1 0 :1:3 
 ]
-[s S788 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S208 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFRM0 1 0 :1:2 
 `uc 1 ADFRM1 1 0 :1:3 
 ]
-[u S793 . 1 `S769 1 . 1 0 `S777 1 . 1 0 `S781 1 . 1 0 `S783 1 . 1 0 `S788 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES793  1 e 1 @147 ]
+[u S213 . 1 `S189 1 . 1 0 `S197 1 . 1 0 `S201 1 . 1 0 `S203 1 . 1 0 `S208 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES213  1 e 1 @147 ]
 "2237
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @148 ]
-[s S995 . 1 `uc 1 ADDSEN 1 0 :1:0 
+[s S415 . 1 `uc 1 ADDSEN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 ADGPOL 1 0 :1:5 
 `uc 1 ADIPEN 1 0 :1:6 
 `uc 1 ADPPOL 1 0 :1:7 
 ]
 "2251
-[u S1001 . 1 `S995 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES1001  1 e 1 @148 ]
+[u S421 . 1 `S415 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES421  1 e 1 @148 ]
 "2276
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @149 ]
-[s S893 . 1 `uc 1 ADMD 1 0 :3:0 
+[s S313 . 1 `uc 1 ADMD 1 0 :3:0 
 `uc 1 ADACLR 1 0 :1:3 
 `uc 1 ADCRS 1 0 :3:4 
 `uc 1 ADPSIS 1 0 :1:7 
 ]
 "2298
-[s S898 . 1 `uc 1 ADMD0 1 0 :1:0 
+[s S318 . 1 `uc 1 ADMD0 1 0 :1:0 
 `uc 1 ADMD1 1 0 :1:1 
 `uc 1 ADMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -381,11 +469,11 @@ I2C_STATE_RESET 8
 `uc 1 ADCRS1 1 0 :1:5 
 `uc 1 ADCRS2 1 0 :1:6 
 ]
-[u S906 . 1 `S893 1 . 1 0 `S898 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES906  1 e 1 @149 ]
+[u S326 . 1 `S313 1 . 1 0 `S318 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES326  1 e 1 @149 ]
 "2353
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @150 ]
-[s S932 . 1 `uc 1 ADTMD0 1 0 :1:0 
+[s S352 . 1 `uc 1 ADTMD0 1 0 :1:0 
 `uc 1 ADTMD1 1 0 :1:1 
 `uc 1 ADTMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -394,15 +482,15 @@ I2C_STATE_RESET 8
 `uc 1 ADCALC2 1 0 :1:6 
 ]
 "2374
-[s S940 . 1 `uc 1 ADTMD 1 0 :3:0 
+[s S360 . 1 `uc 1 ADTMD 1 0 :3:0 
 `uc 1 ADSOI 1 0 :1:3 
 `uc 1 ADCALC 1 0 :3:4 
 ]
-[u S944 . 1 `S932 1 . 1 0 `S940 1 . 1 0 ]
-[v _ADCON3bits ADCON3bits `VES944  1 e 1 @150 ]
+[u S364 . 1 `S352 1 . 1 0 `S360 1 . 1 0 ]
+[v _ADCON3bits ADCON3bits `VES364  1 e 1 @150 ]
 "2424
 [v _ADSTAT ADSTAT `VEuc  1 e 1 @151 ]
-[s S963 . 1 `uc 1 ADSTAT 1 0 :3:0 
+[s S383 . 1 `uc 1 ADSTAT 1 0 :3:0 
 `uc 1 ADMACT 1 0 :1:3 
 `uc 1 ADMATH 1 0 :1:4 
 `uc 1 ADLTHR 1 0 :1:5 
@@ -410,12 +498,12 @@ I2C_STATE_RESET 8
 `uc 1 ADAOV 1 0 :1:7 
 ]
 "2444
-[s S970 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+[s S390 . 1 `uc 1 ADSTAT0 1 0 :1:0 
 `uc 1 ADSTAT1 1 0 :1:1 
 `uc 1 ADSTAT2 1 0 :1:2 
 ]
-[u S974 . 1 `S963 1 . 1 0 `S970 1 . 1 0 ]
-[v _ADSTATbits ADSTATbits `VES974  1 e 1 @151 ]
+[u S394 . 1 `S383 1 . 1 0 `S390 1 . 1 0 ]
+[v _ADSTATbits ADSTATbits `VES394  1 e 1 @151 ]
 "2494
 [v _ADCLK ADCLK `VEuc  1 e 1 @152 ]
 "2552
@@ -460,7 +548,7 @@ I2C_STATE_RESET 8
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
 "4814
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S271 . 1 `uc 1 BF 1 0 :1:0 
+[s S818 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -470,33 +558,33 @@ I2C_STATE_RESET 8
 `uc 1 SMP 1 0 :1:7 
 ]
 "4923
-[s S280 . 1 `uc 1 . 1 0 :2:0 
+[s S827 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S285 . 1 `uc 1 . 1 0 :2:0 
+[s S832 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S290 . 1 `uc 1 . 1 0 :2:0 
+[s S837 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S295 . 1 `uc 1 . 1 0 :2:0 
+[s S842 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S300 . 1 `uc 1 . 1 0 :2:0 
+[s S847 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S306 . 1 `uc 1 BF1 1 0 :1:0 
+[s S853 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -505,66 +593,66 @@ I2C_STATE_RESET 8
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S315 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S321 . 1 `uc 1 . 1 0 :2:0 
+[s S868 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S327 . 1 `uc 1 . 1 0 :2:0 
+[s S874 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S333 . 1 `uc 1 . 1 0 :2:0 
+[s S880 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S338 . 1 `uc 1 . 1 0 :2:0 
+[s S885 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S343 . 1 `uc 1 . 1 0 :2:0 
+[s S890 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S348 . 1 `uc 1 . 1 0 :2:0 
+[s S895 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S353 . 1 `uc 1 . 1 0 :2:0 
+[s S900 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S358 . 1 `S271 1 . 1 0 `S280 1 . 1 0 `S285 1 . 1 0 `S290 1 . 1 0 `S295 1 . 1 0 `S300 1 . 1 0 `S306 1 . 1 0 `S315 1 . 1 0 `S321 1 . 1 0 `S327 1 . 1 0 `S333 1 . 1 0 `S338 1 . 1 0 `S343 1 . 1 0 `S348 1 . 1 0 `S353 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES358  1 e 1 @399 ]
+[u S905 . 1 `S818 1 . 1 0 `S827 1 . 1 0 `S832 1 . 1 0 `S837 1 . 1 0 `S842 1 . 1 0 `S847 1 . 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S868 1 . 1 0 `S874 1 . 1 0 `S880 1 . 1 0 `S885 1 . 1 0 `S890 1 . 1 0 `S895 1 . 1 0 `S900 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES905  1 e 1 @399 ]
 "5178
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S128 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S760 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5208
-[s S134 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S766 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S139 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S771 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -573,11 +661,11 @@ I2C_STATE_RESET 8
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S148 . 1 `S128 1 . 1 0 `S134 1 . 1 0 `S139 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES148  1 e 1 @400 ]
+[u S780 . 1 `S760 1 . 1 0 `S766 1 . 1 0 `S771 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES780  1 e 1 @400 ]
 "5298
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S194 . 1 `uc 1 SEN 1 0 :1:0 
+[s S1101 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -587,17 +675,17 @@ I2C_STATE_RESET 8
 `uc 1 GCEN 1 0 :1:7 
 ]
 "5345
-[s S203 . 1 `uc 1 . 1 0 :1:0 
+[s S1110 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S206 . 1 `uc 1 . 1 0 :1:0 
+[s S1113 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S213 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S1120 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -606,15 +694,15 @@ I2C_STATE_RESET 8
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S222 . 1 `uc 1 . 1 0 :1:0 
+[s S1129 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S229 . 1 `S194 1 . 1 0 `S203 1 . 1 0 `S206 1 . 1 0 `S213 1 . 1 0 `S222 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES229  1 e 1 @401 ]
+[u S1136 . 1 `S1101 1 . 1 0 `S1110 1 . 1 0 `S1113 1 . 1 0 `S1120 1 . 1 0 `S1129 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES1136  1 e 1 @401 ]
 "5485
 [v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @402 ]
 "6497
@@ -623,32 +711,32 @@ I2C_STATE_RESET 8
 [v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
 "6787
 [v _T1CON T1CON `VEuc  1 e 1 @526 ]
-[s S1310 . 1 `uc 1 ON 1 0 :1:0 
+[s S1571 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
 "6818
-[s S1316 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S1577 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S1323 . 1 `uc 1 . 1 0 :4:0 
+[s S1584 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
-[s S1327 . 1 `uc 1 . 1 0 :1:0 
+[s S1588 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD161 1 0 :1:1 
 ]
-[u S1330 . 1 `S1310 1 . 1 0 `S1316 1 . 1 0 `S1323 1 . 1 0 `S1327 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES1330  1 e 1 @526 ]
+[u S1591 . 1 `S1571 1 . 1 0 `S1577 1 . 1 0 `S1584 1 . 1 0 `S1588 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1591  1 e 1 @526 ]
 "6883
 [v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
-[s S1446 . 1 `uc 1 . 1 0 :2:0 
+[s S1707 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO_nDONE 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -657,7 +745,7 @@ I2C_STATE_RESET 8
 `uc 1 GE 1 0 :1:7 
 ]
 "6917
-[s S1454 . 1 `uc 1 . 1 0 :2:0 
+[s S1715 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -665,33 +753,33 @@ I2C_STATE_RESET 8
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
-[s S1462 . 1 `uc 1 . 1 0 :3:0 
+[s S1723 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
-[u S1465 . 1 `S1446 1 . 1 0 `S1454 1 . 1 0 `S1462 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES1465  1 e 1 @527 ]
+[u S1726 . 1 `S1707 1 . 1 0 `S1715 1 . 1 0 `S1723 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1726  1 e 1 @527 ]
 "7079
 [v _T1GATE T1GATE `VEuc  1 e 1 @528 ]
 "7245
 [v _T1CLK T1CLK `VEuc  1 e 1 @529 ]
-[s S1226 . 1 `uc 1 INTF 1 0 :1:0 
+[s S1505 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "21269
-[u S1231 . 1 `S1226 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES1231  1 e 1 @1804 ]
-[s S839 . 1 `uc 1 ADIF 1 0 :1:0 
+[u S1510 . 1 `S1505 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1510  1 e 1 @1804 ]
+[s S259 . 1 `uc 1 ADIF 1 0 :1:0 
 `uc 1 ADTIF 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIF 1 0 :1:6 
 `uc 1 OSFIF 1 0 :1:7 
 ]
 "21303
-[u S845 . 1 `S839 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES845  1 e 1 @1805 ]
-[s S463 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S265 . 1 `S259 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES265  1 e 1 @1805 ]
+[s S1195 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -699,9 +787,9 @@ I2C_STATE_RESET 8
 `uc 1 RCIF 1 0 :1:5 
 ]
 "21376
-[u S470 . 1 `S463 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES470  1 e 1 @1807 ]
-[s S1369 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S1202 . 1 `S1195 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES1202  1 e 1 @1807 ]
+[s S1630 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -709,9 +797,9 @@ I2C_STATE_RESET 8
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "21426
-[u S1376 . 1 `S1369 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES1376  1 e 1 @1808 ]
-[s S1404 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+[u S1637 . 1 `S1630 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES1637  1 e 1 @1808 ]
+[s S1665 . 1 `uc 1 TMR1GIF 1 0 :1:0 
 `uc 1 TMR3GIF 1 0 :1:1 
 `uc 1 TMR5GIF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -721,18 +809,18 @@ I2C_STATE_RESET 8
 `uc 1 CLC4IF 1 0 :1:7 
 ]
 "21478
-[u S1413 . 1 `S1404 1 . 1 0 ]
-[v _PIR5bits PIR5bits `VES1413  1 e 1 @1809 ]
-[s S824 . 1 `uc 1 ADIE 1 0 :1:0 
+[u S1674 . 1 `S1665 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES1674  1 e 1 @1809 ]
+[s S244 . 1 `uc 1 ADIE 1 0 :1:0 
 `uc 1 ADTIE 1 0 :1:1 
 `uc 1 . 1 0 :4:2 
 `uc 1 CSWIE 1 0 :1:6 
 `uc 1 OSFIE 1 0 :1:7 
 ]
 "21725
-[u S830 . 1 `S824 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES830  1 e 1 @1815 ]
-[s S2107 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S250 . 1 `S244 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES250  1 e 1 @1815 ]
+[s S1178 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -740,9 +828,9 @@ I2C_STATE_RESET 8
 `uc 1 RCIE 1 0 :1:5 
 ]
 "21798
-[u S2114 . 1 `S2107 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES2114  1 e 1 @1817 ]
-[s S1386 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S1185 . 1 `S1178 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1185  1 e 1 @1817 ]
+[s S1647 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 TMR3IE 1 0 :1:2 
 `uc 1 TMR4IE 1 0 :1:3 
@@ -750,9 +838,9 @@ I2C_STATE_RESET 8
 `uc 1 TMR6IE 1 0 :1:5 
 ]
 "21848
-[u S1393 . 1 `S1386 1 . 1 0 ]
-[v _PIE4bits PIE4bits `VES1393  1 e 1 @1818 ]
-[s S1425 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+[u S1654 . 1 `S1647 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES1654  1 e 1 @1818 ]
+[s S1686 . 1 `uc 1 TMR1GIE 1 0 :1:0 
 `uc 1 TMR3GIE 1 0 :1:1 
 `uc 1 TMR5GIE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -762,8 +850,8 @@ I2C_STATE_RESET 8
 `uc 1 CLC4IE 1 0 :1:7 
 ]
 "21900
-[u S1434 . 1 `S1425 1 . 1 0 ]
-[v _PIE5bits PIE5bits `VES1434  1 e 1 @1819 ]
+[u S1695 . 1 `S1686 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES1695  1 e 1 @1819 ]
 "23101
 [v _NVMADRL NVMADRL `VEuc  1 e 1 @2074 ]
 "23163
@@ -772,7 +860,7 @@ I2C_STATE_RESET 8
 [v _NVMDATL NVMDATL `VEuc  1 e 1 @2076 ]
 "23281
 [v _NVMDATH NVMDATH `VEuc  1 e 1 @2077 ]
-[s S1588 . 1 `uc 1 RD 1 0 :1:0 
+[s S1364 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -781,8 +869,8 @@ I2C_STATE_RESET 8
 `uc 1 NVMREGS 1 0 :1:6 
 ]
 "23347
-[u S1596 . 1 `S1588 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES1596  1 e 1 @2078 ]
+[u S1372 . 1 `S1364 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES1372  1 e 1 @2078 ]
 "23387
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @2079 ]
 "23451
@@ -877,6 +965,13 @@ I2C_STATE_RESET 8
 [v _IOCEN IOCEN `VEuc  1 e 1 @3946 ]
 "36190
 [v _IOCEF IOCEF `VEuc  1 e 1 @3947 ]
+"153 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
 "4 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\clock/clock.c
 [v __hours _hours `uc  1 s 1 _hours ]
 "5
@@ -891,9 +986,9 @@ I2C_STATE_RESET 8
 [v _adc_busy_status adc_busy_status `a  1 s 1 adc_busy_status ]
 "96 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Callback I2C1_Callback `*.37(v  1 s 2 I2C1_Callback ]
-[s S1774 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.2uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12218 1 errorState 1 12 `E12227 1 state 1 13 ]
+[s S703 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.2uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12218 1 errorState 1 12 `E12227 1 state 1 13 ]
 "97
-[v _i2c1Status i2c1Status `VES1774  1 e 14 0 ]
+[v _i2c1Status i2c1Status `VES703  1 e 14 0 ]
 "99
 [v _i2c1_eventTable i2c1_eventTable `DC[9]*.37(E12227  1 e 18 0 ]
 "40 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
@@ -908,10 +1003,35 @@ I2C_STATE_RESET 8
 [v _TMR1_OverflowCallback TMR1_OverflowCallback `*.37(v  1 s 2 TMR1_OverflowCallback ]
 "45
 [v _TMR1_GateCallback TMR1_GateCallback `*.37(v  1 s 2 TMR1_GateCallback ]
-"47 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+"11 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mode/normal_mode.c
+[v __s2_state _s2_state `uc  1 s 1 _s2_state ]
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"6 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v __configs _configs `S94  1 s 10 _configs ]
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"7
+[v __sensorsMaxMin _sensorsMaxMin `S105  1 s 20 _sensorsMaxMin ]
+"8
+[v __mode _mode `uc  1 s 1 _mode ]
+"9
+[v __mode_has_changed _mode_has_changed `a  1 s 1 _mode_has_changed ]
+"60 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"77
+"91
+[v main@mode mode `uc  1 a 1 54 ]
+"100
+} 0
+"13 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mode/normal_mode.c
+[v _normal_mode_initialization normal_mode_initialization `(v  1 e 1 0 ]
+{
+"16
+[v normal_mode_initialization@clock clock `[9]uc  1 a 9 49 ]
+"24
+[v normal_mode_initialization@temperature temperature `[4]uc  1 a 4 45 ]
+"21
+[v normal_mode_initialization@luminosity luminosity `[4]uc  1 a 4 41 ]
+"31
 } 0
 "5 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LED/led.c
 [v _turn_on turn_on `(v  1 e 1 0 ]
@@ -921,18 +1041,453 @@ I2C_STATE_RESET 8
 [v turn_on@n n `uc  1 p 1 0 ]
 "15
 } 0
+"19 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/Temperature/temperature.c
+[v _get_temperature get_temperature `(v  1 e 1 0 ]
+{
+"21
+[v get_temperature@temp temp `uc  1 a 1 40 ]
+"19
+[v get_temperature@temperature temperature `*.4uc  1 p 1 37 ]
+"25
+} 0
+"12
+[v _readTemperature readTemperature `(uc  1 e 1 0 ]
+{
+"17
+} 0
+"16 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/Luminosity/luminosity.c
+[v _get_luminosity get_luminosity `(v  1 e 1 0 ]
+{
+"18
+[v get_luminosity@lumValue lumValue `uc  1 a 1 40 ]
+"16
+[v get_luminosity@luminosity luminosity `*.4uc  1 p 1 37 ]
+"22
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S2917 . 2 `*.39uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
+"13
+[s S2920 _IO_FILE 11 `S2917 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S2920  1 a 11 26 ]
+"12
+[v sprintf@ap ap `[1]*.4v  1 a 1 25 ]
+"9
+[v sprintf@s s `*.4uc  1 p 1 20 ]
+[v sprintf@fmt fmt `*.25DCuc  1 p 2 21 ]
+"23
+} 0
+"1817 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 10 ]
+[s S2952 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.39S2952  1 p 2 15 ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 17 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 19 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S2965 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S2965  1 a 4 10 ]
+"1179
+[v vfpfcnvrt@cp cp `*.25uc  1 a 2 8 ]
+[v vfpfcnvrt@c c `uc  1 a 1 14 ]
+[s S2952 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.39S2952  1 p 2 0 ]
+[v vfpfcnvrt@fmt fmt `*.30*.25uc  1 p 1 2 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 3 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 0 ]
+[u S2917 . 2 `*.39uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
+[s S2920 _IO_FILE 11 `S2917 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2920  1 p 2 2 ]
+"24
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\putch.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+"9
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"29 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/Luminosity/luminosity.c
+[v _readLum readLum `(uc  1 e 1 0 ]
+{
+"41
+[v readLum@rawResult rawResult `us  1 a 2 4 ]
+"44
+[v readLum@result3Bit result3Bit `uc  1 a 1 6 ]
+"47
+} 0
+"155 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_IsConversionDone ADC_IsConversionDone `(a  1 e 1 0 ]
+{
+"158
+} 0
+"140
+[v _ADC_ConversionStart ADC_ConversionStart `(v  1 e 1 0 ]
+{
+"143
+} 0
+"160
+[v _ADC_ConversionResultGet ADC_ConversionResultGet `(s  1 e 2 0 ]
+{
+"163
+} 0
+"135
+[v _ADC_ChannelSelect ADC_ChannelSelect `(v  1 e 1 0 ]
+{
+[v ADC_ChannelSelect@channel channel `E12222  1 p 1 wreg ]
+[v ADC_ChannelSelect@channel channel `E12222  1 p 1 wreg ]
+"137
+[v ADC_ChannelSelect@channel channel `E12222  1 p 1 0 ]
+"138
+} 0
+"53 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\clock/clock.c
+[v _get_clock get_clock `(uc  1 e 1 0 ]
+{
+[v get_clock@precision precision `uc  1 p 1 wreg ]
+[v get_clock@precision precision `uc  1 p 1 wreg ]
+[v get_clock@clock clock `*.4uc  1 p 1 8 ]
+[v get_clock@precision precision `uc  1 p 1 11 ]
+"90
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"104 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LCD/lcd.c
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+{
+"132
+} 0
+"17
+[v _LCDsend LCDsend `(v  1 e 1 0 ]
+{
+[v LCDsend@c c `uc  1 p 1 wreg ]
+[v LCDsend@c c `uc  1 p 1 wreg ]
+[v LCDsend@c c `uc  1 p 1 3 ]
+"26
+} 0
+"171
+[v _LCDWriteStr LCDWriteStr `(v  1 e 1 0 ]
+{
+[v LCDWriteStr@s s `*.25uc  1 p 2 1 ]
+[v LCDWriteStr@l l `uc  1 p 1 3 ]
+[v LCDWriteStr@c c `uc  1 p 1 4 ]
+"176
+} 0
+"138
+[v _LCDstr LCDstr `(v  1 e 1 0 ]
+{
+"139
+[v LCDstr@c c `uc  1 a 1 0 ]
+"138
+[v LCDstr@p p `*.25uc  1 p 2 8 ]
+"143
+} 0
+"136
+[v _LCDchar LCDchar `(v  1 e 1 0 ]
+{
+[v LCDchar@c c `uc  1 p 1 wreg ]
+[v LCDchar@c c `uc  1 p 1 wreg ]
+[v LCDchar@c c `uc  1 p 1 7 ]
+} 0
+"151
+[v _LCDpos LCDpos `(v  1 e 1 0 ]
+{
+[v LCDpos@l l `uc  1 p 1 wreg ]
+"152
+[v LCDpos@p p `uc  1 a 1 10 ]
+"151
+[v LCDpos@l l `uc  1 p 1 wreg ]
+[v LCDpos@c c `uc  1 p 1 8 ]
+"156
+[v LCDpos@l l `uc  1 p 1 9 ]
+"162
+} 0
+"134
+[v _LCDcmd LCDcmd `(v  1 e 1 0 ]
+{
+[v LCDcmd@c c `uc  1 p 1 wreg ]
+[v LCDcmd@c c `uc  1 p 1 wreg ]
+[v LCDcmd@c c `uc  1 p 1 7 ]
+} 0
+"74
+[v _LCDsend2x4 LCDsend2x4 `(v  1 e 1 0 ]
+{
+[v LCDsend2x4@c c `uc  1 p 1 wreg ]
+"76
+[v LCDsend2x4@lc lc `uc  1 a 1 6 ]
+"75
+[v LCDsend2x4@hc hc `uc  1 a 1 5 ]
+"74
+[v LCDsend2x4@c c `uc  1 p 1 wreg ]
+[v LCDsend2x4@mode mode `uc  1 p 1 2 ]
+"78
+[v LCDsend2x4@c c `uc  1 p 1 4 ]
+"102
+} 0
+"145
+[v _LCDbusy LCDbusy `(i  1 e 2 0 ]
+{
+"149
+} 0
+"27
+[v _LCDrecv LCDrecv `(uc  1 e 1 0 ]
+{
+[v LCDrecv@mode mode `uc  1 p 1 wreg ]
 "29
+[v LCDrecv@lc lc `uc  1 a 1 5 ]
+"28
+[v LCDrecv@hc hc `uc  1 a 1 4 ]
+"27
+[v LCDrecv@mode mode `uc  1 p 1 wreg ]
+[v LCDrecv@mode mode `uc  1 p 1 6 ]
+"72
+} 0
+"59 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LCD/I2C/i2c.c
+[v _WriteI2C WriteI2C `(c  1 e 1 0 ]
+{
+[v WriteI2C@data_out data_out `uc  1 p 1 wreg ]
+[v WriteI2C@data_out data_out `uc  1 p 1 wreg ]
+"61
+[v WriteI2C@data_out data_out `uc  1 p 1 1 ]
+"90
+} 0
+"44
+[v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
+{
+"50
+} 0
+"106 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v _mode_has_changed mode_has_changed `(a  1 e 1 0 ]
+{
+"108
+} 0
+"49 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
+[v _global_initialization global_initialization `(v  1 e 1 0 ]
+{
+"58
+} 0
+"96 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v _set_mode set_mode `(v  1 e 1 0 ]
+{
+[v set_mode@mode mode `uc  1 p 1 wreg ]
+[v set_mode@mode mode `uc  1 p 1 wreg ]
+[v set_mode@mode mode `uc  1 p 1 0 ]
+"99
+} 0
+"23
+[v _set_max_min set_max_min `(v  1 e 1 0 ]
+{
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+[v set_max_min@sensorsMaxMin sensorsMaxMin `S105  1 p 20 30 ]
+[v set_max_min@write_eeprom write_eeprom `a  1 p 1 50 ]
+"29
+} 0
+"31
+[v _set_default set_default `(v  1 e 1 0 ]
+{
+"45
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"5
+[v memset@p p `*.5uc  1 a 1 6 ]
+"3
+[v memset@dest dest `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"10
+} 0
+"76 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _WriteMaxMin WriteMaxMin `(v  1 e 1 0 ]
+{
+"78
+[v WriteMaxMin@i i `uc  1 a 1 8 ]
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"76
+[v WriteMaxMin@sensorMaxMin sensorMaxMin `S105  1 p 20 0 ]
+"85
+} 0
+"11 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v _set_configs set_configs `(v  1 e 1 0 ]
+{
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+[v set_configs@configs configs `S94  1 p 10 30 ]
+[v set_configs@write_eeprom write_eeprom `a  1 p 1 40 ]
+"17
+} 0
+"61 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _WriteConfigs WriteConfigs `(v  1 e 1 0 ]
+{
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+[v WriteConfigs@configs configs `S94  1 p 10 0 ]
+"74
+} 0
+"25
+[v _WriteChecksum WriteChecksum `(v  1 e 1 0 ]
+{
+"26
+[v WriteChecksum@calculatedChecksum calculatedChecksum `uc  1 a 1 79 ]
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"25
+[v WriteChecksum@configs configs `S94  1 p 10 0 ]
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+[v WriteChecksum@sensorsMaxMin sensorsMaxMin `S105  1 p 20 10 ]
+"28
+} 0
+"222 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
+[v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+{
+"225
+[v EEPROM_Write@globalInterruptBitValue globalInterruptBitValue `uc  1 a 1 3 ]
+"222
+[v EEPROM_Write@address address `us  1 p 2 0 ]
+[v EEPROM_Write@data data `uc  1 p 1 2 ]
+"253
+} 0
+"8 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\clock/clock.c
+[v _set_clock set_clock `(v  1 e 1 0 ]
+{
+[v set_clock@hours hours `uc  1 p 1 wreg ]
+[v set_clock@hours hours `uc  1 p 1 wreg ]
+[v set_clock@minutes minutes `uc  1 p 1 0 ]
+[v set_clock@seconds seconds `uc  1 p 1 1 ]
+[v set_clock@hours hours `uc  1 p 1 2 ]
+"12
+} 0
+"55 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v _get_config_clock_minutes get_config_clock_minutes `(uc  1 e 1 0 ]
+{
+"57
+} 0
+"51
+[v _get_config_clock_hours get_config_clock_hours `(uc  1 e 1 0 ]
+{
+"53
+} 0
+"30 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _MemIsUsable MemIsUsable `(a  1 e 1 0 ]
+{
+"34
+[v MemIsUsable@readChecksum readChecksum `uc  1 a 1 2 ]
+"33
+[v MemIsUsable@readMagicWord readMagicWord `uc  1 a 1 1 ]
+"32
+[v MemIsUsable@calculatedChecksum calculatedChecksum `uc  1 a 1 0 ]
+"43
+} 0
+"41 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X/state/state.h
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"87 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _ReadMaxMin ReadMaxMin `(S105  1 e 20 0 ]
+{
+"90
+[v ReadMaxMin@i i `uc  1 a 1 40 ]
+"89
+[v ReadMaxMin@sensorMaxMin sensorMaxMin `S105  1 a 20 20 ]
+"98
+} 0
+"27 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X/state/state.h
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"45 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _ReadConfigs ReadConfigs `(S94  1 e 10 0 ]
+{
+"47
+[v ReadConfigs@configs configs `S94  1 a 10 1 ]
+"59
+} 0
+"207 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/nvm/src/nvm.c
+[v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
+{
+[v EEPROM_Read@address address `us  1 p 2 0 ]
+"220
+} 0
+"3 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/EEPROM/EEPROM_controller.c
+[v _CalculateChecksum CalculateChecksum `(uc  1 e 1 0 ]
+{
+"16
+[v CalculateChecksum@i i `uc  1 a 1 76 ]
+"5
+[v CalculateChecksum@checksum checksum `uc  1 a 1 75 ]
+[s S94 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"3
+[v CalculateChecksum@configs configs `S94  1 p 10 41 ]
+[s S105 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+[v CalculateChecksum@sensorsMaxMin sensorsMaxMin `S105  1 p 20 51 ]
+"23
+} 0
+"101 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\state/state.c
+[v _get_mode get_mode `(uc  1 e 1 0 ]
+{
+"104
+} 0
+"5 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mode/configuration_mode.c
+[v _configuration_mode_initialization configuration_mode_initialization `(v  1 e 1 0 ]
+{
+} 0
+"29 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\controller/LED/led.c
 [v _toggle toggle `(v  1 e 1 0 ]
 {
 [v toggle@n n `uc  1 p 1 wreg ]
 [v toggle@n n `uc  1 p 1 wreg ]
 [v toggle@n n `uc  1 p 1 0 ]
 "39
-} 0
-"42 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\main.c
-[v _global_initialization global_initialization `(v  1 e 1 0 ]
-{
-"45
 } 0
 "39 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -984,4 +1539,9 @@ I2C_STATE_RESET 8
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 {
 "55
+} 0
+"43 C:\Users\krisg\OneDrive - NTNU\7.semester\Real Time Systems\Real_Time_Systems_Lab\Lab_1.X\mcc_generated_files/adc/src/adc.c
+[v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+{
+"92
 } 0

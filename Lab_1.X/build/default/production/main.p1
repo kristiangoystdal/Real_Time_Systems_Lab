@@ -1,18 +1,61 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"28 ./controller/EEPROM/EEPROM_controller.h
+[; ;./controller/EEPROM/EEPROM_controller.h: 28: _Bool MemIsUsable(void);
+[v _MemIsUsable `(a ~T0 @X0 0 ef ]
+"27 ./state/state.h
+[s S1621 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1621 . monitoringPeriod alarmDuration alarmFlag alarmHours alarmMinutes alarmSeconds thresholdTemp thresholdLum clockHours clockMinutes ]
+"49
+[v _set_configs `(v ~T0 @X0 0 ef2`S1621`a ]
+"29 ./controller/EEPROM/EEPROM_controller.h
+[; ;./controller/EEPROM/EEPROM_controller.h: 29: Configs ReadConfigs(void);
+[v _ReadConfigs `(S1621 ~T0 @X0 0 ef ]
+"41 ./state/state.h
+[s S1622 `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i ]
+[n S1622 . maxTemp minTemp maxLum minLum ]
+"51
+[v _set_max_min `(v ~T0 @X0 0 ef2`S1622`a ]
+"32 ./controller/EEPROM/EEPROM_controller.h
+[; ;./controller/EEPROM/EEPROM_controller.h: 32: SensorsMaxMin ReadMaxMin(void);
+[v _ReadMaxMin `(S1622 ~T0 @X0 0 ef ]
+"48 ./state/state.h
+[v _set_default `(v ~T0 @X0 0 ef ]
+"20 ./clock/clock.h
+[; ;./clock/clock.h: 20: void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
+[v _set_clock `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"53 ./state/state.h
+[v _get_config_clock_hours `(uc ~T0 @X0 0 ef ]
+"54
+[v _get_config_clock_minutes `(uc ~T0 @X0 0 ef ]
+"56
+[v _set_mode `(v ~T0 @X0 0 ef1`uc ]
 [p mainexit ]
 "57 ./mcc_generated_files/system/system.h
-[; ;./mcc_generated_files/system/system.h: 57: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"6 ./controller/LED/led.h
-[; ;./controller/LED/led.h: 6: void turn_on(uint8_t n);
-[v _turn_on `(v ~T0 @X0 0 ef1`uc ]
-"10
-[; ;./controller/LED/led.h: 10: void toggle(uint8_t n);
-[v _toggle `(v ~T0 @X0 0 ef1`uc ]
-[v F208 `(v ~T0 @X0 1 tf1`ul ]
-"20 C:\Program Files\Microchip\xc8\v2.50\pic\include\builtins.h
-[v __delay `JF208 ~T0 @X0 0 e ]
-[p i __delay ]
+"357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 357:     struct {
+[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . INTEDG . PEIE GIE ]
+"356
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 356: typedef union {
+[u S30 `S31 1 ]
+[n S30 . . ]
+"364
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 364: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"57 ./mcc_generated_files/adc/adc.h
+[; ;./mcc_generated_files/adc/adc.h: 57: void ADC_Initialize(void);
+[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
+"58 ./state/state.h
+[v _mode_has_changed `(a ~T0 @X0 0 ef ]
+"57
+[v _get_mode `(uc ~T0 @X0 0 ef ]
+"8 ./mode/normal_mode.h
+[; ;./mode/normal_mode.h: 8: void normal_mode_initialization(void);
+[v _normal_mode_initialization `(v ~T0 @X0 0 ef ]
+"4 ./mode/configuration_mode.h
+[; ;./mode/configuration_mode.h: 4: void configuration_mode_initialization(void);
+[v _configuration_mode_initialization `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1651,58 +1694,113 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36489
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"42 main.c
-[; ;main.c: 42: void global_initialization() {
+"49 main.c
+[; ;main.c: 49: void global_initialization() {
 [v _global_initialization `(v ~T0 @X0 1 ef ]
 {
 [e :U _global_initialization ]
 [f ]
-"45
-[; ;main.c: 45: }
-[e :UE 1621 ]
+"50
+[; ;main.c: 50:   if (MemIsUsable()) {
+[e $ ! != -> ( _MemIsUsable ..  `i -> 0 `i 1626  ]
+{
+"51
+[; ;main.c: 51:     set_configs(ReadConfigs(), 0);
+[e ( _set_configs (2 , ( _ReadConfigs ..  -> -> 0 `i `a ]
+"52
+[; ;main.c: 52:     set_max_min(ReadMaxMin(), 0);
+[e ( _set_max_min (2 , ( _ReadMaxMin ..  -> -> 0 `i `a ]
+"53
+[; ;main.c: 53:   } else {
+}
+[e $U 1627  ]
+[e :U 1626 ]
+{
+"54
+[; ;main.c: 54:     set_default();
+[e ( _set_default ..  ]
+"55
+[; ;main.c: 55:   }
+}
+[e :U 1627 ]
+"56
+[; ;main.c: 56:   set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+[e ( _set_clock (3 , , ( _get_config_clock_hours ..  ( _get_config_clock_minutes ..  -> -> 0 `i `uc ]
+"57
+[; ;main.c: 57:   set_mode(0);
+[e ( _set_mode (1 -> -> 0 `i `uc ]
+"58
+[; ;main.c: 58: }
+[e :UE 1625 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"47
-[; ;main.c: 47: int main(void) {
+"60
+[; ;main.c: 60: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"48
-[; ;main.c: 48:   SYSTEM_Initialize();
+"61
+[; ;main.c: 61:   SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"67
-[; ;main.c: 67:   global_initialization();
-[e ( _global_initialization ..  ]
-"69
-[; ;main.c: 69:   turn_on(3);
-[e ( _turn_on (1 -> -> 3 `i `uc ]
-"70
-[; ;main.c: 70:   while (1) {
-[e :U 1624 ]
-{
-"71
-[; ;main.c: 71:     toggle(0);
-[e ( _toggle (1 -> -> 0 `i `uc ]
-"72
-[; ;main.c: 72:     toggle(1);
-[e ( _toggle (1 -> -> 1 `i `uc ]
-"73
-[; ;main.c: 73:     toggle(2);
-[e ( _toggle (1 -> -> 2 `i `uc ]
+"68
+[; ;main.c: 68:   (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "74
-[; ;main.c: 74:     toggle(3);
-[e ( _toggle (1 -> -> 3 `i `uc ]
-"75
-[; ;main.c: 75:     _delay((unsigned long)((1000)*(32000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
-"76
-[; ;main.c: 76:   }
+[; ;main.c: 74:   (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+"79
+[; ;main.c: 79:   ADC_Initialize();
+[e ( _ADC_Initialize ..  ]
+"87
+[; ;main.c: 87:   global_initialization();
+[e ( _global_initialization ..  ]
+"89
+[; ;main.c: 89:   while (1) {
+[e :U 1630 ]
+{
+"90
+[; ;main.c: 90:     if (mode_has_changed()) {
+[e $ ! != -> ( _mode_has_changed ..  `i -> 0 `i 1632  ]
+{
+"91
+[; ;main.c: 91:       uint8_t mode = get_mode();
+[v _mode `uc ~T0 @X0 1 a ]
+[e = _mode ( _get_mode ..  ]
+"92
+[; ;main.c: 92:       if (mode == 0) {
+[e $ ! == -> _mode `i -> 0 `i 1633  ]
+{
+"93
+[; ;main.c: 93:         normal_mode_initialization();
+[e ( _normal_mode_initialization ..  ]
+"94
+[; ;main.c: 94:       } else {
 }
-[e :U 1623 ]
-[e $U 1624  ]
-[e :U 1625 ]
-"77
-[; ;main.c: 77: }
-[e :UE 1622 ]
+[e $U 1634  ]
+[e :U 1633 ]
+{
+"95
+[; ;main.c: 95:         configuration_mode_initialization();
+[e ( _configuration_mode_initialization ..  ]
+"96
+[; ;main.c: 96:       }
+}
+[e :U 1634 ]
+"97
+[; ;main.c: 97:     }
+}
+[e :U 1632 ]
+"98
+[; ;main.c: 98:     __asm("sleep");
+[; <" sleep ;# ">
+"99
+[; ;main.c: 99:   }
+}
+[e :U 1629 ]
+[e $U 1630  ]
+[e :U 1631 ]
+"100
+[; ;main.c: 100: }
+[e :UE 1628 ]
 }

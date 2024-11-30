@@ -32,26 +32,29 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR
     THIS SOFTWARE.
 */
-#include "controller/LED/led.h"
-#include "mcc_generated_files/system/system.h"
-#include "controller/EEPROM/EEPROM_controller.h"
-#include "state/state.h"
 #include "clock/clock.h"
-#include "mode/normal_mode.h"
+#include "controller/EEPROM/EEPROM_controller.h"
+#include "controller/LED/led.h"
+#include "mcc_generated_files/adc/adc.h"
+#include "mcc_generated_files/system/system.h"
 #include "mode/configuration_mode.h"
+#include "mode/normal_mode.h"
+#include "state/state.h"
+#include <stdio.h>
+
 /*
     Main application
 */
 
 void global_initialization() {
-    if(MemIsUsable()) {
-        set_configs(ReadConfigs(), false);
-        set_max_min(ReadMaxMin(), false);
-    } else {
-        set_default();
-    }
-    set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
-    set_mode(NORMAL_MODE);
+  if (MemIsUsable()) {
+    set_configs(ReadConfigs(), false);
+    set_max_min(ReadMaxMin(), false);
+  } else {
+    set_default();
+  }
+  set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+  set_mode(NORMAL_MODE);
 }
 
 int main(void) {
@@ -62,29 +65,36 @@ int main(void) {
   // Use the following macros to:
 
   // Enable the Global Interrupts
-  // INTERRUPT_GlobalInterruptEnable();
+  INTERRUPT_GlobalInterruptEnable();
 
   // Disable the Global Interrupts
   // INTERRUPT_GlobalInterruptDisable();
 
   // Enable the Peripheral Interrupts
-  // INTERRUPT_PeripheralInterruptEnable();
+  INTERRUPT_PeripheralInterruptEnable();
 
   // Disable the Peripheral Interrupts
   // INTERRUPT_PeripheralInterruptDisable();
+
+  ADC_Initialize(); // Initialize ADC
+
+  // Timer1_Initialize();
+  // Timer1_Start();
+  // Timer1_TMRInterruptEnable();
+  // Timer1_OverflowCallbackRegister(normal_mode_timer_handler);
 
   // TODO: Global Initialization
   global_initialization();
 
   while (1) {
-    if(mode_has_changed()) {
+    if (mode_has_changed()) {
       uint8_t mode = get_mode();
-      if(mode == NORMAL_MODE) {
+      if (mode == NORMAL_MODE) {
         normal_mode_initialization();
       } else {
         configuration_mode_initialization();
       }
-    }
+    } // Add a delay for readability
     SLEEP();
   }
 }

@@ -121,15 +121,15 @@ typedef uint32_t uint_fast32_t;
 # 20 "clock/clock.h"
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
-uint8_t increment_clock();
+uint8_t increment_clock(void);
 
-uint8_t increment_seconds();
+uint8_t increment_seconds(void);
 
-uint8_t increment_minutes();
+uint8_t increment_minutes(void);
 
-uint8_t increment_hours();
+uint8_t increment_hours(void);
 
-uint8_t get_clock(uint8_t precision, char* clock);
+uint8_t get_clock(uint8_t precision, char clock[9]);
 # 2 "clock/clock.c" 2
 
 
@@ -182,7 +182,7 @@ uint8_t increment_hours() {
   return 2;
 }
 
-uint8_t get_clock(uint8_t precision, char* clock) {
+uint8_t get_clock(uint8_t precision, char clock[9]) {
   switch (precision) {
     case 0:
       clock[0] = 0x30 + _seconds/10;
