@@ -18,7 +18,11 @@ void get_luminosity(char *luminosity) {
   uint8_t lumValue = readLum();
 
   // Convert the luminosity value to a string
-  sprintf(luminosity, "L %u", lumValue);
+  luminosity_to_string(luminosity, lumValue);
+}
+
+void luminosity_to_string(char *s, uint8_t luminosity) {
+  sprintf(s, "L %u", luminosity);
 }
 
 /**

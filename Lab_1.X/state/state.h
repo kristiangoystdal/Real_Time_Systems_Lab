@@ -48,11 +48,14 @@ typedef struct
 void set_default(void);
 void set_configs(Configs configs, bool write_eeprom);
 Configs get_configs(void);
+
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom);
 SensorsMaxMin get_max_min(void);
+
 uint8_t get_config_clock_hours(void);
 uint8_t get_config_clock_minutes(void);
 void get_measure(uint8_t index, char measure [17]);
+
 void set_mode(uint8_t mode);
 uint8_t get_mode(void);
 bool mode_has_changed(void);

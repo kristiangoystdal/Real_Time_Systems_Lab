@@ -27,6 +27,7 @@ extern "C" {
  */
 uint8_t readLum(void);
 void get_luminosity(char *luminosity);
+void luminosity_to_string(char *s, uint8_t luminosity);
 
 #ifdef __cplusplus
 }

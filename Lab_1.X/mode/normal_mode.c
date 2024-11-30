@@ -9,13 +9,16 @@
 #include <stdio.h>
 
 static uint8_t _s2_state;
+static uint8_t _sensor_cnt;
 
 void normal_mode_initialization() {
-  LCDinit();
+  // TODO: Create and Initializa Max/Min and Alarm Modules
+  set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
 
   char clock[9];
   get_clock(HOURS_MINUTES_AND_SECONDS, clock);
   _s2_state = S2_NORMAL_MODE;
+  _sensor_cnt = 3;
   turn_on(1);
 
   char luminosity[4];
@@ -31,6 +34,23 @@ void normal_mode_initialization() {
 }
 
 void normal_mode_timer_handler() {
+  toggle(0);
+  uint8_t precision = increment_clock();
+  char clock [9];
+  uint8_t clock_pos = get_clock(precision, clock);
+  LCDWriteStr(clock, 0, clock_pos);
+  _sensor_cnt --;
+  if(_sensor_cnt == 0) {
+    _sensor_cnt = 3;
+    uint8_t lum = readLum();
+    uint8_t temp = readTemperature();
+    char luminosity[4];
+    luminosity_to_string(luminosity, lum);
+    char temperature[4];
+    temperature_to_string(temperature, temp);
+    // LCDWriteStr(temperature, 1, 0);
+    // LCDWriteStr(luminosity, 1, 13);
+  }
   toggle(1);
   toggle(2);
   printf("Timer1 interrupt triggered!\n");

@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "temperature.h"
 
 uint8_t readTemperature() {
   // Read the temperature value
@@ -21,5 +22,9 @@ void get_temperature(char *temperature) {
   uint8_t temp = readTemperature();
 
   // Convert the temperature to a string with Celsius sign
-  sprintf(temperature, "%u C", temp);
+  temperature_to_string(temperature, temp);
+}
+
+void temperature_to_string(char *s, uint8_t temperature) {
+  sprintf(s, "%u C", temperature);
 }

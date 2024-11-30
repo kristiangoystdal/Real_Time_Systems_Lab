@@ -35,6 +35,7 @@
 #include "clock/clock.h"
 #include "controller/EEPROM/EEPROM_controller.h"
 #include "controller/LED/led.h"
+#include "controller/LCD/lcd.h"
 #include "mcc_generated_files/adc/adc.h"
 #include "mcc_generated_files/system/system.h"
 #include "mode/configuration_mode.h"
@@ -53,7 +54,6 @@ void global_initialization() {
   } else {
     set_default();
   }
-  set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
   set_mode(NORMAL_MODE);
 }
 
@@ -76,6 +76,7 @@ int main(void) {
   // Disable the Peripheral Interrupts
   // INTERRUPT_PeripheralInterruptDisable();
 
+  LCDinit();
   ADC_Initialize(); // Initialize ADC
 
   // Timer1_Initialize();
@@ -83,7 +84,6 @@ int main(void) {
   // Timer1_TMRInterruptEnable();
   // Timer1_OverflowCallbackRegister(normal_mode_timer_handler);
 
-  // TODO: Global Initialization
   global_initialization();
 
   while (1) {
