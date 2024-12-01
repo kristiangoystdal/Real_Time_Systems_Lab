@@ -20,6 +20,12 @@
 #define MAX_LUMINOSITY 2
 #define MIN_LUMINOSITY 3
 
+#define MAX_MIN_SECONDS_BYTE 0
+#define MAX_MIN_MINUTES_BYTE 1
+#define MAX_MIN_HOURS_BYTE 2
+#define MAX_MIN_TEMP_BYTE 3
+#define MAX_MIN_LUM_BYTE 4
+
 #define NORMAL_MODE 0
 #define CONFIGURATION_MODE 1
 
@@ -52,8 +58,17 @@ Configs get_configs(void);
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom);
 SensorsMaxMin get_max_min(void);
 
+uint8_t get_config_monitoring_period(void);
+uint8_t get_config_alarm_duration(void);
+uint8_t get_config_alarm_flag(void);
+uint8_t get_config_alarm_hours(void);
+uint8_t get_config_alarm_minutes(void);
+uint8_t get_config_alarm_seconds(void);
+uint8_t get_config_threshold_temperature(void);
+uint8_t get_config_threshold_luminosity(void);
 uint8_t get_config_clock_hours(void);
 uint8_t get_config_clock_minutes(void);
+
 void get_measure(uint8_t index, char measure [17]);
 
 void set_mode(uint8_t mode);

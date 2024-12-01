@@ -17,6 +17,12 @@
 #define MINUTES_POSITION 3
 #define HOURS_POSITION 6
 
+typedef struct {
+  uint8_t hours;
+  uint8_t minutes;
+  uint8_t seconds;
+} clock_t;
+
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
 uint8_t increment_clock(void);
@@ -27,6 +33,8 @@ uint8_t increment_minutes(void);
 
 uint8_t increment_hours(void);
 
-uint8_t get_clock(uint8_t precision, char clock[9]);
+clock_t get_clock(void);
+
+uint8_t get_clock_str(uint8_t precision, char clock[9]);
 
 #endif

@@ -48,6 +48,38 @@ SensorsMaxMin get_max_min() {
   return _sensorsMaxMin;
 }
 
+uint8_t get_config_monitoring_period(void) {
+  return _configs.monitoringPeriod;
+}
+
+uint8_t get_config_alarm_duration(void) {
+  return _configs.alarmDuration;
+}
+
+uint8_t get_config_alarm_flag(void) {
+  return _configs.alarmFlag;
+}
+
+uint8_t get_config_alarm_hours(void) {
+  return _configs.alarmHours;
+}
+
+uint8_t get_config_alarm_minutes(void) {
+  return _configs.alarmMinutes;
+}
+
+uint8_t get_config_alarm_seconds(void) {
+  return _configs.alarmSeconds;
+}
+
+uint8_t get_config_threshold_temperature(void) {
+  return _configs.thresholdTemp;
+}
+
+uint8_t get_config_threshold_luminosity(void) {
+  return _configs.thresholdLum;
+}
+
 uint8_t get_config_clock_hours() {
   return _configs.clockHours;
 }
