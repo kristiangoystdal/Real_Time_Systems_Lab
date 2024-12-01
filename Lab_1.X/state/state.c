@@ -91,6 +91,22 @@ uint8_t get_config_clock_minutes() {
   return _configs.clockMinutes;
 }
 
+void get_config_alarm_time_str(char* s) {
+  sprintf(s, "%02u:%02u:%02u", _configs.alarmHours, _configs.alarmMinutes, _configs.alarmSeconds);
+}
+
+void get_config_threshold_temperature_str(char* s) {
+  sprintf(s, "%02u", _configs.thresholdTemp);
+}
+
+void get_config_threshold_luminosity_str(char* s) {
+  sprintf(s, "%u", _configs.thresholdLum);
+}
+
+void get_config_clock_time_str(char* s) {
+  sprintf(s, "%02u:%02u:%02u", _configs.clockHours, _configs.clockMinutes, 0);
+}
+
 void measure_to_string(uint8_t measure [5], char string [17]) {
   uint8_t seconds = measure[MAX_MIN_SECONDS_BYTE];
   uint8_t minutes = measure[MAX_MIN_MINUTES_BYTE];

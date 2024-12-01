@@ -69,6 +69,11 @@ uint8_t get_config_threshold_luminosity(void);
 uint8_t get_config_clock_hours(void);
 uint8_t get_config_clock_minutes(void);
 
+void get_config_alarm_time_str(char* s);
+void get_config_threshold_temperature_str(char* s);
+void get_config_threshold_luminosity_str(char* s);
+void get_config_clock_time_str(char* s);
+
 void get_measure(uint8_t index, char measure [17]);
 
 void set_mode(uint8_t mode);

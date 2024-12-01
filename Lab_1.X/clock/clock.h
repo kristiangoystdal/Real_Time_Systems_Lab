@@ -13,9 +13,9 @@
 #define MINUTES_MAX_VALUE 60
 #define HOURS_MAX_VALUE 24
 
-#define SECONDS_POSITION 0
+#define HOURS_POSITION 0
 #define MINUTES_POSITION 3
-#define HOURS_POSITION 6
+#define SECONDS_POSITION 6
 
 typedef struct {
   uint8_t hours;

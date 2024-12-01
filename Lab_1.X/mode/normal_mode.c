@@ -17,7 +17,7 @@ static uint8_t _pwm_cnt;
 static bool _pwm_en;
 static char _ctl [4];
 
-void write_lcd_normal_mode() {
+void init_lcd_normal_mode() {
   char clock [9];
   uint8_t clock_pos = get_clock_str(HOURS_MINUTES_AND_SECONDS, clock);
   LCDWriteStr(clock, 0, clock_pos);
@@ -26,6 +26,8 @@ void write_lcd_normal_mode() {
 
   if(get_config_alarm_flag() == true)
     LCDWriteChar('A', 0, 14);
+  else
+    LCDWriteChar('a', 0, 14);
 
   char temperature[3];
   get_temperature(temperature);
@@ -39,6 +41,8 @@ void write_lcd_normal_mode() {
 }
 
 void normal_mode_initialization() {
+  // TODO: Set Interrupts
+  // TODO: Enable Timer IRQ
   set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
 
   char clock[9];
@@ -53,7 +57,7 @@ void normal_mode_initialization() {
   turn_off_all();
   turn_on(1);
 
-  write_lcd_normal_mode();
+  init_lcd_normal_mode();
 }
 
 void update_clock(void) {
@@ -120,14 +124,15 @@ void normal_mode_timer_handler() {
     _pwm_en = false;
     // TODO: Disable PWM
   }
-  toggle(1);
-  toggle(2);
-  printf("Timer1 interrupt triggered!\n");
+  // toggle(1);
+  // toggle(2);
+  // printf("Timer1 interrupt triggered!\n");
 }
 
 void normal_mode_s1_handler() { set_mode(CONFIGURATION_MODE); }
 
 void normal_mode_s2_handler() {
+  // TODO: LEDs?
   char line0 [17], line1 [17];
   _s2_state = (_s2_state + 1) % (S2_LUM_MODE + 1);
   switch (_s2_state) {
@@ -146,7 +151,7 @@ void normal_mode_s2_handler() {
     break;
   default: // S2_NORMAL_MODE
     //TODO: Enable Timer
-    write_lcd_normal_mode();
+    init_lcd_normal_mode();
     break;
   }
 }
