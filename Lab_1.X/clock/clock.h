@@ -35,6 +35,10 @@ uint8_t increment_hours(void);
 
 clock_t get_clock(void);
 
+uint8_t get_clock_hours(void);
+
+uint8_t get_clock_minutes(void);
+
 uint8_t get_clock_str(uint8_t precision, char clock[9]);
 
 #endif

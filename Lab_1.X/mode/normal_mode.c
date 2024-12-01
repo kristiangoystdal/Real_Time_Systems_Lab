@@ -19,25 +19,26 @@ static char _ctl [4];
 
 void init_lcd_normal_mode() {
   char clock [9];
-  uint8_t clock_pos = get_clock_str(HOURS_MINUTES_AND_SECONDS, clock);
-  LCDWriteStr(clock, 0, clock_pos);
+  uint8_t clock_column = get_clock_str(HOURS_MINUTES_AND_SECONDS, clock);
+  LCDWriteStr(clock, LINE_CLOCK_HOURS, clock_column);
 
-  LCDWriteStr(_ctl, 0, 10);
+  LCDWriteStr(_ctl, LINE_ALARM_C, COLUMN_ALARM_C);
 
-  if(get_config_alarm_flag() == true)
-    LCDWriteChar('A', 0, 14);
-  else
-    LCDWriteChar('a', 0, 14);
+  if(get_config_alarm_flag() == true) {
+    LCDWriteChar('A', LINE_ALARM_ENABLE, COLUMN_ALARM_ENABLE);
+  } else {
+    LCDWriteChar('a', LINE_ALARM_ENABLE, COLUMN_ALARM_ENABLE);
+  }
 
   char temperature[3];
   get_temperature(temperature);
-  LCDWriteStr(temperature, 1, 0);
-  LCDWriteChar('C', 1, 3);
+  LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
+  LCDWriteChar('C', LINE_TEMP_C, COLUMN_TEMP_C);
 
   char luminosity[2];
   get_luminosity(luminosity);
-  LCDWriteChar('L', 1, 13);
-  LCDWriteChar(luminosity[0], 1, 15);
+  LCDWriteChar('L', LINE_LUM_L, COLUMN_LUM_L);
+  LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 }
 
 void normal_mode_initialization() {
@@ -63,13 +64,13 @@ void normal_mode_initialization() {
 void update_clock(void) {
   uint8_t precision = increment_clock();
   char clock [9];
-  uint8_t clock_pos = get_clock_str(precision, clock);
-  LCDWriteStr(clock, 0, clock_pos);
+  uint8_t clock_column = get_clock_str(precision, clock);
+  LCDWriteStr(clock, LINE_CLOCK_HOURS, clock_column);
   if(check_clock_alarm(get_clock())) {
     // TODO: Turn on PWM
     _pwm_en = true;
     _ctl[0] = 'C';
-    LCDWriteChar('C', 0, 10);
+    LCDWriteChar('C', LINE_ALARM_C, COLUMN_ALARM_C);
   }
 }
 
@@ -84,15 +85,15 @@ void update_sensors(void) {
   luminosity_to_string(luminosity, lum);
   char temperature[3];
   temperature_to_string(temperature, temp);
-  LCDWriteStr(temperature, 1, 0);
-  LCDWriteChar(luminosity[0], 1, 15);
+  LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
+  LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 
   if(check_lum_alarm(lum)) {
     // TODO: Turn on PWM
     _pwm_en = true;
     turn_on(3);
     _ctl[2] = 'L';
-    LCDWriteChar('L', 0, 12);
+    LCDWriteChar('L', LINE_ALARM_T, COLUMN_ALARM_L);
   } else {
     turn_off(3);
   }
@@ -102,7 +103,7 @@ void update_sensors(void) {
     _pwm_en = true;
     turn_on(2);
     _ctl[1] = 'T';
-    LCDWriteChar('T', 0, 11);
+    LCDWriteChar('T', LINE_ALARM_T, COLUMN_ALARM_T);
   } else {
     turn_off(2);
   }

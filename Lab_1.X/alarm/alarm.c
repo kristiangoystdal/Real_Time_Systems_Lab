@@ -6,16 +6,16 @@ bool check_clock_alarm(clock_t clock) {
   if(get_config_alarm_flag() == false)
     return false;
 
-  uint8_t threshold_hours = get_config_alarm_hours();
-  uint8_t threshold_minutes = get_config_alarm_minutes();
-  uint8_t threshold_seconds = get_config_alarm_seconds();
-  if(clock.hours > threshold_hours)
+  uint8_t alarm_hours = get_config_alarm_hours();
+  uint8_t alarm_minutes = get_config_alarm_minutes();
+  uint8_t alarm_seconds = get_config_alarm_seconds();
+  if(clock.hours > alarm_hours)
     return true;
-  else if(clock.hours == threshold_hours) {
-    if(clock.minutes > threshold_minutes)
+  else if(clock.hours == alarm_hours) {
+    if(clock.minutes > alarm_minutes)
       return true;
-    else if(clock.minutes == threshold_minutes) {
-      if(clock.seconds >= threshold_seconds)
+    else if(clock.minutes == alarm_minutes) {
+      if(clock.seconds >= alarm_seconds)
         return true;
     }
   }

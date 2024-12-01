@@ -54,6 +54,14 @@ clock_t get_clock(void) {
   return _clock;
 }
 
+uint8_t get_clock_hours(void) {
+  return _clock.hours;
+}
+
+uint8_t get_clock_minutes(void) {
+  return _clock.minutes;
+}
+
 uint8_t get_clock_str(uint8_t precision, char clock[9]) {
   switch (precision) {
     case ONLY_SECONDS:
