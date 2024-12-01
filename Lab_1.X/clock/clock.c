@@ -1,6 +1,8 @@
 
 #include "clock.h"
 
+#include <stdio.h>
+
 static clock_t _clock;
 
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds) {
@@ -55,38 +57,19 @@ clock_t get_clock(void) {
 uint8_t get_clock_str(uint8_t precision, char clock[9]) {
   switch (precision) {
     case ONLY_SECONDS:
-      clock[0] = 0x30 + _clock.seconds/10;
-      clock[1] = 0x30 + (_clock.seconds%10);
-      clock[2] = '\0';
+      sprintf(clock, "%02u", _clock.seconds);
       return SECONDS_POSITION;
     case ONLY_MINUTES:
-      clock[0] = 0x30 + _clock.minutes/10;
-      clock[1] = 0x30 + (_clock.minutes%10);
-      clock[2] = '\0';
+      sprintf(clock, "%02u", _clock.minutes);
       return MINUTES_POSITION;
     case ONLY_HOURS:
-      clock[0] = 0x30 + _clock.hours/10;
-      clock[1] = 0x30 + (_clock.hours%10);
-      clock[2] = '\0';
+      sprintf(clock, "%02u", _clock.hours);
       return HOURS_POSITION;
     case ONLY_MINUTES_AND_SECONDS:
-      clock[0] = 0x30 + _clock.seconds/10;
-      clock[1] = 0x30 + (_clock.seconds%10);
-      clock[2] = ':';
-      clock[3] = 0x30 + _clock.minutes/10;
-      clock[4] = 0x30 + (_clock.minutes%10);
-      clock[5] = '\0';
+      sprintf(clock, "%02u:%02u", _clock.seconds, _clock.minutes);
       return SECONDS_POSITION;
     default: // HOURS_MINUTES_AND_SECONDS
-      clock[0] = 0x30 + _clock.seconds/10;
-      clock[1] = 0x30 + (_clock.seconds%10);
-      clock[2] = ':';
-      clock[3] = 0x30 + _clock.minutes/10;
-      clock[4] = 0x30 + (_clock.minutes%10);
-      clock[5] = ':';
-      clock[6] = 0x30 + _clock.hours/10;
-      clock[7] = 0x30 + (_clock.hours%10);
-      clock[8] = '\0';
+      sprintf(clock, "%02u:%02u:%02u", _clock.seconds, _clock.minutes, _clock.hours);
       return SECONDS_POSITION;
   }
 }

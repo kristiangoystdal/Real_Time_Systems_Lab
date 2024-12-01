@@ -26,5 +26,5 @@ void get_temperature(char *temperature) {
 }
 
 void temperature_to_string(char *s, uint8_t temperature) {
-  sprintf(s, "%u C", temperature);
+  sprintf(s, "%02u", temperature);
 }

@@ -22,7 +22,7 @@ void get_luminosity(char *luminosity) {
 }
 
 void luminosity_to_string(char *s, uint8_t luminosity) {
-  sprintf(s, "L %u", luminosity);
+  sprintf(s, "%u", luminosity);
 }
 
 /**

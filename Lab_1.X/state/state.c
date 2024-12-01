@@ -2,6 +2,7 @@
 #include "state.h"
 #include "../controller/EEPROM/EEPROM_controller.h"
 #include <string.h>
+#include <stdio.h>
 
 static Configs _configs;
 static SensorsMaxMin _sensorsMaxMin;
@@ -30,6 +31,8 @@ void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
 
 void set_default() {
   memset(&_sensorsMaxMin, 0, sizeof(_sensorsMaxMin));
+  _sensorsMaxMin.minTemp[MAX_MIN_TEMP_BYTE] = 0xFF;
+  _sensorsMaxMin.minLum[MAX_MIN_LUM_BYTE] = 0xFF;
   WriteMaxMin(_sensorsMaxMin);
   _configs.monitoringPeriod = INITIAL_MONITORING_PERIOD;
   _configs.alarmDuration = INITIAL_ALARM_DURATION;
@@ -89,23 +92,12 @@ uint8_t get_config_clock_minutes() {
 }
 
 void measure_to_string(uint8_t measure [5], char string [17]) {
-  string[0] = 0x30 + measure[0]/10;
-  string[1] = 0x30 + (measure[0]%10);
-  string[2] = ':';
-  string[3] = 0x30 + measure[1]/10;
-  string[4] = 0x30 + (measure[1]%10);
-  string[5] = ':';
-  string[6] = 0x30 + measure[2]/10;
-  string[7] = 0x30 + (measure[2]%10);
-  string[8] = ' ';
-  string[9] = ' ';
-  string[10] = 0x30 + measure[3]/10;
-  string[11] = 0x30 + (measure[3]%10);
-  string[12] = 'C';
-  string[13] = ' ';
-  string[14] = 'L';
-  string[15] = 0x30 + measure[4];
-  string[16] = '\0';
+  uint8_t seconds = measure[MAX_MIN_SECONDS_BYTE];
+  uint8_t minutes = measure[MAX_MIN_MINUTES_BYTE];
+  uint8_t hours = measure[MAX_MIN_HOURS_BYTE];
+  uint8_t lum = measure[MAX_MIN_LUM_BYTE];
+  uint8_t temp = measure[MAX_MIN_TEMP_BYTE];
+  sprintf(string, "%02u:%02u:%02u  %02uC L%02u", hours, minutes, seconds, lum, temp);
 }
 
 void get_measure(uint8_t index, char measure [17] ) {
