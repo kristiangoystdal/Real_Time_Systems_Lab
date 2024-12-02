@@ -1,4 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
+<<<<<<< HEAD
 "30 mode/../clock/clock.h
 [; ;mode/../clock/clock.h: 30: uint8_t get_clock(uint8_t precision, char clock[9]);
 [v _get_clock `(uc ~T0 @X0 0 ef2`uc`*uc ]
@@ -16,6 +17,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _set_mode `(v ~T0 @X0 0 ef1`uc ]
 "54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/mcc_generated_files/system/src/system.p1
+"56 mcc_generated_files/system/src/../../system/clock.h
+[; ;mcc_generated_files/system/src/../../system/clock.h: 56: void CLOCK_Initialize(void);
+[v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
+"210 mcc_generated_files/system/src/../../system/pins.h
+[; ;mcc_generated_files/system/src/../../system/pins.h: 210: void PIN_MANAGER_Initialize (void);
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"175 mcc_generated_files/system/src/../../timer/tmr1.h
+[; ;mcc_generated_files/system/src/../../timer/tmr1.h: 175: void TMR1_Initialize(void);
+[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
+"377 mcc_generated_files/system/src/../../timer/tmr6.h
+[; ;mcc_generated_files/system/src/../../timer/tmr6.h: 377: void TMR6_Initialize(void);
+[v _TMR6_Initialize `(v ~T0 @X0 0 ef ]
+"77 mcc_generated_files/system/src/../../i2c_host/mssp1.h
+[; ;mcc_generated_files/system/src/../../i2c_host/mssp1.h: 77: void I2C1_Initialize(void);
+[v _I2C1_Initialize `(v ~T0 @X0 0 ef ]
+"115 mcc_generated_files/system/src/../../nvm/nvm.h
+[; ;mcc_generated_files/system/src/../../nvm/nvm.h: 115: void NVM_Initialize(void);
+[v _NVM_Initialize `(v ~T0 @X0 0 ef ]
+"57 mcc_generated_files/system/src/../../pwm/pwm6.h
+[; ;mcc_generated_files/system/src/../../pwm/pwm6.h: 57:  void PWM6_Initialize(void);
+[v _PWM6_Initialize `(v ~T0 @X0 0 ef ]
+"85 mcc_generated_files/system/src/../../system/interrupt.h
+[; ;mcc_generated_files/system/src/../../system/interrupt.h: 85: void INTERRUPT_Initialize (void);
+[v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
+"54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+========
+"18 mode/../controller/LCD/lcd.h
+[; ;mode/../controller/LCD/lcd.h: 18: void LCDinit(void);
+[v _LCDinit `(v ~T0 @X0 0 ef ]
+"30 mode/../clock/clock.h
+[; ;mode/../clock/clock.h: 30: uint8_t get_clock(uint8_t precision, char clock[9]);
+[v _get_clock `(uc ~T0 @X0 0 ef2`uc`*uc ]
+"6 mode/../controller/LED/led.h
+[; ;mode/../controller/LED/led.h: 6: void turn_on(uint8_t n);
+[v _turn_on `(v ~T0 @X0 0 ef1`uc ]
+"29 mode/../controller/Luminosity/luminosity.h
+[; ;mode/../controller/Luminosity/luminosity.h: 29: void get_luminosity(char *luminosity);
+[v _get_luminosity `(v ~T0 @X0 0 ef1`*uc ]
+"17 mode/../controller/Temperature/temperature.h
+[; ;mode/../controller/Temperature/temperature.h: 17: void get_temperature(char *temperature);
+[v _get_temperature `(v ~T0 @X0 0 ef1`*uc ]
+"32 mode/../controller/LCD/lcd.h
+[; ;mode/../controller/LCD/lcd.h: 32: void LCDWriteStr(char *s, unsigned char l, unsigned char c);
+[v _LCDWriteStr `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
+"10 mode/../controller/LED/led.h
+[; ;mode/../controller/LED/led.h: 10: void toggle(uint8_t n);
+[v _toggle `(v ~T0 @X0 0 ef1`uc ]
+"117 C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h: 117: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"56 mode/../state/state.h
+[; ;mode/../state/state.h: 56: void set_mode(uint8_t mode);
+[v _set_mode `(v ~T0 @X0 0 ef1`uc ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
+>>>>>>>> write_init:Lab_1.X/build/default/production/mode/normal_mode.p1
+>>>>>>> write_init
 [; <" INDF0 equ 00h ;# ">
 "74
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 74: __asm("INDF1 equ 01h");
@@ -1652,15 +1713,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36489
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+<<<<<<< HEAD
 "8 mode/normal_mode.c
 [; ;mode/normal_mode.c: 8: static uint8_t _s2_state;
 [v __s2_state `uc ~T0 @X0 1 s ]
 "10
 [; ;mode/normal_mode.c: 10: void normal_mode_initialization() {
+=======
+"11 mode/normal_mode.c
+[; ;mode/normal_mode.c: 11: static uint8_t _s2_state;
+[v __s2_state `uc ~T0 @X0 1 s ]
+"13
+[; ;mode/normal_mode.c: 13: void normal_mode_initialization() {
+>>>>>>> write_init
 [v _normal_mode_initialization `(v ~T0 @X0 1 ef ]
 {
 [e :U _normal_mode_initialization ]
 [f ]
+<<<<<<< HEAD
 "11
 [; ;mode/normal_mode.c: 11:   char clock [9];
 [v _clock `uc ~T0 @X0 -> 9 `i a ]
@@ -1682,10 +1752,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "18
 [; ;mode/normal_mode.c: 18: void normal_mode_timer_handler() {
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/mcc_generated_files/system/src/system.p1
+"41
+[; ;mcc_generated_files/system/src/system.c: 41:     CLOCK_Initialize();
+[e ( _CLOCK_Initialize ..  ]
+"42
+[; ;mcc_generated_files/system/src/system.c: 42:     PIN_MANAGER_Initialize();
+[e ( _PIN_MANAGER_Initialize ..  ]
+"43
+[; ;mcc_generated_files/system/src/system.c: 43:     TMR1_Initialize();
+[e ( _TMR1_Initialize ..  ]
+"44
+[; ;mcc_generated_files/system/src/system.c: 44:     TMR6_Initialize();
+[e ( _TMR6_Initialize ..  ]
+"45
+[; ;mcc_generated_files/system/src/system.c: 45:     I2C1_Initialize();
+[e ( _I2C1_Initialize ..  ]
+"46
+[; ;mcc_generated_files/system/src/system.c: 46:     NVM_Initialize();
+[e ( _NVM_Initialize ..  ]
+"47
+[; ;mcc_generated_files/system/src/system.c: 47:     PWM6_Initialize();
+[e ( _PWM6_Initialize ..  ]
+"48
+[; ;mcc_generated_files/system/src/system.c: 48:     INTERRUPT_Initialize();
+[e ( _INTERRUPT_Initialize ..  ]
+"49
+[; ;mcc_generated_files/system/src/system.c: 49: }
+[e :UE 1621 ]
+========
+"14
+[; ;mode/normal_mode.c: 14:   LCDinit();
+[e ( _LCDinit ..  ]
+"16
+[; ;mode/normal_mode.c: 16:   char clock[9];
+[v _clock `uc ~T0 @X0 -> 9 `i a ]
+"17
+[; ;mode/normal_mode.c: 17:   get_clock(4, clock);
+[e ( _get_clock (2 , -> -> 4 `i `uc &U _clock ]
+"18
+[; ;mode/normal_mode.c: 18:   _s2_state = 0;
+[e = __s2_state -> -> 0 `i `uc ]
+"19
+[; ;mode/normal_mode.c: 19:   turn_on(1);
+[e ( _turn_on (1 -> -> 1 `i `uc ]
+"21
+[; ;mode/normal_mode.c: 21:   char luminosity[4];
+[v _luminosity `uc ~T0 @X0 -> 4 `i a ]
+"22
+[; ;mode/normal_mode.c: 22:   get_luminosity(luminosity);
+[e ( _get_luminosity (1 &U _luminosity ]
+"24
+[; ;mode/normal_mode.c: 24:   char temperature[4];
+[v _temperature `uc ~T0 @X0 -> 4 `i a ]
+"25
+[; ;mode/normal_mode.c: 25:   get_temperature(temperature);
+[e ( _get_temperature (1 &U _temperature ]
+"27
+[; ;mode/normal_mode.c: 27:   LCDWriteStr("clock", 0, 0);
+[e ( _LCDWriteStr (3 , , :s 1C -> -> 0 `i `uc -> -> 0 `i `uc ]
+"31
+[; ;mode/normal_mode.c: 31: }
+[e :UE 1622 ]
+>>>>>>>> write_init:Lab_1.X/build/default/production/mode/normal_mode.p1
+}
+"33
+[; ;mode/normal_mode.c: 33: void normal_mode_timer_handler() {
+>>>>>>> write_init
 [v _normal_mode_timer_handler `(v ~T0 @X0 1 ef ]
 {
 [e :U _normal_mode_timer_handler ]
 [f ]
+<<<<<<< HEAD
 "19
 [; ;mode/normal_mode.c: 19:     char clock [9];
 [v _clock `uc ~T0 @X0 -> 9 `i a ]
@@ -1702,10 +1841,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "24
 [; ;mode/normal_mode.c: 24: void normal_mode_s1_handler() {
+=======
+"34
+[; ;mode/normal_mode.c: 34:   toggle(1);
+[e ( _toggle (1 -> -> 1 `i `uc ]
+"35
+[; ;mode/normal_mode.c: 35:   toggle(2);
+[e ( _toggle (1 -> -> 2 `i `uc ]
+"36
+[; ;mode/normal_mode.c: 36:   printf("Timer1 interrupt triggered!\n");
+[e ( _printf :s 2C ]
+"37
+[; ;mode/normal_mode.c: 37: }
+[e :UE 1623 ]
+}
+"39
+[; ;mode/normal_mode.c: 39: void normal_mode_s1_handler() { set_mode(1); }
+>>>>>>> write_init
 [v _normal_mode_s1_handler `(v ~T0 @X0 1 ef ]
 {
 [e :U _normal_mode_s1_handler ]
 [f ]
+<<<<<<< HEAD
 "25
 [; ;mode/normal_mode.c: 25:   set_mode(1);
 [e ( _set_mode (1 -> -> 1 `i `uc ]
@@ -1715,10 +1872,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "28
 [; ;mode/normal_mode.c: 28: void normal_mode_s2_handler() {
+=======
+[e ( _set_mode (1 -> -> 1 `i `uc ]
+[e :UE 1624 ]
+}
+"41
+[; ;mode/normal_mode.c: 41: void normal_mode_s2_handler() {
+>>>>>>> write_init
 [v _normal_mode_s2_handler `(v ~T0 @X0 1 ef ]
 {
 [e :U _normal_mode_s2_handler ]
 [f ]
+<<<<<<< HEAD
 "29
 [; ;mode/normal_mode.c: 29:   _s2_state = (_s2_state + 1)%(2 +1);
 [e = __s2_state -> % + -> __s2_state `i -> 1 `i + -> 2 `i -> 1 `i `uc ]
@@ -1757,3 +1922,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mode/normal_mode.c: 38: }
 [e :UE 1623 ]
 }
+=======
+"42
+[; ;mode/normal_mode.c: 42:   _s2_state = (_s2_state + 1) % (2 + 1);
+[e = __s2_state -> % + -> __s2_state `i -> 1 `i + -> 2 `i -> 1 `i `uc ]
+"43
+[; ;mode/normal_mode.c: 43:   switch (_s2_state) {
+[e $U 1627  ]
+{
+"44
+[; ;mode/normal_mode.c: 44:   case 1:
+[e :U 1628 ]
+"45
+[; ;mode/normal_mode.c: 45:     break;
+[e $U 1626  ]
+"46
+[; ;mode/normal_mode.c: 46:   case 2:
+[e :U 1629 ]
+"47
+[; ;mode/normal_mode.c: 47:     break;
+[e $U 1626  ]
+"48
+[; ;mode/normal_mode.c: 48:   default:
+[e :U 1630 ]
+"49
+[; ;mode/normal_mode.c: 49:     break;
+[e $U 1626  ]
+"50
+[; ;mode/normal_mode.c: 50:   }
+}
+[e $U 1626  ]
+[e :U 1627 ]
+[e [\ __s2_state , $ -> 1 `i 1628
+ , $ -> 2 `i 1629
+ 1630 ]
+[e :U 1626 ]
+"51
+[; ;mode/normal_mode.c: 51: }
+[e :UE 1625 ]
+}
+[p f _printf 8388608 ]
+[a 1C 99 108 111 99 107 0 ]
+[a 2C 84 105 109 101 114 49 32 105 110 116 101 114 114 117 112 116 32 116 114 105 103 103 101 114 101 100 33 10 0 ]
+>>>>>>> write_init

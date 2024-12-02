@@ -1,4 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/LED/led.p1
+"956 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 956:     struct {
+[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S53 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"955
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 955: typedef union {
+[u S52 `S53 1 ]
+[n S52 . . ]
+"967
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 967: extern volatile LATAbits_t LATAbits __attribute__((address(0x016)));
+[v _LATAbits `VS52 ~T0 @X0 0 e@22 ]
+"54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+========
+>>>>>>> write_init
 "27 state/../controller/EEPROM/../../state/state.h
 [s S1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
 [n S1 . monitoringPeriod alarmDuration alarmFlag alarmHours alarmMinutes alarmSeconds thresholdTemp thresholdLum clockHours clockMinutes ]
@@ -14,11 +32,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "31
 [; ;state/../controller/EEPROM/EEPROM_controller.h: 31: void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
 [v _WriteMaxMin `(v ~T0 @X0 0 ef1`S2 ]
+<<<<<<< HEAD
 "29 /Applications/microchip/xc8/v2.50/pic/include/c99/string.h
 [; ;/Applications/microchip/xc8/v2.50/pic/include/c99/string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+=======
+"29 C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.p1
+>>>>>>> write_init
 [; <" INDF0 equ 00h ;# ">
 "74
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 74: __asm("INDF1 equ 01h");

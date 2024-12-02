@@ -1,13 +1,20 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
+<<<<<<< HEAD
  /tmp/xcvJn5V52/driver_tmp_3.o
  -Odist/default/production/Lab_1.X.production.hex
  -logfile=dist/default/production/Lab_1.X.production.hxl
+=======
+ C:\Users\krisg\AppData\Local\Temp\xcAsrso.\driver_tmp_3.o
+ -Odist/default/production\Lab_1.X.production.hex
+ -logfile=dist/default/production\Lab_1.X.production.hxl
+>>>>>>> write_init
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
+<<<<<<< HEAD
   0h - 3h		(/tmp/xcvJn5V52/driver_tmp_3.o)
   6h - FFFh		(/tmp/xcvJn5V52/driver_tmp_3.o)
   149Ch - 204Bh		(/tmp/xcvJn5V52/driver_tmp_3.o)
@@ -16,15 +23,31 @@
   4h - 5h
   1000h - 149Bh
   204Ch - 1000Dh
+=======
+  0h - FFFh		(C:\Users\krisg\AppData\Local\Temp\xcAsrso.\driver_tmp_3.o)
+  146Ch - 20A5h		(C:\Users\krisg\AppData\Local\Temp\xcAsrso.\driver_tmp_3.o)
+  1000Eh - 10017h		(C:\Users\krisg\AppData\Local\Temp\xcAsrso.\driver_tmp_3.o)
+ Unused ranges:
+  1000h - 146Bh
+  20A6h - 1000Dh
+>>>>>>> write_init
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
+<<<<<<< HEAD
   H1 = Input file             (/tmp/xcvJn5V52/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
 00000000 | H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+=======
+  H1 = Input file             (C:\Users\krisg\AppData\Local\Temp\xcAsrso.\driver_tmp_3.o)
+----------------------------------------------------------
+         | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----------------------------------------------------------
+00000000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+>>>>>>> write_init
 00000010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -281,7 +304,14 @@
 00000FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
+<<<<<<< HEAD
 00001490 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
+=======
+00001460 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
+00001470 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00001490 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+>>>>>>> write_init
 000014A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000014B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000014C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -468,7 +498,17 @@
 00002010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+<<<<<<< HEAD
 00002040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+=======
+00002040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002080 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002090 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000020A0 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+>>>>>>> write_init
 ----------------------------------------------------------
 00010000 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
 00010010 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --

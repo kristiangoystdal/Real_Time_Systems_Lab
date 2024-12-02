@@ -26,6 +26,13 @@ void turn_off(uint8_t n) {
   }
 }
 
+void turn_off_all(void) {
+  IO_RA4_SetLow();
+  IO_RA5_SetLow();
+  IO_RA6_SetLow();
+  IO_RA7_SetLow();
+}
+
 void toggle(uint8_t n) {
   if (n == 0) {
     IO_RA4_Toggle();

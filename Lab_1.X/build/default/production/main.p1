@@ -29,6 +29,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _get_config_clock_minutes `(uc ~T0 @X0 0 ef ]
 "56
 [v _set_mode `(v ~T0 @X0 0 ef1`uc ]
+<<<<<<< HEAD
 "956 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 956:     struct {
 [s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -46,6 +47,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
 "59 ./controller/EEPROM/../../mcc_generated_files/system/system.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+=======
+[p mainexit ]
+"57 ./mcc_generated_files/system/system.h
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"357 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 357:     struct {
+[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . INTEDG . PEIE GIE ]
+"356
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 356: typedef union {
+[u S30 `S31 1 ]
+[n S30 . . ]
+"364
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 364: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"57 ./mcc_generated_files/adc/adc.h
+[; ;./mcc_generated_files/adc/adc.h: 57: void ADC_Initialize(void);
+[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
+>>>>>>> write_init
 "58 ./state/state.h
 [v _mode_has_changed `(a ~T0 @X0 0 ef ]
 "57
@@ -56,6 +76,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4 ./mode/configuration_mode.h
 [; ;./mode/configuration_mode.h: 4: void configuration_mode_initialization(void);
 [v _configuration_mode_initialization `(v ~T0 @X0 0 ef ]
+<<<<<<< HEAD
 [v F208 `(v ~T0 @X0 1 tf1`ul ]
 "20 /Applications/microchip/xc8/v2.50/pic/include/builtins.h
 [v __delay `JF208 ~T0 @X0 0 e ]
@@ -65,6 +86,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _normal_mode_timer_handler `(v ~T0 @X0 0 ef ]
 "54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+=======
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
+>>>>>>> write_init
 [; <" INDF0 equ 00h ;# ">
 "74
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 74: __asm("INDF1 equ 01h");
@@ -1701,12 +1726,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36489
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+<<<<<<< HEAD
 "47 main.c
 [; ;main.c: 47: void global_initialization() {
+=======
+"49 main.c
+[; ;main.c: 49: void global_initialization() {
+>>>>>>> write_init
 [v _global_initialization `(v ~T0 @X0 1 ef ]
 {
 [e :U _global_initialization ]
 [f ]
+<<<<<<< HEAD
 "48
 [; ;main.c: 48:     if(MemIsUsable()) {
 [e $ ! != -> ( _MemIsUsable ..  `i -> 0 `i 1624  ]
@@ -1749,6 +1780,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "58
 [; ;main.c: 58: }
 [e :UE 1623 ]
+=======
+"50
+[; ;main.c: 50:   if (MemIsUsable()) {
+[e $ ! != -> ( _MemIsUsable ..  `i -> 0 `i 1626  ]
+{
+"51
+[; ;main.c: 51:     set_configs(ReadConfigs(), 0);
+[e ( _set_configs (2 , ( _ReadConfigs ..  -> -> 0 `i `a ]
+"52
+[; ;main.c: 52:     set_max_min(ReadMaxMin(), 0);
+[e ( _set_max_min (2 , ( _ReadMaxMin ..  -> -> 0 `i `a ]
+"53
+[; ;main.c: 53:   } else {
+}
+[e $U 1627  ]
+[e :U 1626 ]
+{
+"54
+[; ;main.c: 54:     set_default();
+[e ( _set_default ..  ]
+"55
+[; ;main.c: 55:   }
+}
+[e :U 1627 ]
+"56
+[; ;main.c: 56:   set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+[e ( _set_clock (3 , , ( _get_config_clock_hours ..  ( _get_config_clock_minutes ..  -> -> 0 `i `uc ]
+"57
+[; ;main.c: 57:   set_mode(0);
+[e ( _set_mode (1 -> -> 0 `i `uc ]
+"58
+[; ;main.c: 58: }
+[e :UE 1625 ]
+>>>>>>> write_init
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "60
@@ -1760,6 +1825,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "61
 [; ;main.c: 61:   SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
+<<<<<<< HEAD
 "80
 [; ;main.c: 80:   global_initialization();
 [e ( _global_initialization ..  ]
@@ -1814,4 +1880,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 "94
 [; ;main.c: 94: }
 [e :UE 1629 ]
+=======
+"68
+[; ;main.c: 68:   (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+"74
+[; ;main.c: 74:   (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
+"79
+[; ;main.c: 79:   ADC_Initialize();
+[e ( _ADC_Initialize ..  ]
+"87
+[; ;main.c: 87:   global_initialization();
+[e ( _global_initialization ..  ]
+"89
+[; ;main.c: 89:   while (1) {
+[e :U 1630 ]
+{
+"90
+[; ;main.c: 90:     if (mode_has_changed()) {
+[e $ ! != -> ( _mode_has_changed ..  `i -> 0 `i 1632  ]
+{
+"91
+[; ;main.c: 91:       uint8_t mode = get_mode();
+[v _mode `uc ~T0 @X0 1 a ]
+[e = _mode ( _get_mode ..  ]
+"92
+[; ;main.c: 92:       if (mode == 0) {
+[e $ ! == -> _mode `i -> 0 `i 1633  ]
+{
+"93
+[; ;main.c: 93:         normal_mode_initialization();
+[e ( _normal_mode_initialization ..  ]
+"94
+[; ;main.c: 94:       } else {
+}
+[e $U 1634  ]
+[e :U 1633 ]
+{
+"95
+[; ;main.c: 95:         configuration_mode_initialization();
+[e ( _configuration_mode_initialization ..  ]
+"96
+[; ;main.c: 96:       }
+}
+[e :U 1634 ]
+"97
+[; ;main.c: 97:     }
+}
+[e :U 1632 ]
+"98
+[; ;main.c: 98:     __asm("sleep");
+[; <" sleep ;# ">
+"99
+[; ;main.c: 99:   }
+}
+[e :U 1629 ]
+[e $U 1630  ]
+[e :U 1631 ]
+"100
+[; ;main.c: 100: }
+[e :UE 1628 ]
+>>>>>>> write_init
 }

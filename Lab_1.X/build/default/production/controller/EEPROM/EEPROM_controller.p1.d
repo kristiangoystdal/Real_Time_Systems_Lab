@@ -14,6 +14,14 @@ controller/EEPROM/../../mcc_generated_files/system/../pwm/pwm6.h  \
 controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h  \
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h  \
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h  \
+<<<<<<< HEAD
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h  \
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h  \
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.p1.d
+controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h  \
+controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h  \
+========
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/EEPROM/EEPROM_controller.p1.d
+>>>>>>> write_init
 controller/EEPROM/../../state/state.h 

@@ -13,9 +13,21 @@
 #define MINUTES_MAX_VALUE 60
 #define HOURS_MAX_VALUE 24
 
+<<<<<<< HEAD
 #define SECONDS_POSITION 6
 #define MINUTES_POSITION 3
 #define HOURS_POSITION 0
+=======
+#define HOURS_POSITION 0
+#define MINUTES_POSITION 3
+#define SECONDS_POSITION 6
+
+typedef struct {
+  uint8_t hours;
+  uint8_t minutes;
+  uint8_t seconds;
+} clock_t;
+>>>>>>> write_init
 
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
@@ -27,6 +39,12 @@ uint8_t increment_minutes(void);
 
 uint8_t increment_hours(void);
 
-uint8_t get_clock(uint8_t precision, char clock[9]);
+clock_t get_clock(void);
+
+uint8_t get_clock_hours(void);
+
+uint8_t get_clock_minutes(void);
+
+uint8_t get_clock_str(uint8_t precision, char clock[9]);
 
 #endif

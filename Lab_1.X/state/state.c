@@ -2,6 +2,7 @@
 #include "state.h"
 #include "../controller/EEPROM/EEPROM_controller.h"
 #include <string.h>
+#include <stdio.h>
 
 static Configs _configs;
 static SensorsMaxMin _sensorsMaxMin;
@@ -16,10 +17,6 @@ void set_configs(Configs configs, bool write_eeprom) {
   }
 }
 
-Configs get_configs(){
-  return _configs;
-}
-
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
   _sensorsMaxMin = sensorsMaxMin;
   if(write_eeprom) {
@@ -29,7 +26,7 @@ void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
 }
 
 void set_default() {
-  memset(&_sensorsMaxMin, 0, sizeof(_sensorsMaxMin));
+  reset_sensors_max_min();
   WriteMaxMin(_sensorsMaxMin);
   _configs.monitoringPeriod = INITIAL_MONITORING_PERIOD;
   _configs.alarmDuration = INITIAL_ALARM_DURATION;
@@ -48,6 +45,38 @@ SensorsMaxMin get_max_min() {
   return _sensorsMaxMin;
 }
 
+uint8_t get_config_monitoring_period(void) {
+  return _configs.monitoringPeriod;
+}
+
+uint8_t get_config_alarm_duration(void) {
+  return _configs.alarmDuration;
+}
+
+uint8_t get_config_alarm_flag(void) {
+  return _configs.alarmFlag;
+}
+
+uint8_t get_config_alarm_hours(void) {
+  return _configs.alarmHours;
+}
+
+uint8_t get_config_alarm_minutes(void) {
+  return _configs.alarmMinutes;
+}
+
+uint8_t get_config_alarm_seconds(void) {
+  return _configs.alarmSeconds;
+}
+
+uint8_t get_config_threshold_temperature(void) {
+  return _configs.thresholdTemp;
+}
+
+uint8_t get_config_threshold_luminosity(void) {
+  return _configs.thresholdLum;
+}
+
 uint8_t get_config_clock_hours() {
   return _configs.clockHours;
 }
@@ -56,24 +85,75 @@ uint8_t get_config_clock_minutes() {
   return _configs.clockMinutes;
 }
 
+void get_config_alarm_hours_str(char* s) {
+  sprintf(s, "%02u", _configs.alarmHours);
+}
+
+void get_config_alarm_minutes_str(char* s) {
+  sprintf(s, "%02u", _configs.alarmMinutes);
+}
+
+void get_config_alarm_seconds_str(char* s) {
+  sprintf(s, "%02u", _configs.alarmSeconds);
+}
+
+void get_config_alarm_time_str(char* s) {
+  sprintf(s, "%02u:%02u:%02u", _configs.alarmHours, _configs.alarmMinutes, _configs.alarmSeconds);
+}
+
+void get_config_threshold_temperature_str(char* s) {
+  sprintf(s, "%02u", _configs.thresholdTemp);
+}
+
+void get_config_threshold_luminosity_str(char* s) {
+  sprintf(s, "%u", _configs.thresholdLum);
+}
+
+void increment_config_alarm_hours(void) {
+  _configs.alarmHours = (_configs.alarmHours + 1) % HOURS_MAX_VALUE;
+}
+
+void increment_config_alarm_minutes(void) {
+  _configs.alarmMinutes = (_configs.alarmMinutes + 1) % MINUTES_MAX_VALUE;
+}
+
+void increment_config_alarm_seconds(void) {
+  _configs.alarmSeconds = (_configs.alarmSeconds + 1) % SECONDS_MAX_VALUE;
+}
+
+void increment_config_threshold_temperature(void) {
+  _configs.thresholdTemp = (_configs.thresholdTemp + 1) % TEMP_MAX_VALUE;
+}
+
+void increment_config_threshold_luminosity(void) {
+  _configs.thresholdLum = (_configs.thresholdLum + 1) % LUM_MAX_VALUE;
+}
+
+void toggle_config_alarm_flag(void) {
+  _configs.alarmFlag = ~_configs.alarmFlag;
+}
+
+void reset_sensors_max_min(void) {
+  memset(&_sensorsMaxMin, 0, sizeof(_sensorsMaxMin));
+  _sensorsMaxMin.minTemp[MAX_MIN_TEMP_BYTE] = 0xFF;
+  _sensorsMaxMin.minLum[MAX_MIN_LUM_BYTE] = 0xFF;
+}
+
+void flush_configs(uint8_t hours, uint8_t minutes) {
+  WriteMaxMin(_sensorsMaxMin);
+  _configs.clockHours = hours;
+  _configs.clockMinutes = minutes;
+  WriteConfigs(_configs);
+  WriteChecksum(_configs, _sensorsMaxMin);
+}
+
 void measure_to_string(uint8_t measure [5], char string [17]) {
-  string[0] = 0x30 + measure[0]/10;
-  string[1] = 0x30 + (measure[0]%10);
-  string[2] = ':';
-  string[3] = 0x30 + measure[1]/10;
-  string[4] = 0x30 + (measure[1]%10);
-  string[5] = ':';
-  string[6] = 0x30 + measure[2]/10;
-  string[7] = 0x30 + (measure[2]%10);
-  string[8] = ' ';
-  string[9] = ' ';
-  string[10] = 0x30 + measure[3]/10;
-  string[11] = 0x30 + (measure[3]%10);
-  string[12] = 'C';
-  string[13] = ' ';
-  string[14] = 'L';
-  string[15] = 0x30 + measure[4];
-  string[16] = '\0';
+  uint8_t seconds = measure[MAX_MIN_SECONDS_BYTE];
+  uint8_t minutes = measure[MAX_MIN_MINUTES_BYTE];
+  uint8_t hours = measure[MAX_MIN_HOURS_BYTE];
+  uint8_t lum = measure[MAX_MIN_LUM_BYTE];
+  uint8_t temp = measure[MAX_MIN_TEMP_BYTE];
+  sprintf(string, "%02u:%02u:%02u  %02uC L%02u", hours, minutes, seconds, lum, temp);
 }
 
 void get_measure(uint8_t index, char measure [17] ) {

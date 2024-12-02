@@ -7,6 +7,8 @@ void turn_on(uint8_t n);
 
 void turn_off(uint8_t n);
 
+void turn_off_all(void);
+
 void toggle(uint8_t n);
 
 #endif

@@ -4,14 +4,24 @@
     <memory name="program">
       <units>words</units>
       <length>8192</length>
+<<<<<<< HEAD
       <used>3543</used>
       <free>4649</free>
+=======
+      <used>3613</used>
+      <free>4579</free>
+>>>>>>> write_init
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>1024</length>
+<<<<<<< HEAD
       <used>215</used>
       <free>809</free>
+=======
+      <used>253</used>
+      <free>771</free>
+>>>>>>> write_init
     </memory>
   </executable>
 </project>

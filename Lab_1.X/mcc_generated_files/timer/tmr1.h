@@ -5,46 +5,48 @@
  *
  * @defgroup tmr1 TMR1
  *
- * @brief This file contains API prototypes and other data types for the TMR1 driver.
+ * @brief This file contains API prototypes and other data types for the TMR1
+ * driver.
  *
  * @version TMR1 Driver Version 4.0.0
- * 
+ *
  * @version Package Version 5.0.0
  */
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2024] Microchip Technology Inc. and its subsidiaries.
 
-    Subject to your compliance with these terms, you may use Microchip 
-    software and any derivatives exclusively with Microchip products. 
-    You are responsible for complying with 3rd party license terms  
-    applicable to your use of 3rd party software (including open source  
-    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
-    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
-    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
-    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
-    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
-    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
-    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
-    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
-    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
-    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
+    Subject to your compliance with these terms, you may use Microchip
+    software and any derivatives exclusively with Microchip products.
+    You are responsible for complying with 3rd party license terms
+    applicable to your use of 3rd party software (including open source
+    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.?
+    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS
+    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,
+    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT
+    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY
+    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF
+    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE
+    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S
+    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT
+    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR
     THIS SOFTWARE.
 */
 
 #ifndef TMR1_H
 #define TMR1_H
 
+#include "tmr1_deprecated.h"
 #include <stdbool.h>
 #include <stdint.h>
-#include "tmr1_deprecated.h"
+
 
 /**
  * @misradeviation{@advisory,2.5}
- * MCC Melody drivers provide macros that can be added to an application. 
- * It depends on the application whether a macro is used or not. 
+ * MCC Melody drivers provide macros that can be added to an application.
+ * It depends on the application whether a macro is used or not.
  */
- 
+
 /**
  * @ingroup tmr1
  * @brief Defines the maximum count value of the timer.
@@ -136,7 +138,8 @@
 #define Timer1_GateStateGet TMR1_GateStateGet
 /**
  * @ingroup tmr1
- * @brief Defines the Custom Name for the \ref TMR1_SinglePulseAcquisitionStart API.
+ * @brief Defines the Custom Name for the \ref TMR1_SinglePulseAcquisitionStart
+ * API.
  */
 /* cppcheck-suppress misra-c2012-2.5 */
 #define Timer1_SinglePulseAcquisitionStart TMR1_SinglePulseAcquisitionStart
@@ -146,7 +149,7 @@
  */
 /* cppcheck-suppress misra-c2012-2.5 */
 #define Timer1_GateCallbackRegister TMR1_GateCallbackRegister
- /**
+/**
  * @ingroup tmr1
  * @brief Defines the Custom Name for the \ref TMR1_TMRInterruptEnable API.
  */
@@ -160,7 +163,8 @@
 #define Timer1_TMRInterruptDisable TMR1_TMRInterruptDisable
 /**
  * @ingroup tmr1
- * @brief Defines the Custom Name for the \ref TMR1_OverflowCallbackRegister API.
+ * @brief Defines the Custom Name for the \ref TMR1_OverflowCallbackRegister
+ * API.
  */
 /* cppcheck-suppress misra-c2012-2.5 */
 #define Timer1_OverflowCallbackRegister TMR1_OverflowCallbackRegister
@@ -220,8 +224,9 @@ void TMR1_CounterSet(uint16_t timerVal);
 
 /**
  * @ingroup tmr1
- * @brief Sets the period count value for the TMR1 timer. 
- *        The period count is calculated by subtracting the number of ticks required for the period from the maximum count.
+ * @brief Sets the period count value for the TMR1 timer.
+ *        The period count is calculated by subtracting the number of ticks
+ * required for the period from the maximum count.
  * @param periodVal - Period value to be stored in the timer period variable
  * @return None.
  */
@@ -300,7 +305,7 @@ void TMR1_OverflowISR(void);
  * @param CallbackHandler - Address of the custom callback function
  * @return None.
  */
- void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+void TMR1_OverflowCallbackRegister(void (*CallbackHandler)(void));
 
 /**
  * @ingroup tmr1
@@ -308,6 +313,6 @@ void TMR1_OverflowISR(void);
  * @param CallbackHandler - Address of the custom callback function
  * @return None.
  */
- void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
+void TMR1_GateCallbackRegister(void (*CallbackHandler)(void));
 
 #endif // TMR1_H

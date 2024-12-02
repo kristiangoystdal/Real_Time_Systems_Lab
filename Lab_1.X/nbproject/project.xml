@@ -13,6 +13,10 @@
                 <sourceRootElem>clock</sourceRootElem>
                 <sourceRootElem>controller</sourceRootElem>
                 <sourceRootElem>mode</sourceRootElem>
+<<<<<<< HEAD
+=======
+                <sourceRootElem>clock</sourceRootElem>
+>>>>>>> write_init
                 <sourceRootElem>state</sourceRootElem>
             </sourceRootList>
             <confList>

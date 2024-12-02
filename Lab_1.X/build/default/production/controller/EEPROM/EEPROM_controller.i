@@ -21067,10 +21067,10 @@ void INT_DefaultInterruptHandler(void);
 # 48 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
 # 1 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 1
-# 40 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 39 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 # 1 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h" 1
-# 40 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 2
-# 175 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 39 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 2
+# 179 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Initialize(void);
 
 
@@ -21080,15 +21080,15 @@ void TMR1_Initialize(void);
 
 
 void TMR1_Deinitialize(void);
-# 192 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 196 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Start(void);
-# 201 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 205 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Stop(void);
-# 210 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 214 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 uint16_t TMR1_CounterGet(void);
-# 219 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 223 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_CounterSet(uint16_t timerVal);
-# 228 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 233 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_PeriodSet(uint16_t periodVal);
 
 
@@ -21098,7 +21098,7 @@ void TMR1_PeriodSet(uint16_t periodVal);
 
 
 uint16_t TMR1_PeriodGet(void);
-# 245 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 250 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Reload(void);
 
 
@@ -21108,9 +21108,9 @@ void TMR1_Reload(void);
 
 
 uint16_t TMR1_MaxCountGet(void);
-# 262 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 267 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_SinglePulseAcquisitionStart(void);
-# 271 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 276 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 uint8_t TMR1_GateStateGet(void);
 
 
@@ -21143,7 +21143,7 @@ void TMR1_OverflowISR(void);
 
 
 
- void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+void TMR1_OverflowCallbackRegister(void (*CallbackHandler)(void));
 
 
 
@@ -21151,6 +21151,7 @@ void TMR1_OverflowISR(void);
 
 
 
+<<<<<<< HEAD
  void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
 # 50 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 # 1 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h" 1
@@ -21421,6 +21422,14 @@ void TMR6_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
 
 void SYSTEM_Initialize(void);
 # 5 "controller/EEPROM/EEPROM_controller.h" 2
+=======
+void TMR1_GateCallbackRegister(void (*CallbackHandler)(void));
+# 48 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 57 "controller/EEPROM/../../mcc_generated_files/system/system.h"
+void SYSTEM_Initialize(void);
+# 4 "controller/EEPROM/EEPROM_controller.h" 2
+
+>>>>>>> write_init
 # 1 "controller/EEPROM/../../state/state.h" 1
 # 26 "controller/EEPROM/../../state/state.h"
 typedef struct
@@ -21456,7 +21465,11 @@ void get_measure(uint8_t index, char measure [17]);
 void set_mode(uint8_t mode);
 uint8_t get_mode(void);
 _Bool mode_has_changed(void);
+<<<<<<< HEAD
 # 6 "controller/EEPROM/EEPROM_controller.h" 2
+=======
+# 5 "controller/EEPROM/EEPROM_controller.h" 2
+>>>>>>> write_init
 # 26 "controller/EEPROM/EEPROM_controller.h"
 uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
 void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
@@ -21465,8 +21478,14 @@ Configs ReadConfigs(void);
 void WriteConfigs(Configs configs);
 void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
 SensorsMaxMin ReadMaxMin(void);
+<<<<<<< HEAD
 # 2 "controller/EEPROM/EEPROM_controller.c" 2
 
+=======
+# 1 "controller/EEPROM/EEPROM_controller.c" 2
+
+
+>>>>>>> write_init
 uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
 {
     uint8_t checksum = 0;

@@ -2,8 +2,13 @@
 
 manifest_file_version: 1.0.0
 project: Lab_1
+<<<<<<< HEAD
 creation_date: 2024-12-01T17:56:05.542Z[Europe/Lisbon]
 operating_system: Mac OS X
+=======
+creation_date: 2024-11-29T14:47:10.246Z[Europe/London]
+operating_system: Windows 10
+>>>>>>> write_init
 mcc_mode: IDE
 mcc_mode_version: v6.20
 device_name: PIC16F18875

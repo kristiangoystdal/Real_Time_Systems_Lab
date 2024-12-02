@@ -4,7 +4,11 @@
 # 288 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/language_support.h" 1 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
+>>>>>>> write_init
 # 2 "<built-in>" 2
 # 1 "mode/configuration_mode.c" 2
 
@@ -16,11 +20,17 @@ void configuration_mode_initialization(void);
 void configuration_mode_timer_handler(void);
 void configuration_mode_s1_handler(void);
 void configuration_mode_s2_handler(void);
+<<<<<<< HEAD
 # 3 "mode/configuration_mode.c" 2
+=======
+# 2 "mode/configuration_mode.c" 2
+
+>>>>>>> write_init
 # 1 "mode/../controller/LED/led.h" 1
 
 
 
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
 
 
@@ -34,6 +44,21 @@ typedef unsigned short uintptr_t;
 # 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef short intptr_t;
 # 164 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+>>>>>>> write_init
 typedef signed char int8_t;
 
 
@@ -56,7 +81,11 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
+<<<<<<< HEAD
 # 194 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+=======
+# 194 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+>>>>>>> write_init
 typedef long long intmax_t;
 
 
@@ -85,9 +114,15 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
+<<<<<<< HEAD
 # 235 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
 # 27 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+=======
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+>>>>>>> write_init
 
 typedef int8_t int_fast8_t;
 
@@ -119,20 +154,32 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
+<<<<<<< HEAD
 # 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/stdint.h" 1 3
+=======
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/stdint.h" 1 3
+>>>>>>> write_init
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
+<<<<<<< HEAD
 # 149 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
 # 5 "mode/../controller/LED/led.h" 2
+=======
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 4 "mode/../controller/LED/led.h" 2
+
+>>>>>>> write_init
 
 void turn_on(uint8_t n);
 
 void turn_off(uint8_t n);
 
 void toggle(uint8_t n);
+<<<<<<< HEAD
 # 4 "mode/configuration_mode.c" 2
 
 void configuration_mode_initialization() {
@@ -150,3 +197,15 @@ void configuration_mode_s1_handler() {
 void configuration_mode_s2_handler() {
 
 }
+=======
+# 3 "mode/configuration_mode.c" 2
+
+
+void configuration_mode_initialization() { toggle(2); }
+
+void configuration_mode_timer_handler() {}
+
+void configuration_mode_s1_handler() {}
+
+void configuration_mode_s2_handler() {}
+>>>>>>> write_init

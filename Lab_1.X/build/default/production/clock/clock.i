@@ -128,6 +128,12 @@ uint8_t increment_seconds(void);
 uint8_t increment_minutes(void);
 
 uint8_t increment_hours(void);
+<<<<<<< HEAD
+=======
+
+uint8_t get_clock(uint8_t precision, char clock[9]);
+# 2 "clock/clock.c" 2
+>>>>>>> write_init
 
 uint8_t get_clock(uint8_t precision, char clock[9]);
 # 3 "clock/clock.c" 2

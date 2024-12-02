@@ -82,6 +82,76 @@
       </logicalFolder>
       <logicalFolder name="controller" displayName="controller" projectFiles="true">
         <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
+          <itemPath>controller/EEPROM/EEPROM_controller.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
+          <logicalFolder name="I2C" displayName="I2C" projectFiles="true">
+            <itemPath>controller/LCD/I2C/i2c.h</itemPath>
+          </logicalFolder>
+          <itemPath>controller/LCD/lcd.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="LED" displayName="LED" projectFiles="true">
+          <itemPath>controller/LED/led.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
+          <itemPath>controller/Luminosity/luminosity.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Temperature" displayName="Temperature" projectFiles="true">
+          <itemPath>controller/Temperature/temperature.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
+          <itemPath>controller/Luminosity/luminosity.c</itemPath>
+        </logicalFolder>
+<<<<<<< HEAD
+        <logicalFolder name="PWM" displayName="PWM" projectFiles="true">
+          <itemPath>controller/PWM/pwm.c</itemPath>
+=======
+        <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
+          <itemPath>mcc_generated_files/i2c_host/mssp1.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
+          <itemPath>mcc_generated_files/nvm/nvm.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="system" displayName="system" projectFiles="true">
+          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
+          <itemPath>mcc_generated_files/system/pins.h</itemPath>
+          <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
+          <itemPath>mcc_generated_files/system/clock.h</itemPath>
+          <itemPath>mcc_generated_files/system/system.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="timer" displayName="timer" projectFiles="true">
+          <itemPath>mcc_generated_files/timer/tmr1.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr1_deprecated.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="mode" displayName="mode" projectFiles="true">
+        <itemPath>mode/configuration_mode.c</itemPath>
+        <itemPath>mode/normal_mode.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="state" displayName="state" projectFiles="true">
+        <itemPath>state/state.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>Lab_1.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LinkerScript"
+                   displayName="Linker Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="clock" displayName="clock" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="controller" displayName="controller" projectFiles="true">
+        <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
           <itemPath>controller/EEPROM/EEPROM_controller.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
@@ -96,8 +166,9 @@
         <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
           <itemPath>controller/Luminosity/luminosity.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="PWM" displayName="PWM" projectFiles="true">
-          <itemPath>controller/PWM/pwm.c</itemPath>
+        <logicalFolder name="Temperature" displayName="Temperature" projectFiles="true">
+          <itemPath>controller/Temperature/temperature.c</itemPath>
+>>>>>>> write_init
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -141,6 +212,8 @@
       <logicalFolder name="state" displayName="state" projectFiles="true">
         <itemPath>state/state.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="state" displayName="state" projectFiles="true">
+      </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -149,6 +222,10 @@
     <Elem>clock</Elem>
     <Elem>controller</Elem>
     <Elem>mode</Elem>
+<<<<<<< HEAD
+=======
+    <Elem>clock</Elem>
+>>>>>>> write_init
     <Elem>state</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>

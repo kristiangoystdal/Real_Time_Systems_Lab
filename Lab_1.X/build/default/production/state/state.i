@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 1 "state/state.c"
+========
+# 1 "controller/Luminosity/luminosity.c"
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 1 "state/state.c"
+>>>>>>> write_init
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,12 +14,28 @@
 # 1 "<built-in>" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 1 "controller/EEPROM/EEPROM_controller.c" 2
+# 1 "controller/EEPROM/EEPROM_controller.h" 1
+
+
+
+# 1 "controller/EEPROM/../../mcc_generated_files/system/system.h" 1
+# 39 "controller/EEPROM/../../mcc_generated_files/system/system.h"
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 1 3
+# 18 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 3
+========
+>>>>>>> write_init
 # 1 "state/state.c" 2
 
 # 1 "state/state.h" 1
 
 
 
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
 
 
@@ -25,6 +49,29 @@ typedef unsigned short uintptr_t;
 # 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef short intptr_t;
 # 164 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+========
+# 1 "controller/Luminosity/luminosity.c" 2
+# 1 "controller/Luminosity/luminosity.h" 1
+# 11 "controller/Luminosity/luminosity.h"
+=======
+>>>>>>> write_init
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 1 3
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 133 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+<<<<<<< HEAD
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+>>>>>>> write_init
 typedef signed char int8_t;
 
 
@@ -47,7 +94,15 @@ typedef long int32_t;
 
 
 typedef long long int64_t;
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 194 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+========
+# 194 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 194 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+>>>>>>> write_init
 typedef long long intmax_t;
 
 
@@ -76,9 +131,21 @@ typedef unsigned long uint32_t;
 
 
 typedef unsigned long long uint64_t;
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 235 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned long long uintmax_t;
 # 27 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+========
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 235 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+>>>>>>> write_init
 
 typedef int8_t int_fast8_t;
 
@@ -110,16 +177,35 @@ typedef uint24_t uint_fast24_t;
 typedef uint32_t uint_least32_t;
 
 typedef uint64_t uint_least64_t;
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/stdint.h" 1 3
+========
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/stdint.h" 1 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 148 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/stdint.h" 1 3
+>>>>>>> write_init
 typedef int16_t int_fast16_t;
 typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 149 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
 # 5 "state/state.h" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdbool.h" 1 3
 # 6 "state/state.h" 2
+=======
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 4 "state/state.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdbool.h" 1 3
+# 5 "state/state.h" 2
+>>>>>>> write_init
 # 26 "state/state.h"
 typedef struct
 {
@@ -154,15 +240,33 @@ void get_measure(uint8_t index, char measure [17]);
 void set_mode(uint8_t mode);
 uint8_t get_mode(void);
 _Bool mode_has_changed(void);
+<<<<<<< HEAD
 # 3 "state/state.c" 2
+=======
+# 2 "state/state.c" 2
+
+>>>>>>> write_init
 # 1 "state/../controller/EEPROM/EEPROM_controller.h" 1
 
 
 
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 1
 # 39 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h"
+<<<<<<< HEAD
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 1 3
 # 18 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 3
+========
+# 149 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdint.h" 2 3
+# 11 "controller/Luminosity/luminosity.h" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -173,17 +277,62 @@ extern double __fpnormalize(double);
 
 
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 1 3
 # 10 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 3
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 1 3
+
+
+
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/musl_xc8.h" 1 3
+# 5 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 2 3
+
+
+
+
+
+>>>>>>> write_init
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/features.h" 1 3
 # 11 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 2 3
 # 21 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 3
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
 # 24 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+========
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdlib.h" 1 3
+# 10 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\features.h" 1 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+<<<<<<< HEAD
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
 typedef long int wchar_t;
 # 128 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef unsigned size_t;
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 22 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 2 3
+========
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdlib.h" 2 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+typedef long int wchar_t;
+# 128 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned size_t;
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 174 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 210 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 22 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdlib.h" 2 3
+========
+# 22 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdlib.h" 2 3
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 
 int atoi (const char *);
 long atol (const char *);
@@ -270,9 +419,103 @@ extern void __builtin_software_breakpoint(void);
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 1 3
+# 26 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 1 3
+# 133 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned short uintptr_t;
+# 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef short intptr_t;
+# 164 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+# 179 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef long int32_t;
+
+
+
+
+
+typedef long long int64_t;
+# 194 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef long long intmax_t;
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+# 215 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned long uint32_t;
+
+
+
+
+
+typedef unsigned long long uint64_t;
+# 235 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
+typedef unsigned long long uintmax_t;
+# 27 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+
+typedef int8_t int_fast8_t;
+
+typedef int64_t int_fast64_t;
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+
+typedef int24_t int_least24_t;
+typedef int24_t int_fast24_t;
+
+typedef int32_t int_least32_t;
+
+typedef int64_t int_least64_t;
+
+
+typedef uint8_t uint_fast8_t;
+
+typedef uint64_t uint_fast64_t;
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+
+typedef uint24_t uint_least24_t;
+typedef uint24_t uint_fast24_t;
+
+typedef uint32_t uint_least32_t;
+
+typedef uint64_t uint_least64_t;
+# 148 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 3
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/stdint.h" 1 3
+typedef int16_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint16_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 149 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdint.h" 2 3
+# 5 "/Applications/microchip/xc8/v2.50/pic/include/builtins.h" 2 3
+========
+
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+
+
+>>>>>>> write_init
 #pragma intrinsic(__nop)
 extern void __nop(void);
 # 19 "/Applications/microchip/xc8/v2.50/pic/include/builtins.h" 3
@@ -20859,8 +21102,31 @@ extern unsigned char eeprom_read(unsigned char addr);
 extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
 # 29 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 2 3
 # 40 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 29 "/Applications/microchip/xc8/v2.50/pic/include/xc.h" 2 3
+# 40 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+# 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/stdbool.h" 1 3
+# 42 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 1
+# 39 "controller/EEPROM/../../mcc_generated_files/system/config_bits.h"
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../system/clock.h" 1
+# 56 "controller/EEPROM/../../mcc_generated_files/system/../system/clock.h"
+void CLOCK_Initialize(void);
+# 40 "controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 2
+# 43 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../system/pins.h" 1
+# 210 "controller/EEPROM/../../mcc_generated_files/system/../system/pins.h"
+========
+# 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
+# 39 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+>>>>>>> write_init
 
 
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 1
@@ -20868,11 +21134,38 @@ extern __bank0 __bit __timeout;
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/clock.h" 1
 # 56 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/clock.h"
 void CLOCK_Initialize(void);
+<<<<<<< HEAD
 # 40 "state/../controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 2
 # 43 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/pins.h" 1
 # 210 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/pins.h"
 void PIN_MANAGER_Initialize (void);
+========
+# 28 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
+# 12 "controller/Luminosity/luminosity.h" 2
+# 28 "controller/Luminosity/luminosity.h"
+uint8_t readLum(void);
+void get_luminosity(char *luminosity);
+# 1 "controller/Luminosity/luminosity.c" 2
+
+# 1 "controller/Luminosity/../../mcc_generated_files/adc/adc.h" 1
+# 40 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdbool.h" 1 3
+# 40 "controller/Luminosity/../../mcc_generated_files/adc/adc.h" 2
+
+# 1 "controller/Luminosity/../../mcc_generated_files/adc/./adc_types.h" 1
+# 62 "controller/Luminosity/../../mcc_generated_files/adc/./adc_types.h"
+typedef int16_t adc_result_t;
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 39 "state/../controller/EEPROM/../../mcc_generated_files/system/config_bits.h" 2
+# 42 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+# 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/pins.h" 1
+# 210 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/pins.h"
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+void PIN_MANAGER_Initialize (void);
+>>>>>>> write_init
 
 
 
@@ -20881,13 +21174,31 @@ void PIN_MANAGER_Initialize (void);
 
 
 void PIN_MANAGER_IOC(void);
+<<<<<<< HEAD
 # 44 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 44 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h" 1
+# 45 "controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 1
+# 39 "controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h" 1
+# 44 "controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h"
+========
+# 43 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+>>>>>>> write_init
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h" 1
 # 45 "state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/mssp1.h"
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h" 1
 # 39 "state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_event_types.h"
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h" 1
 # 44 "state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h"
+<<<<<<< HEAD
+=======
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 typedef enum
 {
     I2C_ERROR_NONE,
@@ -20989,9 +21300,22 @@ void I2C1_ISR(void);
 
 
 void I2C1_ERROR_ISR(void);
+<<<<<<< HEAD
 # 45 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h" 1
 # 80 "state/../controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 45 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h" 1
+# 80 "controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
+========
+# 44 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+# 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h" 1
+# 80 "state/../controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 typedef uint16_t flash_data_t;
 
 
@@ -21088,9 +21412,16 @@ uint16_t FLASH_PageOffsetGet(flash_address_t address);
 eeprom_data_t EEPROM_Read(eeprom_address_t address);
 # 230 "state/../controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h"
 void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
+<<<<<<< HEAD
 # 46 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../pwm/pwm6.h" 1
 # 57 "state/../controller/EEPROM/../../mcc_generated_files/system/../pwm/pwm6.h"
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 46 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../pwm/pwm6.h" 1
+# 57 "controller/EEPROM/../../mcc_generated_files/system/../pwm/pwm6.h"
+>>>>>>> write_init
  void PWM6_Initialize(void);
 
 
@@ -21100,9 +21431,21 @@ void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
 
 
  void PWM6_LoadDutyValue(uint16_t dutyValue);
+<<<<<<< HEAD
 # 47 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h" 1
 # 85 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
+=======
+# 47 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h" 1
+# 85 "controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
+========
+# 45 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+# 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h" 1
+# 85 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 void INTERRUPT_Initialize (void);
 # 139 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INT_ISR(void);
@@ -21114,6 +21457,7 @@ void INT_SetInterruptHandler(void (* InterruptHandler)(void));
 extern void (*INT_InterruptHandler)(void);
 # 175 "state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h"
 void INT_DefaultInterruptHandler(void);
+<<<<<<< HEAD
 # 48 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 1
@@ -21121,6 +21465,20 @@ void INT_DefaultInterruptHandler(void);
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h" 1
 # 40 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 2
 # 175 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 48 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+========
+# 46 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+
+# 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 1
+# 39 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+# 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h" 1
+# 39 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h" 2
+# 179 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+>>>>>>> write_init
 void TMR1_Initialize(void);
 
 
@@ -21130,6 +21488,7 @@ void TMR1_Initialize(void);
 
 
 void TMR1_Deinitialize(void);
+<<<<<<< HEAD
 # 192 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_Start(void);
 # 201 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
@@ -21139,6 +21498,17 @@ uint16_t TMR1_CounterGet(void);
 # 219 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_CounterSet(uint16_t timerVal);
 # 228 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+=======
+# 196 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_Start(void);
+# 205 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_Stop(void);
+# 214 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+uint16_t TMR1_CounterGet(void);
+# 223 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_CounterSet(uint16_t timerVal);
+# 233 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+>>>>>>> write_init
 void TMR1_PeriodSet(uint16_t periodVal);
 
 
@@ -21148,7 +21518,11 @@ void TMR1_PeriodSet(uint16_t periodVal);
 
 
 uint16_t TMR1_PeriodGet(void);
+<<<<<<< HEAD
 # 245 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+=======
+# 250 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+>>>>>>> write_init
 void TMR1_Reload(void);
 
 
@@ -21158,9 +21532,15 @@ void TMR1_Reload(void);
 
 
 uint16_t TMR1_MaxCountGet(void);
+<<<<<<< HEAD
 # 262 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
 void TMR1_SinglePulseAcquisitionStart(void);
 # 271 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+=======
+# 267 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+void TMR1_SinglePulseAcquisitionStart(void);
+# 276 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h"
+>>>>>>> write_init
 uint8_t TMR1_GateStateGet(void);
 
 
@@ -21193,7 +21573,11 @@ void TMR1_OverflowISR(void);
 
 
 
+<<<<<<< HEAD
  void TMR1_OverflowCallbackRegister(void (* CallbackHandler)(void));
+=======
+void TMR1_OverflowCallbackRegister(void (*CallbackHandler)(void));
+>>>>>>> write_init
 
 
 
@@ -21201,6 +21585,7 @@ void TMR1_OverflowISR(void);
 
 
 
+<<<<<<< HEAD
  void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
 # 50 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h" 1
@@ -21208,6 +21593,16 @@ void TMR1_OverflowISR(void);
 # 1 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h" 1
 # 41 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h" 2
 # 162 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+ void TMR1_GateCallbackRegister(void (* CallbackHandler)(void));
+# 50 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h" 1
+# 41 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+# 1 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h" 1
+# 41 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h" 2
+# 162 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+>>>>>>> write_init
 typedef enum
 {
 
@@ -21253,7 +21648,11 @@ typedef enum
 
 
    TMR6_ROP_RESETS_ERSHIGH,
+<<<<<<< HEAD
 # 217 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+=======
+# 217 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+>>>>>>> write_init
    TMR6_OS_STARTS_TMRON,
 
 
@@ -21303,7 +21702,11 @@ typedef enum
 
 
    TMR6_OS_STARTS_TMRON_ERSLOW = 0x17,
+<<<<<<< HEAD
 # 274 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+=======
+# 274 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+>>>>>>> write_init
    TMR6_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
 
 
@@ -21357,7 +21760,27 @@ typedef enum
 
 
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
     TMR6_CCP5_OUT = 0x8,
+========
+typedef enum
+{
+    ADC_NOT_CONVERTING = 0x0,
+    ADC_1ST_PRECHARGE = 0x1,
+    ADC_1ST_ACQUISITION = 0x2,
+    ADC_1ST_CONVERSION = 0x3,
+    ADC_2ND_PRECHARGE = 0x5,
+    ADC_2ND_ACQUISITION = 0x6,
+    ADC_2ND_CONVERSION = 0x7
+} adc_conversion_stage_t;
+# 41 "controller/Luminosity/../../mcc_generated_files/adc/adc.h" 2
+# 57 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+void ADC_Initialize(void);
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+    TMR6_CCP5_OUT = 0x8,
+>>>>>>> write_init
 
 
 
@@ -21395,9 +21818,21 @@ typedef enum
 
     TMR6_LC4_OUT = 0x11
 } TMR6_HLT_EXT_RESET_SOURCE;
+<<<<<<< HEAD
 # 377 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
 void TMR6_Initialize(void);
 
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
+========
+void ADC_ChannelSelect(adc_channel_t channel);
+# 99 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+void ADC_ConversionStart(void);
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 377 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_Initialize(void);
+
+>>>>>>> write_init
 
 
 
@@ -21405,6 +21840,7 @@ void TMR6_Initialize(void);
 
 
 void TMR6_Deinitialize(void);
+<<<<<<< HEAD
 # 394 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
 void TMR6_Start(void);
 # 403 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
@@ -21416,6 +21852,19 @@ void TMR6_CounterSet(uint8_t count);
 # 430 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
 void TMR6_PeriodSet(uint8_t periodVal);
 # 439 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+=======
+# 394 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_Start(void);
+# 403 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_Stop(void);
+# 412 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+uint8_t TMR6_CounterGet(void);
+# 421 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_CounterSet(uint8_t count);
+# 430 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_PeriodSet(uint8_t periodVal);
+# 439 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+>>>>>>> write_init
 uint8_t TMR6_PeriodGet(void);
 
 
@@ -21425,11 +21874,25 @@ uint8_t TMR6_PeriodGet(void);
 
 
 uint8_t TMR6_MaxCountGet(void);
+<<<<<<< HEAD
 # 456 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
 void TMR6_ModeSet(TMR6_HLT_MODE mode);
 # 465 "state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
 void TMR6_ExtResetSourceSet(TMR6_HLT_EXT_RESET_SOURCE reset);
 
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
+========
+void ADC_ConversionDoneInterruptDisable(void);
+# 124 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsConversionDone(void);
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 456 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_ModeSet(TMR6_HLT_MODE mode);
+# 465 "controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h"
+void TMR6_ExtResetSourceSet(TMR6_HLT_EXT_RESET_SOURCE reset);
+
+>>>>>>> write_init
 
 
 
@@ -21460,9 +21923,21 @@ void TMR6_Tasks(void);
 
 
 void TMR6_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
+<<<<<<< HEAD
 # 51 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
 
 
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
+========
+uint8_t ADC_ResolutionGet(void);
+# 165 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsBusy(void);
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+# 51 "controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+
+
+>>>>>>> write_init
 
 
 
@@ -21470,8 +21945,57 @@ void TMR6_PeriodMatchCallbackRegister(void (* callbackHandler)(void));
 
 
 void SYSTEM_Initialize(void);
+<<<<<<< HEAD
 # 5 "state/../controller/EEPROM/EEPROM_controller.h" 2
 # 26 "state/../controller/EEPROM/EEPROM_controller.h"
+=======
+# 5 "controller/EEPROM/EEPROM_controller.h" 2
+# 1 "controller/EEPROM/../../state/state.h" 1
+# 26 "controller/EEPROM/../../state/state.h"
+typedef struct
+{
+    uint8_t monitoringPeriod;
+    uint8_t alarmDuration;
+    uint8_t alarmFlag;
+    uint8_t alarmHours;
+    uint8_t alarmMinutes;
+    uint8_t alarmSeconds;
+    uint8_t thresholdTemp;
+    uint8_t thresholdLum;
+    uint8_t clockHours;
+    uint8_t clockMinutes;
+} Configs;
+
+typedef struct
+{
+    uint8_t maxTemp[5];
+    uint8_t minTemp[5];
+    uint8_t maxLum[5];
+    uint8_t minLum[5];
+} SensorsMaxMin;
+
+void set_default(void);
+void set_configs(Configs configs, _Bool write_eeprom);
+Configs get_configs(void);
+void set_max_min(SensorsMaxMin sensorsMaxMin, _Bool write_eeprom);
+SensorsMaxMin get_max_min(void);
+uint8_t get_config_clock_hours(void);
+uint8_t get_config_clock_minutes(void);
+void get_measure(uint8_t index, char measure [17]);
+void set_mode(uint8_t mode);
+uint8_t get_mode(void);
+_Bool mode_has_changed(void);
+# 6 "controller/EEPROM/EEPROM_controller.h" 2
+# 26 "controller/EEPROM/EEPROM_controller.h"
+========
+void TMR1_GateCallbackRegister(void (*CallbackHandler)(void));
+# 48 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h" 2
+# 57 "state/../controller/EEPROM/../../mcc_generated_files/system/system.h"
+void SYSTEM_Initialize(void);
+# 4 "state/../controller/EEPROM/EEPROM_controller.h" 2
+# 26 "state/../controller/EEPROM/EEPROM_controller.h"
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
 void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin);
 _Bool MemIsUsable(void);
@@ -21479,6 +22003,7 @@ Configs ReadConfigs(void);
 void WriteConfigs(Configs configs);
 void WriteMaxMin(SensorsMaxMin sensorsMaxMin);
 SensorsMaxMin ReadMaxMin(void);
+<<<<<<< HEAD
 # 4 "state/state.c" 2
 # 1 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 1 3
 # 25 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 3
@@ -21486,6 +22011,60 @@ SensorsMaxMin ReadMaxMin(void);
 # 421 "/Applications/microchip/xc8/v2.50/pic/include/c99/bits/alltypes.h" 3
 typedef struct __locale_struct * locale_t;
 # 26 "/Applications/microchip/xc8/v2.50/pic/include/c99/string.h" 2 3
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+# 2 "controller/EEPROM/EEPROM_controller.c" 2
+
+uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin)
+{
+    uint8_t checksum = 0;
+    checksum += configs.monitoringPeriod;
+    checksum += configs.alarmDuration;
+    checksum += configs.alarmFlag;
+    checksum += configs.alarmHours;
+    checksum += configs.alarmMinutes;
+    checksum += configs.alarmSeconds;
+    checksum += configs.thresholdTemp;
+    checksum += configs.thresholdLum;
+    checksum += configs.clockHours;
+    checksum += configs.clockMinutes;
+    for(uint8_t i = 0; i < 5; i++) {
+        checksum += sensorsMaxMin.maxLum[i];
+        checksum += sensorsMaxMin.maxTemp[i];
+        checksum += sensorsMaxMin.minLum[i];
+        checksum += sensorsMaxMin.minTemp[i];
+    }
+    return checksum;
+}
+
+void WriteChecksum(Configs configs, SensorsMaxMin sensorsMaxMin) {
+    uint8_t calculatedChecksum = CalculateChecksum(configs, sensorsMaxMin);
+    EEPROM_Write(0x7043, calculatedChecksum);
+}
+
+_Bool MemIsUsable()
+{
+    uint8_t calculatedChecksum = CalculateChecksum(ReadConfigs(), ReadMaxMin());
+    uint8_t readMagicWord = EEPROM_Read(0x7042);
+    uint8_t readChecksum = EEPROM_Read(0x7043);
+    if ((readChecksum == calculatedChecksum) && (readMagicWord == 42))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+========
+# 3 "state/state.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\string.h" 2 3
+>>>>>>> write_init
 
 void *memcpy (void *restrict, const void *restrict, size_t);
 void *memmove (void *, const void *, size_t);
@@ -21537,13 +22116,22 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
+<<<<<<< HEAD
 # 5 "state/state.c" 2
+=======
+# 4 "state/state.c" 2
+
+>>>>>>> write_init
 
 static Configs _configs;
 static SensorsMaxMin _sensorsMaxMin;
 static uint8_t _mode;
 static _Bool _mode_has_changed;
 
+<<<<<<< HEAD
+<<<<<<<< HEAD:Lab_1.X/build/default/production/state/state.i
+=======
+>>>>>>> write_init
 void set_configs(Configs configs, _Bool write_eeprom) {
   _configs = configs;
   if(write_eeprom) {
@@ -21554,6 +22142,10 @@ void set_configs(Configs configs, _Bool write_eeprom) {
 
 Configs get_configs(){
   return _configs;
+<<<<<<< HEAD
+=======
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 }
 
 void set_max_min(SensorsMaxMin sensorsMaxMin, _Bool write_eeprom) {
@@ -21564,6 +22156,24 @@ void set_max_min(SensorsMaxMin sensorsMaxMin, _Bool write_eeprom) {
   }
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/controller/EEPROM/EEPROM_controller.i
+void WriteConfigs(Configs configs)
+{
+    EEPROM_Write(0x7042, 42);
+    EEPROM_Write(0x7000, configs.monitoringPeriod);
+    EEPROM_Write(0x7001, configs.alarmDuration);
+    EEPROM_Write(0x7002, configs.alarmFlag);
+    EEPROM_Write(0x7003, configs.alarmHours);
+    EEPROM_Write(0x7004, configs.alarmMinutes);
+    EEPROM_Write(0x7005, configs.alarmSeconds);
+    EEPROM_Write(0x7006, configs.thresholdTemp);
+    EEPROM_Write(0x7007, configs.thresholdLum);
+    EEPROM_Write(0x7008, configs.clockHours);
+    EEPROM_Write(0x7009, configs.clockMinutes);
+========
+>>>>>>> write_init
 void set_default() {
   memset(&_sensorsMaxMin, 0, sizeof(_sensorsMaxMin));
   WriteMaxMin(_sensorsMaxMin);
@@ -21578,6 +22188,10 @@ void set_default() {
   _configs.clockHours = 0;
   _configs.clockMinutes = 0;
   WriteConfigs(_configs);
+<<<<<<< HEAD
+=======
+>>>>>>>> write_init:Lab_1.X/build/default/production/state/state.i
+>>>>>>> write_init
 }
 
 SensorsMaxMin get_max_min() {
@@ -21641,4 +22255,465 @@ uint8_t get_mode(void) {
 
 _Bool mode_has_changed(void) {
   return _mode_has_changed;
+<<<<<<< HEAD
+========
+
+
+
+void ADC_ComputationModeSet(adc_computation_mode_t computationMode);
+
+
+
+
+
+
+
+void ADC_UpperThresholdSet(adc_threshold_t upperThreshold);
+
+
+
+
+
+
+
+void ADC_LowerThresholdSet(adc_threshold_t lowerThreshold);
+
+
+
+
+
+
+
+void ADC_ThresholdModeSet(adc_threshold_mode_t thresholdMode);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptDisable(void);
+
+
+
+
+
+
+
+adc_accumulate_t ADC_AccumulatedResultGet(void);
+
+
+
+
+
+
+
+void ADC_ThresholdCallbackRegister(void (*callback)(void));
+# 262 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+void ADC_StopOnInterruptEnable(void);
+
+
+
+
+
+
+
+void ADC_StopOnInterruptDisable(void);
+
+
+
+
+
+
+
+void ADC_SampleCapacitorDischarge(void);
+
+
+
+
+
+
+
+void ADC_AcquisitionTimeSet(uint8_t acquisitionValue);
+
+
+
+
+
+
+
+void ADC_PrechargeTimeSet(uint8_t prechargeTime);
+
+
+
+
+
+
+
+adc_repeat_count_t ADC_CurrentConversionCountGet(void);
+
+
+
+
+
+
+
+void ADC_AccumulatorClear(void);
+# 319 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsAccumulatorClearComplete(void);
+# 328 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_HasAccumulatorOverflowed(void);
+# 337 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+adc_result_t ADC_FilterValueGet(void);
+
+
+
+
+
+
+
+adc_result_t ADC_PreviousResultGet(void);
+
+
+
+
+
+
+
+void ADC_SetPointDefine(adc_threshold_t setPoint);
+
+
+
+
+
+
+
+adc_result_t ADC_ErrorCalculationGet(void);
+
+
+
+
+
+
+
+void ADC_DoubleSamplingEnable(void);
+
+
+
+
+
+
+
+void ADC_DoubleSamplingDisable(void);
+
+
+
+
+
+
+
+void ADC_ContinuousConversionEnable(void);
+
+
+
+
+
+
+
+void ADC_ContinuousConversionDisable(void);
+# 402 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsErrorGreaterThanUpperThreshold(void);
+# 411 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsErrorLesserThanLowerThreshold(void);
+
+
+
+
+
+
+
+adc_conversion_stage_t ADC_ConversionStageStatusGet(void);
+
+
+
+
+
+
+
+void ADC_AutoTriggerSourceSet(adc_trigger_source_t triggerSource);
+
+
+
+
+
+
+
+void ADC_ErrorCalculationModeSet(adc_calculation_mode_t errorCalculationMode);
+
+
+
+
+
+
+
+void ADC_CalculationRightShiftSet(uint8_t rightShiftValue);
+
+
+
+
+
+
+
+void ADC_ConversionDoneInterruptFlagClear(void);
+# 460 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsConversionDoneInterruptFlagSet(void);
+
+
+
+
+
+
+
+void ADC_ThresholdInterruptFlagClear(void);
+# 477 "controller/Luminosity/../../mcc_generated_files/adc/adc.h"
+_Bool ADC_IsThresholdInterruptFlagSet(void);
+
+
+
+
+
+
+
+void ADC_ISR(void);
+
+
+
+
+
+
+
+void ADC_ThresholdISR(void);
+# 2 "controller/Luminosity/luminosity.c" 2
+
+# 1 "controller/Luminosity/../LCD/lcd.h" 1
+# 12 "controller/Luminosity/../LCD/lcd.h"
+void LCDsend(unsigned char c);
+
+unsigned char LCDrecv(unsigned char mode);
+
+void LCDsend2x4(unsigned char c, unsigned char mode);
+
+void LCDinit(void);
+
+void LCDcmd(unsigned char c);
+
+void LCDchar(unsigned char c);
+
+void LCDstr(char *p);
+
+int LCDbusy(void);
+
+void LCDpos(unsigned char l, unsigned char c);
+
+void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c);
+
+void LCDWriteStr(char *s, unsigned char l, unsigned char c);
+# 3 "controller/Luminosity/luminosity.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef short ssize_t;
+# 255 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 4 "controller/Luminosity/luminosity.c" 2
+# 16 "controller/Luminosity/luminosity.c"
+void get_luminosity(char *luminosity) {
+
+  uint8_t lumValue = readLum();
+
+
+  sprintf(luminosity, "L %u", lumValue);
+}
+
+
+
+
+
+
+uint8_t readLum(void) {
+
+  ADC_ChannelSelect(0);
+
+
+  ADC_ConversionStart();
+
+
+  while (!ADC_IsConversionDone())
+    ;
+
+
+  uint16_t rawResult = (uint16_t)ADC_ConversionResultGet();
+
+
+  uint8_t result3Bit = (uint8_t)(rawResult >> 7);
+
+  return result3Bit;
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.i
+=======
+>>>>>>> write_init
 }

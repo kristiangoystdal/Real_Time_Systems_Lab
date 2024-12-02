@@ -1,4 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
+<<<<<<< HEAD
 "21 controller/Luminosity/luminosity.c
 [; ;controller/Luminosity/luminosity.c: 21:   ADC_ChannelSelect(0);
 [v _ADC_ChannelSelect `(i ~T0 @X0 0 e? ]
@@ -13,6 +14,104 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADC_ConversionResultGet `(i ~T0 @X0 0 e? ]
 "54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/main.p1
+"28 ./controller/EEPROM/EEPROM_controller.h
+[; ;./controller/EEPROM/EEPROM_controller.h: 28: _Bool MemIsUsable(void);
+[v _MemIsUsable `(a ~T0 @X0 0 ef ]
+"27 ./state/state.h
+[s S1621 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S1621 . monitoringPeriod alarmDuration alarmFlag alarmHours alarmMinutes alarmSeconds thresholdTemp thresholdLum clockHours clockMinutes ]
+"49
+[v _set_configs `(v ~T0 @X0 0 ef2`S1621`a ]
+"29 ./controller/EEPROM/EEPROM_controller.h
+[; ;./controller/EEPROM/EEPROM_controller.h: 29: Configs ReadConfigs(void);
+[v _ReadConfigs `(S1621 ~T0 @X0 0 ef ]
+"41 ./state/state.h
+[s S1622 `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i `uc -> 5 `i ]
+[n S1622 . maxTemp minTemp maxLum minLum ]
+"51
+[v _set_max_min `(v ~T0 @X0 0 ef2`S1622`a ]
+"32 ./controller/EEPROM/EEPROM_controller.h
+[; ;./controller/EEPROM/EEPROM_controller.h: 32: SensorsMaxMin ReadMaxMin(void);
+[v _ReadMaxMin `(S1622 ~T0 @X0 0 ef ]
+"48 ./state/state.h
+[v _set_default `(v ~T0 @X0 0 ef ]
+"20 ./clock/clock.h
+[; ;./clock/clock.h: 20: void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
+[v _set_clock `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"53 ./state/state.h
+[v _get_config_clock_hours `(uc ~T0 @X0 0 ef ]
+"54
+[v _get_config_clock_minutes `(uc ~T0 @X0 0 ef ]
+"56
+[v _set_mode `(v ~T0 @X0 0 ef1`uc ]
+"956 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 956:     struct {
+[s S53 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S53 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"955
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 955: typedef union {
+[u S52 `S53 1 ]
+[n S52 . . ]
+"967
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 967: extern volatile LATAbits_t LATAbits __attribute__((address(0x016)));
+[v _LATAbits `VS52 ~T0 @X0 0 e@22 ]
+"18 ./controller/LCD/lcd.h
+[; ;./controller/LCD/lcd.h: 18: void LCDinit(void);
+[v _LCDinit `(v ~T0 @X0 0 ef ]
+"32
+[; ;./controller/LCD/lcd.h: 32: void LCDWriteStr(char *s, unsigned char l, unsigned char c);
+[v _LCDWriteStr `(v ~T0 @X0 0 ef3`*uc`uc`uc ]
+[p mainexit ]
+"59 ./controller/EEPROM/../../mcc_generated_files/system/system.h
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"58 ./state/state.h
+[v _mode_has_changed `(a ~T0 @X0 0 ef ]
+"57
+[v _get_mode `(uc ~T0 @X0 0 ef ]
+"8 ./mode/normal_mode.h
+[; ;./mode/normal_mode.h: 8: void normal_mode_initialization(void);
+[v _normal_mode_initialization `(v ~T0 @X0 0 ef ]
+"4 ./mode/configuration_mode.h
+[; ;./mode/configuration_mode.h: 4: void configuration_mode_initialization(void);
+[v _configuration_mode_initialization `(v ~T0 @X0 0 ef ]
+[v F208 `(v ~T0 @X0 1 tf1`ul ]
+"20 /Applications/microchip/xc8/v2.50/pic/include/builtins.h
+[v __delay `JF208 ~T0 @X0 0 e ]
+[p i __delay ]
+"9 ./mode/normal_mode.h
+[; ;./mode/normal_mode.h: 9: void normal_mode_timer_handler(void);
+[v _normal_mode_timer_handler `(v ~T0 @X0 0 ef ]
+"54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
+[; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+========
+"28 controller/Luminosity/luminosity.h
+[; ;controller/Luminosity/luminosity.h: 28: uint8_t readLum(void);
+[v _readLum `(uc ~T0 @X0 0 ef ]
+"121 C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdio.h: 121: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"31 controller/Luminosity/luminosity.c
+[; ;controller/Luminosity/luminosity.c: 31:   ADC_ChannelSelect(0);
+[c E12225 60 61 62 63 0 .. ]
+[n E12225 . ADC_CHANNEL_VSS ADC_CHANNEL_TEMP ADC_CHANNEL_DAC1 ADC_CHANNEL_FVR_BUF1 ADC_CHANNEL_ANA0  ]
+"89 controller/Luminosity/../../mcc_generated_files/adc/adc.h
+[; ;controller/Luminosity/../../mcc_generated_files/adc/adc.h: 89: void ADC_ChannelSelect(adc_channel_t channel);
+[v _ADC_ChannelSelect `(v ~T0 @X0 0 ef1`E12225 ]
+"99
+[; ;controller/Luminosity/../../mcc_generated_files/adc/adc.h: 99: void ADC_ConversionStart(void);
+[v _ADC_ConversionStart `(v ~T0 @X0 0 ef ]
+"124
+[; ;controller/Luminosity/../../mcc_generated_files/adc/adc.h: 124: _Bool ADC_IsConversionDone(void);
+[v _ADC_IsConversionDone `(a ~T0 @X0 0 ef ]
+"132
+[; ;controller/Luminosity/../../mcc_generated_files/adc/adc.h: 132: adc_result_t ADC_ConversionResultGet(void);
+[v _ADC_ConversionResultGet `(s ~T0 @X0 0 ef ]
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.p1
+>>>>>>> write_init
 [; <" INDF0 equ 00h ;# ">
 "74
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 74: __asm("INDF1 equ 01h");
@@ -1649,12 +1748,156 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36489
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 36489: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+<<<<<<< HEAD
 "19 controller/Luminosity/luminosity.c
 [; ;controller/Luminosity/luminosity.c: 19: uint8_t readLum(void) {
+=======
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/main.p1
+"47 main.c
+[; ;main.c: 47: void global_initialization() {
+[v _global_initialization `(v ~T0 @X0 1 ef ]
+========
+"16 controller/Luminosity/luminosity.c
+[; ;controller/Luminosity/luminosity.c: 16: void get_luminosity(char *luminosity) {
+[v _get_luminosity `(v ~T0 @X0 1 ef1`*uc ]
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.p1
+{
+[e :U _get_luminosity ]
+[v _luminosity `*uc ~T0 @X0 1 r1 ]
+[f ]
+<<<<<<<< HEAD:Lab_1.X/build/default/debug/main.p1
+"48
+[; ;main.c: 48:     if(MemIsUsable()) {
+[e $ ! != -> ( _MemIsUsable ..  `i -> 0 `i 1624  ]
+{
+"49
+[; ;main.c: 49:         set_configs(ReadConfigs(), 0);
+[e ( _set_configs (2 , ( _ReadConfigs ..  -> -> 0 `i `a ]
+"50
+[; ;main.c: 50:         set_max_min(ReadMaxMin(), 0);
+[e ( _set_max_min (2 , ( _ReadMaxMin ..  -> -> 0 `i `a ]
+"51
+[; ;main.c: 51:     } else {
+}
+[e $U 1625  ]
+[e :U 1624 ]
+{
+"52
+[; ;main.c: 52:         set_default();
+[e ( _set_default ..  ]
+"53
+[; ;main.c: 53:     }
+}
+[e :U 1625 ]
+"54
+[; ;main.c: 54:     set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+[e ( _set_clock (3 , , ( _get_config_clock_hours ..  ( _get_config_clock_minutes ..  -> -> 0 `i `uc ]
+"55
+[; ;main.c: 55:     set_mode(0);
+[e ( _set_mode (1 -> -> 0 `i `uc ]
+"56
+[; ;main.c: 56:     do { LATAbits.LATA6 = ~LATAbits.LATA6; } while(0);
+[e :U 1628 ]
+{
+[e = . . _LATAbits 0 6 -> ~ -> . . _LATAbits 0 6 `i `uc ]
+}
+[e :U 1627 ]
+"57
+[; ;main.c: 57:     LCDinit();
+[e ( _LCDinit ..  ]
+"58
+[; ;main.c: 58:     LCDWriteStr("test",0,0);
+[e ( _LCDWriteStr (3 , , :s 1C -> -> 0 `i `uc -> -> 0 `i `uc ]
+"59
+[; ;main.c: 59: }
+[e :UE 1623 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"61
+[; ;main.c: 61: int main(void) {
+[v _main `(i ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"62
+[; ;main.c: 62:   SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"81
+[; ;main.c: 81:   global_initialization();
+[e ( _global_initialization ..  ]
+"83
+[; ;main.c: 83:   while (1) {
+[e :U 1631 ]
+{
+"84
+[; ;main.c: 84:     if(mode_has_changed()) {
+[e $ ! != -> ( _mode_has_changed ..  `i -> 0 `i 1633  ]
+{
+"85
+[; ;main.c: 85:       uint8_t mode = get_mode();
+[v _mode `uc ~T0 @X0 1 a ]
+[e = _mode ( _get_mode ..  ]
+"86
+[; ;main.c: 86:       if(mode == 0) {
+[e $ ! == -> _mode `i -> 0 `i 1634  ]
+{
+"87
+[; ;main.c: 87:         normal_mode_initialization();
+[e ( _normal_mode_initialization ..  ]
+"88
+[; ;main.c: 88:       } else {
+}
+[e $U 1635  ]
+[e :U 1634 ]
+{
+"89
+[; ;main.c: 89:         configuration_mode_initialization();
+[e ( _configuration_mode_initialization ..  ]
+"90
+[; ;main.c: 90:       }
+}
+[e :U 1635 ]
+"91
+[; ;main.c: 91:     }
+}
+[e :U 1633 ]
+"92
+[; ;main.c: 92:     _delay((unsigned long)((1000)*(32000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `ul `d .4000.0 `ul ]
+"93
+[; ;main.c: 93:     normal_mode_timer_handler();
+[e ( _normal_mode_timer_handler ..  ]
+"94
+[; ;main.c: 94:   }
+}
+[e :U 1630 ]
+[e $U 1631  ]
+[e :U 1632 ]
+"95
+[; ;main.c: 95: }
+[e :UE 1629 ]
+}
+[a 1C 116 101 115 116 0 ]
+========
+"18
+[; ;controller/Luminosity/luminosity.c: 18:   uint8_t lumValue = readLum();
+[v _lumValue `uc ~T0 @X0 1 a ]
+[e = _lumValue ( _readLum ..  ]
+"21
+[; ;controller/Luminosity/luminosity.c: 21:   sprintf(luminosity, "L %u", lumValue);
+[e ( _sprintf (1 , (. , _luminosity :s 1C -> _lumValue `i ]
+"22
+[; ;controller/Luminosity/luminosity.c: 22: }
+[e :UE 1620 ]
+}
+"29
+[; ;controller/Luminosity/luminosity.c: 29: uint8_t readLum(void) {
+>>>>>>> write_init
 [v _readLum `(uc ~T0 @X0 1 ef ]
 {
 [e :U _readLum ]
 [f ]
+<<<<<<< HEAD
 "21
 [; ;controller/Luminosity/luminosity.c: 21:   ADC_ChannelSelect(0);
 [e ( _ADC_ChannelSelect -> 0 `i ]
@@ -1688,3 +1931,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;controller/Luminosity/luminosity.c: 37: }
 [e :UE 1618 ]
 }
+=======
+"31
+[; ;controller/Luminosity/luminosity.c: 31:   ADC_ChannelSelect(0);
+[e ( _ADC_ChannelSelect (1 -> -> 0 `i `E12225 ]
+"34
+[; ;controller/Luminosity/luminosity.c: 34:   ADC_ConversionStart();
+[e ( _ADC_ConversionStart ..  ]
+"37
+[; ;controller/Luminosity/luminosity.c: 37:   while (!ADC_IsConversionDone())
+[e $U 1622  ]
+[e :U 1623 ]
+"38
+[; ;controller/Luminosity/luminosity.c: 38:     ;
+[e :U 1622 ]
+"37
+[; ;controller/Luminosity/luminosity.c: 37:   while (!ADC_IsConversionDone())
+[e $ ! != -> ( _ADC_IsConversionDone ..  `i -> 0 `i 1623  ]
+[e :U 1624 ]
+"41
+[; ;controller/Luminosity/luminosity.c: 41:   uint16_t rawResult = (uint16_t)ADC_ConversionResultGet();
+[v _rawResult `us ~T0 @X0 1 a ]
+[e = _rawResult -> ( _ADC_ConversionResultGet ..  `us ]
+"44
+[; ;controller/Luminosity/luminosity.c: 44:   uint8_t result3Bit = (uint8_t)(rawResult >> 7);
+[v _result3Bit `uc ~T0 @X0 1 a ]
+[e = _result3Bit -> >> -> _rawResult `ui -> 7 `i `uc ]
+"46
+[; ;controller/Luminosity/luminosity.c: 46:   return result3Bit;
+[e ) _result3Bit ]
+[e $UE 1621  ]
+"47
+[; ;controller/Luminosity/luminosity.c: 47: }
+[e :UE 1621 ]
+}
+[p f _sprintf 8389632 ]
+[a 1C 76 32 37 117 0 ]
+>>>>>>>> write_init:Lab_1.X/build/default/production/controller/Luminosity/luminosity.p1
+>>>>>>> write_init

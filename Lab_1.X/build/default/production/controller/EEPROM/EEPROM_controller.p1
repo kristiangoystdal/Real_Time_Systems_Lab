@@ -19,8 +19,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "217 controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h
 [; ;controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h: 217: eeprom_data_t EEPROM_Read(eeprom_address_t address);
 [v _EEPROM_Read `(uc ~T0 @X0 0 ef1`us ]
+<<<<<<< HEAD
 "54 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 54: __asm("INDF0 equ 00h");
+=======
+"54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18875.h: 54: __asm("INDF0 equ 00h");
+>>>>>>> write_init
 [; <" INDF0 equ 00h ;# ">
 "74
 [; ;/Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h: 74: __asm("INDF1 equ 01h");

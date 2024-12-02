@@ -11,9 +11,15 @@ state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host
 state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_types.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../i2c_host/i2c_host_interface.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../nvm/nvm.h  \
+<<<<<<< HEAD
 state/../controller/EEPROM/../../mcc_generated_files/system/../pwm/pwm6.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h  \
 state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h 
+=======
+state/../controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h  \
+state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h  \
+state/../controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h 
+>>>>>>> write_init
