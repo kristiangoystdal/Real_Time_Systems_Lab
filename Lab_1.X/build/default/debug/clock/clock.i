@@ -121,15 +121,15 @@ typedef uint32_t uint_fast32_t;
 # 20 "clock/clock.h"
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
-uint8_t increment_clock();
+uint8_t increment_clock(void);
 
-uint8_t increment_seconds();
+uint8_t increment_seconds(void);
 
-uint8_t increment_minutes();
+uint8_t increment_minutes(void);
 
-uint8_t increment_hours();
+uint8_t increment_hours(void);
 
-uint8_t get_clock(uint8_t precision, char* clock);
+uint8_t get_clock(uint8_t precision, char clock[9]);
 # 3 "clock/clock.c" 2
 
 static uint8_t _hours = 0;
@@ -181,13 +181,13 @@ uint8_t increment_hours() {
   return 2;
 }
 
-uint8_t get_clock(uint8_t precision, char* clock) {
+uint8_t get_clock(uint8_t precision, char clock[9]) {
   switch (precision) {
     case 0:
       clock[0] = 0x30 + _seconds/10;
       clock[1] = 0x30 + (_seconds%10);
       clock[2] = '\0';
-      return 0;
+      return 6;
     case 1:
       clock[0] = 0x30 + _minutes/10;
       clock[1] = 0x30 + (_minutes%10);
@@ -197,24 +197,24 @@ uint8_t get_clock(uint8_t precision, char* clock) {
       clock[0] = 0x30 + _hours/10;
       clock[1] = 0x30 + (_hours%10);
       clock[2] = '\0';
-      return 6;
-    case 3:
-      clock[0] = 0x30 + _seconds/10;
-      clock[1] = 0x30 + (_seconds%10);
-      clock[2] = ':';
-      clock[3] = 0x30 + _minutes/10;
-      clock[4] = 0x30 + (_minutes%10);
-      clock[5] = '\0';
       return 0;
+    case 3:
+      clock[0] = 0x30 + _minutes/10;
+      clock[1] = 0x30 + (_minutes%10);
+      clock[2] = ':';
+      clock[3] = 0x30 + _seconds/10;
+      clock[4] = 0x30 + (_seconds%10);
+      clock[5] = '\0';
+      return 3;
     default:
-      clock[0] = 0x30 + _seconds/10;
-      clock[1] = 0x30 + (_seconds%10);
+      clock[0] = 0x30 + _hours/10;
+      clock[1] = 0x30 + (_hours%10);
       clock[2] = ':';
       clock[3] = 0x30 + _minutes/10;
       clock[4] = 0x30 + (_minutes%10);
       clock[5] = ':';
-      clock[6] = 0x30 + _hours/10;
-      clock[7] = 0x30 + (_hours%10);
+      clock[6] = 0x30 + _seconds/10;
+      clock[7] = 0x30 + (_seconds%10);
       clock[8] = '\0';
       return 0;
   }

@@ -164,7 +164,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 10 ]
 }
 "53
-[; ;clock/clock.c: 53: uint8_t get_clock(uint8_t precision, char* clock) {
+[; ;clock/clock.c: 53: uint8_t get_clock(uint8_t precision, char clock[9]) {
 [v _get_clock `(uc ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _get_clock ]
@@ -188,8 +188,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;clock/clock.c: 58:       clock[2] = '\0';
 [e = *U + _clock * -> -> 2 `i `x -> -> # *U _clock `i `x -> -> 0 `ui `uc ]
 "59
-[; ;clock/clock.c: 59:       return 0;
-[e ) -> -> 0 `i `uc ]
+[; ;clock/clock.c: 59:       return 6;
+[e ) -> -> 6 `i `uc ]
 [e $UE 12  ]
 "60
 [; ;clock/clock.c: 60:     case 1:
@@ -220,43 +220,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;clock/clock.c: 68:       clock[2] = '\0';
 [e = *U + _clock * -> -> 2 `i `x -> -> # *U _clock `i `x -> -> 0 `ui `uc ]
 "69
-[; ;clock/clock.c: 69:       return 6;
-[e ) -> -> 6 `i `uc ]
+[; ;clock/clock.c: 69:       return 0;
+[e ) -> -> 0 `i `uc ]
 [e $UE 12  ]
 "70
 [; ;clock/clock.c: 70:     case 3:
 [e :U 18 ]
 "71
-[; ;clock/clock.c: 71:       clock[0] = 0x30 + _seconds/10;
-[e = *U + _clock * -> -> 0 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __seconds `i -> 10 `i `uc ]
+[; ;clock/clock.c: 71:       clock[0] = 0x30 + _minutes/10;
+[e = *U + _clock * -> -> 0 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __minutes `i -> 10 `i `uc ]
 "72
-[; ;clock/clock.c: 72:       clock[1] = 0x30 + (_seconds%10);
-[e = *U + _clock * -> -> 1 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __seconds `i -> 10 `i `uc ]
+[; ;clock/clock.c: 72:       clock[1] = 0x30 + (_minutes%10);
+[e = *U + _clock * -> -> 1 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __minutes `i -> 10 `i `uc ]
 "73
 [; ;clock/clock.c: 73:       clock[2] = ':';
 [e = *U + _clock * -> -> 2 `i `x -> -> # *U _clock `i `x -> -> 58 `ui `uc ]
 "74
-[; ;clock/clock.c: 74:       clock[3] = 0x30 + _minutes/10;
-[e = *U + _clock * -> -> 3 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __minutes `i -> 10 `i `uc ]
+[; ;clock/clock.c: 74:       clock[3] = 0x30 + _seconds/10;
+[e = *U + _clock * -> -> 3 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __seconds `i -> 10 `i `uc ]
 "75
-[; ;clock/clock.c: 75:       clock[4] = 0x30 + (_minutes%10);
-[e = *U + _clock * -> -> 4 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __minutes `i -> 10 `i `uc ]
+[; ;clock/clock.c: 75:       clock[4] = 0x30 + (_seconds%10);
+[e = *U + _clock * -> -> 4 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __seconds `i -> 10 `i `uc ]
 "76
 [; ;clock/clock.c: 76:       clock[5] = '\0';
 [e = *U + _clock * -> -> 5 `i `x -> -> # *U _clock `i `x -> -> 0 `ui `uc ]
 "77
-[; ;clock/clock.c: 77:       return 0;
-[e ) -> -> 0 `i `uc ]
+[; ;clock/clock.c: 77:       return 3;
+[e ) -> -> 3 `i `uc ]
 [e $UE 12  ]
 "78
 [; ;clock/clock.c: 78:     default:
 [e :U 19 ]
 "79
-[; ;clock/clock.c: 79:       clock[0] = 0x30 + _seconds/10;
-[e = *U + _clock * -> -> 0 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __seconds `i -> 10 `i `uc ]
+[; ;clock/clock.c: 79:       clock[0] = 0x30 + _hours/10;
+[e = *U + _clock * -> -> 0 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __hours `i -> 10 `i `uc ]
 "80
-[; ;clock/clock.c: 80:       clock[1] = 0x30 + (_seconds%10);
-[e = *U + _clock * -> -> 1 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __seconds `i -> 10 `i `uc ]
+[; ;clock/clock.c: 80:       clock[1] = 0x30 + (_hours%10);
+[e = *U + _clock * -> -> 1 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __hours `i -> 10 `i `uc ]
 "81
 [; ;clock/clock.c: 81:       clock[2] = ':';
 [e = *U + _clock * -> -> 2 `i `x -> -> # *U _clock `i `x -> -> 58 `ui `uc ]
@@ -270,11 +270,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;clock/clock.c: 84:       clock[5] = ':';
 [e = *U + _clock * -> -> 5 `i `x -> -> # *U _clock `i `x -> -> 58 `ui `uc ]
 "85
-[; ;clock/clock.c: 85:       clock[6] = 0x30 + _hours/10;
-[e = *U + _clock * -> -> 6 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __hours `i -> 10 `i `uc ]
+[; ;clock/clock.c: 85:       clock[6] = 0x30 + _seconds/10;
+[e = *U + _clock * -> -> 6 `i `x -> -> # *U _clock `i `x -> + -> 48 `i / -> __seconds `i -> 10 `i `uc ]
 "86
-[; ;clock/clock.c: 86:       clock[7] = 0x30 + (_hours%10);
-[e = *U + _clock * -> -> 7 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __hours `i -> 10 `i `uc ]
+[; ;clock/clock.c: 86:       clock[7] = 0x30 + (_seconds%10);
+[e = *U + _clock * -> -> 7 `i `x -> -> # *U _clock `i `x -> + -> 48 `i % -> __seconds `i -> 10 `i `uc ]
 "87
 [; ;clock/clock.c: 87:       clock[8] = '\0';
 [e = *U + _clock * -> -> 8 `i `x -> -> # *U _clock `i `x -> -> 0 `ui `uc ]

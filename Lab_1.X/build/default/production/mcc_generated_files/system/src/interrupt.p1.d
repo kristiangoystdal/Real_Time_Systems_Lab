@@ -10,13 +10,8 @@ mcc_generated_files/system/src/../../system/../i2c_host/i2c_host_event_types.h  
 mcc_generated_files/system/src/../../system/../i2c_host/i2c_host_types.h  \
 mcc_generated_files/system/src/../../system/../i2c_host/i2c_host_interface.h  \
 mcc_generated_files/system/src/../../system/../nvm/nvm.h  \
-<<<<<<< HEAD
 mcc_generated_files/system/src/../../system/../pwm/pwm6.h  \
 mcc_generated_files/system/src/../../system/../timer/tmr1.h  \
 mcc_generated_files/system/src/../../system/../timer/tmr1_deprecated.h  \
 mcc_generated_files/system/src/../../system/../timer/tmr6.h  \
 mcc_generated_files/system/src/../../system/../timer/tmr6_deprecated.h 
-=======
-mcc_generated_files/system/src/../../system/../timer/tmr1.h  \
-mcc_generated_files/system/src/../../system/../timer/tmr1_deprecated.h 
->>>>>>> initialization_and_modes

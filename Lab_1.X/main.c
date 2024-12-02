@@ -39,6 +39,7 @@
 #include "clock/clock.h"
 #include "mode/normal_mode.h"
 #include "mode/configuration_mode.h"
+#include "controller/LCD/lcd.h"
 /*
     Main application
 */
@@ -52,6 +53,8 @@ void global_initialization() {
     }
     set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
     set_mode(NORMAL_MODE);
+    IO_RA6_Toggle();
+    LCDinit();
 }
 
 int main(void) {
@@ -85,6 +88,7 @@ int main(void) {
         configuration_mode_initialization();
       }
     }
-    SLEEP();
+    __delay_ms(1000);
+    normal_mode_timer_handler();
   }
 }

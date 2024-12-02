@@ -15,4 +15,5 @@ controller/EEPROM/../../mcc_generated_files/system/../system/interrupt.h  \
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1.h  \
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr1_deprecated.h  \
 controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6.h  \
-controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h 
+controller/EEPROM/../../mcc_generated_files/system/../timer/tmr6_deprecated.h  \
+controller/EEPROM/../../state/state.h 

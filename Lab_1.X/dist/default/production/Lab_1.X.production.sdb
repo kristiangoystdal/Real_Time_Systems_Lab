@@ -75,6 +75,8 @@ TMR6_LC4_OUT 17
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
+"3 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
 "10 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/Umul8_16.c
@@ -83,12 +85,30 @@ TMR6_LC4_OUT 17
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"8 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/clock/clock.c
+[v _set_clock set_clock `(v  1 e 1 0 ]
+"14
+[v _increment_clock increment_clock `(uc  1 e 1 0 ]
+"53
+[v _get_clock get_clock `(uc  1 e 1 0 ]
 "3 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
 [v _CalculateChecksum CalculateChecksum `(uc  1 e 1 0 ]
-"26 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.h
+"25
+[v _WriteChecksum WriteChecksum `(v  1 e 1 0 ]
+"30
+[v _MemIsUsable MemIsUsable `(a  1 e 1 0 ]
+"27 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.h
 [s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
-"34 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+"45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
 [v _ReadConfigs ReadConfigs `(S36  1 e 10 0 ]
+"61
+[v _WriteConfigs WriteConfigs `(v  1 e 1 0 ]
+"76
+[v _WriteMaxMin WriteMaxMin `(v  1 e 1 0 ]
+"41 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.h
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"87 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _ReadMaxMin ReadMaxMin `(S47  1 e 20 0 ]
 "44 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/I2C/i2c.c
 [v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
 "59
@@ -113,13 +133,13 @@ TMR6_LC4_OUT 17
 [v _LCDpos LCDpos `(v  1 e 1 0 ]
 "142
 [v _LCDWriteStr LCDWriteStr `(v  1 e 1 0 ]
-"5 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/PWM/pwm.c
-[v _PWM_Output_D4_Enable PWM_Output_D4_Enable `(v  1 e 1 0 ]
-"19
-[v _PWM_Output_D4_Disable PWM_Output_D4_Disable `(v  1 e 1 0 ]
-"45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
+"5 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LED/led.c
+[v _turn_on turn_on `(v  1 e 1 0 ]
+"17
+[v _turn_off turn_off `(v  1 e 1 0 ]
+"47 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
 [v _global_initialization global_initialization `(v  1 e 1 0 ]
-"51
+"60
 [v _main main `(i  1 e 2 0 ]
 "114 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
@@ -247,21 +267,45 @@ TMR6_LC4_OUT 17
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 "161
 [v _TMR6_DefaultPeriodMatchCallback TMR6_DefaultPeriodMatchCallback `(v  1 s 1 TMR6_DefaultPeriodMatchCallback ]
-[s S1355 . 1 `uc 1 INTEDG 1 0 :1:0 
+"5 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mode/configuration_mode.c
+[v _configuration_mode_initialization configuration_mode_initialization `(v  1 e 1 0 ]
+"10 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mode/normal_mode.c
+[v _normal_mode_initialization normal_mode_initialization `(v  1 e 1 0 ]
+"18
+[v _normal_mode_timer_handler normal_mode_timer_handler `(v  1 e 1 0 ]
+"11 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v _set_configs set_configs `(v  1 e 1 0 ]
+"23
+[v _set_max_min set_max_min `(v  1 e 1 0 ]
+"31
+[v _set_default set_default `(v  1 e 1 0 ]
+"51
+[v _get_config_clock_hours get_config_clock_hours `(uc  1 e 1 0 ]
+"55
+[v _get_config_clock_minutes get_config_clock_minutes `(uc  1 e 1 0 ]
+"59
+[v _measure_to_string measure_to_string `(v  1 e 1 0 ]
+"96
+[v _set_mode set_mode `(v  1 e 1 0 ]
+"101
+[v _get_mode get_mode `(uc  1 e 1 0 ]
+"106
+[v _mode_has_changed mode_has_changed `(a  1 e 1 0 ]
+[s S1434 . 1 `uc 1 INTEDG 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "364 /Users/einarbergslid/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8/pic/include/proc/pic16f18875.h
-[u S1360 . 1 `S1355 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES1360  1 e 1 @11 ]
+[u S1439 . 1 `S1434 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1439  1 e 1 @11 ]
 "670
 [v _TRISA TRISA `VEuc  1 e 1 @17 ]
 "732
 [v _TRISB TRISB `VEuc  1 e 1 @18 ]
 "794
 [v _TRISC TRISC `VEuc  1 e 1 @19 ]
-[s S173 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S200 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -271,15 +315,15 @@ TMR6_LC4_OUT 17
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "811
-[u S182 . 1 `S173 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES182  1 e 1 @19 ]
+[u S209 . 1 `S200 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES209  1 e 1 @19 ]
 "856
 [v _TRISD TRISD `VEuc  1 e 1 @20 ]
 "918
 [v _TRISE TRISE `VEuc  1 e 1 @21 ]
 "950
 [v _LATA LATA `VEuc  1 e 1 @22 ]
-[s S2158 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S747 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -289,8 +333,8 @@ TMR6_LC4_OUT 17
 `uc 1 LATA7 1 0 :1:7 
 ]
 "967
-[u S2167 . 1 `S2158 1 . 1 0 ]
-[v _LATAbits LATAbits `VES2167  1 e 1 @22 ]
+[u S756 . 1 `S747 1 . 1 0 ]
+[v _LATAbits LATAbits `VES756  1 e 1 @22 ]
 "1012
 [v _LATB LATB `VEuc  1 e 1 @23 ]
 "1074
@@ -305,7 +349,7 @@ TMR6_LC4_OUT 17
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
 "4814
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
-[s S271 . 1 `uc 1 BF 1 0 :1:0 
+[s S298 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -315,33 +359,33 @@ TMR6_LC4_OUT 17
 `uc 1 SMP 1 0 :1:7 
 ]
 "4923
-[s S280 . 1 `uc 1 . 1 0 :2:0 
+[s S307 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S285 . 1 `uc 1 . 1 0 :2:0 
+[s S312 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S290 . 1 `uc 1 . 1 0 :2:0 
+[s S317 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S295 . 1 `uc 1 . 1 0 :2:0 
+[s S322 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S300 . 1 `uc 1 . 1 0 :2:0 
+[s S327 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S306 . 1 `uc 1 BF1 1 0 :1:0 
+[s S333 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -350,66 +394,66 @@ TMR6_LC4_OUT 17
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S315 . 1 `uc 1 . 1 0 :2:0 
+[s S342 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S321 . 1 `uc 1 . 1 0 :2:0 
+[s S348 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S327 . 1 `uc 1 . 1 0 :2:0 
+[s S354 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S333 . 1 `uc 1 . 1 0 :2:0 
+[s S360 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S338 . 1 `uc 1 . 1 0 :2:0 
+[s S365 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S343 . 1 `uc 1 . 1 0 :2:0 
+[s S370 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S348 . 1 `uc 1 . 1 0 :2:0 
+[s S375 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S353 . 1 `uc 1 . 1 0 :2:0 
+[s S380 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S358 . 1 `S271 1 . 1 0 `S280 1 . 1 0 `S285 1 . 1 0 `S290 1 . 1 0 `S295 1 . 1 0 `S300 1 . 1 0 `S306 1 . 1 0 `S315 1 . 1 0 `S321 1 . 1 0 `S327 1 . 1 0 `S333 1 . 1 0 `S338 1 . 1 0 `S343 1 . 1 0 `S348 1 . 1 0 `S353 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES358  1 e 1 @399 ]
+[u S385 . 1 `S298 1 . 1 0 `S307 1 . 1 0 `S312 1 . 1 0 `S317 1 . 1 0 `S322 1 . 1 0 `S327 1 . 1 0 `S333 1 . 1 0 `S342 1 . 1 0 `S348 1 . 1 0 `S354 1 . 1 0 `S360 1 . 1 0 `S365 1 . 1 0 `S370 1 . 1 0 `S375 1 . 1 0 `S380 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES385  1 e 1 @399 ]
 "5178
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
-[s S128 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S155 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "5208
-[s S134 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S161 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S139 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S166 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -418,11 +462,11 @@ TMR6_LC4_OUT 17
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S148 . 1 `S128 1 . 1 0 `S134 1 . 1 0 `S139 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES148  1 e 1 @400 ]
+[u S175 . 1 `S155 1 . 1 0 `S161 1 . 1 0 `S166 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES175  1 e 1 @400 ]
 "5298
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @401 ]
-[s S194 . 1 `uc 1 SEN 1 0 :1:0 
+[s S221 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -432,17 +476,17 @@ TMR6_LC4_OUT 17
 `uc 1 GCEN 1 0 :1:7 
 ]
 "5345
-[s S203 . 1 `uc 1 . 1 0 :1:0 
+[s S230 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S206 . 1 `uc 1 . 1 0 :1:0 
+[s S233 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S213 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S240 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -451,15 +495,15 @@ TMR6_LC4_OUT 17
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S222 . 1 `uc 1 . 1 0 :1:0 
+[s S249 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S229 . 1 `S194 1 . 1 0 `S203 1 . 1 0 `S206 1 . 1 0 `S213 1 . 1 0 `S222 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES229  1 e 1 @401 ]
+[u S256 . 1 `S221 1 . 1 0 `S230 1 . 1 0 `S233 1 . 1 0 `S240 1 . 1 0 `S249 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES256  1 e 1 @401 ]
 "5485
 [v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @402 ]
 "6497
@@ -468,32 +512,32 @@ TMR6_LC4_OUT 17
 [v _TMR1H TMR1H `VEuc  1 e 1 @525 ]
 "6787
 [v _T1CON T1CON `VEuc  1 e 1 @526 ]
-[s S1656 . 1 `uc 1 ON 1 0 :1:0 
+[s S1735 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
 "6818
-[s S1662 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S1741 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S1669 . 1 `uc 1 . 1 0 :4:0 
+[s S1748 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
-[s S1673 . 1 `uc 1 . 1 0 :1:0 
+[s S1752 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD161 1 0 :1:1 
 ]
-[u S1676 . 1 `S1656 1 . 1 0 `S1662 1 . 1 0 `S1669 1 . 1 0 `S1673 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES1676  1 e 1 @526 ]
+[u S1755 . 1 `S1735 1 . 1 0 `S1741 1 . 1 0 `S1748 1 . 1 0 `S1752 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1755  1 e 1 @526 ]
 "6883
 [v _T1GCON T1GCON `VEuc  1 e 1 @527 ]
-[s S1778 . 1 `uc 1 . 1 0 :2:0 
+[s S1857 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO_nDONE 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -502,7 +546,7 @@ TMR6_LC4_OUT 17
 `uc 1 GE 1 0 :1:7 
 ]
 "6917
-[s S1786 . 1 `uc 1 . 1 0 :2:0 
+[s S1865 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -510,45 +554,45 @@ TMR6_LC4_OUT 17
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
-[s S1794 . 1 `uc 1 . 1 0 :3:0 
+[s S1873 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
-[u S1797 . 1 `S1778 1 . 1 0 `S1786 1 . 1 0 `S1794 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES1797  1 e 1 @527 ]
+[u S1876 . 1 `S1857 1 . 1 0 `S1865 1 . 1 0 `S1873 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1876  1 e 1 @527 ]
 "7079
 [v _T1GATE T1GATE `VEuc  1 e 1 @528 ]
 "7245
 [v _T1CLK T1CLK `VEuc  1 e 1 @529 ]
-[s S1413 . 1 `uc 1 C5TSEL 1 0 :2:0 
+[s S1492 . 1 `uc 1 C5TSEL 1 0 :2:0 
 `uc 1 P6TSEL 1 0 :2:2 
 `uc 1 P7TSEL 1 0 :2:4 
 ]
 "9289
-[s S1417 . 1 `uc 1 C5TSEL0 1 0 :1:0 
+[s S1496 . 1 `uc 1 C5TSEL0 1 0 :1:0 
 `uc 1 C5TSEL1 1 0 :1:1 
 `uc 1 P6TSEL0 1 0 :1:2 
 `uc 1 P6TSEL1 1 0 :1:3 
 `uc 1 P7TSEL0 1 0 :1:4 
 `uc 1 P7TSEL1 1 0 :1:5 
 ]
-[u S1424 . 1 `S1413 1 . 1 0 `S1417 1 . 1 0 ]
-[v _CCPTMRS1bits CCPTMRS1bits `VES1424  1 e 1 @543 ]
+[u S1503 . 1 `S1492 1 . 1 0 `S1496 1 . 1 0 ]
+[v _CCPTMRS1bits CCPTMRS1bits `VES1503  1 e 1 @543 ]
 "10539
 [v _T6TMR T6TMR `VEuc  1 e 1 @664 ]
 "10577
 [v _T6PR T6PR `VEuc  1 e 1 @665 ]
 "10615
 [v _T6CON T6CON `VEuc  1 e 1 @666 ]
-[s S1910 . 1 `uc 1 OUTPS 1 0 :4:0 
+[s S1989 . 1 `uc 1 OUTPS 1 0 :4:0 
 `uc 1 CKPS 1 0 :3:4 
 `uc 1 ON 1 0 :1:7 
 ]
 "10651
-[s S1914 . 1 `uc 1 T6OUTPS 1 0 :4:0 
+[s S1993 . 1 `uc 1 T6OUTPS 1 0 :4:0 
 `uc 1 T6CKPS 1 0 :3:4 
 `uc 1 T6ON 1 0 :1:7 
 ]
-[s S1918 . 1 `uc 1 T6OUTPS0 1 0 :1:0 
+[s S1997 . 1 `uc 1 T6OUTPS0 1 0 :1:0 
 `uc 1 T6OUTPS1 1 0 :1:1 
 `uc 1 T6OUTPS2 1 0 :1:2 
 `uc 1 T6OUTPS3 1 0 :1:3 
@@ -556,7 +600,7 @@ TMR6_LC4_OUT 17
 `uc 1 T6CKPS1 1 0 :1:5 
 `uc 1 T6CKPS2 1 0 :1:6 
 ]
-[s S1926 . 1 `uc 1 OUTPS0 1 0 :1:0 
+[s S2005 . 1 `uc 1 OUTPS0 1 0 :1:0 
 `uc 1 OUTPS1 1 0 :1:1 
 `uc 1 OUTPS2 1 0 :1:2 
 `uc 1 OUTPS3 1 0 :1:3 
@@ -565,73 +609,73 @@ TMR6_LC4_OUT 17
 `uc 1 CKPS2 1 0 :1:6 
 `uc 1 TMR6ON 1 0 :1:7 
 ]
-[u S1935 . 1 `S1910 1 . 1 0 `S1914 1 . 1 0 `S1918 1 . 1 0 `S1926 1 . 1 0 ]
-[v _T6CONbits T6CONbits `VES1935  1 e 1 @666 ]
+[u S2014 . 1 `S1989 1 . 1 0 `S1993 1 . 1 0 `S1997 1 . 1 0 `S2005 1 . 1 0 ]
+[v _T6CONbits T6CONbits `VES2014  1 e 1 @666 ]
 "10761
 [v _T6HLT T6HLT `VEuc  1 e 1 @667 ]
-[s S1998 . 1 `uc 1 MODE 1 0 :5:0 
+[s S2077 . 1 `uc 1 MODE 1 0 :5:0 
 `uc 1 CKSYNC 1 0 :1:5 
 `uc 1 CKPOL 1 0 :1:6 
 `uc 1 PSYNC 1 0 :1:7 
 ]
 "10794
-[s S2003 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S2082 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 MODE3 1 0 :1:3 
 `uc 1 MODE4 1 0 :1:4 
 ]
-[s S2009 . 1 `uc 1 T6MODE 1 0 :5:0 
+[s S2088 . 1 `uc 1 T6MODE 1 0 :5:0 
 `uc 1 T6CKSYNC 1 0 :1:5 
 `uc 1 T6CKPOL 1 0 :1:6 
 `uc 1 T6PSYNC 1 0 :1:7 
 ]
-[s S2014 . 1 `uc 1 T6MODE0 1 0 :1:0 
+[s S2093 . 1 `uc 1 T6MODE0 1 0 :1:0 
 `uc 1 T6MODE1 1 0 :1:1 
 `uc 1 T6MODE2 1 0 :1:2 
 `uc 1 T6MODE3 1 0 :1:3 
 `uc 1 T6MODE4 1 0 :1:4 
 ]
-[u S2020 . 1 `S1998 1 . 1 0 `S2003 1 . 1 0 `S2009 1 . 1 0 `S2014 1 . 1 0 ]
-[v _T6HLTbits T6HLTbits `VES2020  1 e 1 @667 ]
+[u S2099 . 1 `S2077 1 . 1 0 `S2082 1 . 1 0 `S2088 1 . 1 0 `S2093 1 . 1 0 ]
+[v _T6HLTbits T6HLTbits `VES2099  1 e 1 @667 ]
 "10889
 [v _T6CLKCON T6CLKCON `VEuc  1 e 1 @668 ]
 "11047
 [v _T6RST T6RST `VEuc  1 e 1 @669 ]
-[s S2066 . 1 `uc 1 RSEL 1 0 :5:0 
+[s S2145 . 1 `uc 1 RSEL 1 0 :5:0 
 ]
 "11074
-[s S2068 . 1 `uc 1 RSEL0 1 0 :1:0 
+[s S2147 . 1 `uc 1 RSEL0 1 0 :1:0 
 `uc 1 RSEL1 1 0 :1:1 
 `uc 1 RSEL2 1 0 :1:2 
 `uc 1 RSEL3 1 0 :1:3 
 `uc 1 RSEL4 1 0 :1:4 
 ]
-[s S2074 . 1 `uc 1 T6RSEL 1 0 :5:0 
+[s S2153 . 1 `uc 1 T6RSEL 1 0 :5:0 
 ]
-[s S2076 . 1 `uc 1 T6RSEL0 1 0 :1:0 
+[s S2155 . 1 `uc 1 T6RSEL0 1 0 :1:0 
 `uc 1 T6RSEL1 1 0 :1:1 
 `uc 1 T6RSEL2 1 0 :1:2 
 `uc 1 T6RSEL3 1 0 :1:3 
 `uc 1 T6RSEL4 1 0 :1:4 
 ]
-[u S2082 . 1 `S2066 1 . 1 0 `S2068 1 . 1 0 `S2074 1 . 1 0 `S2076 1 . 1 0 ]
-[v _T6RSTbits T6RSTbits `VES2082  1 e 1 @669 ]
+[u S2161 . 1 `S2145 1 . 1 0 `S2147 1 . 1 0 `S2153 1 . 1 0 `S2155 1 . 1 0 ]
+[v _T6RSTbits T6RSTbits `VES2161  1 e 1 @669 ]
 "12311
 [v _PWM6DCL PWM6DCL `VEuc  1 e 1 @908 ]
 "12377
 [v _PWM6DCH PWM6DCH `VEuc  1 e 1 @909 ]
 "12547
 [v _PWM6CON PWM6CON `VEuc  1 e 1 @910 ]
-[s S1505 . 1 `uc 1 INTF 1 0 :1:0 
+[s S1584 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "21269
-[u S1510 . 1 `S1505 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES1510  1 e 1 @1804 ]
-[s S463 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S1589 . 1 `S1584 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1589  1 e 1 @1804 ]
+[s S490 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -639,9 +683,9 @@ TMR6_LC4_OUT 17
 `uc 1 RCIF 1 0 :1:5 
 ]
 "21376
-[u S470 . 1 `S463 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES470  1 e 1 @1807 ]
-[s S1553 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S497 . 1 `S490 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES497  1 e 1 @1807 ]
+[s S1632 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -649,9 +693,9 @@ TMR6_LC4_OUT 17
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "21426
-[u S1560 . 1 `S1553 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES1560  1 e 1 @1808 ]
-[s S1736 . 1 `uc 1 TMR1GIF 1 0 :1:0 
+[u S1639 . 1 `S1632 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES1639  1 e 1 @1808 ]
+[s S1815 . 1 `uc 1 TMR1GIF 1 0 :1:0 
 `uc 1 TMR3GIF 1 0 :1:1 
 `uc 1 TMR5GIF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -661,9 +705,9 @@ TMR6_LC4_OUT 17
 `uc 1 CLC4IF 1 0 :1:7 
 ]
 "21478
-[u S1745 . 1 `S1736 1 . 1 0 ]
-[v _PIR5bits PIR5bits `VES1745  1 e 1 @1809 ]
-[s S1176 . 1 `uc 1 SSP1IE 1 0 :1:0 
+[u S1824 . 1 `S1815 1 . 1 0 ]
+[v _PIR5bits PIR5bits `VES1824  1 e 1 @1809 ]
+[s S1255 . 1 `uc 1 SSP1IE 1 0 :1:0 
 `uc 1 BCL1IE 1 0 :1:1 
 `uc 1 SSP2IE 1 0 :1:2 
 `uc 1 BCL2IE 1 0 :1:3 
@@ -671,9 +715,9 @@ TMR6_LC4_OUT 17
 `uc 1 RCIE 1 0 :1:5 
 ]
 "21798
-[u S1183 . 1 `S1176 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES1183  1 e 1 @1817 ]
-[s S1536 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S1262 . 1 `S1255 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1262  1 e 1 @1817 ]
+[s S1615 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 TMR3IE 1 0 :1:2 
 `uc 1 TMR4IE 1 0 :1:3 
@@ -681,9 +725,9 @@ TMR6_LC4_OUT 17
 `uc 1 TMR6IE 1 0 :1:5 
 ]
 "21848
-[u S1543 . 1 `S1536 1 . 1 0 ]
-[v _PIE4bits PIE4bits `VES1543  1 e 1 @1818 ]
-[s S1757 . 1 `uc 1 TMR1GIE 1 0 :1:0 
+[u S1622 . 1 `S1615 1 . 1 0 ]
+[v _PIE4bits PIE4bits `VES1622  1 e 1 @1818 ]
+[s S1836 . 1 `uc 1 TMR1GIE 1 0 :1:0 
 `uc 1 TMR3GIE 1 0 :1:1 
 `uc 1 TMR5GIE 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -693,8 +737,8 @@ TMR6_LC4_OUT 17
 `uc 1 CLC4IE 1 0 :1:7 
 ]
 "21900
-[u S1766 . 1 `S1757 1 . 1 0 ]
-[v _PIE5bits PIE5bits `VES1766  1 e 1 @1819 ]
+[u S1845 . 1 `S1836 1 . 1 0 ]
+[v _PIE5bits PIE5bits `VES1845  1 e 1 @1819 ]
 "23101
 [v _NVMADRL NVMADRL `VEuc  1 e 1 @2074 ]
 "23163
@@ -703,7 +747,7 @@ TMR6_LC4_OUT 17
 [v _NVMDATL NVMDATL `VEuc  1 e 1 @2076 ]
 "23281
 [v _NVMDATH NVMDATH `VEuc  1 e 1 @2077 ]
-[s S1329 . 1 `uc 1 RD 1 0 :1:0 
+[s S1408 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -712,8 +756,8 @@ TMR6_LC4_OUT 17
 `uc 1 NVMREGS 1 0 :1:6 
 ]
 "23347
-[u S1337 . 1 `S1329 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES1337  1 e 1 @2078 ]
+[u S1416 . 1 `S1408 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES1416  1 e 1 @2078 ]
 "23387
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @2079 ]
 "23451
@@ -820,9 +864,9 @@ TMR6_LC4_OUT 17
 [v __seconds _seconds `uc  1 s 1 _seconds ]
 "96 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Callback I2C1_Callback `*.37(v  1 s 2 I2C1_Callback ]
-[s S843 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.2uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12218 1 errorState 1 12 `E12227 1 state 1 13 ]
+[s S922 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.2uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12218 1 errorState 1 12 `E12227 1 state 1 13 ]
 "97
-[v _i2c1Status i2c1Status `VES843  1 e 14 0 ]
+[v _i2c1Status i2c1Status `VES922  1 e 14 0 ]
 "99
 [v _i2c1_eventTable i2c1_eventTable `DC[9]*.37(E12227  1 e 18 0 ]
 "40 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
@@ -839,109 +883,88 @@ TMR6_LC4_OUT 17
 [v _TMR1_GateCallback TMR1_GateCallback `*.37(v  1 s 2 TMR1_GateCallback ]
 "43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_PeriodMatchCallback TMR6_PeriodMatchCallback `*.37(v  1 s 2 TMR6_PeriodMatchCallback ]
-"51 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
+"8 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mode/normal_mode.c
+[v __s2_state _s2_state `uc  1 s 1 _s2_state ]
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"6 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v __configs _configs `S36  1 s 10 _configs ]
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"7
+[v __sensorsMaxMin _sensorsMaxMin `S47  1 s 20 _sensorsMaxMin ]
+"8
+[v __mode _mode `uc  1 s 1 _mode ]
+"9
+[v __mode_has_changed _mode_has_changed `a  1 s 1 _mode_has_changed ]
+"60 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"74
-[v main@string2 string2 `[12]uc  1 a 12 24 ]
-"73
-[v main@string string `[12]uc  1 a 12 12 ]
-"71
-[v main@F12518 F12518 `[12]uc  1 s 12 F12518 ]
-"73
-[v main@F12520 F12520 `[12]uc  1 s 12 F12520 ]
-"90
+"84
+[v main@mode mode `uc  1 a 1 60 ]
+"94
 } 0
-"45
-[v _global_initialization global_initialization `(v  1 e 1 0 ]
+"18 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mode/normal_mode.c
+[v _normal_mode_timer_handler normal_mode_timer_handler `(v  1 e 1 0 ]
 {
-"49
-} 0
-"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/system.c
-[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-{
-"49
-} 0
-"50 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr6.c
-[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
-{
-"72
-} 0
-"49 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr1.c
-[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
-{
-"77
-} 0
-"45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/pwm/src/pwm6.c
-[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
-{
-"61
-} 0
-"38 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/pins.c
-[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-{
-"131
-} 0
-"43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
-[v _NVM_Initialize NVM_Initialize `(v  1 e 1 0 ]
-{
-"46
-} 0
-"65
-[v _NVM_StatusClear NVM_StatusClear `(v  1 e 1 0 ]
-{
-"68
-} 0
-"40 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/interrupt.c
-[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-{
-"50
-} 0
-"105
-[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
-{
-[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
-"107
-} 0
-"114 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
-[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
-{
-"128
-} 0
-"474
-[v _I2C1_InterruptsEnable I2C1_InterruptsEnable `T(v  1 s 1 I2C1_InterruptsEnable ]
-{
-"478
-} 0
-"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/clock.c
-[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
-{
-"55
-} 0
-"5 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/PWM/pwm.c
-[v _PWM_Output_D4_Enable PWM_Output_D4_Enable `(v  1 e 1 0 ]
-{
-"17
-} 0
 "19
-[v _PWM_Output_D4_Disable PWM_Output_D4_Disable `(v  1 e 1 0 ]
+[v normal_mode_timer_handler@clock clock `[9]uc  1 a 9 10 ]
+"20
+[v normal_mode_timer_handler@cursor_position cursor_position `uc  1 a 1 19 ]
+"22
+} 0
+"14 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/clock/clock.c
+[v _increment_clock increment_clock `(uc  1 e 1 0 ]
 {
 "30
 } 0
-"79 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/lcd.c
-[v _LCDinit LCDinit `(v  1 e 1 0 ]
+"10 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mode/normal_mode.c
+[v _normal_mode_initialization normal_mode_initialization `(v  1 e 1 0 ]
 {
-"100
+"11
+[v normal_mode_initialization@clock clock `[9]uc  1 a 9 10 ]
+"16
 } 0
-"17
-[v _LCDsend LCDsend `(v  1 e 1 0 ]
+"5 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LED/led.c
+[v _turn_on turn_on `(v  1 e 1 0 ]
 {
-[v LCDsend@c c `uc  1 p 1 wreg ]
-[v LCDsend@c c `uc  1 p 1 wreg ]
-[v LCDsend@c c `uc  1 p 1 7 ]
-"24
+[v turn_on@n n `uc  1 p 1 wreg ]
+[v turn_on@n n `uc  1 p 1 wreg ]
+[v turn_on@n n `uc  1 p 1 4 ]
+"15
 } 0
-"142
+"53 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/clock/clock.c
+[v _get_clock get_clock `(uc  1 e 1 0 ]
+{
+[v get_clock@precision precision `uc  1 p 1 wreg ]
+[v get_clock@precision precision `uc  1 p 1 wreg ]
+[v get_clock@clock clock `*.4uc  1 p 1 4 ]
+[v get_clock@precision precision `uc  1 p 1 7 ]
+"90
+} 0
+"5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 1 ]
+[v ___awmod@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 4 ]
+[v ___awmod@dividend dividend `i  1 p 2 6 ]
+"34
+} 0
+"5 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 2 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 1 ]
+[v ___awdiv@counter counter `uc  1 a 1 0 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+"41
+} 0
+"142 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/lcd.c
 [v _LCDWriteStr LCDWriteStr `(v  1 e 1 0 ]
 {
 [v LCDWriteStr@s s `*.4uc  1 p 1 7 ]
@@ -989,21 +1012,6 @@ TMR6_LC4_OUT 17
 [v LCDcmd@c c `uc  1 p 1 3 ]
 "105
 } 0
-"56
-[v _LCDsend2x4 LCDsend2x4 `(v  1 e 1 0 ]
-{
-[v LCDsend2x4@c c `uc  1 p 1 wreg ]
-"59
-[v LCDsend2x4@lc lc `uc  1 a 1 2 ]
-"58
-[v LCDsend2x4@hc hc `uc  1 a 1 1 ]
-"56
-[v LCDsend2x4@c c `uc  1 p 1 wreg ]
-[v LCDsend2x4@mode mode `uc  1 p 1 6 ]
-"61
-[v LCDsend2x4@c c `uc  1 p 1 0 ]
-"77
-} 0
 "119
 [v _LCDbusy LCDbusy `(i  1 e 2 0 ]
 {
@@ -1022,6 +1030,199 @@ TMR6_LC4_OUT 17
 [v LCDrecv@mode mode `uc  1 p 1 2 ]
 "54
 } 0
+"44 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/I2C/i2c.c
+[v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
+{
+"50
+} 0
+"106 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v _mode_has_changed mode_has_changed `(a  1 e 1 0 ]
+{
+"108
+} 0
+"47 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/main.c
+[v _global_initialization global_initialization `(v  1 e 1 0 ]
+{
+"58
+} 0
+"96 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v _set_mode set_mode `(v  1 e 1 0 ]
+{
+[v set_mode@mode mode `uc  1 p 1 wreg ]
+[v set_mode@mode mode `uc  1 p 1 wreg ]
+[v set_mode@mode mode `uc  1 p 1 4 ]
+"99
+} 0
+"23
+[v _set_max_min set_max_min `(v  1 e 1 0 ]
+{
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+[v set_max_min@sensorsMaxMin sensorsMaxMin `S47  1 p 20 34 ]
+[v set_max_min@write_eeprom write_eeprom `a  1 p 1 54 ]
+"29
+} 0
+"31
+[v _set_default set_default `(v  1 e 1 0 ]
+{
+"45
+} 0
+"3 /Applications/microchip/xc8/v2.50/pic/sources/c99/common/memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"5
+[v memset@p p `*.5uc  1 a 1 4 ]
+"3
+[v memset@dest dest `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"10
+} 0
+"76 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _WriteMaxMin WriteMaxMin `(v  1 e 1 0 ]
+{
+"78
+[v WriteMaxMin@i i `uc  1 a 1 24 ]
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"76
+[v WriteMaxMin@sensorMaxMin sensorMaxMin `S47  1 p 20 0 ]
+"85
+} 0
+"11 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v _set_configs set_configs `(v  1 e 1 0 ]
+{
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+[v set_configs@configs configs `S36  1 p 10 34 ]
+[v set_configs@write_eeprom write_eeprom `a  1 p 1 44 ]
+"17
+} 0
+"61 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _WriteConfigs WriteConfigs `(v  1 e 1 0 ]
+{
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+[v WriteConfigs@configs configs `S36  1 p 10 0 ]
+"74
+} 0
+"25
+[v _WriteChecksum WriteChecksum `(v  1 e 1 0 ]
+{
+"26
+[v WriteChecksum@calculatedChecksum calculatedChecksum `uc  1 a 1 79 ]
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"25
+[v WriteChecksum@configs configs `S36  1 p 10 2 ]
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+[v WriteChecksum@sensorsMaxMin sensorsMaxMin `S47  1 p 20 12 ]
+"28
+} 0
+"222 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
+[v _EEPROM_Write EEPROM_Write `(v  1 e 1 0 ]
+{
+"225
+[v EEPROM_Write@globalInterruptBitValue globalInterruptBitValue `uc  1 a 1 7 ]
+"222
+[v EEPROM_Write@address address `us  1 p 2 4 ]
+[v EEPROM_Write@data data `uc  1 p 1 6 ]
+"253
+} 0
+"8 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/clock/clock.c
+[v _set_clock set_clock `(v  1 e 1 0 ]
+{
+[v set_clock@hours hours `uc  1 p 1 wreg ]
+[v set_clock@hours hours `uc  1 p 1 wreg ]
+[v set_clock@minutes minutes `uc  1 p 1 4 ]
+[v set_clock@seconds seconds `uc  1 p 1 5 ]
+[v set_clock@hours hours `uc  1 p 1 6 ]
+"12
+} 0
+"55 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v _get_config_clock_minutes get_config_clock_minutes `(uc  1 e 1 0 ]
+{
+"57
+} 0
+"51
+[v _get_config_clock_hours get_config_clock_hours `(uc  1 e 1 0 ]
+{
+"53
+} 0
+"30 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _MemIsUsable MemIsUsable `(a  1 e 1 0 ]
+{
+"34
+[v MemIsUsable@readChecksum readChecksum `uc  1 a 1 6 ]
+"33
+[v MemIsUsable@readMagicWord readMagicWord `uc  1 a 1 5 ]
+"32
+[v MemIsUsable@calculatedChecksum calculatedChecksum `uc  1 a 1 4 ]
+"43
+} 0
+"41 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.h
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+"87 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _ReadMaxMin ReadMaxMin `(S47  1 e 20 0 ]
+{
+"90
+[v ReadMaxMin@i i `uc  1 a 1 44 ]
+"89
+[v ReadMaxMin@sensorMaxMin sensorMaxMin `S47  1 a 20 24 ]
+"98
+} 0
+"27 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.h
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _ReadConfigs ReadConfigs `(S36  1 e 10 0 ]
+{
+"47
+[v ReadConfigs@configs configs `S36  1 a 10 10 ]
+"59
+} 0
+"207 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
+[v _EEPROM_Read EEPROM_Read `(uc  1 e 1 0 ]
+{
+[v EEPROM_Read@address address `us  1 p 2 4 ]
+"220
+} 0
+"3 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/EEPROM/EEPROM_controller.c
+[v _CalculateChecksum CalculateChecksum `(uc  1 e 1 0 ]
+{
+"16
+[v CalculateChecksum@i i `uc  1 a 1 1 ]
+"5
+[v CalculateChecksum@checksum checksum `uc  1 a 1 0 ]
+[s S36 . 10 `uc 1 monitoringPeriod 1 0 `uc 1 alarmDuration 1 1 `uc 1 alarmFlag 1 2 `uc 1 alarmHours 1 3 `uc 1 alarmMinutes 1 4 `uc 1 alarmSeconds 1 5 `uc 1 thresholdTemp 1 6 `uc 1 thresholdLum 1 7 `uc 1 clockHours 1 8 `uc 1 clockMinutes 1 9 ]
+"3
+[v CalculateChecksum@configs configs `S36  1 p 10 45 ]
+[s S47 . 20 `[5]uc 1 maxTemp 5 0 `[5]uc 1 minTemp 5 5 `[5]uc 1 maxLum 5 10 `[5]uc 1 minLum 5 15 ]
+[v CalculateChecksum@sensorsMaxMin sensorsMaxMin `S47  1 p 20 55 ]
+"23
+} 0
+"79 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/lcd.c
+[v _LCDinit LCDinit `(v  1 e 1 0 ]
+{
+"100
+} 0
+"56
+[v _LCDsend2x4 LCDsend2x4 `(v  1 e 1 0 ]
+{
+[v LCDsend2x4@c c `uc  1 p 1 wreg ]
+"59
+[v LCDsend2x4@lc lc `uc  1 a 1 2 ]
+"58
+[v LCDsend2x4@hc hc `uc  1 a 1 1 ]
+"56
+[v LCDsend2x4@c c `uc  1 p 1 wreg ]
+[v LCDsend2x4@mode mode `uc  1 p 1 6 ]
+"61
+[v LCDsend2x4@c c `uc  1 p 1 0 ]
+"77
+} 0
+"17
+[v _LCDsend LCDsend `(v  1 e 1 0 ]
+{
+[v LCDsend@c c `uc  1 p 1 wreg ]
+[v LCDsend@c c `uc  1 p 1 wreg ]
+[v LCDsend@c c `uc  1 p 1 7 ]
+"24
+} 0
 "59 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LCD/I2C/i2c.c
 [v _WriteI2C WriteI2C `(c  1 e 1 0 ]
 {
@@ -1031,10 +1232,84 @@ TMR6_LC4_OUT 17
 [v WriteI2C@data_out data_out `uc  1 p 1 5 ]
 "90
 } 0
-"44
-[v _ReadI2C ReadI2C `(uc  1 e 1 0 ]
+"101 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/state/state.c
+[v _get_mode get_mode `(uc  1 e 1 0 ]
+{
+"104
+} 0
+"5 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mode/configuration_mode.c
+[v _configuration_mode_initialization configuration_mode_initialization `(v  1 e 1 0 ]
+{
+"7
+} 0
+"17 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/controller/LED/led.c
+[v _turn_off turn_off `(v  1 e 1 0 ]
+{
+[v turn_off@n n `uc  1 p 1 wreg ]
+[v turn_off@n n `uc  1 p 1 wreg ]
+[v turn_off@n n `uc  1 p 1 4 ]
+"27
+} 0
+"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"49
+} 0
+"50 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr6.c
+[v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"49 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/timer/src/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"45 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/pwm/src/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+{
+"61
+} 0
+"38 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"138
+} 0
+"43 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/nvm/src/nvm.c
+[v _NVM_Initialize NVM_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"65
+[v _NVM_StatusClear NVM_StatusClear `(v  1 e 1 0 ]
+{
+"68
+} 0
+"40 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "50
+} 0
+"105
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 4 ]
+"107
+} 0
+"114 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/i2c_host/src/mssp1.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+{
+"128
+} 0
+"474
+[v _I2C1_InterruptsEnable I2C1_InterruptsEnable `T(v  1 s 1 I2C1_InterruptsEnable ]
+{
+"478
+} 0
+"39 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"55
 } 0
 "59 /Users/einarbergslid/Library/CloudStorage/OneDrive-Personlig/Dokumenter/ELSYS/7_Semester/Real_Time_Systems/Real_Time_Systems_Lab/Lab_1.X/mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]

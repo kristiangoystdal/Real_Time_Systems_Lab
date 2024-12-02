@@ -68,23 +68,23 @@ uint8_t get_clock(uint8_t precision, char clock[9]) {
       clock[2] = '\0';
       return HOURS_POSITION;
     case ONLY_MINUTES_AND_SECONDS:
-      clock[0] = 0x30 + _seconds/10;
-      clock[1] = 0x30 + (_seconds%10);
+      clock[0] = 0x30 + _minutes/10;
+      clock[1] = 0x30 + (_minutes%10);
       clock[2] = ':';
-      clock[3] = 0x30 + _minutes/10;
-      clock[4] = 0x30 + (_minutes%10);
+      clock[3] = 0x30 + _seconds/10;
+      clock[4] = 0x30 + (_seconds%10);
       clock[5] = '\0';
-      return SECONDS_POSITION;
+      return MINUTES_POSITION;
     default: // HOURS_MINUTES_AND_SECONDS
-      clock[0] = 0x30 + _seconds/10;
-      clock[1] = 0x30 + (_seconds%10);
+      clock[0] = 0x30 + _hours/10;
+      clock[1] = 0x30 + (_hours%10);
       clock[2] = ':';
       clock[3] = 0x30 + _minutes/10;
       clock[4] = 0x30 + (_minutes%10);
       clock[5] = ':';
-      clock[6] = 0x30 + _hours/10;
-      clock[7] = 0x30 + (_hours%10);
+      clock[6] = 0x30 + _seconds/10;
+      clock[7] = 0x30 + (_seconds%10);
       clock[8] = '\0';
-      return SECONDS_POSITION;
+      return HOURS_POSITION;
   }
 }

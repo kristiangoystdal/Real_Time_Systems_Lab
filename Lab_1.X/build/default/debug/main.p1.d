@@ -16,7 +16,9 @@ mcc_generated_files/system/../timer/tmr1.h  \
 mcc_generated_files/system/../timer/tmr1_deprecated.h  \
 mcc_generated_files/system/../timer/tmr6.h  \
 mcc_generated_files/system/../timer/tmr6_deprecated.h  \
-controller/LCD/lcd.h  \
 controller/EEPROM/EEPROM_controller.h  \
-controller/LED/led.h  \
-controller/PWM/pwm.h 
+controller/EEPROM/../../state/state.h  \
+clock/clock.h  \
+mode/normal_mode.h  \
+mode/configuration_mode.h  \
+controller/LCD/lcd.h 

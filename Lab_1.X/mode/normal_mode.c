@@ -10,12 +10,15 @@ static uint8_t _s2_state;
 void normal_mode_initialization() {
   char clock [9];
   get_clock(HOURS_MINUTES_AND_SECONDS, clock);
+  LCDWriteStr(clock,0,0);
   _s2_state = S2_NORMAL_MODE;
   turn_on(2);
 }
 
 void normal_mode_timer_handler() {
-
+    char clock [9];
+    uint8_t cursor_position = get_clock(increment_clock(),clock);
+    LCDWriteStr(clock,0,cursor_position);
 }
 
 void normal_mode_s1_handler() {
