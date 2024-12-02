@@ -69,6 +69,7 @@ void update_clock(void) {
   if(check_clock_alarm(get_clock())) {
     // TODO: Turn on PWM
     _pwm_en = true;
+    _pwm_cnt = get_config_alarm_duration();
     _ctl[0] = 'C';
     LCDWriteChar('C', LINE_ALARM_C, COLUMN_ALARM_C);
   }
@@ -91,6 +92,7 @@ void update_sensors(void) {
   if(check_lum_alarm(lum)) {
     // TODO: Turn on PWM
     _pwm_en = true;
+    _pwm_cnt = get_config_alarm_duration();
     turn_on(3);
     _ctl[2] = 'L';
     LCDWriteChar('L', LINE_ALARM_T, COLUMN_ALARM_L);
@@ -101,6 +103,7 @@ void update_sensors(void) {
   if(check_temp_alarm(temp)) {
     // TODO: Turn on PWM
     _pwm_en = true;
+    _pwm_cnt = get_config_alarm_duration();
     turn_on(2);
     _ctl[1] = 'T';
     LCDWriteChar('T', LINE_ALARM_T, COLUMN_ALARM_T);
@@ -114,14 +117,14 @@ void normal_mode_timer_handler() {
   update_clock();
   _sensor_cnt --;
   if(_sensor_cnt == 0) {
-    _sensor_cnt = 3;
+    _sensor_cnt = get_config_monitoring_period();
     update_sensors();
   }
   if(_pwm_en) {
     _pwm_cnt --;
   }
   if(_pwm_cnt == 0) {
-    _pwm_cnt = 5;
+    _pwm_cnt = get_config_alarm_duration();
     _pwm_en = false;
     // TODO: Disable PWM
   }

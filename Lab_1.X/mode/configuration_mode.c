@@ -29,6 +29,8 @@ void init_lcd_configuration_mode() {
   get_config_threshold_luminosity_str(luminosity);
   LCDWriteChar('L', LINE_LUM_L, COLUMN_LUM_L);
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
+
+  LCDpos(_cursor_pos_l, _cursor_pos_c);
 }
 
 void configuration_mode_initialization() {
@@ -117,6 +119,7 @@ void configuration_mode_s1_handler() {
     set_mode(NORMAL_MODE);
     break;
   }
+  LCDpos(_cursor_pos_l, _cursor_pos_c);
 }
 
 void configuration_mode_s2_handler() {
@@ -138,9 +141,10 @@ void configuration_mode_s2_handler() {
   case CURSOR_ALARM_C:
     get_config_alarm_time_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
-    _cursor = CURSOR_CLOCK_SECONDS;
-    _cursor_pos_l = LINE_CLOCK_SECONDS;
-    _cursor_pos_c = COLUMN_CLOCK_SECONDS1;
+    _cursor = CURSOR_CLOCK_HOURS;
+    _cursor_pos_l = LINE_CLOCK_HOURS;
+    _cursor_pos_c = COLUMN_CLOCK_HOURS1;
+    LCDpos(_cursor_pos_l, _cursor_pos_c);
     break;
   case CURSOR_ALARM_HOURS:
     increment_config_alarm_hours();
@@ -161,6 +165,7 @@ void configuration_mode_s2_handler() {
     _cursor = CURSOR_ALARM_TEMP;
     _cursor_pos_l = LINE_TEMP;
     _cursor_pos_c = COLUMN_TEMP1;
+    LCDpos(_cursor_pos_l, _cursor_pos_c);
     break;
   case CURSOR_ALARM_TEMP:
     increment_config_threshold_temperature();
@@ -171,6 +176,7 @@ void configuration_mode_s2_handler() {
     _cursor = CURSOR_ALARM_LUM;
     _cursor_pos_l = LINE_ALARM_L;
     _cursor_pos_c = COLUMN_ALARM_L;
+    LCDpos(_cursor_pos_l, _cursor_pos_c);
     break;
   case CURSOR_ALARM_LUM:
     increment_config_threshold_luminosity();
