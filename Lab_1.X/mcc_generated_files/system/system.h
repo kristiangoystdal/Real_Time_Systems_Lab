@@ -45,7 +45,8 @@
 #include "../nvm/nvm.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
-#include "../timer/tmr1.h"
+#include "../adc/adc.h"
+#include "../timer/tmr6.h"
 
 /**
  * @ingroup systemdriver

@@ -12,7 +12,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+? [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -58,7 +58,7 @@ void PIN_MANAGER_Initialize(void)
     /**
     ANSELx registers
     */
-    ANSELA = 0xE;
+    ANSELA = 0xF;
     ANSELB = 0xEF;
     ANSELC = 0xE7;
     ANSELD = 0xFF;

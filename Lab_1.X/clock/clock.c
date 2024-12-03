@@ -75,9 +75,9 @@ uint8_t get_clock_str(uint8_t precision, char clock[9]) {
       return HOURS_POSITION;
     case ONLY_MINUTES_AND_SECONDS:
       sprintf(clock, "%02u:%02u", _clock.minutes, _clock.seconds);
-      return SECONDS_POSITION;
+      return MINUTES_POSITION;
     default: // HOURS_MINUTES_AND_SECONDS
       sprintf(clock, "%02u:%02u:%02u", _clock.hours, _clock.minutes, _clock.seconds);
-      return SECONDS_POSITION;
+      return HOURS_POSITION;
   }
 }

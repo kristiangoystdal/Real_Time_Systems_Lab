@@ -13,7 +13,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+? [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -50,7 +50,7 @@
 
 /**
  * @ingroup adc
- * @brief Initializes the registers based on configurable options in the MPLABÂ® Code Configurator (MCC) Melody UI for the Analog-to-Digital Converter (ADC) operation.
+ * @brief Initializes the registers based on configurable options in the MPLAB? Code Configurator (MCC) Melody UI for the Analog-to-Digital Converter (ADC) operation.
  * @param None.
  * @return None.
  */

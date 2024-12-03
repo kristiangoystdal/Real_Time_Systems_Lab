@@ -43,9 +43,14 @@
 #include "state/state.h"
 #include <stdio.h>
 
-/*
-    Main application
-*/
+static void Timer_Callback(void);
+
+static const struct TIMER_INTERFACE *Timer = &Timer6; // TODO: Replace Timer0 with name of const struct TMR_INTERFACE, from MCC Generated Files > timer > tmrx.c
+
+static void Timer_Callback(void)
+{
+    IO_RA6_Toggle();
+}
 
 void global_initialization() {
   if (MemIsUsable()) {
@@ -63,7 +68,7 @@ int main(void) {
   // Global High and Low Interrupts If using interrupts in PIC Mid-Range
   // Compatibility Mode you need to enable the Global and Peripheral Interrupts
   // Use the following macros to:
-
+  Timer->TimeoutCallbackRegister(Timer_Callback);
   // Enable the Global Interrupts
   INTERRUPT_GlobalInterruptEnable();
 
