@@ -61,15 +61,7 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     // interrupt handler
     if(INTCONbits.PEIE == 1)
     {
-        if(PIE3bits.BCL1IE == 1 && PIR3bits.BCL1IF == 1)
-        {
-            I2C1_ERROR_ISR();
-        } 
-        else if(PIE3bits.SSP1IE == 1 && PIR3bits.SSP1IF == 1)
-        {
-            I2C1_ISR();
-        } 
-        else if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
+        if(PIE1bits.ADIE == 1 && PIR1bits.ADIF == 1)
         {
             ADC_ISR();
         } 
@@ -80,6 +72,14 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         else if(PIE4bits.TMR6IE == 1 && PIR4bits.TMR6IF == 1)
         {
             TMR6_ISR();
+        } 
+        else if(PIE3bits.BCL1IE == 1 && PIR3bits.BCL1IF == 1)
+        {
+            I2C1_ERROR_ISR();
+        } 
+        else if(PIE3bits.SSP1IE == 1 && PIR3bits.SSP1IF == 1)
+        {
+            I2C1_ISR();
         } 
         else
         {

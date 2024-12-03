@@ -114,6 +114,7 @@ void update_sensors(void) {
 
 void normal_mode_timer_handler() {
   toggle(0);
+  /*
   update_clock();
   _sensor_cnt --;
   if(_sensor_cnt == 0) {
@@ -128,6 +129,7 @@ void normal_mode_timer_handler() {
     _pwm_en = false;
     // TODO: Disable PWM
   }
+  */
   // toggle(1);
   // toggle(2);
   // printf("Timer1 interrupt triggered!\n");

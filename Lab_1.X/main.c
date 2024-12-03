@@ -41,6 +41,7 @@
 #include "mode/configuration_mode.h"
 #include "mode/normal_mode.h"
 #include "state/state.h"
+#include "controller/LCD/I2C/i2c.h"
 #include <stdio.h>
 
 static void Timer_Callback(void);
@@ -64,6 +65,16 @@ void global_initialization() {
 
 int main(void) {
   SYSTEM_Initialize();
+  
+  
+  
+  
+  OpenI2C();
+  LCDinit();
+  
+  
+  
+  
   // If using interrupts in PIC18 High/Low Priority Mode you need to enable the
   // Global High and Low Interrupts If using interrupts in PIC Mid-Range
   // Compatibility Mode you need to enable the Global and Peripheral Interrupts
@@ -80,9 +91,7 @@ int main(void) {
 
   // Disable the Peripheral Interrupts
   // INTERRUPT_PeripheralInterruptDisable();
-
-  LCDinit();
-  ADC_Initialize(); // Initialize ADC
+  //ADC_Initialize(); // Initialize ADC
 
   // Timer1_Initialize();
   // Timer1_Start();
@@ -92,6 +101,7 @@ int main(void) {
   global_initialization();
 
   while (1) {
+      /*
     if (mode_has_changed()) {
       uint8_t mode = get_mode();
       if (mode == NORMAL_MODE) {
@@ -101,5 +111,6 @@ int main(void) {
       }
     } // Add a delay for readability
     SLEEP();
+       */
   }
 }

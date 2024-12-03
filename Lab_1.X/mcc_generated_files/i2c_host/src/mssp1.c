@@ -113,18 +113,11 @@ const i2c1eventHandler i2c1_eventTable[] = {
  */
 void I2C1_Initialize(void)
 {
-    /* CKE disabled; SMP Standard Speed;  */
     SSP1STAT = 0x80;
-    /* SSPM FOSC/4_SSPxADD_I2C; CKP disabled; SSPEN disabled; SSPOV no_overflow; WCOL no_collision;  */
-    SSP1CON1 = 0x8;
-    /* SEN disabled; RSEN disabled; PEN disabled; RCEN disabled; ACKEN disabled; ACKDT acknowledge; GCEN disabled;  */
-    SSP1CON2 = 0x0;
-    /* DHEN disabled; AHEN disabled; SBCDE disabled; SDAHT 100ns; BOEN disabled; SCIE disabled; PCIE disabled;  */
-    SSP1CON3 = 0x0;
-    /* SSPADD 79;  */
-    SSP1ADD = 0x4F;
-    I2C1_InterruptsEnable();
-    SSP1CON1bits.SSPEN = 1;
+    SSP1CON1 = 0x08;
+    SSP1CON2 = 0x00;
+    SSP1ADD  = 0x03;
+    SSP1CON1bits.SSPEN = 0;
 }
 
 void I2C1_Deinitialize(void)
