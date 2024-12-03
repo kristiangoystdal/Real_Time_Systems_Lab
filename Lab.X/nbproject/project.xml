@@ -3,17 +3,20 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Lab_1</name>
-            <creation-uuid>88b1632b-f2e5-4e1d-8a1f-f04f73f0e069</creation-uuid>
+            <name>Lab</name>
+            <creation-uuid>3ff54a49-2ad3-41ba-ad16-2e17b53d12f7</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>CONTROLLERS</sourceRootElem>
+                <sourceRootElem>I2C</sourceRootElem>
+                <sourceRootElem>LCD</sourceRootElem>
+                <sourceRootElem>clock</sourceRootElem>
                 <sourceRootElem>controller</sourceRootElem>
+                <sourceRootElem>max_min</sourceRootElem>
                 <sourceRootElem>mode</sourceRootElem>
                 <sourceRootElem>state</sourceRootElem>
-                <sourceRootElem>clock</sourceRootElem>
+                <sourceRootElem>alarm</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

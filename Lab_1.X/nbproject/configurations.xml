@@ -9,35 +9,38 @@
       </logicalFolder>
       <logicalFolder name="controller" displayName="controller" projectFiles="true">
         <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
-          <itemPath>controller/EEPROM/EEPROM_controller.h</itemPath>
+          <itemPath>controller/EEPROM/EEPROM_controller.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
           <logicalFolder name="I2C" displayName="I2C" projectFiles="true">
-            <itemPath>controller/LCD/I2C/i2c.h</itemPath>
+            <itemPath>controller/LCD/I2C/i2c.c</itemPath>
           </logicalFolder>
-          <itemPath>controller/LCD/lcd.h</itemPath>
+          <itemPath>controller/LCD/lcd.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
-          <itemPath>controller/LED/led.h</itemPath>
+          <itemPath>controller/LED/led.c</itemPath>
         </logicalFolder>
         <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
-          <itemPath>controller/Luminosity/luminosity.h</itemPath>
+          <itemPath>controller/Luminosity/luminosity.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="PWM" displayName="PWM" projectFiles="true">
+          <itemPath>controller/PWM/pwm.c</itemPath>
         </logicalFolder>
         <logicalFolder name="Temperature" displayName="Temperature" projectFiles="true">
-          <itemPath>controller/Temperature/temperature.h</itemPath>
+          <itemPath>controller/Temperature/temperature.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="adc" displayName="adc" projectFiles="true">
-          <itemPath>mcc_generated_files/adc/adc_types.h</itemPath>
           <itemPath>mcc_generated_files/adc/adc.h</itemPath>
+          <itemPath>mcc_generated_files/adc/adc_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <itemPath>mcc_generated_files/i2c_host/mssp1.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
         </logicalFolder>
         <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
@@ -51,8 +54,8 @@
           <itemPath>mcc_generated_files/system/system.h</itemPath>
         </logicalFolder>
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
-          <itemPath>mcc_generated_files/timer/tmr1.h</itemPath>
           <itemPath>mcc_generated_files/timer/tmr1_deprecated.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr1.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="mode" displayName="mode" projectFiles="true">
@@ -80,22 +83,18 @@
       </logicalFolder>
       <logicalFolder name="controller" displayName="controller" projectFiles="true">
         <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
-          <itemPath>controller/EEPROM/EEPROM_controller.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LCD" displayName="LCD" projectFiles="true">
           <logicalFolder name="I2C" displayName="I2C" projectFiles="true">
-            <itemPath>controller/LCD/I2C/i2c.c</itemPath>
           </logicalFolder>
-          <itemPath>controller/LCD/lcd.c</itemPath>
         </logicalFolder>
         <logicalFolder name="LED" displayName="LED" projectFiles="true">
-          <itemPath>controller/LED/led.c</itemPath>
         </logicalFolder>
         <logicalFolder name="Luminosity" displayName="Luminosity" projectFiles="true">
-          <itemPath>controller/Luminosity/luminosity.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="PWM" displayName="PWM" projectFiles="true">
         </logicalFolder>
         <logicalFolder name="Temperature" displayName="Temperature" projectFiles="true">
-          <itemPath>controller/Temperature/temperature.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -139,10 +138,11 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
+    <Elem>CONTROLLERS</Elem>
     <Elem>controller</Elem>
     <Elem>mode</Elem>
-    <Elem>clock</Elem>
     <Elem>state</Elem>
+    <Elem>clock</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -152,7 +152,7 @@
         <targetDevice>PIC16F18875</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PKOBSKDEPlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
@@ -189,6 +189,7 @@
       </makeCustomizationType>
       <HI-TECH-COMP>
         <property key="additional-warnings" value="true"/>
+        <property key="appendMe" value=""/>
         <property key="asmlist" value="true"/>
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
@@ -268,47 +269,10 @@
         <property key="program-the-device-with-default-config-words" value="false"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
-      <PKOBSKDEPlatformTool>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="event.recorder.debugger.behavior" value="Running"/>
-        <property key="event.recorder.enabled" value="false"/>
-        <property key="event.recorder.scvd.files" value=""/>
-        <property key="lastid" value=""/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-1fff"/>
-        <property key="memories.userotp" value="true"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value=""/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges"
-                  value="${memories.eedata.default}"/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="true"/>
-      </PKOBSKDEPlatformTool>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
         <property key="codecoverage.outputfile" value=""/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="event.recorder.debugger.behavior" value="Running"/>
-        <property key="event.recorder.enabled" value="false"/>
-        <property key="event.recorder.scvd.files" value=""/>
-        <property key="lastid" value=""/>
         <property key="oscillator.auxfrequency" value="120"/>
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
         <property key="oscillator.frequency" value="1"/>
@@ -316,7 +280,7 @@
         <property key="oscillator.rcfrequency" value="250"/>
         <property key="oscillator.rcfrequencyunit" value="Kilo"/>
         <property key="periphADC1.altscl" value="false"/>
-        <property key="periphADC1.minTacq" value="4"/>
+        <property key="periphADC1.minTacq" value=""/>
         <property key="periphADC1.tacqunits" value="microseconds"/>
         <property key="periphADC2.altscl" value="false"/>
         <property key="periphADC2.minTacq" value=""/>
@@ -775,28 +739,9 @@
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
       <Tool>
-        <property key="AutoSelectMemRanges" value="auto"/>
-        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
         <property key="codecoverage.outputfile" value=""/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="event.recorder.debugger.behavior" value="Running"/>
-        <property key="event.recorder.enabled" value="false"/>
-        <property key="event.recorder.scvd.files" value=""/>
-        <property key="firmware.download.all" value="false"/>
-        <property key="lastid" value=""/>
-        <property key="memories.configurationmemory" value="true"/>
-        <property key="memories.dataflash" value="true"/>
-        <property key="memories.eeprom" value="true"/>
-        <property key="memories.id" value="true"/>
-        <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-1fff"/>
-        <property key="memories.userotp" value="true"/>
         <property key="oscillator.auxfrequency" value="120"/>
         <property key="oscillator.auxfrequencyunit" value="Mega"/>
         <property key="oscillator.frequency" value="1"/>
@@ -804,7 +749,7 @@
         <property key="oscillator.rcfrequency" value="250"/>
         <property key="oscillator.rcfrequencyunit" value="Kilo"/>
         <property key="periphADC1.altscl" value="false"/>
-        <property key="periphADC1.minTacq" value="4"/>
+        <property key="periphADC1.minTacq" value=""/>
         <property key="periphADC1.tacqunits" value="microseconds"/>
         <property key="periphADC2.altscl" value="false"/>
         <property key="periphADC2.minTacq" value=""/>
@@ -815,17 +760,6 @@
         <property key="periphComp4.gte" value="gt"/>
         <property key="periphComp5.gte" value="gt"/>
         <property key="periphComp6.gte" value="gt"/>
-        <property key="programoptions.donoteraseauxmem" value="false"/>
-        <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value=""/>
-        <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges"
-                  value="${memories.eedata.default}"/>
-        <property key="programoptions.preserveprogram.ranges" value=""/>
-        <property key="programoptions.preserveprogramrange" value="false"/>
-        <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="true"/>
         <property key="reset.scl" value="false"/>
         <property key="reset.type" value="MCLR"/>
         <property key="toolpack.updateoptions"
