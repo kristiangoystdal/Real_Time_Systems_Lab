@@ -13,6 +13,8 @@
                 <sourceRootElem>mode</sourceRootElem>
                 <sourceRootElem>clock</sourceRootElem>
                 <sourceRootElem>state</sourceRootElem>
+                <sourceRootElem>alarm</sourceRootElem>
+                <sourceRootElem>max_min</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

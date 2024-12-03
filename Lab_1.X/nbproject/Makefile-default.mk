@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=clock/clock.c mode/configuration_mode.c mode/normal_mode.c state/state.c controller/EEPROM/EEPROM_controller.c controller/LCD/I2C/i2c.c controller/LCD/lcd.c controller/LED/led.c controller/Luminosity/luminosity.c controller/Temperature/temperature.c mcc_generated_files/adc/src/adc.c mcc_generated_files/i2c_host/src/mssp1.c mcc_generated_files/nvm/src/nvm.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/system.c mcc_generated_files/timer/src/tmr1.c main.c
+SOURCEFILES_QUOTED_IF_SPACED=clock/clock.c controller/PWM/pwm.c max_min/max_min.c mode/configuration_mode.c mode/normal_mode.c state/state.c alarm/alarm.c controller/EEPROM/EEPROM_controller.c controller/LCD/I2C/i2c.c controller/LCD/lcd.c controller/LED/led.c controller/Luminosity/luminosity.c controller/Temperature/temperature.c mcc_generated_files/adc/src/adc.c mcc_generated_files/examples/TIMER_Example/timer_example.c mcc_generated_files/i2c_host/src/mssp1.c mcc_generated_files/nvm/src/nvm.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/system.c mcc_generated_files/timer/src/tmr6.c main.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/clock/clock.p1 ${OBJECTDIR}/mode/configuration_mode.p1 ${OBJECTDIR}/mode/normal_mode.p1 ${OBJECTDIR}/state/state.p1 ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1 ${OBJECTDIR}/controller/LCD/I2C/i2c.p1 ${OBJECTDIR}/controller/LCD/lcd.p1 ${OBJECTDIR}/controller/LED/led.p1 ${OBJECTDIR}/controller/Luminosity/luminosity.p1 ${OBJECTDIR}/controller/Temperature/temperature.p1 ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 ${OBJECTDIR}/main.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/clock/clock.p1.d ${OBJECTDIR}/mode/configuration_mode.p1.d ${OBJECTDIR}/mode/normal_mode.p1.d ${OBJECTDIR}/state/state.p1.d ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1.d ${OBJECTDIR}/controller/LCD/I2C/i2c.p1.d ${OBJECTDIR}/controller/LCD/lcd.p1.d ${OBJECTDIR}/controller/LED/led.p1.d ${OBJECTDIR}/controller/Luminosity/luminosity.p1.d ${OBJECTDIR}/controller/Temperature/temperature.p1.d ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d ${OBJECTDIR}/main.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/clock/clock.p1 ${OBJECTDIR}/controller/PWM/pwm.p1 ${OBJECTDIR}/max_min/max_min.p1 ${OBJECTDIR}/mode/configuration_mode.p1 ${OBJECTDIR}/mode/normal_mode.p1 ${OBJECTDIR}/state/state.p1 ${OBJECTDIR}/alarm/alarm.p1 ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1 ${OBJECTDIR}/controller/LCD/I2C/i2c.p1 ${OBJECTDIR}/controller/LCD/lcd.p1 ${OBJECTDIR}/controller/LED/led.p1 ${OBJECTDIR}/controller/Luminosity/luminosity.p1 ${OBJECTDIR}/controller/Temperature/temperature.p1 ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 ${OBJECTDIR}/main.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/clock/clock.p1.d ${OBJECTDIR}/controller/PWM/pwm.p1.d ${OBJECTDIR}/max_min/max_min.p1.d ${OBJECTDIR}/mode/configuration_mode.p1.d ${OBJECTDIR}/mode/normal_mode.p1.d ${OBJECTDIR}/state/state.p1.d ${OBJECTDIR}/alarm/alarm.p1.d ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1.d ${OBJECTDIR}/controller/LCD/I2C/i2c.p1.d ${OBJECTDIR}/controller/LCD/lcd.p1.d ${OBJECTDIR}/controller/LED/led.p1.d ${OBJECTDIR}/controller/Luminosity/luminosity.p1.d ${OBJECTDIR}/controller/Temperature/temperature.p1.d ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1.d ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d ${OBJECTDIR}/main.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/clock/clock.p1 ${OBJECTDIR}/mode/configuration_mode.p1 ${OBJECTDIR}/mode/normal_mode.p1 ${OBJECTDIR}/state/state.p1 ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1 ${OBJECTDIR}/controller/LCD/I2C/i2c.p1 ${OBJECTDIR}/controller/LCD/lcd.p1 ${OBJECTDIR}/controller/LED/led.p1 ${OBJECTDIR}/controller/Luminosity/luminosity.p1 ${OBJECTDIR}/controller/Temperature/temperature.p1 ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 ${OBJECTDIR}/main.p1
+OBJECTFILES=${OBJECTDIR}/clock/clock.p1 ${OBJECTDIR}/controller/PWM/pwm.p1 ${OBJECTDIR}/max_min/max_min.p1 ${OBJECTDIR}/mode/configuration_mode.p1 ${OBJECTDIR}/mode/normal_mode.p1 ${OBJECTDIR}/state/state.p1 ${OBJECTDIR}/alarm/alarm.p1 ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1 ${OBJECTDIR}/controller/LCD/I2C/i2c.p1 ${OBJECTDIR}/controller/LCD/lcd.p1 ${OBJECTDIR}/controller/LED/led.p1 ${OBJECTDIR}/controller/Luminosity/luminosity.p1 ${OBJECTDIR}/controller/Temperature/temperature.p1 ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1 ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1 ${OBJECTDIR}/mcc_generated_files/nvm/src/nvm.p1 ${OBJECTDIR}/mcc_generated_files/system/src/pins.p1 ${OBJECTDIR}/mcc_generated_files/system/src/config_bits.p1 ${OBJECTDIR}/mcc_generated_files/system/src/clock.p1 ${OBJECTDIR}/mcc_generated_files/system/src/interrupt.p1 ${OBJECTDIR}/mcc_generated_files/system/src/system.p1 ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 ${OBJECTDIR}/main.p1
 
 # Source Files
-SOURCEFILES=clock/clock.c mode/configuration_mode.c mode/normal_mode.c state/state.c controller/EEPROM/EEPROM_controller.c controller/LCD/I2C/i2c.c controller/LCD/lcd.c controller/LED/led.c controller/Luminosity/luminosity.c controller/Temperature/temperature.c mcc_generated_files/adc/src/adc.c mcc_generated_files/i2c_host/src/mssp1.c mcc_generated_files/nvm/src/nvm.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/system.c mcc_generated_files/timer/src/tmr1.c main.c
+SOURCEFILES=clock/clock.c controller/PWM/pwm.c max_min/max_min.c mode/configuration_mode.c mode/normal_mode.c state/state.c alarm/alarm.c controller/EEPROM/EEPROM_controller.c controller/LCD/I2C/i2c.c controller/LCD/lcd.c controller/LED/led.c controller/Luminosity/luminosity.c controller/Temperature/temperature.c mcc_generated_files/adc/src/adc.c mcc_generated_files/examples/TIMER_Example/timer_example.c mcc_generated_files/i2c_host/src/mssp1.c mcc_generated_files/nvm/src/nvm.c mcc_generated_files/system/src/pins.c mcc_generated_files/system/src/config_bits.c mcc_generated_files/system/src/clock.c mcc_generated_files/system/src/interrupt.c mcc_generated_files/system/src/system.c mcc_generated_files/timer/src/tmr6.c main.c
 
 
 
@@ -96,6 +96,22 @@ ${OBJECTDIR}/clock/clock.p1: clock/clock.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/clock/clock.d ${OBJECTDIR}/clock/clock.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/clock/clock.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/controller/PWM/pwm.p1: controller/PWM/pwm.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/controller/PWM" 
+	@${RM} ${OBJECTDIR}/controller/PWM/pwm.p1.d 
+	@${RM} ${OBJECTDIR}/controller/PWM/pwm.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/controller/PWM/pwm.p1 controller/PWM/pwm.c 
+	@-${MV} ${OBJECTDIR}/controller/PWM/pwm.d ${OBJECTDIR}/controller/PWM/pwm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/controller/PWM/pwm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/max_min/max_min.p1: max_min/max_min.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/max_min" 
+	@${RM} ${OBJECTDIR}/max_min/max_min.p1.d 
+	@${RM} ${OBJECTDIR}/max_min/max_min.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/max_min/max_min.p1 max_min/max_min.c 
+	@-${MV} ${OBJECTDIR}/max_min/max_min.d ${OBJECTDIR}/max_min/max_min.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/max_min/max_min.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/mode/configuration_mode.p1: mode/configuration_mode.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mode" 
 	@${RM} ${OBJECTDIR}/mode/configuration_mode.p1.d 
@@ -119,6 +135,14 @@ ${OBJECTDIR}/state/state.p1: state/state.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/state/state.p1 state/state.c 
 	@-${MV} ${OBJECTDIR}/state/state.d ${OBJECTDIR}/state/state.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/state/state.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/alarm/alarm.p1: alarm/alarm.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/alarm" 
+	@${RM} ${OBJECTDIR}/alarm/alarm.p1.d 
+	@${RM} ${OBJECTDIR}/alarm/alarm.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/alarm/alarm.p1 alarm/alarm.c 
+	@-${MV} ${OBJECTDIR}/alarm/alarm.d ${OBJECTDIR}/alarm/alarm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/alarm/alarm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1: controller/EEPROM/EEPROM_controller.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/controller/EEPROM" 
@@ -176,6 +200,14 @@ ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1: mcc_generated_files/adc/src/adc
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/adc/src/adc.d ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1: mcc_generated_files/examples/TIMER_Example/timer_example.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1 mcc_generated_files/examples/TIMER_Example/timer_example.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.d ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1: mcc_generated_files/i2c_host/src/mssp1.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1.d 
@@ -232,13 +264,13 @@ ${OBJECTDIR}/mcc_generated_files/system/src/system.p1: mcc_generated_files/syste
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/system/src/system.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1: mcc_generated_files/timer/src/tmr1.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1: mcc_generated_files/timer/src/tmr6.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/timer/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 mcc_generated_files/timer/src/tmr1.c 
-	@-${MV} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=pickit3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 mcc_generated_files/timer/src/tmr6.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -256,6 +288,22 @@ ${OBJECTDIR}/clock/clock.p1: clock/clock.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/clock/clock.p1 clock/clock.c 
 	@-${MV} ${OBJECTDIR}/clock/clock.d ${OBJECTDIR}/clock/clock.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/clock/clock.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/controller/PWM/pwm.p1: controller/PWM/pwm.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/controller/PWM" 
+	@${RM} ${OBJECTDIR}/controller/PWM/pwm.p1.d 
+	@${RM} ${OBJECTDIR}/controller/PWM/pwm.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/controller/PWM/pwm.p1 controller/PWM/pwm.c 
+	@-${MV} ${OBJECTDIR}/controller/PWM/pwm.d ${OBJECTDIR}/controller/PWM/pwm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/controller/PWM/pwm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/max_min/max_min.p1: max_min/max_min.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/max_min" 
+	@${RM} ${OBJECTDIR}/max_min/max_min.p1.d 
+	@${RM} ${OBJECTDIR}/max_min/max_min.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/max_min/max_min.p1 max_min/max_min.c 
+	@-${MV} ${OBJECTDIR}/max_min/max_min.d ${OBJECTDIR}/max_min/max_min.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/max_min/max_min.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/mode/configuration_mode.p1: mode/configuration_mode.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mode" 
@@ -280,6 +328,14 @@ ${OBJECTDIR}/state/state.p1: state/state.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/state/state.p1 state/state.c 
 	@-${MV} ${OBJECTDIR}/state/state.d ${OBJECTDIR}/state/state.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/state/state.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/alarm/alarm.p1: alarm/alarm.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/alarm" 
+	@${RM} ${OBJECTDIR}/alarm/alarm.p1.d 
+	@${RM} ${OBJECTDIR}/alarm/alarm.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/alarm/alarm.p1 alarm/alarm.c 
+	@-${MV} ${OBJECTDIR}/alarm/alarm.d ${OBJECTDIR}/alarm/alarm.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/alarm/alarm.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/controller/EEPROM/EEPROM_controller.p1: controller/EEPROM/EEPROM_controller.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/controller/EEPROM" 
@@ -337,6 +393,14 @@ ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1: mcc_generated_files/adc/src/adc
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/adc/src/adc.d ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/adc/src/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1: mcc_generated_files/examples/TIMER_Example/timer_example.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example" 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1 mcc_generated_files/examples/TIMER_Example/timer_example.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.d ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/examples/TIMER_Example/timer_example.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1: mcc_generated_files/i2c_host/src/mssp1.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/i2c_host/src" 
 	@${RM} ${OBJECTDIR}/mcc_generated_files/i2c_host/src/mssp1.p1.d 
@@ -393,13 +457,13 @@ ${OBJECTDIR}/mcc_generated_files/system/src/system.p1: mcc_generated_files/syste
 	@-${MV} ${OBJECTDIR}/mcc_generated_files/system/src/system.d ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/system/src/system.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1: mcc_generated_files/timer/src/tmr1.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1: mcc_generated_files/timer/src/tmr6.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/mcc_generated_files/timer/src" 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d 
-	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1 mcc_generated_files/timer/src/tmr1.c 
-	@-${MV} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d 
+	@${RM} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=require -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1 mcc_generated_files/timer/src/tmr6.c 
+	@-${MV} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.d ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/mcc_generated_files/timer/src/tmr6.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
