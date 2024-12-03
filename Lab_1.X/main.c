@@ -68,7 +68,7 @@ int main(void) {
   // Global High and Low Interrupts If using interrupts in PIC Mid-Range
   // Compatibility Mode you need to enable the Global and Peripheral Interrupts
   // Use the following macros to:
-  Timer->TimeoutCallbackRegister(Timer_Callback);
+  Timer->TimeoutCallbackRegister(normal_mode_timer_handler);
   // Enable the Global Interrupts
   INTERRUPT_GlobalInterruptEnable();
 
