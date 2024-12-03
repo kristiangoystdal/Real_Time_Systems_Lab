@@ -67,7 +67,7 @@ void update_clock(void) {
   uint8_t clock_column = get_clock_str(precision, clock);
   LCDWriteStr(clock, LINE_CLOCK_HOURS, clock_column);
   if (clock_column == HOURS_POSITION || clock_column == MINUTES_POSITION) {
-    // TODO: Update clock in EEPROM
+      
   }
   if (check_clock_alarm(get_clock())) {
     // TODO: Turn on PWM

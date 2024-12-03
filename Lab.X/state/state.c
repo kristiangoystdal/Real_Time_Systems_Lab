@@ -17,6 +17,10 @@ void set_configs(Configs configs, bool write_eeprom) {
   }
 }
 
+Configs get_configs(){
+    return _configs;
+}
+
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
   _sensorsMaxMin = sensorsMaxMin;
   if(write_eeprom) {

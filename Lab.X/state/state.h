@@ -59,6 +59,7 @@ typedef struct
 
 void set_default(void);
 void set_configs(Configs configs, bool write_eeprom);
+Configs get_configs();
 
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom);
 SensorsMaxMin get_max_min(void);

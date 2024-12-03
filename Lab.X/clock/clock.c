@@ -1,6 +1,7 @@
 
 #include "clock.h"
-
+#include "../state/state.h"
+#include "../controller/EEPROM/EEPROM_controller.h"
 #include <stdio.h>
 
 static clock_t _clock;
@@ -18,14 +19,21 @@ uint8_t increment_clock() {
 
   _clock.seconds = 0;
   _clock.minutes++;
-  if (_clock.minutes < MINUTES_MAX_VALUE)
-    return ONLY_MINUTES_AND_SECONDS;
+  if (_clock.minutes < MINUTES_MAX_VALUE){
+      Configs configs = get_configs();
+      configs.clockMinutes = _clock.minutes;
+      set_configs(configs, true);
+      return ONLY_MINUTES_AND_SECONDS;
+  }
 
   _clock.minutes = 0;
   _clock.hours++;
   if (_clock.hours >= HOURS_MAX_VALUE)
-    _clock.hours = 0;
-
+      _clock.hours = 0;
+  Configs configs = get_configs();
+  configs.clockMinutes = _clock.minutes;
+  configs.clockHours = _clock.hours;
+  set_configs(configs, true);
   return HOURS_MINUTES_AND_SECONDS;
 }
 
