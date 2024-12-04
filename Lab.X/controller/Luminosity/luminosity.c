@@ -1,7 +1,7 @@
+
 #include "luminosity.h"
-#include "../../mcc_generated_files/mcc.h" // Ensure this includes ADC function declarations
+#include "../../mcc_generated_files/adcc.h" // Ensure this includes ADC function declarations
 #include "../LCD/lcd.h"                    // Include the LCD header file
-#include <stdio.h>
 
 /**
  * @brief Reads the luminosity value from the ADC and converts it to a 3-bit
@@ -19,10 +19,6 @@ void get_luminosity(char *luminosity) {
 
   // Convert the luminosity value to a string
   luminosity_to_string(luminosity, lumValue);
-}
-
-void luminosity_to_string(char *s, uint8_t luminosity) {
-  sprintf(s, "%u", luminosity);
 }
 
 /**

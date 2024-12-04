@@ -6,9 +6,9 @@
 #include "../mcc_generated_files/tmr0.h"
 #include "../state/state.h"
 
-static uint8_t _cursor;
-static uint8_t _cursor_pos_l;
-static uint8_t _cursor_pos_c;
+volatile static uint8_t _cursor;
+volatile static uint8_t _cursor_pos_l;
+volatile static uint8_t _cursor_pos_c;
 
 void init_lcd_configuration_mode() {
   char clock_alarm[9];
@@ -35,11 +35,8 @@ void init_lcd_configuration_mode() {
 }
 
 void configuration_mode_initialization() {
-  // TODO: Disable Timer IRQ
   TMR0_StopTimer();
-  // TODO: Set Interrupts
   turn_off_all();
-  // toggle(2)
   _cursor = CURSOR_CLOCK_HOURS;
   _cursor_pos_l = LINE_CLOCK_HOURS;
   _cursor_pos_c = COLUMN_CLOCK_HOURS1;

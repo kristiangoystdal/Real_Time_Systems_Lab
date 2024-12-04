@@ -1,7 +1,6 @@
 
 #include "clock.h"
 #include "../state/state.h"
-#include "../controller/EEPROM/EEPROM_controller.h"
 #include <stdio.h>
 
 static clock_t _clock;
