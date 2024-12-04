@@ -5,11 +5,11 @@
 #include "../controller/LCD/lcd.h"
 #include "../controller/LED/led.h"
 #include "../controller/Luminosity/luminosity.h"
-#include "../controller/Temperature/temperature.h"
 #include "../controller/PWM/pwm.h"
-#include "../mcc_generated_files/tmr2.h"
+#include "../controller/Temperature/temperature.h"
 #include "../max_min/max_min.h"
 #include "../mcc_generated_files/tmr0.h"
+#include "../mcc_generated_files/tmr2.h"
 #include "../state/state.h"
 #include <stdio.h>
 #include <string.h>
@@ -69,11 +69,11 @@ void update_clock(void) {
   LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
 
   if (check_clock_alarm(get_clock())) {
-      if(_pwm_en == false){
-          turn_off(2);
-          set_PWM(true);
-          TMR2_StartTimer();
-      }
+    if (_pwm_en == false) {
+      turn_off(2);
+      set_PWM(true);
+      TMR2_StartTimer();
+    }
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
     _ctl[0] = 'C';
@@ -96,11 +96,11 @@ void update_sensors(void) {
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 
   if (check_lum_alarm(lum)) {
-      if(_pwm_en == false){
-          turn_off(2);
-          set_PWM(true);
-          TMR2_StartTimer();
-      }
+    if (_pwm_en == false) {
+      turn_off(2);
+      set_PWM(true);
+      TMR2_StartTimer();
+    }
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
     turn_on(0);
@@ -111,10 +111,10 @@ void update_sensors(void) {
   }
 
   if (check_temp_alarm(temp)) {
-    if(_pwm_en == false){
-        turn_off(2);
-        set_PWM(true);
-        TMR2_StartTimer();
+    if (_pwm_en == false) {
+      turn_off(2);
+      set_PWM(true);
+      TMR2_StartTimer();
     }
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
@@ -131,7 +131,7 @@ void normal_mode_timer_handler() {
   update_clock();
   _sensor_cnt--;
   if (_pwm_en)
-      _pwm_cnt--;
+    _pwm_cnt--;
   if (_sensor_cnt == 0) {
     _sensor_cnt = get_config_monitoring_period();
     update_sensors();
@@ -167,13 +167,12 @@ void normal_mode_s2_handler() {
     LCDWriteStr(line1, 1, 0);
     break;
   default: // S2_NORMAL_MODE
-    // TODO: Enable Timer
-      TMR0_StartTimer();
-      init_lcd_normal_mode();
+           // TODO: Enable Timer
+    TMR0_StartTimer();
+    LCDClear();
+    init_lcd_normal_mode();
     break;
   }
 }
 
-bool get_pwm_en(void){
-    return _pwm_en;
-}
+bool get_pwm_en(void) { return _pwm_en; }

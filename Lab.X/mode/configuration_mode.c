@@ -35,6 +35,7 @@ void init_lcd_configuration_mode() {
 }
 
 void configuration_mode_initialization() {
+  LCDinit();
   TMR0_StopTimer();
   turn_off_all();
   _cursor = CURSOR_CLOCK_HOURS;

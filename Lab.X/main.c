@@ -92,6 +92,15 @@ void checkButtonS2(void) {
   }
 }
 
+uint8_t normal_interupt = 0;
+void normal_mode_isr() { normal_interupt = 1; }
+
+uint8_t btn1_interrupt = 0;
+void checkButtonS1_isr(void) { btn1_interrupt = 1; }
+
+uint8_t btn2_interrupt = 0;
+void checkButtonS2_isr(void) { btn2_interrupt = 1; }
+
 int main(void) {
   SYSTEM_Initialize();
   // If using interrupts in PIC18 High/Low Priority Mode you need to enable the
@@ -99,10 +108,10 @@ int main(void) {
   // Compatibility Mode you need to enable the Global and Peripheral Interrupts
   // Use the following macros to:
 
-  TMR0_SetInterruptHandler(normal_mode_timer_handler);
-  
-  //IOCBF4_SetInterruptHandler(checkButtonS1);
-  //IOCCF5_SetInterruptHandler(checkButtonS2);
+  TMR0_SetInterruptHandler(normal_mode_isr);
+
+  IOCBF4_SetInterruptHandler(checkButtonS1_isr);
+  IOCCF5_SetInterruptHandler(checkButtonS2_isr);
 
   // Enable the Global Interrupts
   INTERRUPT_GlobalInterruptEnable();
@@ -124,7 +133,21 @@ int main(void) {
 
   while (1) {
 
+    if (normal_interupt == 1) {
+      normal_interupt = 0;
+      normal_mode_timer_handler();
+    }
+    if (btn1_interrupt == 1) {
+      btn1_interrupt = 0;
+      checkButtonS1();
+    }
+    if (btn2_interrupt == 1) {
+      btn2_interrupt = 0;
+      checkButtonS2();
+    }
+
     if (mode_has_changed()) {
+      LCDClear();
       uint8_t mode = get_mode();
       if (mode == NORMAL_MODE) {
         normal_mode_initialization();
@@ -132,8 +155,7 @@ int main(void) {
         configuration_mode_initialization();
       }
     }
-    if(!get_pwm_en())
-        SLEEP();
- 
+    if (!get_pwm_en())
+      SLEEP();
   }
 }

@@ -175,3 +175,8 @@ void LCDWriteStr(char *s, unsigned char l, unsigned char c) {
     ;
   LCDstr(s);
 }
+
+void LCDClear() {
+  LCDsend2x4(0x01, 0); // Clear display command
+  __delay_ms(20);      // Delay to ensure the LCD processes the command
+}

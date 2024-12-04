@@ -39,4 +39,6 @@ void LCDWriteChar(unsigned char s, unsigned char l, unsigned char c);
 
 void LCDWriteStr(char *s, unsigned char l, unsigned char c);
 
+void LCDClear(void);
+
 #endif
