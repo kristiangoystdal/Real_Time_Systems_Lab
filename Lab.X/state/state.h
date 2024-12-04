@@ -3,6 +3,7 @@
 
 #include "stdint.h"
 #include "stdbool.h"
+#include <stdio.h>
 
 #define INITIAL_MONITORING_PERIOD 3
 #define INITIAL_ALARM_DURATION 5
@@ -57,45 +58,130 @@ typedef struct
     uint8_t minLum[5];
 } SensorsMaxMin;
 
+volatile Configs _configs;
+volatile SensorsMaxMin _sensorsMaxMin;
+volatile uint8_t _mode;
+volatile bool _mode_has_changed;
+
 void set_default(void);
 void set_configs(Configs configs, bool write_eeprom);
-Configs get_configs(void);
+
+static inline Configs get_configs(void) {
+    return _configs;
+}
 
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom);
-SensorsMaxMin get_max_min(void);
 
-uint8_t get_config_monitoring_period(void);
-uint8_t get_config_alarm_duration(void);
-uint8_t get_config_alarm_flag(void);
-uint8_t get_config_alarm_hours(void);
-uint8_t get_config_alarm_minutes(void);
-uint8_t get_config_alarm_seconds(void);
-uint8_t get_config_threshold_temperature(void);
-uint8_t get_config_threshold_luminosity(void);
-uint8_t get_config_clock_hours(void);
-uint8_t get_config_clock_minutes(void);
+static inline SensorsMaxMin get_max_min(void) {
+  return _sensorsMaxMin;
+}
 
-void get_config_alarm_hours_str(char* s);
-void get_config_alarm_minutes_str(char* s);
-void get_config_alarm_seconds_str(char* s);
-void get_config_alarm_time_str(char* s);
-void get_config_threshold_temperature_str(char* s);
-void get_config_threshold_luminosity_str(char* s);
+static inline uint8_t get_config_monitoring_period(void) {
+  return _configs.monitoringPeriod;
+}
 
-void increment_config_alarm_hours(void);
-void increment_config_alarm_minutes(void);
-void increment_config_alarm_seconds(void);
-void increment_config_threshold_temperature(void);
-void increment_config_threshold_luminosity(void);
-void toggle_config_alarm_flag(void);
+static inline uint8_t get_config_alarm_duration(void) {
+  return _configs.alarmDuration;
+}
+
+static inline uint8_t get_config_alarm_flag(void) {
+  return _configs.alarmFlag;
+}
+
+static inline uint8_t get_config_alarm_hours(void) {
+  return _configs.alarmHours;
+}
+
+static inline uint8_t get_config_alarm_minutes(void) {
+  return _configs.alarmMinutes;
+}
+
+static inline uint8_t get_config_alarm_seconds(void) {
+  return _configs.alarmSeconds;
+}
+
+static inline uint8_t get_config_threshold_temperature(void) {
+  return _configs.thresholdTemp;
+}
+
+static inline uint8_t get_config_threshold_luminosity(void) {
+  return _configs.thresholdLum;
+}
+
+static inline uint8_t get_config_clock_hours() {
+  return _configs.clockHours;
+}
+
+static inline uint8_t get_config_clock_minutes() {
+  return _configs.clockMinutes;
+}
+
+static inline void get_config_alarm_hours_str(char* s) {
+  sprintf(s, "%02u", _configs.alarmHours);
+}
+
+static inline void get_config_alarm_minutes_str(char* s) {
+  sprintf(s, "%02u", _configs.alarmMinutes);
+}
+
+static inline void get_config_alarm_seconds_str(char* s) {
+  sprintf(s, "%02u", _configs.alarmSeconds);
+}
+
+static inline void get_config_alarm_time_str(char* s) {
+  sprintf(s, "%02u:%02u:%02u", _configs.alarmHours, _configs.alarmMinutes, _configs.alarmSeconds);
+}
+
+static inline void get_config_threshold_temperature_str(char* s) {
+  sprintf(s, "%02u", _configs.thresholdTemp);
+}
+
+static inline void get_config_threshold_luminosity_str(char* s) {
+  sprintf(s, "%u", _configs.thresholdLum);
+}
+
+static inline void increment_config_alarm_hours(void) {
+  _configs.alarmHours = (_configs.alarmHours + 1) % HOURS_MAX_VALUE;
+}
+
+static inline void increment_config_alarm_minutes(void) {
+  _configs.alarmMinutes = (_configs.alarmMinutes + 1) % MINUTES_MAX_VALUE;
+}
+
+static inline void increment_config_alarm_seconds(void) {
+  _configs.alarmSeconds = (_configs.alarmSeconds + 1) % SECONDS_MAX_VALUE;
+}
+
+static inline void increment_config_threshold_temperature(void) {
+  _configs.thresholdTemp = (_configs.thresholdTemp + 1) % TEMP_MAX_VALUE;
+}
+
+static inline void increment_config_threshold_luminosity(void) {
+  _configs.thresholdLum = (_configs.thresholdLum + 1) % LUM_MAX_VALUE;
+}
+
+static inline void toggle_config_alarm_flag(void) {
+  _configs.alarmFlag = ~_configs.alarmFlag;
+}
+
 void reset_sensors_max_min(void);
 
 void flush_configs(uint8_t hours, uint8_t minutes);
 
 void get_measure(uint8_t index, char measure [17]);
 
-void set_mode(uint8_t mode);
-uint8_t get_mode(void);
-bool mode_has_changed(void);
+static inline void set_mode(uint8_t mode) {
+  _mode = mode;
+  _mode_has_changed = true;
+}
+
+static inline uint8_t get_mode(void) {
+  _mode_has_changed = false;
+  return _mode;
+}
+
+static inline bool mode_has_changed(void) {
+  return _mode_has_changed;
+}
 
 #endif

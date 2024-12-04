@@ -31,7 +31,7 @@ DEFAULTCONF=Config_2
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default Config_1 Config_2 
+ALLCONFS=PRO_Comparison 
 
 
 # build
@@ -45,17 +45,13 @@ ALLCONFS=default Config_1 Config_2
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_1 clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_2 clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=PRO_Comparison clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_1 build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_2 build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=PRO_Comparison build
 
 
 
