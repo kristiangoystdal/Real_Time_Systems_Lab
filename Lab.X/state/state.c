@@ -2,12 +2,6 @@
 #include "state.h"
 #include "../controller/EEPROM/EEPROM_controller.h"
 #include <string.h>
-#include <stdio.h>
-
-static Configs _configs;
-static SensorsMaxMin _sensorsMaxMin;
-static uint8_t _mode;
-static bool _mode_has_changed;
 
 void set_configs(Configs configs, bool write_eeprom) {
   _configs = configs;
@@ -15,10 +9,6 @@ void set_configs(Configs configs, bool write_eeprom) {
     WriteConfigs(configs);
     WriteChecksum(configs, _sensorsMaxMin);
   }
-}
-
-Configs get_configs(){
-    return _configs;
 }
 
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
@@ -43,98 +33,6 @@ void set_default() {
   _configs.clockHours = INITIAL_CLOCK_HOURS;
   _configs.clockMinutes = INITIAL_CLOCK_MINUTES;
   WriteConfigs(_configs);
-}
-
-SensorsMaxMin get_max_min() {
-  return _sensorsMaxMin;
-}
-
-uint8_t get_config_monitoring_period(void) {
-  return _configs.monitoringPeriod;
-}
-
-uint8_t get_config_alarm_duration(void) {
-  return _configs.alarmDuration;
-}
-
-uint8_t get_config_alarm_flag(void) {
-  return _configs.alarmFlag;
-}
-
-uint8_t get_config_alarm_hours(void) {
-  return _configs.alarmHours;
-}
-
-uint8_t get_config_alarm_minutes(void) {
-  return _configs.alarmMinutes;
-}
-
-uint8_t get_config_alarm_seconds(void) {
-  return _configs.alarmSeconds;
-}
-
-uint8_t get_config_threshold_temperature(void) {
-  return _configs.thresholdTemp;
-}
-
-uint8_t get_config_threshold_luminosity(void) {
-  return _configs.thresholdLum;
-}
-
-uint8_t get_config_clock_hours() {
-  return _configs.clockHours;
-}
-
-uint8_t get_config_clock_minutes() {
-  return _configs.clockMinutes;
-}
-
-void get_config_alarm_hours_str(char* s) {
-  sprintf(s, "%02u", _configs.alarmHours);
-}
-
-void get_config_alarm_minutes_str(char* s) {
-  sprintf(s, "%02u", _configs.alarmMinutes);
-}
-
-void get_config_alarm_seconds_str(char* s) {
-  sprintf(s, "%02u", _configs.alarmSeconds);
-}
-
-void get_config_alarm_time_str(char* s) {
-  sprintf(s, "%02u:%02u:%02u", _configs.alarmHours, _configs.alarmMinutes, _configs.alarmSeconds);
-}
-
-void get_config_threshold_temperature_str(char* s) {
-  sprintf(s, "%02u", _configs.thresholdTemp);
-}
-
-void get_config_threshold_luminosity_str(char* s) {
-  sprintf(s, "%u", _configs.thresholdLum);
-}
-
-void increment_config_alarm_hours(void) {
-  _configs.alarmHours = (_configs.alarmHours + 1) % HOURS_MAX_VALUE;
-}
-
-void increment_config_alarm_minutes(void) {
-  _configs.alarmMinutes = (_configs.alarmMinutes + 1) % MINUTES_MAX_VALUE;
-}
-
-void increment_config_alarm_seconds(void) {
-  _configs.alarmSeconds = (_configs.alarmSeconds + 1) % SECONDS_MAX_VALUE;
-}
-
-void increment_config_threshold_temperature(void) {
-  _configs.thresholdTemp = (_configs.thresholdTemp + 1) % TEMP_MAX_VALUE;
-}
-
-void increment_config_threshold_luminosity(void) {
-  _configs.thresholdLum = (_configs.thresholdLum + 1) % LUM_MAX_VALUE;
-}
-
-void toggle_config_alarm_flag(void) {
-  _configs.alarmFlag = ~_configs.alarmFlag;
 }
 
 void reset_sensors_max_min(void) {
@@ -175,18 +73,4 @@ void get_measure(uint8_t index, char measure [17] ) {
       measure_to_string(_sensorsMaxMin.minLum, measure);
       return;
   }
-}
-
-void set_mode(uint8_t mode) {
-  _mode = mode;
-  _mode_has_changed = true;
-}
-
-uint8_t get_mode(void) {
-  _mode_has_changed = false;
-  return _mode;
-}
-
-bool mode_has_changed(void) {
-  return _mode_has_changed;
 }

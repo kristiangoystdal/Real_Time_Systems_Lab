@@ -1,7 +1,6 @@
 #ifndef __EEPROM_H
 #define __EEPROM_H
 
-#include "../../mcc_generated_files/mcc.h"
 #include "../../state/state.h"
 
 #define MONITORING_PERIOD_ADDR 0x7000

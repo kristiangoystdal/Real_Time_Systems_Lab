@@ -1,4 +1,6 @@
+
 #include "EEPROM_controller.h"
+#include "../../mcc_generated_files/memory.h"
 
 uint8_t CalculateChecksum(Configs configs, SensorsMaxMin sensorsMaxMin) {
   uint8_t checksum = 0;

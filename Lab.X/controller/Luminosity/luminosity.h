@@ -9,7 +9,7 @@
 #define LUMINOSITY_H
 
 #include <stdint.h>
-#include <xc.h>
+#include <stdio.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -27,7 +27,9 @@ extern "C" {
  */
 uint8_t readLum(void);
 void get_luminosity(char *luminosity);
-void luminosity_to_string(char *s, uint8_t luminosity);
+static inline void luminosity_to_string(char *s, uint8_t luminosity) {
+  sprintf(s, "%u", luminosity);
+}
 
 #ifdef __cplusplus
 }

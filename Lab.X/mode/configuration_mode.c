@@ -6,9 +6,9 @@
 #include "../mcc_generated_files/tmr0.h"
 #include "../state/state.h"
 
-static uint8_t _cursor;
-static uint8_t _cursor_pos_l;
-static uint8_t _cursor_pos_c;
+volatile static uint8_t _cursor;
+volatile static uint8_t _cursor_pos_l;
+volatile static uint8_t _cursor_pos_c;
 
 void init_lcd_configuration_mode() {
   char clock_alarm[9];
@@ -35,11 +35,8 @@ void init_lcd_configuration_mode() {
 }
 
 void configuration_mode_initialization() {
-  // TODO: Disable Timer IRQ
   TMR0_StopTimer();
-  // TODO: Set Interrupts
   turn_off_all();
-  // toggle(2)
   _cursor = CURSOR_CLOCK_HOURS;
   _cursor_pos_l = LINE_CLOCK_HOURS;
   _cursor_pos_c = COLUMN_CLOCK_HOURS1;
@@ -80,7 +77,7 @@ void configuration_mode_s1_handler() {
     _cursor_pos_c = COLUMN_CLOCK_SECONDS1;
     break;
   case CURSOR_ALARM_SECONDS:
-    get_clock_str(HOURS_MINUTES_AND_SECONDS, buf);
+    get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     _cursor = CURSOR_ALARM_T;
     _cursor_pos_l = LINE_ALARM_T;
@@ -126,19 +123,21 @@ void configuration_mode_s1_handler() {
 
 void configuration_mode_s2_handler() {
   char buf[9];
-  uint8_t column;
   switch (_cursor) {
   case CURSOR_CLOCK_HOURS:
-    column = get_clock_str(increment_hours(), buf);
-    LCDWriteStr(buf, LINE_CLOCK_HOURS, column);
+    increment_hours();
+    get_clock_str(buf);
+    LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_CLOCK_MINUTES:
-    column = get_clock_str(increment_minutes(), buf);
-    LCDWriteStr(buf, LINE_CLOCK_HOURS, column);
+    increment_minutes();
+    get_clock_str(buf);
+    LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_CLOCK_SECONDS:
-    column = get_clock_str(increment_seconds(), buf);
-    LCDWriteStr(buf, LINE_CLOCK_HOURS, column);
+    increment_seconds();
+    get_clock_str(buf);
+    LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_ALARM_C:
     get_config_alarm_time_str(buf);
@@ -146,7 +145,6 @@ void configuration_mode_s2_handler() {
     _cursor = CURSOR_CLOCK_HOURS;
     _cursor_pos_l = LINE_CLOCK_HOURS;
     _cursor_pos_c = COLUMN_CLOCK_HOURS1;
-    LCDpos(_cursor_pos_l, _cursor_pos_c);
     break;
   case CURSOR_ALARM_HOURS:
     increment_config_alarm_hours();
@@ -167,7 +165,6 @@ void configuration_mode_s2_handler() {
     _cursor = CURSOR_ALARM_TEMP;
     _cursor_pos_l = LINE_TEMP;
     _cursor_pos_c = COLUMN_TEMP1;
-    LCDpos(_cursor_pos_l, _cursor_pos_c);
     break;
   case CURSOR_ALARM_TEMP:
     increment_config_threshold_temperature();
@@ -178,7 +175,6 @@ void configuration_mode_s2_handler() {
     _cursor = CURSOR_ALARM_LUM;
     _cursor_pos_l = LINE_ALARM_L;
     _cursor_pos_c = COLUMN_ALARM_L;
-    LCDpos(_cursor_pos_l, _cursor_pos_c);
     break;
   case CURSOR_ALARM_LUM:
     increment_config_threshold_luminosity();
@@ -196,4 +192,5 @@ void configuration_mode_s2_handler() {
   default: // CURSOR_NORMAL_MODE
     break;
   }
+  LCDpos(_cursor_pos_l, _cursor_pos_c);
 }

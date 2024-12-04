@@ -14,16 +14,16 @@
 #include <stdio.h>
 #include <string.h>
 
-static uint8_t _s2_state;
-static uint8_t _sensor_cnt;
-static uint8_t _pwm_cnt;
-static bool _pwm_en;
-static char _ctl[4];
+volatile static uint8_t _s2_state;
+volatile static uint8_t _sensor_cnt;
+volatile static uint8_t _pwm_cnt;
+volatile static bool _pwm_en;
+volatile static char _ctl[4];
 
 void init_lcd_normal_mode() {
   char clock[9];
-  uint8_t clock_column = get_clock_str(HOURS_MINUTES_AND_SECONDS, clock);
-  LCDWriteStr(clock, LINE_CLOCK_HOURS, clock_column);
+  get_clock_str(clock);
+  LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
 
   LCDWriteStr(_ctl, LINE_ALARM_C, COLUMN_ALARM_C);
 
@@ -32,6 +32,8 @@ void init_lcd_normal_mode() {
   } else {
     LCDWriteChar('a', LINE_ALARM_ENABLE, COLUMN_ALARM_ENABLE);
   }
+
+  LCDWriteChar(' ', LINE_RESET_MAX_MIN, COLUMN_RESET_MAX_MIN);
 
   char temperature[3];
   get_temperature(temperature);
@@ -45,13 +47,8 @@ void init_lcd_normal_mode() {
 }
 
 void normal_mode_initialization() {
-  // TODO: Set Interrupts
-  // TODO: Enable Timer IRQ
   TMR0_StartTimer();
   set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
-  printf("Setting clock");
-  char clock[9];
-  get_clock_str(HOURS_MINUTES_AND_SECONDS, clock);
 
   _s2_state = S2_NORMAL_MODE;
   _sensor_cnt = get_config_monitoring_period();
@@ -66,10 +63,10 @@ void normal_mode_initialization() {
 }
 
 void update_clock(void) {
-  uint8_t precision = increment_clock();
+  increment_clock();
   char clock[9];
-  uint8_t clock_column = get_clock_str(precision, clock);
-  LCDWriteStr(clock, LINE_CLOCK_HOURS, clock_column);
+  get_clock_str(clock);
+  LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
 
   if (check_clock_alarm(get_clock())) {
       if(_pwm_en == false){

@@ -3,6 +3,7 @@ LCD
 */
 
 #include <xc.h>
+
 #define _XTAL_FREQ 4000000
 
 #include "I2C/i2c.h"
@@ -131,9 +132,9 @@ void LCDinit(void) {
   __delay_ms(20);
 }
 
-void LCDcmd(unsigned char c) { LCDsend2x4(c, 0); }
+static inline void LCDcmd(unsigned char c) { LCDsend2x4(c, 0); }
 
-void LCDchar(unsigned char c) { LCDsend2x4(c, LCD_RS); }
+static inline void LCDchar(unsigned char c) { LCDsend2x4(c, LCD_RS); }
 
 void LCDstr(char *p) {
   unsigned char c;

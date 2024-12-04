@@ -1,6 +1,6 @@
 
 #include "led.h"
-#include "../../mcc_generated_files/mcc.h"
+#include "../../mcc_generated_files/pin_manager.h"
 
 void turn_on(uint8_t n) {
   if (n == 0) {
