@@ -4,7 +4,6 @@
  * Description: This file contains the implementation of temperature control
  * functions. Created on: Date
  */
-
 #include "temperature.h"
 #include "../LCD/I2C/i2c.h"
 

@@ -100,8 +100,9 @@ int main(void) {
   // Use the following macros to:
 
   TMR0_SetInterruptHandler(normal_mode_timer_handler);
-  IOCBF4_SetInterruptHandler(checkButtonS1);
-  IOCCF5_SetInterruptHandler(checkButtonS2);
+  
+  //IOCBF4_SetInterruptHandler(checkButtonS1);
+  //IOCCF5_SetInterruptHandler(checkButtonS2);
 
   // Enable the Global Interrupts
   INTERRUPT_GlobalInterruptEnable();
@@ -133,5 +134,6 @@ int main(void) {
     }
     if(!get_pwm_en())
         SLEEP();
+ 
   }
 }

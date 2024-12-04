@@ -5,7 +5,7 @@
   <confs>
     <conf name="default" type="2">
       <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>8107:=&lt;rev>0002:=&lt;man>Microchip Technology Incorporated:=&lt;prod>Curiosity:=&lt;sn>BUR171272106:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v2.50/bin</languageToolchainDir>
+      <languageToolchainDir>/Applications/microchip/xc8/v2.50/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -23,7 +23,7 @@
     </conf>
     <conf name="Config_1" type="2">
       <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>8107:=&lt;rev>0002:=&lt;man>Microchip Technology Incorporated:=&lt;prod>Curiosity:=&lt;sn>BUR171272106:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v2.50/bin</languageToolchainDir>
+      <languageToolchainDir>/Applications/microchip/xc8/v2.50/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -40,8 +40,8 @@
       </runprofile>
     </conf>
     <conf name="Config_2" type="2">
-      <platformToolSN></platformToolSN>
-      <languageToolchainDir>/opt/microchip/xc8/v2.50/bin</languageToolchainDir>
+      <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>8107:=&lt;rev>0002:=&lt;man>Microchip Technology Incorporated:=&lt;prod>Curiosity:=&lt;sn>BUR171272106:=&lt;drv>x:=&lt;xpt>h:=end</platformToolSN>
+      <languageToolchainDir>/Applications/microchip/xc8/v2.50/bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>

@@ -28,7 +28,7 @@
  * IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL OR
  * CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
  *****************************************************************************/
-
+#include <xc.h>
 /* SSPCON1 REGISTER */
 #define   SSPENB    			0b00100000  	/* Enable serial port and configures SCK, SDO, SDI*/
 #define   SLAVE_7   			0b00000110     	/* I2C Slave mode, 7-bit address*/

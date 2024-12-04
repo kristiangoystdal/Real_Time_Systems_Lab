@@ -148,7 +148,7 @@
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>2</platform>
+        <platform>4</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
@@ -356,7 +356,7 @@
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>2</platform>
+        <platform>4</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
@@ -561,10 +561,10 @@
         <targetDevice>PIC16F18875</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>Simulator</platformTool>
+        <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>2</platform>
+        <platform>4</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>
@@ -684,6 +684,12 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
+        <property key="lastid" value=""/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
         <property key="memories.eeprom" value="true"/>
