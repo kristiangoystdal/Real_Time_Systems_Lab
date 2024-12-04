@@ -72,7 +72,11 @@ void update_clock(void) {
       
   }
   if (check_clock_alarm(get_clock())) {
-    // TODO: Turn on PWM
+      if(_pwm_en == false){
+          turn_off(2);
+          PWM_enable();
+          TMR2_StartTimer();
+      }
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
     _ctl[0] = 'C';
@@ -95,8 +99,11 @@ void update_sensors(void) {
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 
   if (check_lum_alarm(lum)) {
-    PWM_enable();
-    TMR2_StartTimer();
+      if(_pwm_en == false){
+          turn_off(2);
+          PWM_enable();
+          TMR2_StartTimer();
+      }
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
     turn_on(0);
@@ -107,8 +114,11 @@ void update_sensors(void) {
   }
 
   if (check_temp_alarm(temp)) {
-    PWM_enable();
-    TMR2_StartTimer();
+    if(_pwm_en == false){
+        turn_off(2);
+        PWM_enable();
+        TMR2_StartTimer();
+    }
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
     turn_on(1);
@@ -123,22 +133,19 @@ void normal_mode_timer_handler() {
   toggle(3);
   update_clock();
   _sensor_cnt--;
+  if (_pwm_en)
+      _pwm_cnt--;
   if (_sensor_cnt == 0) {
     _sensor_cnt = get_config_monitoring_period();
     update_sensors();
-  }
-  if (_pwm_en) {
-    _pwm_cnt--;
   }
   if (_pwm_cnt == 0) {
     _pwm_cnt = get_config_alarm_duration();
     _pwm_en = false;
     TMR2_StopTimer();
     PWM_disable();
+    turn_on(2);
   }
-  // toggle(1);
-  // toggle(2);
-  // printf("Timer1 interrupt triggered!\n");
 }
 
 void normal_mode_s1_handler() { set_mode(CONFIGURATION_MODE); }
@@ -166,4 +173,8 @@ void normal_mode_s2_handler() {
     init_lcd_normal_mode();
     break;
   }
+}
+
+bool get_pwm_en(void){
+    return _pwm_en;
 }

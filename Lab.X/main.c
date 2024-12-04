@@ -92,7 +92,8 @@ int main(void) {
       } else {
         configuration_mode_initialization();
       }
-    } // Add a delay for readability
-    SLEEP();
+    }
+    if(!get_pwm_en())
+        SLEEP();
   }
 }

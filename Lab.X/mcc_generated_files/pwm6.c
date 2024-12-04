@@ -61,11 +61,11 @@
     // PWM6POL active_hi; PWM6EN enabled; 
     PWM6CON = 0x80;   
 
-    // DC 127; 
-    PWM6DCH = 0x7F;   
+    // DC 25; 
+    PWM6DCH = 0x19;   
 
-    // DC 3; 
-    PWM6DCL = 0xC0;   
+    // DC 1; 
+    PWM6DCL = 0x40;   
 
     // Select timer
     CCPTMRS1bits.P6TSEL = 1;
