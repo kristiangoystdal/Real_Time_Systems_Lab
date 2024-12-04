@@ -8,10 +8,10 @@ void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds) {
   _clock.seconds = seconds;
 }
 
-uint8_t increment_clock() {
+void increment_clock() {
   _clock.seconds++;
   if (_clock.seconds < SECONDS_MAX_VALUE)
-    return ONLY_SECONDS;
+    return;
 
   _clock.seconds = 0;
   _clock.minutes++;
@@ -19,7 +19,7 @@ uint8_t increment_clock() {
       Configs configs = get_configs();
       configs.clockMinutes = _clock.minutes;
       set_configs(configs, true);
-      return ONLY_MINUTES_AND_SECONDS;
+      return;
   }
 
   _clock.minutes = 0;
@@ -30,5 +30,5 @@ uint8_t increment_clock() {
   configs.clockMinutes = _clock.minutes;
   configs.clockHours = _clock.hours;
   set_configs(configs, true);
-  return HOURS_MINUTES_AND_SECONDS;
+  return;
 }
