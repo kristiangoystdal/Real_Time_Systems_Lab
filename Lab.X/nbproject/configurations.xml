@@ -11,6 +11,9 @@
         <itemPath>clock/clock.h</itemPath>
       </logicalFolder>
       <logicalFolder name="controller" displayName="controller" projectFiles="true">
+        <logicalFolder name="Button" displayName="Button" projectFiles="true">
+          <itemPath>controller/Button/button.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="EEPROM" displayName="EEPROM" projectFiles="true">
           <itemPath>controller/EEPROM/EEPROM_controller.h</itemPath>
         </logicalFolder>
@@ -73,6 +76,9 @@
                    projectFiles="true">
       <logicalFolder name="alarm" displayName="alarm" projectFiles="true">
         <itemPath>alarm/alarm.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="Button" displayName="Button" projectFiles="true">
+        <itemPath>controller/Button/button.c</itemPath>
       </logicalFolder>
       <logicalFolder name="clock" displayName="clock" projectFiles="true">
         <itemPath>clock/clock.c</itemPath>
@@ -564,7 +570,7 @@
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>4</platform>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.25.389"/>

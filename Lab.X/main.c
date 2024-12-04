@@ -37,15 +37,18 @@
 #include "controller/LCD/I2C/i2c.h"
 #include "controller/LCD/lcd.h"
 #include "controller/LED/led.h"
+#include "controller/Button/button.h"
 #include "mcc_generated_files/mcc.h"
 #include "mode/configuration_mode.h"
 #include "mode/normal_mode.h"
 #include "state/state.h"
-#include <stdio.h>
 
 /*
     Main application
 */
+
+#define NO_INTERRUPT 0
+#define HAS_INTERRUPT 1
 
 void global_initialization() {
   if (MemIsUsable()) {
@@ -57,49 +60,14 @@ void global_initialization() {
   set_mode(NORMAL_MODE);
 }
 
-volatile uint8_t btn1_state = 0;
-volatile uint8_t btn2_state = 0;
+volatile uint8_t normal_interrupt = NO_INTERRUPT;
+void normal_mode_isr() { normal_interrupt = HAS_INTERRUPT; }
 
-void checkButtonS1(void) {
-  if (btn1_state == 0) {
-    if (BTN_1_PORT == LOW) {
-      __delay_ms(1);
-      btn1_state = 1;
-    }
-  } else if (BTN_1_PORT == HIGH) {
-    btn1_state = 0;
-    if (get_mode() == NORMAL_MODE) {
-      normal_mode_s1_handler();
-    } else {
-      configuration_mode_s1_handler();
-    }
-  }
-}
+volatile uint8_t btn1_interrupt = NO_INTERRUPT;
+void checkButtonS1_isr(void) { btn1_interrupt = HAS_INTERRUPT; }
 
-void checkButtonS2(void) {
-  if (btn2_state == 0) {
-    if (BTN_2_PORT == LOW) {
-      __delay_ms(1);
-      btn2_state = 1;
-    }
-  } else if (BTN_2_PORT == HIGH) {
-    btn2_state = 0;
-    if (get_mode() == NORMAL_MODE) {
-      normal_mode_s2_handler();
-    } else {
-      configuration_mode_s2_handler();
-    }
-  }
-}
-
-uint8_t normal_interupt = 0;
-void normal_mode_isr() { normal_interupt = 1; }
-
-uint8_t btn1_interrupt = 0;
-void checkButtonS1_isr(void) { btn1_interrupt = 1; }
-
-uint8_t btn2_interrupt = 0;
-void checkButtonS2_isr(void) { btn2_interrupt = 1; }
+volatile uint8_t btn2_interrupt = NO_INTERRUPT;
+void checkButtonS2_isr(void) { btn2_interrupt = HAS_INTERRUPT; }
 
 int main(void) {
   SYSTEM_Initialize();
@@ -127,29 +95,41 @@ int main(void) {
 
   OpenI2C();
   LCDinit();
-  ADCC_Initialize(); // Initialize ADC
 
   global_initialization();
 
   while (1) {
 
-    if (normal_interupt == 1) {
-      normal_interupt = 0;
+    if (normal_interrupt == HAS_INTERRUPT) {
+      normal_interrupt = NO_INTERRUPT;
       normal_mode_timer_handler();
     }
-    if (btn1_interrupt == 1) {
-      btn1_interrupt = 0;
-      checkButtonS1();
+
+    if (btn1_interrupt == HAS_INTERRUPT) {
+      btn1_interrupt = NO_INTERRUPT;
+      if(checkButtonS1()) {
+        if (get_mode() == NORMAL_MODE) {
+          normal_mode_s1_handler();
+        } else {
+          configuration_mode_s1_handler();
+        }
+      }
     }
-    if (btn2_interrupt == 1) {
-      btn2_interrupt = 0;
-      checkButtonS2();
+
+    if (btn2_interrupt == HAS_INTERRUPT) {
+      btn2_interrupt = NO_INTERRUPT;
+      if(checkButtonS2()) {
+        if (get_mode() == NORMAL_MODE) {
+          normal_mode_s2_handler();
+        } else {
+          configuration_mode_s2_handler();
+        }
+      }
     }
 
     if (mode_has_changed()) {
       LCDClear();
-      uint8_t mode = get_mode();
-      if (mode == NORMAL_MODE) {
+      if(get_mode() == NORMAL_MODE) {
         normal_mode_initialization();
       } else {
         configuration_mode_initialization();

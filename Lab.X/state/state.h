@@ -58,10 +58,10 @@ typedef struct
     uint8_t minLum[5];
 } SensorsMaxMin;
 
-volatile Configs _configs;
-volatile SensorsMaxMin _sensorsMaxMin;
-volatile uint8_t _mode;
-volatile bool _mode_has_changed;
+Configs _configs;
+SensorsMaxMin _sensorsMaxMin;
+uint8_t _mode;
+bool _mode_has_changed;
 
 void set_default(void);
 void set_configs(Configs configs, bool write_eeprom);

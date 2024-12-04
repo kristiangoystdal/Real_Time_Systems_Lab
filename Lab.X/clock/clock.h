@@ -14,7 +14,7 @@ typedef struct {
   uint8_t seconds;
 } clock_t;
 
-volatile clock_t _clock;
+clock_t _clock;
 
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 

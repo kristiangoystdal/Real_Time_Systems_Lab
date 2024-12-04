@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include <string.h>
 
-volatile static uint8_t _s2_state;
-volatile static uint8_t _sensor_cnt;
-volatile static uint8_t _pwm_cnt;
-volatile static bool _pwm_en;
-volatile static char _ctl[4];
+static uint8_t _s2_state;
+static uint8_t _sensor_cnt;
+static uint8_t _pwm_cnt;
+static bool _pwm_en;
+static char _ctl[4];
 
 void init_lcd_normal_mode() {
   char clock[9];
@@ -153,7 +153,6 @@ void normal_mode_s2_handler() {
   _s2_state = (_s2_state + 1) % (S2_LUM_MODE + 1);
   switch (_s2_state) {
   case S2_TEMP_MODE:
-    // TODO: Disable Timer
     TMR0_StopTimer();
     get_measure(MAX_TEMPERATURE, line0);
     get_measure(MIN_TEMPERATURE, line1);
@@ -167,7 +166,6 @@ void normal_mode_s2_handler() {
     LCDWriteStr(line1, 1, 0);
     break;
   default: // S2_NORMAL_MODE
-           // TODO: Enable Timer
     TMR0_StartTimer();
     LCDClear();
     init_lcd_normal_mode();

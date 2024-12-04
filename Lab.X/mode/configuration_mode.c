@@ -6,9 +6,9 @@
 #include "../mcc_generated_files/tmr0.h"
 #include "../state/state.h"
 
-volatile static uint8_t _cursor;
-volatile static uint8_t _cursor_pos_l;
-volatile static uint8_t _cursor_pos_c;
+static uint8_t _cursor;
+static uint8_t _cursor_pos_l;
+static uint8_t _cursor_pos_c;
 
 void init_lcd_configuration_mode() {
   char clock_alarm[9];
@@ -111,12 +111,10 @@ void configuration_mode_s1_handler() {
     break;
   case CURSOR_RESET_MAX_MIN:
     _cursor = CURSOR_NORMAL_MODE;
-    _cursor_pos_l = LINE_RESET_MAX_MIN;
-    _cursor_pos_c = COLUMN_RESET_MAX_MIN;
-    break;
-  default: // CURSOR_NORMAL_MODE
     flush_configs(get_clock_hours(), get_clock_minutes());
     set_mode(NORMAL_MODE);
+    break;
+  default: // CURSOR_NORMAL_MODE
     break;
   }
   LCDpos(_cursor_pos_l, _cursor_pos_c);
