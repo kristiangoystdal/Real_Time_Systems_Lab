@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=Lab.X
 
 # Active Configuration
-DEFAULTCONF=Config_1
+DEFAULTCONF=Config_2
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=default Config_1 
+ALLCONFS=default Config_1 Config_2 
 
 
 # build
@@ -47,6 +47,7 @@ ALLCONFS=default Config_1
 .clobber-impl: .clobber-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_1 clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_2 clean
 
 
 
@@ -54,6 +55,7 @@ ALLCONFS=default Config_1
 .all-impl: .all-pre .depcheck-impl
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
 	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_1 build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=Config_2 build
 
 
 

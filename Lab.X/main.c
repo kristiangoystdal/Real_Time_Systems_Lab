@@ -78,11 +78,11 @@ void checkButtonS1(void) {
 
 void checkButtonS2(void) {
   if (btn2_state == 0) {
-    if (BTN_1_PORT == LOW) {
+    if (BTN_2_PORT == LOW) {
       __delay_ms(1);
       btn2_state = 1;
     }
-  } else if (BTN_1_PORT == HIGH) {
+  } else if (BTN_2_PORT == HIGH) {
     btn2_state = 0;
     if (get_mode() == NORMAL_MODE) {
       normal_mode_s2_handler();
