@@ -1,20 +1,21 @@
 
 #include "configuration_mode.h"
-#include "../controller/LED/led.h"
-#include "../controller/LCD/lcd.h"
-#include "../state/state.h"
 #include "../clock/clock.h"
+#include "../controller/LCD/lcd.h"
+#include "../controller/LED/led.h"
+#include "../mcc_generated_files/tmr0.h"
+#include "../state/state.h"
 
 static uint8_t _cursor;
 static uint8_t _cursor_pos_l;
 static uint8_t _cursor_pos_c;
 
 void init_lcd_configuration_mode() {
-  char clock_alarm [9];
+  char clock_alarm[9];
   get_config_alarm_time_str(clock_alarm);
   LCDWriteStr(clock_alarm, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
 
-  if(get_config_alarm_flag() == true) {
+  if (get_config_alarm_flag() == true) {
     LCDWriteStr("CTL AR", LINE_ALARM_C, COLUMN_ALARM_C);
   } else {
     LCDWriteStr("CTL aR", LINE_ALARM_C, COLUMN_ALARM_C);
@@ -35,6 +36,7 @@ void init_lcd_configuration_mode() {
 
 void configuration_mode_initialization() {
   // TODO: Disable Timer IRQ
+  TMR0_StopTimer();
   // TODO: Set Interrupts
   turn_off_all();
   // toggle(2)
@@ -45,7 +47,7 @@ void configuration_mode_initialization() {
 }
 
 void configuration_mode_s1_handler() {
-  char buf [9];
+  char buf[9];
   switch (_cursor) {
   case CURSOR_CLOCK_HOURS:
     _cursor = CURSOR_CLOCK_MINUTES;
@@ -123,7 +125,7 @@ void configuration_mode_s1_handler() {
 }
 
 void configuration_mode_s2_handler() {
-  char buf [9];
+  char buf[9];
   uint8_t column;
   switch (_cursor) {
   case CURSOR_CLOCK_HOURS:

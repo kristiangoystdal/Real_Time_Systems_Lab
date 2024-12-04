@@ -57,6 +57,41 @@ void global_initialization() {
   set_mode(NORMAL_MODE);
 }
 
+volatile uint8_t btn1_state = 0;
+volatile uint8_t btn2_state = 0;
+
+void checkButtonS1(void) {
+  if (btn1_state == 0) {
+    if (BTN_1_PORT == LOW) {
+      __delay_ms(1);
+      btn1_state = 1;
+    }
+  } else if (BTN_1_PORT == HIGH) {
+    btn1_state = 0;
+    if (get_mode() == NORMAL_MODE) {
+      normal_mode_s1_handler();
+    } else {
+      configuration_mode_s1_handler();
+    }
+  }
+}
+
+void checkButtonS2(void) {
+  if (btn2_state == 0) {
+    if (BTN_1_PORT == LOW) {
+      __delay_ms(1);
+      btn2_state = 1;
+    }
+  } else if (BTN_1_PORT == HIGH) {
+    btn2_state = 0;
+    if (get_mode() == NORMAL_MODE) {
+      normal_mode_s2_handler();
+    } else {
+      configuration_mode_s2_handler();
+    }
+  }
+}
+
 int main(void) {
   SYSTEM_Initialize();
   // If using interrupts in PIC18 High/Low Priority Mode you need to enable the
@@ -65,6 +100,10 @@ int main(void) {
   // Use the following macros to:
 
   TMR0_SetInterruptHandler(normal_mode_timer_handler);
+  IOCBF4_SetInterruptHandler(checkButtonS1);
+  //IOCCF5_SetInterruptHandler(checkButtonS2);
+  
+  checkButtonS2();
 
   // Enable the Global Interrupts
   INTERRUPT_GlobalInterruptEnable();
@@ -85,6 +124,7 @@ int main(void) {
   global_initialization();
 
   while (1) {
+
     if (mode_has_changed()) {
       uint8_t mode = get_mode();
       if (mode == NORMAL_MODE) {

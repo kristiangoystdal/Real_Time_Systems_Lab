@@ -9,6 +9,7 @@
 #include "../controller/PWM/pwm.h"
 #include "../mcc_generated_files/tmr2.h"
 #include "../max_min/max_min.h"
+#include "../mcc_generated_files/tmr0.h"
 #include "../state/state.h"
 #include <stdio.h>
 #include <string.h>
@@ -46,6 +47,7 @@ void init_lcd_normal_mode() {
 void normal_mode_initialization() {
   // TODO: Set Interrupts
   // TODO: Enable Timer IRQ
+  TMR0_StartTimer();
   set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
   printf("Setting clock");
   char clock[9];
@@ -68,9 +70,7 @@ void update_clock(void) {
   char clock[9];
   uint8_t clock_column = get_clock_str(precision, clock);
   LCDWriteStr(clock, LINE_CLOCK_HOURS, clock_column);
-  if (clock_column == HOURS_POSITION || clock_column == MINUTES_POSITION) {
-      
-  }
+
   if (check_clock_alarm(get_clock())) {
       if(_pwm_en == false){
           turn_off(2);
@@ -157,6 +157,7 @@ void normal_mode_s2_handler() {
   switch (_s2_state) {
   case S2_TEMP_MODE:
     // TODO: Disable Timer
+    TMR0_StopTimer();
     get_measure(MAX_TEMPERATURE, line0);
     get_measure(MIN_TEMPERATURE, line1);
     LCDWriteStr(line0, 0, 0);
@@ -170,7 +171,8 @@ void normal_mode_s2_handler() {
     break;
   default: // S2_NORMAL_MODE
     // TODO: Enable Timer
-    init_lcd_normal_mode();
+      TMR0_StartTimer();
+      init_lcd_normal_mode();
     break;
   }
 }
