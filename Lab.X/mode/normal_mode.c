@@ -6,6 +6,8 @@
 #include "../controller/LED/led.h"
 #include "../controller/Luminosity/luminosity.h"
 #include "../controller/Temperature/temperature.h"
+#include "../controller/PWM/pwm.h"
+#include "../mcc_generated_files/tmr2.h"
 #include "../max_min/max_min.h"
 #include "../state/state.h"
 #include <stdio.h>
@@ -56,7 +58,7 @@ void normal_mode_initialization() {
   strcpy(_ctl, "   ");
 
   turn_off_all();
-  turn_on(1);
+  turn_on(2);
 
   init_lcd_normal_mode();
 }
@@ -93,30 +95,32 @@ void update_sensors(void) {
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 
   if (check_lum_alarm(lum)) {
-    // TODO: Turn on PWM
+    PWM_enable();
+    TMR2_StartTimer();
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
-    turn_on(3);
+    turn_on(0);
     _ctl[2] = 'L';
     LCDWriteChar('L', LINE_ALARM_T, COLUMN_ALARM_L);
   } else {
-    turn_off(3);
+    turn_off(0);
   }
 
   if (check_temp_alarm(temp)) {
-    // TODO: Turn on PWM
+    PWM_enable();
+    TMR2_StartTimer();
     _pwm_en = true;
     _pwm_cnt = get_config_alarm_duration();
-    turn_on(2);
+    turn_on(1);
     _ctl[1] = 'T';
     LCDWriteChar('T', LINE_ALARM_T, COLUMN_ALARM_T);
   } else {
-    turn_off(2);
+    turn_off(1);
   }
 }
 
 void normal_mode_timer_handler() {
-  toggle(0);
+  toggle(3);
   update_clock();
   _sensor_cnt--;
   if (_sensor_cnt == 0) {
@@ -129,7 +133,8 @@ void normal_mode_timer_handler() {
   if (_pwm_cnt == 0) {
     _pwm_cnt = get_config_alarm_duration();
     _pwm_en = false;
-    // TODO: Disable PWM
+    TMR2_StopTimer();
+    PWM_disable();
   }
   // toggle(1);
   // toggle(2);

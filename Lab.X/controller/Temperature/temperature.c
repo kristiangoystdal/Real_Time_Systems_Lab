@@ -12,7 +12,7 @@
 
 uint8_t readTemperature() {
   // Read the temperature value
-  uint8_t temp = 25;
+  uint8_t temp = 22;
 
   return temp;
 }
