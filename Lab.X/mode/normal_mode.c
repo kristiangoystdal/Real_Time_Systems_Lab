@@ -74,7 +74,7 @@ void update_clock(void) {
   if (check_clock_alarm(get_clock())) {
       if(_pwm_en == false){
           turn_off(2);
-          PWM_enable();
+          set_PWM(true);
           TMR2_StartTimer();
       }
     _pwm_en = true;
@@ -101,7 +101,7 @@ void update_sensors(void) {
   if (check_lum_alarm(lum)) {
       if(_pwm_en == false){
           turn_off(2);
-          PWM_enable();
+          set_PWM(true);
           TMR2_StartTimer();
       }
     _pwm_en = true;
@@ -116,7 +116,7 @@ void update_sensors(void) {
   if (check_temp_alarm(temp)) {
     if(_pwm_en == false){
         turn_off(2);
-        PWM_enable();
+        set_PWM(true);
         TMR2_StartTimer();
     }
     _pwm_en = true;
@@ -143,7 +143,7 @@ void normal_mode_timer_handler() {
     _pwm_cnt = get_config_alarm_duration();
     _pwm_en = false;
     TMR2_StopTimer();
-    PWM_disable();
+    set_PWM(false);
     turn_on(2);
   }
 }
