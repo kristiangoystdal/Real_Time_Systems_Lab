@@ -67,6 +67,8 @@ void configuration_mode_s1_handler() {
     _cursor_pos_c = COLUMN_ALARM_C;
     break;
   case CURSOR_ALARM_C:
+    get_clock_str(buf);
+    LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     _cursor = CURSOR_ALARM_T;
     _cursor_pos_l = LINE_ALARM_T;
     _cursor_pos_c = COLUMN_ALARM_T;
