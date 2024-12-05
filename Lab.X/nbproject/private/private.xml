@@ -3,11 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/EEPROM/EEPROM_controller.h</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/main.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/PWM/pwm.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/mode/configuration_mode.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/Button/button.c</file>
+            <file>file:/C:/Users/krisg/OneDrive%20-%20NTNU/7.semester/Real%20Time%20Systems/Real_Time_Systems_Lab/Lab.X/mode/normal_mode.c</file>
+            <file>file:/C:/Users/krisg/OneDrive%20-%20NTNU/7.semester/Real%20Time%20Systems/Real_Time_Systems_Lab/Lab.X/controller/LCD/I2C/i2c.c</file>
         </group>
     </open-files>
 </project-private>

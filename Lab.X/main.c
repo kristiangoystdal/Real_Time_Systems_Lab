@@ -32,16 +32,18 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR
     THIS SOFTWARE.
 */
+#include "alarm/alarm.h"
 #include "clock/clock.h"
+#include "controller/Button/button.h"
 #include "controller/EEPROM/EEPROM_controller.h"
 #include "controller/LCD/I2C/i2c.h"
 #include "controller/LCD/lcd.h"
-#include "controller/Button/button.h"
 #include "controller/PWM/pwm.h"
 #include "mcc_generated_files/mcc.h"
 #include "mode/configuration_mode.h"
 #include "mode/normal_mode.h"
 #include "state/state.h"
+
 
 /*
     Main application
@@ -102,17 +104,18 @@ int main(void) {
 
     if (normal_interrupt == HAS_INTERRUPT) {
       normal_interrupt = NO_INTERRUPT;
-        if (get_mode() == NORMAL_MODE) {
-          normal_mode_timer_handler();
-        } else {
-          configuration_mode_timer_handler();
-        }
+      if (get_mode() == NORMAL_MODE) {
+        normal_mode_timer_handler();
+      }
     }
 
     if (btn1_interrupt == HAS_INTERRUPT) {
       btn1_interrupt = NO_INTERRUPT;
-      if(checkButtonS1()) {
-        if (get_mode() == NORMAL_MODE) {
+      if (checkButtonS1()) {
+        if (get_alarm_triggered()) {
+          set_alarm_triggered(false);
+          clear_alarm();
+        } else if (get_mode() == NORMAL_MODE) {
           normal_mode_s1_handler();
         } else {
           configuration_mode_s1_handler();
@@ -122,7 +125,7 @@ int main(void) {
 
     if (btn2_interrupt == HAS_INTERRUPT) {
       btn2_interrupt = NO_INTERRUPT;
-      if(checkButtonS2()) {
+      if (checkButtonS2()) {
         if (get_mode() == NORMAL_MODE) {
           normal_mode_s2_handler();
         } else {
@@ -133,7 +136,7 @@ int main(void) {
 
     if (mode_has_changed()) {
       LCDClear();
-      if(get_mode() == NORMAL_MODE) {
+      if (get_mode() == NORMAL_MODE) {
         normal_mode_initialization();
       } else {
         configuration_mode_initialization();

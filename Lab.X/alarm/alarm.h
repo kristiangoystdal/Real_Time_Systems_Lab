@@ -10,4 +10,10 @@ bool check_lum_alarm(uint8_t lum);
 
 bool check_temp_alarm(uint8_t temp);
 
+void set_alarm_triggered(bool value);
+
+bool get_alarm_triggered(void);
+
+void clear_alarm();
+
 #endif

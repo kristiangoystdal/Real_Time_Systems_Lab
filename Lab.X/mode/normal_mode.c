@@ -67,6 +67,7 @@ void update_clock(void) {
     activate_pwm();
     _ctl[0] = 'C';
     LCDWriteChar('C', LINE_ALARM_C, COLUMN_ALARM_C);
+    set_alarm_triggered(true);
   }
 }
 
@@ -89,6 +90,7 @@ void update_sensors(void) {
     turn_on(0);
     _ctl[2] = 'L';
     LCDWriteChar('L', LINE_ALARM_T, COLUMN_ALARM_L);
+    set_alarm_triggered(true);
   } else {
     turn_off(0);
   }
@@ -98,6 +100,7 @@ void update_sensors(void) {
     turn_on(1);
     _ctl[1] = 'T';
     LCDWriteChar('T', LINE_ALARM_T, COLUMN_ALARM_T);
+    set_alarm_triggered(true);
   } else {
     turn_off(1);
   }
