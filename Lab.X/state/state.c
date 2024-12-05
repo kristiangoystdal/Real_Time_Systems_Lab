@@ -5,17 +5,19 @@
 
 void set_configs(Configs configs, bool write_eeprom) {
   _configs = configs;
-  if(write_eeprom) {
+  if (write_eeprom) {
     WriteConfigs(configs);
     WriteChecksum(configs, _sensorsMaxMin);
   }
 }
 
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
-  _sensorsMaxMin = sensorsMaxMin;
-  if(write_eeprom) {
+  if (write_eeprom) {
+    _sensorsMaxMin = sensorsMaxMin;
     WriteMaxMin(sensorsMaxMin);
     WriteChecksum(_configs, sensorsMaxMin);
+  } else {
+    _sensorsMaxMin = ReadMaxMin();
   }
 }
 
@@ -49,28 +51,29 @@ void flush_configs(uint8_t hours, uint8_t minutes) {
   WriteChecksum(_configs, _sensorsMaxMin);
 }
 
-void measure_to_string(uint8_t measure [5], char string [17]) {
+void measure_to_string(uint8_t measure[5], char string[17]) {
   uint8_t seconds = measure[MAX_MIN_SECONDS_BYTE];
   uint8_t minutes = measure[MAX_MIN_MINUTES_BYTE];
   uint8_t hours = measure[MAX_MIN_HOURS_BYTE];
   uint8_t lum = measure[MAX_MIN_LUM_BYTE];
   uint8_t temp = measure[MAX_MIN_TEMP_BYTE];
-  sprintf(string, "%02u:%02u:%02u  %02uC L%02u", hours, minutes, seconds, lum, temp);
+  sprintf(string, "%02u:%02u:%02u  %02uC L%u", hours, minutes, seconds, temp,
+          lum);
 }
 
-void get_measure(uint8_t index, char measure [17] ) {
+void get_measure(uint8_t index, char measure[17]) {
   switch (index) {
-    case MAX_TEMPERATURE:
-      measure_to_string(_sensorsMaxMin.maxTemp, measure);
-      return;
-    case MIN_TEMPERATURE:
-      measure_to_string(_sensorsMaxMin.minTemp, measure);
-      return;
-    case MAX_LUMINOSITY:
-      measure_to_string(_sensorsMaxMin.maxLum, measure);
-      return;
-    default: // MIN_LUMINOSITY
-      measure_to_string(_sensorsMaxMin.minLum, measure);
-      return;
+  case MAX_TEMPERATURE:
+    measure_to_string(_sensorsMaxMin.maxTemp, measure);
+    return;
+  case MIN_TEMPERATURE:
+    measure_to_string(_sensorsMaxMin.minTemp, measure);
+    return;
+  case MAX_LUMINOSITY:
+    measure_to_string(_sensorsMaxMin.maxLum, measure);
+    return;
+  default: // MIN_LUMINOSITY
+    measure_to_string(_sensorsMaxMin.minLum, measure);
+    return;
   }
 }

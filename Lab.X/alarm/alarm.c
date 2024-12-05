@@ -25,7 +25,7 @@ bool check_lum_alarm(uint8_t lum) {
     return false;
 
   uint8_t threshold_lum = get_config_threshold_luminosity();
-  if (lum >= threshold_lum)
+  if (lum > threshold_lum)
     return true;
 
   return false;
@@ -36,7 +36,7 @@ bool check_temp_alarm(uint8_t temp) {
     return false;
 
   uint8_t threshold_temp = get_config_threshold_temperature();
-  if (temp >= threshold_temp)
+  if (temp > threshold_temp)
     return true;
 
   return false;

@@ -44,7 +44,8 @@ void init_lcd_normal_mode() {
 
 void normal_mode_initialization() {
   TMR0_StartTimer();
-  set_clock(get_config_clock_hours(), get_config_clock_minutes(), 0);
+  set_clock(get_config_clock_hours(), get_config_clock_minutes(),
+            _clock.seconds);
 
   _s2_state = S2_NORMAL_MODE;
   _sensor_cnt = get_config_monitoring_period();
