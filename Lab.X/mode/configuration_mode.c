@@ -5,6 +5,7 @@
 #include "../controller/LED/led.h"
 #include "../mcc_generated_files/tmr0.h"
 #include "../state/state.h"
+#include "../controller/PWM/pwm.h"
 
 static uint8_t _cursor;
 static uint8_t _cursor_pos_l;
@@ -36,12 +37,21 @@ void init_lcd_configuration_mode() {
 
 void configuration_mode_initialization() {
   LCDinit();
-  TMR0_StopTimer();
+  deactivate_pwm();
   turn_off_all();
   _cursor = CURSOR_CLOCK_HOURS;
   _cursor_pos_l = LINE_CLOCK_HOURS;
   _cursor_pos_c = COLUMN_CLOCK_HOURS1;
   init_lcd_configuration_mode();
+}
+
+void configuration_mode_timer_handler() {
+  increment_clock();
+  if(_cursor != CURSOR_ALARM_HOURS && _cursor != CURSOR_ALARM_MINUTES && _cursor != CURSOR_ALARM_SECONDS) {
+    char clock[9];
+    get_clock_str(clock);
+    LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
+  }
 }
 
 void configuration_mode_s1_handler() {
@@ -58,6 +68,7 @@ void configuration_mode_s1_handler() {
     _cursor_pos_c = COLUMN_CLOCK_SECONDS1;
     break;
   case CURSOR_CLOCK_SECONDS:
+    TMR0_StartTimer();
     _cursor = CURSOR_ALARM_C;
     _cursor_pos_l = LINE_ALARM_C;
     _cursor_pos_c = COLUMN_ALARM_C;
@@ -124,6 +135,7 @@ void configuration_mode_s2_handler() {
   char buf[9];
   switch (_cursor) {
   case CURSOR_CLOCK_HOURS:
+    TMR0_StopTimer();
     increment_hours();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);

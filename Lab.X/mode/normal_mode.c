@@ -16,8 +16,6 @@
 
 static uint8_t _s2_state;
 static uint8_t _sensor_cnt;
-static uint8_t _pwm_cnt;
-static bool _pwm_en;
 static char _ctl[4];
 
 void init_lcd_normal_mode() {
@@ -32,8 +30,6 @@ void init_lcd_normal_mode() {
   } else {
     LCDWriteChar('a', LINE_ALARM_ENABLE, COLUMN_ALARM_ENABLE);
   }
-
-  LCDWriteChar(' ', LINE_RESET_MAX_MIN, COLUMN_RESET_MAX_MIN);
 
   char temperature[3];
   get_temperature(temperature);
@@ -52,8 +48,7 @@ void normal_mode_initialization() {
 
   _s2_state = S2_NORMAL_MODE;
   _sensor_cnt = get_config_monitoring_period();
-  _pwm_cnt = get_config_alarm_duration();
-  _pwm_en = false;
+  deactivate_pwm();
   strcpy(_ctl, "   ");
 
   turn_off_all();
@@ -69,13 +64,7 @@ void update_clock(void) {
   LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
 
   if (check_clock_alarm(get_clock())) {
-    if (_pwm_en == false) {
-      turn_off(2);
-      set_PWM(true);
-      TMR2_StartTimer();
-    }
-    _pwm_en = true;
-    _pwm_cnt = get_config_alarm_duration();
+    activate_pwm();
     _ctl[0] = 'C';
     LCDWriteChar('C', LINE_ALARM_C, COLUMN_ALARM_C);
   }
@@ -96,13 +85,7 @@ void update_sensors(void) {
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 
   if (check_lum_alarm(lum)) {
-    if (_pwm_en == false) {
-      turn_off(2);
-      set_PWM(true);
-      TMR2_StartTimer();
-    }
-    _pwm_en = true;
-    _pwm_cnt = get_config_alarm_duration();
+    activate_pwm();
     turn_on(0);
     _ctl[2] = 'L';
     LCDWriteChar('L', LINE_ALARM_T, COLUMN_ALARM_L);
@@ -111,13 +94,7 @@ void update_sensors(void) {
   }
 
   if (check_temp_alarm(temp)) {
-    if (_pwm_en == false) {
-      turn_off(2);
-      set_PWM(true);
-      TMR2_StartTimer();
-    }
-    _pwm_en = true;
-    _pwm_cnt = get_config_alarm_duration();
+    activate_pwm();
     turn_on(1);
     _ctl[1] = 'T';
     LCDWriteChar('T', LINE_ALARM_T, COLUMN_ALARM_T);
@@ -130,29 +107,21 @@ void normal_mode_timer_handler() {
   toggle(3);
   update_clock();
   _sensor_cnt--;
-  if (_pwm_en)
-    _pwm_cnt--;
   if (_sensor_cnt == 0) {
     _sensor_cnt = get_config_monitoring_period();
     update_sensors();
   }
-  if (_pwm_cnt == 0) {
-    _pwm_cnt = get_config_alarm_duration();
-    _pwm_en = false;
-    TMR2_StopTimer();
-    set_PWM(false);
-    turn_on(2);
-  }
+  decrement_pwm_cnt();
 }
 
 void normal_mode_s1_handler() { set_mode(CONFIGURATION_MODE); }
 
 void normal_mode_s2_handler() {
-  // TODO: LEDs?
   char line0[17], line1[17];
   _s2_state = (_s2_state + 1) % (S2_LUM_MODE + 1);
   switch (_s2_state) {
   case S2_TEMP_MODE:
+    turn_off_all();
     TMR0_StopTimer();
     get_measure(MAX_TEMPERATURE, line0);
     get_measure(MIN_TEMPERATURE, line1);
@@ -166,11 +135,10 @@ void normal_mode_s2_handler() {
     LCDWriteStr(line1, 1, 0);
     break;
   default: // S2_NORMAL_MODE
+    turn_on(2);
     TMR0_StartTimer();
     LCDClear();
     init_lcd_normal_mode();
     break;
   }
 }
-
-bool get_pwm_en(void) { return _pwm_en; }

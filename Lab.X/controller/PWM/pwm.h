@@ -3,6 +3,9 @@
 
 #include "stdbool.h"
 
-void set_PWM(bool on);
+void activate_pwm(void);
+void deactivate_pwm(void);
+void decrement_pwm_cnt(void);
+bool get_pwm_en(void);
 
 #endif

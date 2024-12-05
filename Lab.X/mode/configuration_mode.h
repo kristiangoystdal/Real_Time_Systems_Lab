@@ -17,6 +17,7 @@
 #define CURSOR_NORMAL_MODE 13
 
 void configuration_mode_initialization(void);
+void configuration_mode_timer_handler(void);
 void configuration_mode_s1_handler(void);
 void configuration_mode_s2_handler(void);
 

@@ -36,8 +36,8 @@
 #include "controller/EEPROM/EEPROM_controller.h"
 #include "controller/LCD/I2C/i2c.h"
 #include "controller/LCD/lcd.h"
-#include "controller/LED/led.h"
 #include "controller/Button/button.h"
+#include "controller/PWM/pwm.h"
 #include "mcc_generated_files/mcc.h"
 #include "mode/configuration_mode.h"
 #include "mode/normal_mode.h"
@@ -102,7 +102,11 @@ int main(void) {
 
     if (normal_interrupt == HAS_INTERRUPT) {
       normal_interrupt = NO_INTERRUPT;
-      normal_mode_timer_handler();
+        if (get_mode() == NORMAL_MODE) {
+          normal_mode_timer_handler();
+        } else {
+          configuration_mode_timer_handler();
+        }
     }
 
     if (btn1_interrupt == HAS_INTERRUPT) {

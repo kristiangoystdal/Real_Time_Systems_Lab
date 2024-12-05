@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/mcc_generated_files/mcc.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/mode/normal_mode.c</file>
+            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/EEPROM/EEPROM_controller.h</file>
             <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/main.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/mcc_generated_files/tmr0.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/state/state.h</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/clock/clock.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/clock/clock.h</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/LCD/lcd.c</file>
-            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/state/state.c</file>
+            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/PWM/pwm.c</file>
+            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/mode/configuration_mode.c</file>
+            <file>file:/home/joao-pedro/Documents/Tecnico/Y1-P2/STR/Laboratory/Real_Time_Systems_Lab/Lab.X/controller/Button/button.c</file>
         </group>
     </open-files>
 </project-private>
