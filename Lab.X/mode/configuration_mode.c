@@ -12,11 +12,6 @@ static uint8_t _cursor_pos_l;
 static uint8_t _cursor_pos_c;
 
 void init_lcd_configuration_mode() {
-  char clock[9];
-  TMR0_StopTimer();
-  get_clock_str(clock);
-  LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
-
   if (get_config_alarm_flag() == true) {
     LCDWriteStr("CTL AR", LINE_ALARM_C, COLUMN_ALARM_C);
   } else {
@@ -137,16 +132,19 @@ void configuration_mode_s2_handler() {
   char buf[9];
   switch (_cursor) {
   case CURSOR_CLOCK_HOURS:
+    TMR0_StopTimer();
     increment_hours();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_CLOCK_MINUTES:
+    TMR0_StopTimer();
     increment_minutes();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_CLOCK_SECONDS:
+    TMR0_StopTimer();
     increment_seconds();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
@@ -157,19 +155,16 @@ void configuration_mode_s2_handler() {
     _cursor_pos_c = COLUMN_CLOCK_HOURS1;
     break;
   case CURSOR_ALARM_HOURS:
-    TMR0_StopTimer();
     increment_config_alarm_hours();
     get_config_alarm_hours_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_ALARM_MINUTES:
-    TMR0_StopTimer();
     increment_config_alarm_minutes();
     get_config_alarm_minutes_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_MINUTES, COLUMN_CLOCK_MINUTES0);
     break;
   case CURSOR_ALARM_SECONDS:
-    TMR0_StopTimer();
     increment_config_alarm_seconds();
     get_config_alarm_seconds_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_SECONDS, COLUMN_CLOCK_SECONDS0);

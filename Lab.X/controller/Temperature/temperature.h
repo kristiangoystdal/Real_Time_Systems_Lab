@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define MAX_TEMPERATURE 128
+#define MAX_TEMPERATURE 99
 
 // Function to read the temperature value
 uint8_t readTemperature(void);
