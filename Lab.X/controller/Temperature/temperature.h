@@ -22,7 +22,7 @@ void get_temperature(char *temperature);
 // Function to convert the temperature as a string
 static inline void temperature_to_string(char *s, uint8_t temperature) {
   if(temperature > MAX_TEMPERATURE_VALUE) {
-    s[0] = '\0';
+    sprintf(temperature, "ER");
   } else {
     sprintf(s, "%02u", temperature);
   }

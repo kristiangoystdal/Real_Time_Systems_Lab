@@ -82,11 +82,11 @@ void update_sensors(void) {
   if(temp > MAX_TEMPERATURE_VALUE)
     temp = MAX_TEMPERATURE_VALUE;
 
-  update_max_min_luminosity(clock, lum, temp);
-
   char luminosity[2];
   luminosity_to_string(luminosity, lum);
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
+
+  update_max_min_luminosity(clock, lum, temp);
 
   if (check_lum_alarm(lum)) {
     activate_pwm();
@@ -98,14 +98,14 @@ void update_sensors(void) {
     turn_off(0);
   }
 
+  char temperature[3];
+  temperature_to_string(temperature, temp);
+  LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
+
   if(temp == MAX_TEMPERATURE_VALUE)
     return;
 
   update_max_min_temperature(clock, lum, temp);
-
-  char temperature[3];
-  temperature_to_string(temperature, temp);
-  LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
 
   if (check_temp_alarm(temp)) {
     activate_pwm();
@@ -129,6 +129,7 @@ void normal_mode_timer_handler() {
     _sensor_cnt = get_config_monitoring_period();
     update_sensors();
   }
+  LCDpos(LINE_CLOCK_SECONDS, COLUMN_CLOCK_SECONDS1 + 1);
   decrement_pwm_cnt();
 }
 
