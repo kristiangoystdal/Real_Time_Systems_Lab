@@ -38,8 +38,8 @@ void set_default() {
 
 void reset_sensors_max_min(void) {
   memset(&_sensorsMaxMin, 0, sizeof(_sensorsMaxMin));
-  _sensorsMaxMin.minTemp[MAX_MIN_TEMP_BYTE] = 0xFF;
-  _sensorsMaxMin.minLum[MAX_MIN_LUM_BYTE] = 0xFF;
+  _sensorsMaxMin.minTemp[MAX_MIN_TEMP_BYTE] = 99;
+  _sensorsMaxMin.minLum[MAX_MIN_LUM_BYTE] = 7;
 }
 
 void flush_configs(uint8_t hours, uint8_t minutes) {

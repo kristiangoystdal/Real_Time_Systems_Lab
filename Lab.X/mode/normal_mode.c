@@ -79,8 +79,8 @@ void update_sensors(void) {
   uint8_t lum = readLum();
   uint8_t temp = readTemperature();
   clock_t clock = get_clock();
-  if(temp > MAX_TEMPERATURE)
-    temp = MAX_TEMPERATURE;
+  if(temp > MAX_TEMPERATURE_VALUE)
+    temp = MAX_TEMPERATURE_VALUE;
 
   update_max_min_luminosity(clock, lum, temp);
 
@@ -98,7 +98,7 @@ void update_sensors(void) {
     turn_off(0);
   }
 
-  if(temp == MAX_TEMPERATURE)
+  if(temp == MAX_TEMPERATURE_VALUE)
     return;
 
   update_max_min_temperature(clock, lum, temp);
