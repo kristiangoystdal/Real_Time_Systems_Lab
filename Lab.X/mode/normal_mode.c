@@ -125,7 +125,12 @@ void normal_mode_timer_handler() {
   decrement_pwm_cnt();
 }
 
-void normal_mode_s1_handler() { set_mode(CONFIGURATION_MODE); }
+void normal_mode_s1_handler() {
+  if(_s2_state != S2_NORMAL_MODE) {
+    return;
+  }
+  set_mode(CONFIGURATION_MODE);
+}
 
 void normal_mode_s2_handler() {
   char line0[17], line1[17];

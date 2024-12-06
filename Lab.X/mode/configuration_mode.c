@@ -10,6 +10,8 @@
 static uint8_t _cursor;
 static uint8_t _cursor_pos_l;
 static uint8_t _cursor_pos_c;
+static clock_t _clock_config;
+static bool _clock_is_set;
 
 void init_lcd_configuration_mode() {
   char clock[9];
@@ -42,6 +44,8 @@ void configuration_mode_initialization() {
   _cursor = CURSOR_CLOCK_HOURS;
   _cursor_pos_l = LINE_CLOCK_HOURS;
   _cursor_pos_c = COLUMN_CLOCK_HOURS1;
+  _clock_config = get_clock();
+  _clock_is_set = false;
   init_lcd_configuration_mode();
 }
 
@@ -134,18 +138,30 @@ void configuration_mode_s2_handler() {
   switch (_cursor) {
   case CURSOR_CLOCK_HOURS:
     TMR0_StopTimer();
+    if(!_clock_is_set) {
+      set_clock(_clock_config.hours, _clock_config.minutes, _clock_config.seconds);
+      _clock_is_set = true;
+    }
     increment_hours();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_CLOCK_MINUTES:
     TMR0_StopTimer();
+    if(!_clock_is_set) {
+      set_clock(_clock_config.hours, _clock_config.minutes, _clock_config.seconds);
+      _clock_is_set = true;
+    }
     increment_minutes();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_CLOCK_SECONDS:
     TMR0_StopTimer();
+    if(!_clock_is_set) {
+      set_clock(_clock_config.hours, _clock_config.minutes, _clock_config.seconds);
+    _clock_is_set = true;
+    }
     increment_seconds();
     get_clock_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
