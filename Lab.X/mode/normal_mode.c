@@ -60,6 +60,9 @@ void normal_mode_initialization() {
 
 void update_clock(void) {
   increment_clock();
+  if(_s2_state != S2_NORMAL_MODE) {
+    return;
+  }
   char clock[9];
   get_clock_str(clock);
   LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
@@ -109,8 +112,11 @@ void update_sensors(void) {
 }
 
 void normal_mode_timer_handler() {
-  toggle(3);
   update_clock();
+  if(_s2_state != S2_NORMAL_MODE) {
+    return;
+  }
+  toggle(3);
   _sensor_cnt--;
   if (_sensor_cnt == 0) {
     _sensor_cnt = get_config_monitoring_period();
@@ -127,7 +133,7 @@ void normal_mode_s2_handler() {
   switch (_s2_state) {
   case S2_TEMP_MODE:
     turn_off_all();
-    TMR0_StopTimer();
+    deactivate_pwm();
     get_measure(MAX_TEMPERATURE, line0);
     get_measure(MIN_TEMPERATURE, line1);
     LCDWriteStr(line0, 0, 0);
@@ -141,7 +147,7 @@ void normal_mode_s2_handler() {
     break;
   default: // S2_NORMAL_MODE
     turn_on(2);
-    TMR0_StartTimer();
+    activate_pwm();
     LCDClear();
     init_lcd_normal_mode();
     break;

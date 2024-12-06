@@ -12,6 +12,10 @@ static uint8_t _cursor_pos_l;
 static uint8_t _cursor_pos_c;
 
 void init_lcd_configuration_mode() {
+  char clock[9];
+  get_clock_str(clock);
+  LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
+
   if (get_config_alarm_flag() == true) {
     LCDWriteStr("CTL AR", LINE_ALARM_C, COLUMN_ALARM_C);
   } else {
@@ -43,9 +47,6 @@ void configuration_mode_initialization() {
 
 void configuration_mode_timer_handler() {
   increment_clock();
-  char clock[9];
-  get_clock_str(clock);
-  LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
 }
 
 void configuration_mode_s1_handler() {
