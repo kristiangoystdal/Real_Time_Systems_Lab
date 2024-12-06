@@ -78,8 +78,8 @@ static inline uint8_t get_config_alarm_duration(void) {
   return _configs.alarmDuration;
 }
 
-static inline uint8_t get_config_alarm_flag(void) {
-  return _configs.alarmFlag != 0;
+static inline bool get_config_alarm_flag(void) {
+  return _configs.alarmFlag != false;
 }
 
 static inline uint8_t get_config_alarm_hours(void) {

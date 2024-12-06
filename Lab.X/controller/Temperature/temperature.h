@@ -11,6 +11,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#define MAX_TEMPERATURE 128
+
 // Function to read the temperature value
 uint8_t readTemperature(void);
 
@@ -19,7 +21,11 @@ void get_temperature(char *temperature);
 
 // Function to convert the temperature as a string
 static inline void temperature_to_string(char *s, uint8_t temperature) {
-  sprintf(s, "%02u", temperature);
+  if(temperature > MAX_TEMPERATURE) {
+    s[0] = '\0';
+  } else {
+    sprintf(s, "%02u", temperature);
+  }
 }
 
 #endif /* TEMPERATURE_H */

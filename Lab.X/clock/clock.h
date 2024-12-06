@@ -15,7 +15,6 @@ typedef struct {
 } clock_t;
 
 clock_t _clock;
-clock_t _configClock;
 
 void set_clock(uint8_t hours, uint8_t minutes, uint8_t seconds);
 
@@ -38,6 +37,8 @@ static inline clock_t get_clock(void) { return _clock; }
 static inline uint8_t get_clock_hours(void) { return _clock.hours; }
 
 static inline uint8_t get_clock_minutes(void) { return _clock.minutes; }
+
+static inline uint8_t get_clock_seconds(void) { return _clock.seconds; }
 
 static inline void get_clock_str(char clock[9]) {
   sprintf(clock, "%02u:%02u:%02u", _clock.hours, _clock.minutes,

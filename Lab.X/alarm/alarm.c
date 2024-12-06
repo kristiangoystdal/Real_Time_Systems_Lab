@@ -4,7 +4,7 @@
 #include "../state/state.h"
 #include <stdbool.h>
 
-bool alarm_triggered = false;
+static bool alarm_triggered = false;
 
 bool check_clock_alarm(clock_t clock) {
   if (get_config_alarm_flag() == false)

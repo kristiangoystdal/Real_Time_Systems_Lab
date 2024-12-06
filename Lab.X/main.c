@@ -106,6 +106,8 @@ int main(void) {
       normal_interrupt = NO_INTERRUPT;
       if (get_mode() == NORMAL_MODE) {
         normal_mode_timer_handler();
+      } else {
+        configuration_mode_timer_handler();
       }
     }
 
@@ -114,7 +116,7 @@ int main(void) {
       if (checkButtonS1()) {
         if (get_alarm_triggered()) {
           set_alarm_triggered(false);
-          clear_alarm();
+          clear_alarm(); 
         } else if (get_mode() == NORMAL_MODE) {
           normal_mode_s1_handler();
         } else {
@@ -142,7 +144,7 @@ int main(void) {
         configuration_mode_initialization();
       }
     }
-    if (!get_pwm_en())
+        if (!get_pwm_en())
       SLEEP();
   }
 }

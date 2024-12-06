@@ -11,6 +11,5 @@ void normal_mode_initialization(void);
 void normal_mode_timer_handler(void);
 void normal_mode_s1_handler(void);
 void normal_mode_s2_handler(void);
-bool get_pwm_en(void);
 
 #endif

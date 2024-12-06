@@ -46,6 +46,13 @@ void configuration_mode_initialization() {
   init_lcd_configuration_mode();
 }
 
+void configuration_mode_timer_handler() {
+  increment_clock();
+  char clock[9];
+  get_clock_str(clock);
+  LCDWriteStr(clock, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
+}
+
 void configuration_mode_s1_handler() {
   char buf[9];
   switch (_cursor) {
@@ -150,16 +157,19 @@ void configuration_mode_s2_handler() {
     _cursor_pos_c = COLUMN_CLOCK_HOURS1;
     break;
   case CURSOR_ALARM_HOURS:
+    TMR0_StopTimer();
     increment_config_alarm_hours();
     get_config_alarm_hours_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_HOURS, COLUMN_CLOCK_HOURS0);
     break;
   case CURSOR_ALARM_MINUTES:
+    TMR0_StopTimer();
     increment_config_alarm_minutes();
     get_config_alarm_minutes_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_MINUTES, COLUMN_CLOCK_MINUTES0);
     break;
   case CURSOR_ALARM_SECONDS:
+    TMR0_StopTimer();
     increment_config_alarm_seconds();
     get_config_alarm_seconds_str(buf);
     LCDWriteStr(buf, LINE_CLOCK_SECONDS, COLUMN_CLOCK_SECONDS0);
@@ -191,8 +201,6 @@ void configuration_mode_s2_handler() {
     } else {
       LCDWriteChar('a', LINE_ALARM_ENABLE, COLUMN_ALARM_ENABLE);
     }
-    // buf[0] = get_config_alarm_flag() ? 'A' : 'a';
-    // LCDWriteChar(buf[0], LINE_ALARM_ENABLE, COLUMN_ALARM_ENABLE);
     break;
   case CURSOR_RESET_MAX_MIN:
     reset_sensors_max_min();

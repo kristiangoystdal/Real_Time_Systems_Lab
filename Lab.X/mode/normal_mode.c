@@ -45,7 +45,7 @@ void init_lcd_normal_mode() {
 void normal_mode_initialization() {
   TMR0_StartTimer();
   set_clock(get_config_clock_hours(), get_config_clock_minutes(),
-            _clock.seconds);
+            get_clock_seconds());
 
   _s2_state = S2_NORMAL_MODE;
   _sensor_cnt = get_config_monitoring_period();
@@ -79,11 +79,12 @@ void update_sensors(void) {
   update_max_min_luminosity(clock, lum, temp);
   update_max_min_temperature(clock, lum, temp);
 
-  char luminosity[2];
-  luminosity_to_string(luminosity, lum);
   char temperature[3];
   temperature_to_string(temperature, temp);
   LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
+
+  char luminosity[2];
+  luminosity_to_string(luminosity, lum);
   LCDWriteChar(luminosity[0], LINE_LUM, COLUMN_LUM);
 
   if (check_lum_alarm(lum)) {

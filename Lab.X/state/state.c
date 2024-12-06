@@ -12,12 +12,11 @@ void set_configs(Configs configs, bool write_eeprom) {
 }
 
 void set_max_min(SensorsMaxMin sensorsMaxMin, bool write_eeprom) {
+  _sensorsMaxMin = sensorsMaxMin;
   if (write_eeprom) {
     _sensorsMaxMin = sensorsMaxMin;
     WriteMaxMin(sensorsMaxMin);
     WriteChecksum(_configs, sensorsMaxMin);
-  } else {
-    _sensorsMaxMin = ReadMaxMin();
   }
 }
 
