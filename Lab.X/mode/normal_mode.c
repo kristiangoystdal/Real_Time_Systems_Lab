@@ -152,7 +152,6 @@ void normal_mode_s2_handler() {
     break;
   default: // S2_NORMAL_MODE
     turn_on(2);
-    activate_pwm();
     LCDClear();
     init_lcd_normal_mode();
     break;
