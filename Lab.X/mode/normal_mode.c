@@ -79,8 +79,6 @@ void update_sensors(void) {
   uint8_t lum = readLum();
   uint8_t temp = readTemperature();
   clock_t clock = get_clock();
-  if(temp > MAX_TEMPERATURE_VALUE)
-    temp = MAX_TEMPERATURE_VALUE;
 
   char luminosity[2];
   luminosity_to_string(luminosity, lum);

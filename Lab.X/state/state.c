@@ -1,6 +1,7 @@
 
 #include "state.h"
 #include "../controller/EEPROM/EEPROM_controller.h"
+#include "../controller/Temperature/temperature.h"
 #include <string.h>
 
 void set_configs(Configs configs, bool write_eeprom) {
@@ -56,8 +57,12 @@ void measure_to_string(uint8_t measure[5], char string[17]) {
   uint8_t hours = measure[MAX_MIN_HOURS_BYTE];
   uint8_t lum = measure[MAX_MIN_LUM_BYTE];
   uint8_t temp = measure[MAX_MIN_TEMP_BYTE];
-  sprintf(string, "%02u:%02u:%02u  %02uC L%u", hours, minutes, seconds, temp,
-          lum);
+  if(temp > MAX_TEMPERATURE_VALUE) {
+    sprintf(string, "%02u:%02u:%02u  ERC L%u", hours, minutes, seconds, lum);
+  } else {
+    sprintf(string, "%02u:%02u:%02u  %02uC L%u", hours, minutes, seconds, temp,
+      lum);
+  }
 }
 
 void get_measure(uint8_t index, char measure[17]) {
