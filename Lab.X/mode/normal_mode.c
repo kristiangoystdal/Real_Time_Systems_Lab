@@ -79,12 +79,10 @@ void update_sensors(void) {
   uint8_t lum = readLum();
   uint8_t temp = readTemperature();
   clock_t clock = get_clock();
-  update_max_min_luminosity(clock, lum, temp);
-  update_max_min_temperature(clock, lum, temp);
+  if(temp > MAX_TEMPERATURE)
+    temp = MAX_TEMPERATURE;
 
-  char temperature[3];
-  temperature_to_string(temperature, temp);
-  LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
+  update_max_min_luminosity(clock, lum, temp);
 
   char luminosity[2];
   luminosity_to_string(luminosity, lum);
@@ -99,6 +97,15 @@ void update_sensors(void) {
   } else {
     turn_off(0);
   }
+
+  if(temp == MAX_TEMPERATURE)
+    return;
+
+  update_max_min_temperature(clock, lum, temp);
+
+  char temperature[3];
+  temperature_to_string(temperature, temp);
+  LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
 
   if (check_temp_alarm(temp)) {
     activate_pwm();
