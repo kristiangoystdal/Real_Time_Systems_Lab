@@ -100,7 +100,7 @@ void update_sensors(void) {
   temperature_to_string(temperature, temp);
   LCDWriteStr(temperature, LINE_TEMP, COLUMN_TEMP0);
 
-  if(temp == MAX_TEMPERATURE_VALUE)
+  if(temp > MAX_TEMPERATURE_VALUE)
     return;
 
   update_max_min_temperature(clock, lum, temp);
