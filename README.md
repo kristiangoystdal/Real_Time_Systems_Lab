@@ -1,6 +1,6 @@
 # Real-Time Systems Laboratory Project:
 
-## Part 1: Weather Station and Alarm Clock
+## Weather Station and Alarm Clock
 
 ### Introduction
 
